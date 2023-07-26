@@ -1,2 +1,6 @@
 [submodule "Carthage/Checkouts/UICKeyChainStore"]
 	url = ssh://git@github.com/DuetDisplay/UICKeyChainStore.git
+	path = Carthage/Checkouts/UICKeyChainStore
+[submodule "Carthage/Checkouts/DuetCommon"]
+	path = Carthage/Checkouts/DuetCommon
+	url = ssh://git@github.com/DuetDisplay/DuetCommon.git
