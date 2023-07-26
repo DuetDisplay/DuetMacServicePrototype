@@ -1,0 +1,2 @@
+[submodule "Carthage/Checkouts/UICKeyChainStore"]
+	url = ssh://git@github.com/DuetDisplay/UICKeyChainStore.git

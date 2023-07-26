@@ -1,0 +1,2 @@
+github "DuetDisplay/DuetCommon" "bugfix/falseProxy"
+github "DuetDisplay/UICKeyChainStore" "v2.2.1_deployment_target_ios12_macos1015"

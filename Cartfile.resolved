@@ -1,0 +1,2 @@
+github "DuetDisplay/DuetCommon" "d47a9f8fe6de5c0b8c5b84074aed2dc326f8627c"
+github "DuetDisplay/UICKeyChainStore" "v2.2.1_deployment_target_ios12_macos1015"
