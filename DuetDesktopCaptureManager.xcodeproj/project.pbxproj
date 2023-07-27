@@ -3,18 +3,813 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E47578E318E58B7A00C668DE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47578E218E58B7A00C668DE /* Cocoa.framework */; };
+		42583ABE93513321FD4445A5 /* libPods-DuetDesktopCaptureManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F906F3C0D1E513F627AA96 /* libPods-DuetDesktopCaptureManager.a */; };
+		5D65C7542A7144E6000FB8DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47578E218E58B7A00C668DE /* Cocoa.framework */; };
+		5D65C7572A7144EB000FB8DD /* DuetAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6B2A713F0800BB9A91 /* DuetAnalytics.framework */; };
+		5D65C7582A7144EB000FB8DD /* DuetAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6B2A713F0800BB9A91 /* DuetAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D65C75A2A7144ED000FB8DD /* DuetCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C672A713F0800BB9A91 /* DuetCommon.framework */; };
+		5D65C75B2A7144ED000FB8DD /* DuetCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C672A713F0800BB9A91 /* DuetCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D65C75C2A7144EE000FB8DD /* DuetConnections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C692A713F0800BB9A91 /* DuetConnections.framework */; };
+		5D65C75D2A7144EE000FB8DD /* DuetConnections.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C692A713F0800BB9A91 /* DuetConnections.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D65C75E2A7144F0000FB8DD /* DuetRemoteDisplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C632A713F0800BB9A91 /* DuetRemoteDisplay.framework */; };
+		5D65C75F2A7144F0000FB8DD /* DuetRemoteDisplay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C632A713F0800BB9A91 /* DuetRemoteDisplay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D65C7602A7144F1000FB8DD /* DuetScreenCapture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6D2A713F0800BB9A91 /* DuetScreenCapture.framework */; };
+		5D65C7612A7144F1000FB8DD /* DuetScreenCapture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6D2A713F0800BB9A91 /* DuetScreenCapture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D65C7642A7144F4000FB8DD /* DuetServiceSessions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C652A713F0800BB9A91 /* DuetServiceSessions.framework */; };
+		5D65C7652A7144F4000FB8DD /* DuetServiceSessions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C652A713F0800BB9A91 /* DuetServiceSessions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D65C7662A7144F6000FB8DD /* DuetVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6F2A713F0800BB9A91 /* DuetVideo.framework */; };
+		5D65C7672A7144F6000FB8DD /* DuetVideo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6F2A713F0800BB9A91 /* DuetVideo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D65C76A2A7148CA000FB8DD /* FramePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D65C7692A7148CA000FB8DD /* FramePanel.m */; };
+		5DF8FDF12A7152C10077C1CC /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 5DF8FDF02A7152C10077C1CC /* CocoaLumberjack */; };
+		5DF8FDF32A7152C10077C1CC /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5DF8FDF22A7152C10077C1CC /* CocoaLumberjackSwift */; };
+		5DF8FDF42A7153860077C1CC /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C8E2A713F0800BB9A91 /* SocketRocket.framework */; };
+		5DF8FDF52A7153860077C1CC /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C8E2A713F0800BB9A91 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DF8FDF62A71588B0077C1CC /* TCMPortMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C7C2A713F0800BB9A91 /* TCMPortMapper.framework */; };
+		5DF8FDF72A71588B0077C1CC /* TCMPortMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C7C2A713F0800BB9A91 /* TCMPortMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E475791A18E5A06A00C668DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E475791418E5A06A00C668DE /* AppDelegate.m */; };
 		E475791C18E5A06A00C668DE /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E475791718E5A06A00C668DE /* LogManager.m */; };
 		E475791D18E5A06A00C668DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E475791818E5A06A00C668DE /* main.m */; };
 		E475791E18E5A06A00C668DE /* main.xib in Resources */ = {isa = PBXBuildFile; fileRef = E475791918E5A06A00C668DE /* main.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5D943C602A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D11C16529437B5C0030FB13;
+			remoteInfo = DuetSDK;
+		};
+		5D943C622A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D11BA64294363BB0030FB13;
+			remoteInfo = DuetRemoteDisplay;
+		};
+		5D943C642A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D11C3CB294735210030FB13;
+			remoteInfo = DuetServiceSessions;
+		};
+		5D943C662A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D29DADB2947835E00568008;
+			remoteInfo = DuetCommon;
+		};
+		5D943C682A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D29DA832947816100568008;
+			remoteInfo = DuetConnections;
+		};
+		5D943C6A2A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D29DA462947763900568008;
+			remoteInfo = DuetAnalytics;
+		};
+		5D943C6C2A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D6B25EC294BC1C800764DFF;
+			remoteInfo = DuetScreenCapture;
+		};
+		5D943C6E2A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D6B259E294BB9D700764DFF;
+			remoteInfo = DuetVideo;
+		};
+		5D943C702A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D11C0DC29436EAB0030FB13;
+			remoteInfo = udplib;
+		};
+		5D943C722A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9EFD57D2989CCF20073489A;
+			remoteInfo = DuetSDKTests;
+		};
+		5D943C7B2A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943B502A713F0800BB9A91 /* Port Map.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3180119F0D4DEC8400BE3B28;
+			remoteInfo = TCMPortMapper;
+		};
+		5D943C7D2A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943B502A713F0800BB9A91 /* Port Map.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F2C65FFF0D50C2D100820CAE;
+			remoteInfo = "Port Map";
+		};
+		5D943C7F2A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943B502A713F0800BB9A91 /* Port Map.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F214E5DB0D5F5FE600A06962;
+			remoteInfo = NATEcho;
+		};
+		5D943C812A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943B502A713F0800BB9A91 /* Port Map.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F21B76970DB73CFC00942BC0;
+			remoteInfo = "UPnP Command Line Debug Tool";
+		};
+		5D943C892A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943A392A713F0700BB9A91 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81D6478D1D2CA78800690609;
+			remoteInfo = "SocketRocket-iOS";
+		};
+		5D943C8B2A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943A392A713F0700BB9A91 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D4227621BB4358C000C1A6C;
+			remoteInfo = "SocketRocket-iOS-Dynamic";
+		};
+		5D943C8D2A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943A392A713F0700BB9A91 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F668C880153E91210044DBAC;
+			remoteInfo = "SocketRocket-macOS";
+		};
+		5D943C8F2A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943A392A713F0700BB9A91 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3345DC901C52ACD70083CCB8;
+			remoteInfo = "SocketRocket-tvOS";
+		};
+		5D943C912A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943A392A713F0700BB9A91 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6BDA802145900D200FE3253;
+			remoteInfo = "SocketRocketTests-iOS";
+		};
+		5D943C932A713F0800BB9A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943A392A713F0700BB9A91 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F62417E314D52F3C003CE997;
+			remoteInfo = TestChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5D65C7592A7144EB000FB8DD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5D65C7672A7144F6000FB8DD /* DuetVideo.framework in Embed Frameworks */,
+				5D65C7582A7144EB000FB8DD /* DuetAnalytics.framework in Embed Frameworks */,
+				5D65C7612A7144F1000FB8DD /* DuetScreenCapture.framework in Embed Frameworks */,
+				5DF8FDF52A7153860077C1CC /* SocketRocket.framework in Embed Frameworks */,
+				5D65C7652A7144F4000FB8DD /* DuetServiceSessions.framework in Embed Frameworks */,
+				5DF8FDF72A71588B0077C1CC /* TCMPortMapper.framework in Embed Frameworks */,
+				5D65C75D2A7144EE000FB8DD /* DuetConnections.framework in Embed Frameworks */,
+				5D65C75B2A7144ED000FB8DD /* DuetCommon.framework in Embed Frameworks */,
+				5D65C75F2A7144F0000FB8DD /* DuetRemoteDisplay.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		411946218BF15387E6A60CFF /* Pods-DuetDesktopCaptureManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuetDesktopCaptureManager.debug.xcconfig"; path = "Target Support Files/Pods-DuetDesktopCaptureManager/Pods-DuetDesktopCaptureManager.debug.xcconfig"; sourceTree = "<group>"; };
+		5D65C7682A7148CA000FB8DD /* FramePanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FramePanel.h; sourceTree = "<group>"; };
+		5D65C7692A7148CA000FB8DD /* FramePanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FramePanel.m; sourceTree = "<group>"; };
+		5D9439922A713F0700BB9A91 /* UICKeyChainStore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UICKeyChainStore; sourceTree = "<group>"; };
+		5D9439942A713F0700BB9A91 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		5D9439972A713F0700BB9A91 /* WebSocketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketProvider.swift; sourceTree = "<group>"; };
+		5D9439982A713F0700BB9A91 /* DevicesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesClient.swift; sourceTree = "<group>"; };
+		5D9439992A713F0700BB9A91 /* DuetServiceSessionPreferences+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuetServiceSessionPreferences+Private.h"; sourceTree = "<group>"; };
+		5D94399A2A713F0700BB9A91 /* DuetServicePreference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetServicePreference.m; sourceTree = "<group>"; };
+		5D94399B2A713F0700BB9A91 /* WebSocketDevicesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketDevicesClient.swift; sourceTree = "<group>"; };
+		5D94399C2A713F0700BB9A91 /* DuetServiceSessionUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuetServiceSessionUtil.swift; sourceTree = "<group>"; };
+		5D94399D2A713F0700BB9A91 /* DuetServiceServerInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetServiceServerInfo.m; sourceTree = "<group>"; };
+		5D94399E2A713F0700BB9A91 /* DuetServiceSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetServiceSession.m; sourceTree = "<group>"; };
+		5D94399F2A713F0700BB9A91 /* DuetServiceSessionPreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetServiceSessionPreferences.m; sourceTree = "<group>"; };
+		5D9439A02A713F0700BB9A91 /* DuetServiceDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetServiceDevice.m; sourceTree = "<group>"; };
+		5D9439A12A713F0700BB9A91 /* DuetRelayProxyInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRelayProxyInfo.m; sourceTree = "<group>"; };
+		5D9439A22A713F0700BB9A91 /* DuetServicesConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetServicesConfig.h; sourceTree = "<group>"; };
+		5D9439A32A713F0700BB9A91 /* DuetServiceSession+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuetServiceSession+Private.h"; sourceTree = "<group>"; };
+		5D9439A42A713F0700BB9A91 /* URLSessionWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWebSocket.swift; sourceTree = "<group>"; };
+		5D9439A52A713F0700BB9A91 /* DuetStunConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetStunConfiguration.m; sourceTree = "<group>"; };
+		5D9439A62A713F0700BB9A91 /* DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
+		5D9439A72A713F0700BB9A91 /* SocketRocketWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketRocketWebSocket.swift; sourceTree = "<group>"; };
+		5D9439A82A713F0700BB9A91 /* DuetCertificateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetCertificateManager.h; sourceTree = "<group>"; };
+		5D9439A92A713F0700BB9A91 /* DuetServicePreference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetServicePreference.h; sourceTree = "<group>"; };
+		5D9439AA2A713F0700BB9A91 /* DuetServiceDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetServiceDevice.h; sourceTree = "<group>"; };
+		5D9439AB2A713F0700BB9A91 /* DuetServiceSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetServiceSession.h; sourceTree = "<group>"; };
+		5D9439AC2A713F0700BB9A91 /* DuetServiceSessionPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetServiceSessionPreferences.h; sourceTree = "<group>"; };
+		5D9439AD2A713F0700BB9A91 /* DuetServiceServerInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetServiceServerInfo.h; sourceTree = "<group>"; };
+		5D9439AE2A713F0700BB9A91 /* DuetRelayProxyInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRelayProxyInfo.h; sourceTree = "<group>"; };
+		5D9439AF2A713F0700BB9A91 /* DuetUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuetUserProfile.swift; sourceTree = "<group>"; };
+		5D9439B02A713F0700BB9A91 /* DuetCertificateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetCertificateManager.m; sourceTree = "<group>"; };
+		5D9439B12A713F0700BB9A91 /* DuetStunConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetStunConfiguration.h; sourceTree = "<group>"; };
+		5D9439B22A713F0700BB9A91 /* DeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
+		5D9439B32A713F0700BB9A91 /* DuetServicesConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetServicesConfig.m; sourceTree = "<group>"; };
+		5D9439B42A713F0700BB9A91 /* DuetServiceConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetServiceConstants.h; sourceTree = "<group>"; };
+		5D9439B52A713F0700BB9A91 /* DuetServiceConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetServiceConstants.m; sourceTree = "<group>"; };
+		5D9439B62A713F0700BB9A91 /* DuetServiceSessions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetServiceSessions.h; sourceTree = "<group>"; };
+		5D9439B82A713F0700BB9A91 /* DuetServiceUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetServiceUtils.m; sourceTree = "<group>"; };
+		5D9439B92A713F0700BB9A91 /* NSData+ServiceHashing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+ServiceHashing.h"; sourceTree = "<group>"; };
+		5D9439BA2A713F0700BB9A91 /* NSURLRequest+CURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+CURL.h"; sourceTree = "<group>"; };
+		5D9439BB2A713F0700BB9A91 /* DuetServiceUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetServiceUtils.h; sourceTree = "<group>"; };
+		5D9439BC2A713F0700BB9A91 /* NSURLRequest+CURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+CURL.m"; sourceTree = "<group>"; };
+		5D9439BD2A713F0700BB9A91 /* NSData+ServiceHashing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+ServiceHashing.m"; sourceTree = "<group>"; };
+		5D9439BE2A713F0700BB9A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D9439C02A713F0700BB9A91 /* udplib.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = udplib.hpp; sourceTree = "<group>"; };
+		5D9439C12A713F0700BB9A91 /* udplibPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = udplibPriv.hpp; sourceTree = "<group>"; };
+		5D9439C22A713F0700BB9A91 /* udplib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = udplib.cpp; sourceTree = "<group>"; };
+		5D9439C32A713F0700BB9A91 /* cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = cartfile; sourceTree = "<group>"; };
+		5D9439C52A713F0700BB9A91 /* DuetE2ECryptoHandshakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetE2ECryptoHandshakeTests.m; sourceTree = "<group>"; };
+		5D9439C62A713F0700BB9A91 /* DuetE2ECryptoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetE2ECryptoTests.m; sourceTree = "<group>"; };
+		5D9439CB2A713F0700BB9A91 /* SocketRocket-macOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SocketRocket-macOS.xcconfig"; sourceTree = "<group>"; };
+		5D9439CC2A713F0700BB9A91 /* SocketRocket-tvOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SocketRocket-tvOS.xcconfig"; sourceTree = "<group>"; };
+		5D9439CE2A713F0700BB9A91 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		5D9439D02A713F0700BB9A91 /* macOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = macOS.xcconfig; sourceTree = "<group>"; };
+		5D9439D12A713F0700BB9A91 /* tvOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = tvOS.xcconfig; sourceTree = "<group>"; };
+		5D9439D22A713F0700BB9A91 /* iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = iOS.xcconfig; sourceTree = "<group>"; };
+		5D9439D32A713F0700BB9A91 /* watchOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = watchOS.xcconfig; sourceTree = "<group>"; };
+		5D9439D52A713F0700BB9A91 /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		5D9439D62A713F0700BB9A91 /* DynamicFramework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DynamicFramework.xcconfig; sourceTree = "<group>"; };
+		5D9439D72A713F0700BB9A91 /* StaticFramework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticFramework.xcconfig; sourceTree = "<group>"; };
+		5D9439D82A713F0700BB9A91 /* LogicTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = LogicTests.xcconfig; sourceTree = "<group>"; };
+		5D9439DA2A713F0700BB9A91 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		5D9439DB2A713F0700BB9A91 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		5D9439DC2A713F0700BB9A91 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		5D9439DD2A713F0700BB9A91 /* SocketRocketTests-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SocketRocketTests-iOS.xcconfig"; sourceTree = "<group>"; };
+		5D9439DE2A713F0700BB9A91 /* SocketRocket-iOS-Dynamic.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SocketRocket-iOS-Dynamic.xcconfig"; sourceTree = "<group>"; };
+		5D9439DF2A713F0700BB9A91 /* TestChat-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "TestChat-iOS.xcconfig"; sourceTree = "<group>"; };
+		5D9439E02A713F0700BB9A91 /* SocketRocket-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SocketRocket-iOS.xcconfig"; sourceTree = "<group>"; };
+		5D9439E12A713F0700BB9A91 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+		5D9439E32A713F0700BB9A91 /* autobahn_fuzzingserver.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autobahn_fuzzingserver.json; sourceTree = "<group>"; };
+		5D9439E42A713F0700BB9A91 /* run_test_server.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = run_test_server.sh; sourceTree = "<group>"; };
+		5D9439E52A713F0700BB9A91 /* setup_env.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup_env.sh; sourceTree = "<group>"; };
+		5D9439E62A713F0700BB9A91 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5D9439E72A713F0700BB9A91 /* PATENTS */ = {isa = PBXFileReference; lastKnownFileType = text; path = PATENTS; sourceTree = "<group>"; };
+		5D9439E82A713F0700BB9A91 /* .ruby-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".ruby-version"; sourceTree = "<group>"; };
+		5D9439E92A713F0700BB9A91 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		5D9439EC2A713F0700BB9A91 /* chatroom.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = chatroom.py; sourceTree = "<group>"; };
+		5D9439EE2A713F0700BB9A91 /* chatroom.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = chatroom.go; sourceTree = "<group>"; };
+		5D9439EF2A713F0700BB9A91 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		5D9439F12A713F0700BB9A91 /* proxy.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = proxy.js; sourceTree = "<group>"; };
+		5D9439F22A713F0700BB9A91 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		5D9439F32A713F0700BB9A91 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5D9439F42A713F0700BB9A91 /* SocketRocket.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SocketRocket.podspec; sourceTree = "<group>"; };
+		5D9439F62A713F0700BB9A91 /* SRWebSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		5D9439F72A713F0700BB9A91 /* NSRunLoop+SRWebSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSRunLoop+SRWebSocket.m"; sourceTree = "<group>"; };
+		5D9439F92A713F0700BB9A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D9439FA2A713F0700BB9A91 /* SRSecurityPolicy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRSecurityPolicy.m; sourceTree = "<group>"; };
+		5D9439FB2A713F0700BB9A91 /* SocketRocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketRocket.h; sourceTree = "<group>"; };
+		5D9439FD2A713F0700BB9A91 /* SRConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRConstants.h; sourceTree = "<group>"; };
+		5D9439FF2A713F0700BB9A91 /* SRProxyConnect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRProxyConnect.m; sourceTree = "<group>"; };
+		5D943A002A713F0700BB9A91 /* SRProxyConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRProxyConnect.h; sourceTree = "<group>"; };
+		5D943A022A713F0700BB9A91 /* SRRunLoopThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRRunLoopThread.h; sourceTree = "<group>"; };
+		5D943A032A713F0700BB9A91 /* SRRunLoopThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRRunLoopThread.m; sourceTree = "<group>"; };
+		5D943A052A713F0700BB9A91 /* SRPinningSecurityPolicy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRPinningSecurityPolicy.h; sourceTree = "<group>"; };
+		5D943A062A713F0700BB9A91 /* SRPinningSecurityPolicy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRPinningSecurityPolicy.m; sourceTree = "<group>"; };
+		5D943A072A713F0700BB9A91 /* NSRunLoop+SRWebSocketPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSRunLoop+SRWebSocketPrivate.h"; sourceTree = "<group>"; };
+		5D943A092A713F0700BB9A91 /* SRDelegateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRDelegateController.m; sourceTree = "<group>"; };
+		5D943A0A2A713F0700BB9A91 /* SRDelegateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRDelegateController.h; sourceTree = "<group>"; };
+		5D943A0B2A713F0700BB9A91 /* NSURLRequest+SRWebSocketPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+SRWebSocketPrivate.h"; sourceTree = "<group>"; };
+		5D943A0D2A713F0700BB9A91 /* SRHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHash.h; sourceTree = "<group>"; };
+		5D943A0E2A713F0700BB9A91 /* SRLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRLog.h; sourceTree = "<group>"; };
+		5D943A0F2A713F0700BB9A91 /* SRMutex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRMutex.m; sourceTree = "<group>"; };
+		5D943A102A713F0700BB9A91 /* SRHTTPConnectMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRHTTPConnectMessage.m; sourceTree = "<group>"; };
+		5D943A112A713F0700BB9A91 /* SRSIMDHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRSIMDHelpers.h; sourceTree = "<group>"; };
+		5D943A122A713F0700BB9A91 /* SRRandom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRRandom.h; sourceTree = "<group>"; };
+		5D943A132A713F0700BB9A91 /* SRURLUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRURLUtilities.m; sourceTree = "<group>"; };
+		5D943A142A713F0700BB9A91 /* SRError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRError.h; sourceTree = "<group>"; };
+		5D943A152A713F0700BB9A91 /* SRLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRLog.m; sourceTree = "<group>"; };
+		5D943A162A713F0700BB9A91 /* SRHash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRHash.m; sourceTree = "<group>"; };
+		5D943A172A713F0700BB9A91 /* SRMutex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRMutex.h; sourceTree = "<group>"; };
+		5D943A182A713F0700BB9A91 /* SRHTTPConnectMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHTTPConnectMessage.h; sourceTree = "<group>"; };
+		5D943A192A713F0700BB9A91 /* SRError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRError.m; sourceTree = "<group>"; };
+		5D943A1A2A713F0700BB9A91 /* SRRandom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRRandom.m; sourceTree = "<group>"; };
+		5D943A1B2A713F0700BB9A91 /* SRURLUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRURLUtilities.h; sourceTree = "<group>"; };
+		5D943A1C2A713F0700BB9A91 /* SRSIMDHelpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRSIMDHelpers.m; sourceTree = "<group>"; };
+		5D943A1E2A713F0700BB9A91 /* SRIOConsumerPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRIOConsumerPool.h; sourceTree = "<group>"; };
+		5D943A1F2A713F0700BB9A91 /* SRIOConsumer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRIOConsumer.m; sourceTree = "<group>"; };
+		5D943A202A713F0700BB9A91 /* SRIOConsumer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRIOConsumer.h; sourceTree = "<group>"; };
+		5D943A212A713F0700BB9A91 /* SRIOConsumerPool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRIOConsumerPool.m; sourceTree = "<group>"; };
+		5D943A222A713F0700BB9A91 /* SRConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRConstants.m; sourceTree = "<group>"; };
+		5D943A232A713F0700BB9A91 /* NSURLRequest+SRWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+SRWebSocket.h"; sourceTree = "<group>"; };
+		5D943A242A713F0700BB9A91 /* SRWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		5D943A252A713F0700BB9A91 /* NSRunLoop+SRWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSRunLoop+SRWebSocket.h"; sourceTree = "<group>"; };
+		5D943A262A713F0700BB9A91 /* SRSecurityPolicy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRSecurityPolicy.h; sourceTree = "<group>"; };
+		5D943A272A713F0700BB9A91 /* NSURLRequest+SRWebSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+SRWebSocket.m"; sourceTree = "<group>"; };
+		5D943A292A713F0700BB9A91 /* SRAutobahnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRAutobahnTests.m; sourceTree = "<group>"; };
+		5D943A2B2A713F0700BB9A91 /* autobahn_configuration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autobahn_configuration.json; sourceTree = "<group>"; };
+		5D943A2C2A713F0700BB9A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D943A2E2A713F0700BB9A91 /* SRAutobahnOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRAutobahnOperation.h; sourceTree = "<group>"; };
+		5D943A2F2A713F0700BB9A91 /* SRTWebSocketOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRTWebSocketOperation.m; sourceTree = "<group>"; };
+		5D943A302A713F0700BB9A91 /* SRAutobahnOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRAutobahnOperation.m; sourceTree = "<group>"; };
+		5D943A312A713F0700BB9A91 /* SRTWebSocketOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRTWebSocketOperation.h; sourceTree = "<group>"; };
+		5D943A332A713F0700BB9A91 /* SRAutobahnUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRAutobahnUtilities.m; sourceTree = "<group>"; };
+		5D943A342A713F0700BB9A91 /* SRAutobahnUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRAutobahnUtilities.h; sourceTree = "<group>"; };
+		5D943A352A713F0700BB9A91 /* .gitmodules */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
+		5D943A362A713F0700BB9A91 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5D943A372A713F0700BB9A91 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5D943A382A713F0700BB9A91 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		5D943A392A713F0700BB9A91 /* SocketRocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SocketRocket.xcodeproj; sourceTree = "<group>"; };
+		5D943A3C2A713F0700BB9A91 /* LICENSE-examples */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LICENSE-examples"; sourceTree = "<group>"; };
+		5D943A3D2A713F0700BB9A91 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		5D943A402A713F0700BB9A91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5D943A422A713F0700BB9A91 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/Default-568h@2x.png"; sourceTree = "<group>"; };
+		5D943A442A713F0700BB9A91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		5D943A452A713F0700BB9A91 /* TCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCAppDelegate.h; sourceTree = "<group>"; };
+		5D943A462A713F0700BB9A91 /* TCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCViewController.m; sourceTree = "<group>"; };
+		5D943A472A713F0700BB9A91 /* TCChatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCChatCell.m; sourceTree = "<group>"; };
+		5D943A482A713F0700BB9A91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5D943A492A713F0700BB9A91 /* TestChat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestChat-Info.plist"; sourceTree = "<group>"; };
+		5D943A4A2A713F0700BB9A91 /* TCChatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCChatCell.h; sourceTree = "<group>"; };
+		5D943A4B2A713F0700BB9A91 /* TCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCViewController.h; sourceTree = "<group>"; };
+		5D943A4C2A713F0700BB9A91 /* TCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAppDelegate.m; sourceTree = "<group>"; };
+		5D943A4D2A713F0700BB9A91 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
+		5D943A512A713F0800BB9A91 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		5D943A532A713F0800BB9A91 /* macOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = macOS.xcconfig; sourceTree = "<group>"; };
+		5D943A542A713F0800BB9A91 /* tvOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = tvOS.xcconfig; sourceTree = "<group>"; };
+		5D943A552A713F0800BB9A91 /* iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = iOS.xcconfig; sourceTree = "<group>"; };
+		5D943A562A713F0800BB9A91 /* watchOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = watchOS.xcconfig; sourceTree = "<group>"; };
+		5D943A582A713F0800BB9A91 /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		5D943A592A713F0800BB9A91 /* DynamicFramework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DynamicFramework.xcconfig; sourceTree = "<group>"; };
+		5D943A5A2A713F0800BB9A91 /* StaticFramework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticFramework.xcconfig; sourceTree = "<group>"; };
+		5D943A5B2A713F0800BB9A91 /* LogicTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = LogicTests.xcconfig; sourceTree = "<group>"; };
+		5D943A5D2A713F0800BB9A91 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		5D943A5E2A713F0800BB9A91 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		5D943A5F2A713F0800BB9A91 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		5D943A602A713F0800BB9A91 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5D943A612A713F0800BB9A91 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5D943A642A713F0800BB9A91 /* build_task.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = build_task.rb; sourceTree = "<group>"; };
+		5D943A652A713F0800BB9A91 /* build_framework_task.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = build_framework_task.rb; sourceTree = "<group>"; };
+		5D943A662A713F0800BB9A91 /* .clang-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".clang-format"; sourceTree = "<group>"; };
+		5D943A682A713F0800BB9A91 /* DuetUDPStreamCluster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuetUDPStreamCluster.swift; sourceTree = "<group>"; };
+		5D943A6A2A713F0800BB9A91 /* DuetUDPStreamProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetUDPStreamProtocol.h; sourceTree = "<group>"; };
+		5D943A6B2A713F0800BB9A91 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		5D943A6C2A713F0800BB9A91 /* DuetDataContentResponseHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetDataContentResponseHandler.m; sourceTree = "<group>"; };
+		5D943A6D2A713F0800BB9A91 /* DuetRemoteDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteDisplay.h; sourceTree = "<group>"; };
+		5D943A702A713F0800BB9A91 /* DuetVPNServerPacketHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVPNServerPacketHandler.h; sourceTree = "<group>"; };
+		5D943A722A713F0800BB9A91 /* DuetVPNServerConfigurationProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVPNServerConfigurationProcessor.m; sourceTree = "<group>"; };
+		5D943A732A713F0800BB9A91 /* DuetVPNServerCommandProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVPNServerCommandProcessor.h; sourceTree = "<group>"; };
+		5D943A742A713F0800BB9A91 /* DuetVPNServerPacketProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVPNServerPacketProcessor.m; sourceTree = "<group>"; };
+		5D943A752A713F0800BB9A91 /* DuetVPNServerConfigurationProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVPNServerConfigurationProcessor.h; sourceTree = "<group>"; };
+		5D943A762A713F0800BB9A91 /* DuetVPNServerCommandProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVPNServerCommandProcessor.m; sourceTree = "<group>"; };
+		5D943A772A713F0800BB9A91 /* DuetVPNServerPacketProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVPNServerPacketProcessor.h; sourceTree = "<group>"; };
+		5D943A782A713F0800BB9A91 /* DuetVPNServerPacketHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVPNServerPacketHandler.m; sourceTree = "<group>"; };
+		5D943A7A2A713F0800BB9A91 /* DuetVPNPacketFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVPNPacketFormat.m; sourceTree = "<group>"; };
+		5D943A7B2A713F0800BB9A91 /* DuetVPNBasePacketHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVPNBasePacketHandler.m; sourceTree = "<group>"; };
+		5D943A7C2A713F0800BB9A91 /* DuetVPNPacketFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVPNPacketFormat.h; sourceTree = "<group>"; };
+		5D943A7D2A713F0800BB9A91 /* DuetVPNBasePacketHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVPNBasePacketHandler.h; sourceTree = "<group>"; };
+		5D943A7F2A713F0800BB9A91 /* DuetRemoteVPNClientPacketHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRemoteVPNClientPacketHandler.m; sourceTree = "<group>"; };
+		5D943A812A713F0800BB9A91 /* DuetVPNClientCommandProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVPNClientCommandProcessor.h; sourceTree = "<group>"; };
+		5D943A822A713F0800BB9A91 /* DuetVPNClientConfigurationProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVPNClientConfigurationProcessor.m; sourceTree = "<group>"; };
+		5D943A832A713F0800BB9A91 /* DuetVPNClientPacketProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVPNClientPacketProcessor.h; sourceTree = "<group>"; };
+		5D943A842A713F0800BB9A91 /* DuetVPNClientCommandProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVPNClientCommandProcessor.m; sourceTree = "<group>"; };
+		5D943A852A713F0800BB9A91 /* DuetVPNClientPacketProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVPNClientPacketProcessor.m; sourceTree = "<group>"; };
+		5D943A862A713F0800BB9A91 /* DuetVPNClientConfigurationProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVPNClientConfigurationProcessor.h; sourceTree = "<group>"; };
+		5D943A872A713F0800BB9A91 /* DuetRemoteVPNClientPacketHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteVPNClientPacketHandler.h; sourceTree = "<group>"; };
+		5D943A882A713F0800BB9A91 /* DuetRemoteDisplayLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteDisplayLogging.h; sourceTree = "<group>"; };
+		5D943A8A2A713F0800BB9A91 /* DuetRemoteDisplayServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteDisplayServer.h; sourceTree = "<group>"; };
+		5D943A8C2A713F0800BB9A91 /* DuetRDSMirrorProcessorServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSMirrorProcessorServer.h; sourceTree = "<group>"; };
+		5D943A8D2A713F0800BB9A91 /* DuetDisplayListPacket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetDisplayListPacket.m; sourceTree = "<group>"; };
+		5D943A8E2A713F0800BB9A91 /* DuetContentDataPackets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetContentDataPackets.m; sourceTree = "<group>"; };
+		5D943A8F2A713F0800BB9A91 /* DuetRDSExtendProcessorServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRDSExtendProcessorServer.m; sourceTree = "<group>"; };
+		5D943A902A713F0800BB9A91 /* PacketDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketDebug.h; sourceTree = "<group>"; };
+		5D943A912A713F0800BB9A91 /* DuetDisplayStreamPackets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetDisplayStreamPackets.m; sourceTree = "<group>"; };
+		5D943A922A713F0800BB9A91 /* DuetRDSUDPNegotiationHandlerServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSUDPNegotiationHandlerServer.h; sourceTree = "<group>"; };
+		5D943A932A713F0800BB9A91 /* DuetRemoteEventPackets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRemoteEventPackets.m; sourceTree = "<group>"; };
+		5D943A942A713F0800BB9A91 /* DuetVPNPromotionServerHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVPNPromotionServerHandler.m; sourceTree = "<group>"; };
+		5D943A952A713F0800BB9A91 /* DuetRDSMirrorProcessorServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRDSMirrorProcessorServer.m; sourceTree = "<group>"; };
+		5D943A962A713F0800BB9A91 /* DuetRDSExtendProcessorServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSExtendProcessorServer.h; sourceTree = "<group>"; };
+		5D943A972A713F0800BB9A91 /* DuetContentDataPackets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetContentDataPackets.h; sourceTree = "<group>"; };
+		5D943A982A713F0800BB9A91 /* DuetDisplayListPacket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetDisplayListPacket.h; sourceTree = "<group>"; };
+		5D943A992A713F0800BB9A91 /* DuetVPNPromotionServerHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVPNPromotionServerHandler.h; sourceTree = "<group>"; };
+		5D943A9A2A713F0800BB9A91 /* DuetRemoteEventPackets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteEventPackets.h; sourceTree = "<group>"; };
+		5D943A9B2A713F0800BB9A91 /* DuetRDSUDPNegotiationHandlerServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRDSUDPNegotiationHandlerServer.m; sourceTree = "<group>"; };
+		5D943A9C2A713F0800BB9A91 /* DuetDisplayStreamPackets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetDisplayStreamPackets.h; sourceTree = "<group>"; };
+		5D943A9D2A713F0800BB9A91 /* DuetRemoteDisplayServer+UdpRelay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DuetRemoteDisplayServer+UdpRelay.m"; sourceTree = "<group>"; };
+		5D943A9E2A713F0800BB9A91 /* DuetServerScreenStreamContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetServerScreenStreamContainer.m; sourceTree = "<group>"; };
+		5D943A9F2A713F0800BB9A91 /* MiscUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiscUtil.m; sourceTree = "<group>"; };
+		5D943AA02A713F0800BB9A91 /* DuetRemoteDisplayServer+Private.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DuetRemoteDisplayServer+Private.m"; sourceTree = "<group>"; };
+		5D943AA12A713F0800BB9A91 /* DuetRDSServerPacketHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSServerPacketHandler.h; sourceTree = "<group>"; };
+		5D943AA22A713F0800BB9A91 /* SlicePacketForUdp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlicePacketForUdp.h; sourceTree = "<group>"; };
+		5D943AA32A713F0800BB9A91 /* DuetRemoteDisplayServer+InternalMethods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DuetRemoteDisplayServer+InternalMethods.m"; sourceTree = "<group>"; };
+		5D943AA42A713F0800BB9A91 /* DuetLocalUserEventManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetLocalUserEventManager.m; sourceTree = "<group>"; };
+		5D943AA52A713F0800BB9A91 /* NSScreen+PointConversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSScreen+PointConversion.h"; sourceTree = "<group>"; };
+		5D943AA62A713F0800BB9A91 /* DuetUDPPacketFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetUDPPacketFormat.h; sourceTree = "<group>"; };
+		5D943AA72A713F0800BB9A91 /* KeyUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyUtils.h; sourceTree = "<group>"; };
+		5D943AA82A713F0800BB9A91 /* DuetRemoteDisplayServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRemoteDisplayServer.m; sourceTree = "<group>"; };
+		5D943AAB2A713F0800BB9A91 /* logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = logger.cpp; sourceTree = "<group>"; };
+		5D943AAC2A713F0800BB9A91 /* logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = logger.h; sourceTree = "<group>"; };
+		5D943AAF2A713F0800BB9A91 /* apitest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = apitest.cpp; sourceTree = "<group>"; };
+		5D943AB02A713F0800BB9A91 /* makefile.mac */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.mac; sourceTree = "<group>"; };
+		5D943AB12A713F0800BB9A91 /* udpshow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = udpshow.cpp; sourceTree = "<group>"; };
+		5D943AB22A713F0800BB9A91 /* udpviewres.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = udpviewres.h; sourceTree = "<group>"; };
+		5D943AB32A713F0800BB9A91 /* OpenPortTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenPortTest.cpp; sourceTree = "<group>"; };
+		5D943AB42A713F0800BB9A91 /* udpviewpkt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = udpviewpkt.h; sourceTree = "<group>"; };
+		5D943AB52A713F0800BB9A91 /* StunTestWin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StunTestWin.cpp; sourceTree = "<group>"; };
+		5D943AB62A713F0800BB9A91 /* TwilioTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TwilioTest.cpp; sourceTree = "<group>"; };
+		5D943AB72A713F0800BB9A91 /* StunTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StunTest.cpp; sourceTree = "<group>"; };
+		5D943AB82A713F0800BB9A91 /* ipfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ipfile.h; sourceTree = "<group>"; };
+		5D943AB92A713F0800BB9A91 /* UDPTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UDPTest.cpp; sourceTree = "<group>"; };
+		5D943ABA2A713F0800BB9A91 /* trtemp2.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = trtemp2.sh; sourceTree = "<group>"; };
+		5D943ABB2A713F0800BB9A91 /* udpview.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = udpview.cpp; sourceTree = "<group>"; };
+		5D943ABC2A713F0800BB9A91 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		5D943ABD2A713F0800BB9A91 /* txtemp3.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = txtemp3.sh; sourceTree = "<group>"; };
+		5D943ABE2A713F0800BB9A91 /* udpview.rc */ = {isa = PBXFileReference; lastKnownFileType = text; path = udpview.rc; sourceTree = "<group>"; };
+		5D943ABF2A713F0800BB9A91 /* txtemp2.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = txtemp2.sh; sourceTree = "<group>"; };
+		5D943AC02A713F0800BB9A91 /* udpcap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = udpcap.cpp; sourceTree = "<group>"; };
+		5D943AC12A713F0800BB9A91 /* udpsend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = udpsend.cpp; sourceTree = "<group>"; };
+		5D943AC22A713F0800BB9A91 /* OpenPort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenPort.cpp; sourceTree = "<group>"; };
+		5D943AC32A713F0800BB9A91 /* PacketList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketList.h; sourceTree = "<group>"; };
+		5D943AC42A713F0800BB9A91 /* PortsHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PortsHistory.h; sourceTree = "<group>"; };
+		5D943AC52A713F0800BB9A91 /* UDPRelayClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UDPRelayClient.cpp; sourceTree = "<group>"; };
+		5D943AC62A713F0800BB9A91 /* StunUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StunUtil.h; sourceTree = "<group>"; };
+		5D943AC72A713F0800BB9A91 /* StunPacket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StunPacket.h; sourceTree = "<group>"; };
+		5D943AC82A713F0800BB9A91 /* SockUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SockUtil.h; sourceTree = "<group>"; };
+		5D943AC92A713F0800BB9A91 /* XirsysInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XirsysInfo.h; sourceTree = "<group>"; };
+		5D943ACB2A713F0800BB9A91 /* trtest.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = trtest.sh; sourceTree = "<group>"; };
+		5D943ACC2A713F0800BB9A91 /* StunUtil_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StunUtil_c.h; sourceTree = "<group>"; };
+		5D943ACD2A713F0800BB9A91 /* makefile.mac */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.mac; sourceTree = "<group>"; };
+		5D943ACF2A713F0800BB9A91 /* DuetUdpRelayLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = DuetUdpRelayLib.a; sourceTree = "<group>"; };
+		5D943AD02A713F0800BB9A91 /* ipfile_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ipfile_c.h; sourceTree = "<group>"; };
+		5D943AD12A713F0800BB9A91 /* txtest.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = txtest.sh; sourceTree = "<group>"; };
+		5D943AD22A713F0800BB9A91 /* StunUtil_c.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StunUtil_c.cpp; sourceTree = "<group>"; };
+		5D943AD32A713F0800BB9A91 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5D943AD42A713F0800BB9A91 /* UDPRelayClient_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDPRelayClient_c.h; sourceTree = "<group>"; };
+		5D943AD52A713F0800BB9A91 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		5D943AD62A713F0800BB9A91 /* StunTest_c.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StunTest_c.c; sourceTree = "<group>"; };
+		5D943AD72A713F0800BB9A91 /* UdpTest_m.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UdpTest_m.m; sourceTree = "<group>"; };
+		5D943AD82A713F0800BB9A91 /* StunTest_m.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StunTest_m.m; sourceTree = "<group>"; };
+		5D943AD92A713F0800BB9A91 /* UdpTest_c.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = UdpTest_c.c; sourceTree = "<group>"; };
+		5D943ADA2A713F0800BB9A91 /* trtest_m.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = trtest_m.sh; sourceTree = "<group>"; };
+		5D943ADB2A713F0800BB9A91 /* txtest_m.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = txtest_m.sh; sourceTree = "<group>"; };
+		5D943ADC2A713F0800BB9A91 /* UDPRelayClient_c.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UDPRelayClient_c.cpp; sourceTree = "<group>"; };
+		5D943ADD2A713F0800BB9A91 /* UDPRelayClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDPRelayClient.h; sourceTree = "<group>"; };
+		5D943ADE2A713F0800BB9A91 /* StunPacket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StunPacket.cpp; sourceTree = "<group>"; };
+		5D943ADF2A713F0800BB9A91 /* XirsysInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = XirsysInfo.cpp; sourceTree = "<group>"; };
+		5D943AE02A713F0800BB9A91 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		5D943AE12A713F0800BB9A91 /* TwilioAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwilioAuth.h; sourceTree = "<group>"; };
+		5D943AE22A713F0800BB9A91 /* StunUtil.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StunUtil.cpp; sourceTree = "<group>"; };
+		5D943AE52A713F0800BB9A91 /* md5solar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = md5solar.cpp; sourceTree = "<group>"; };
+		5D943AE62A713F0800BB9A91 /* base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		5D943AE72A713F0800BB9A91 /* crc32.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = crc32.cpp; sourceTree = "<group>"; };
+		5D943AE82A713F0800BB9A91 /* hmac_sha1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hmac_sha1.h; sourceTree = "<group>"; };
+		5D943AE92A713F0800BB9A91 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		5D943AEA2A713F0800BB9A91 /* sha1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		5D943AEB2A713F0800BB9A91 /* md5solar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md5solar.h; sourceTree = "<group>"; };
+		5D943AEC2A713F0800BB9A91 /* crc32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crc32.h; sourceTree = "<group>"; };
+		5D943AEE2A713F0800BB9A91 /* formatstring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = formatstring.h; sourceTree = "<group>"; };
+		5D943AEF2A713F0800BB9A91 /* Trace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trace.h; sourceTree = "<group>"; };
+		5D943AF12A713F0800BB9A91 /* lzrw1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lzrw1.c; sourceTree = "<group>"; };
+		5D943AF22A713F0800BB9A91 /* lzrw1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lzrw1.h; sourceTree = "<group>"; };
+		5D943AF32A713F0800BB9A91 /* macutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macutil.h; sourceTree = "<group>"; };
+		5D943AF42A713F0800BB9A91 /* TwilioAuth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TwilioAuth.cpp; sourceTree = "<group>"; };
+		5D943AF52A713F0800BB9A91 /* OpenPort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenPort.h; sourceTree = "<group>"; };
+		5D943AF62A713F0800BB9A91 /* StunDefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StunDefs.h; sourceTree = "<group>"; };
+		5D943AF72A713F0800BB9A91 /* ScopedLock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScopedLock.h; sourceTree = "<group>"; };
+		5D943AF82A713F0800BB9A91 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		5D943AF92A713F0800BB9A91 /* DuetRemoteDisplayServer+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuetRemoteDisplayServer+Private.h"; sourceTree = "<group>"; };
+		5D943AFA2A713F0800BB9A91 /* MiscUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiscUtil.h; sourceTree = "<group>"; };
+		5D943AFB2A713F0800BB9A91 /* DuetServerScreenStreamContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetServerScreenStreamContainer.h; sourceTree = "<group>"; };
+		5D943AFC2A713F0800BB9A91 /* DuetRemoteDisplayServer+UdpRelay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuetRemoteDisplayServer+UdpRelay.h"; sourceTree = "<group>"; };
+		5D943AFD2A713F0800BB9A91 /* SlicePacketForUdp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlicePacketForUdp.m; sourceTree = "<group>"; };
+		5D943AFE2A713F0800BB9A91 /* DuetRDSServerPacketHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRDSServerPacketHandler.m; sourceTree = "<group>"; };
+		5D943AFF2A713F0800BB9A91 /* KeyUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyUtils.m; sourceTree = "<group>"; };
+		5D943B002A713F0800BB9A91 /* NSScreen+PointConversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSScreen+PointConversion.m"; sourceTree = "<group>"; };
+		5D943B012A713F0800BB9A91 /* DuetLocalUserEventManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetLocalUserEventManager.h; sourceTree = "<group>"; };
+		5D943B022A713F0800BB9A91 /* DuetRemoteDisplayServer+InternalMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuetRemoteDisplayServer+InternalMethods.h"; sourceTree = "<group>"; };
+		5D943B042A713F0800BB9A91 /* DuetRemoteEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRemoteEvent.m; sourceTree = "<group>"; };
+		5D943B062A713F0800BB9A91 /* DuetTimingPacketProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetTimingPacketProcessor.m; sourceTree = "<group>"; };
+		5D943B072A713F0800BB9A91 /* DuetSettingsChangeRequestProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetSettingsChangeRequestProcessor.m; sourceTree = "<group>"; };
+		5D943B082A713F0800BB9A91 /* DuetFeatureListProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetFeatureListProcessor.m; sourceTree = "<group>"; };
+		5D943B092A713F0800BB9A91 /* DuetSettingsRequestProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetSettingsRequestProcessor.m; sourceTree = "<group>"; };
+		5D943B0A2A713F0800BB9A91 /* DuetTimingPacketProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetTimingPacketProcessor.h; sourceTree = "<group>"; };
+		5D943B0B2A713F0800BB9A91 /* DuetSettingsRequestProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetSettingsRequestProcessor.h; sourceTree = "<group>"; };
+		5D943B0C2A713F0800BB9A91 /* DuetFeatureListProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetFeatureListProcessor.h; sourceTree = "<group>"; };
+		5D943B0D2A713F0800BB9A91 /* DuetSettingsChangeRequestProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetSettingsChangeRequestProcessor.h; sourceTree = "<group>"; };
+		5D943B0E2A713F0800BB9A91 /* DuetPacketProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetPacketProcessor.h; sourceTree = "<group>"; };
+		5D943B0F2A713F0800BB9A91 /* DuetTouchEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetTouchEvent.h; sourceTree = "<group>"; };
+		5D943B102A713F0800BB9A91 /* DuetRDSPublicTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSPublicTypes.h; sourceTree = "<group>"; };
+		5D943B112A713F0800BB9A91 /* DuetAccessibilityEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetAccessibilityEvent.h; sourceTree = "<group>"; };
+		5D943B122A713F0800BB9A91 /* DuetKeyEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetKeyEvent.m; sourceTree = "<group>"; };
+		5D943B132A713F0800BB9A91 /* GetDebugOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetDebugOption.h; sourceTree = "<group>"; };
+		5D943B142A713F0800BB9A91 /* DuetRemoteFeatures.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRemoteFeatures.m; sourceTree = "<group>"; };
+		5D943B152A713F0800BB9A91 /* DuetRDSPacketFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSPacketFormat.h; sourceTree = "<group>"; };
+		5D943B162A713F0800BB9A91 /* DuetRemoteSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRemoteSettings.m; sourceTree = "<group>"; };
+		5D943B172A713F0800BB9A91 /* DuetRemoteEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteEvent.h; sourceTree = "<group>"; };
+		5D943B182A713F0800BB9A91 /* DuetTouchEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetTouchEvent.m; sourceTree = "<group>"; };
+		5D943B192A713F0800BB9A91 /* DuetKeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetKeyEvent.h; sourceTree = "<group>"; };
+		5D943B1A2A713F0800BB9A91 /* DuetRemoteCodeFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuetRemoteCodeFeatures.swift; sourceTree = "<group>"; };
+		5D943B1B2A713F0800BB9A91 /* DuetAccessibilityEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetAccessibilityEvent.m; sourceTree = "<group>"; };
+		5D943B1C2A713F0800BB9A91 /* DuetRemoteSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteSettings.h; sourceTree = "<group>"; };
+		5D943B1D2A713F0800BB9A91 /* DuetRDSPacketFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRDSPacketFormat.m; sourceTree = "<group>"; };
+		5D943B1E2A713F0800BB9A91 /* DuetRemoteFeatures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteFeatures.h; sourceTree = "<group>"; };
+		5D943B1F2A713F0800BB9A91 /* GetDebugOption.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GetDebugOption.c; sourceTree = "<group>"; };
+		5D943B202A713F0800BB9A91 /* DuetRemoteMinimal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteMinimal.h; sourceTree = "<group>"; };
+		5D943B212A713F0800BB9A91 /* DuetRDSPacketForwardingProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSPacketForwardingProvider.h; sourceTree = "<group>"; };
+		5D943B222A713F0800BB9A91 /* DuetStreamMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuetStreamMonitor.swift; sourceTree = "<group>"; };
+		5D943B232A713F0800BB9A91 /* DuetRemoteDisplayLogging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRemoteDisplayLogging.m; sourceTree = "<group>"; };
+		5D943B252A713F0800BB9A91 /* RDPAsyncConnectionState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDPAsyncConnectionState.h; sourceTree = "<group>"; };
+		5D943B272A713F0800BB9A91 /* DuetRDSRemoteEventProcessorClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRDSRemoteEventProcessorClient.m; sourceTree = "<group>"; };
+		5D943B282A713F0800BB9A91 /* DuetDisplayListResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetDisplayListResponse.m; sourceTree = "<group>"; };
+		5D943B292A713F0800BB9A91 /* DuetRemoteFrameResponseHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteFrameResponseHandler.h; sourceTree = "<group>"; };
+		5D943B2A2A713F0800BB9A91 /* DuetRDSUDPNegotiationHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRDSUDPNegotiationHandler.m; sourceTree = "<group>"; };
+		5D943B2B2A713F0800BB9A91 /* DuetRDSExtendProcessorClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSExtendProcessorClient.h; sourceTree = "<group>"; };
+		5D943B2C2A713F0800BB9A91 /* DuetRDSMirrorProcessorClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRDSMirrorProcessorClient.m; sourceTree = "<group>"; };
+		5D943B2D2A713F0800BB9A91 /* DuetRDSRemoteEventProcessorClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSRemoteEventProcessorClient.h; sourceTree = "<group>"; };
+		5D943B2E2A713F0800BB9A91 /* DuetRemoteFrameResponseHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRemoteFrameResponseHandler.m; sourceTree = "<group>"; };
+		5D943B2F2A713F0800BB9A91 /* DuetDisplayListResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetDisplayListResponse.h; sourceTree = "<group>"; };
+		5D943B302A713F0800BB9A91 /* DuetDataContentResponseHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetDataContentResponseHandler.h; sourceTree = "<group>"; };
+		5D943B312A713F0800BB9A91 /* DuetRDSExtendProcessorClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRDSExtendProcessorClient.m; sourceTree = "<group>"; };
+		5D943B322A713F0800BB9A91 /* DuetRDSUDPNegotiationHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSUDPNegotiationHandler.h; sourceTree = "<group>"; };
+		5D943B332A713F0800BB9A91 /* DuetRDSMirrorProcessorClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSMirrorProcessorClient.h; sourceTree = "<group>"; };
+		5D943B342A713F0800BB9A91 /* RDPAsyncConnectionOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDPAsyncConnectionOperation.h; sourceTree = "<group>"; };
+		5D943B352A713F0800BB9A91 /* DuetRDSClientPacketHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRDSClientPacketHandler.m; sourceTree = "<group>"; };
+		5D943B362A713F0800BB9A91 /* DuetRemoteDeviceClient+Private.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DuetRemoteDeviceClient+Private.m"; sourceTree = "<group>"; };
+		5D943B372A713F0800BB9A91 /* DuetRemoteDeviceClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRemoteDeviceClient.m; sourceTree = "<group>"; };
+		5D943B382A713F0800BB9A91 /* DuetRemoteFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRemoteFrame.m; sourceTree = "<group>"; };
+		5D943B392A713F0800BB9A91 /* DuetClientStreamHandlerContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetClientStreamHandlerContainer.h; sourceTree = "<group>"; };
+		5D943B3A2A713F0800BB9A91 /* DuetRemoteDeviceClient+InternalMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuetRemoteDeviceClient+InternalMethods.h"; sourceTree = "<group>"; };
+		5D943B3B2A713F0800BB9A91 /* DuetRemoteDisplayClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetRemoteDisplayClient.m; sourceTree = "<group>"; };
+		5D943B3C2A713F0800BB9A91 /* DuetRemoteDisplayClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuetRemoteDisplayClient.swift; sourceTree = "<group>"; };
+		5D943B3D2A713F0800BB9A91 /* RDPAsyncConnectionState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDPAsyncConnectionState.m; sourceTree = "<group>"; };
+		5D943B3E2A713F0800BB9A91 /* DuetRDSClientPacketHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSClientPacketHandler.h; sourceTree = "<group>"; };
+		5D943B3F2A713F0800BB9A91 /* RDPAsyncConnectionOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDPAsyncConnectionOperation.m; sourceTree = "<group>"; };
+		5D943B402A713F0800BB9A91 /* DuetRemoteDeviceClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteDeviceClient.h; sourceTree = "<group>"; };
+		5D943B412A713F0800BB9A91 /* DuetRemoteDeviceClient+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuetRemoteDeviceClient+Private.h"; sourceTree = "<group>"; };
+		5D943B422A713F0800BB9A91 /* DuetRemoteDisplayClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteDisplayClient.h; sourceTree = "<group>"; };
+		5D943B432A713F0800BB9A91 /* DuetRemoteDeviceClient+InternalMethods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DuetRemoteDeviceClient+InternalMethods.m"; sourceTree = "<group>"; };
+		5D943B442A713F0800BB9A91 /* DuetClientStreamHandlerContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetClientStreamHandlerContainer.m; sourceTree = "<group>"; };
+		5D943B452A713F0800BB9A91 /* DuetRemoteFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRemoteFrame.h; sourceTree = "<group>"; };
+		5D943B462A713F0800BB9A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D943B482A713F0800BB9A91 /* AnalyticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticManager.swift; sourceTree = "<group>"; };
+		5D943B492A713F0800BB9A91 /* AnalyiticsServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyiticsServiceAdapter.swift; sourceTree = "<group>"; };
+		5D943B4A2A713F0800BB9A91 /* AnalyticsEventNotificationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventNotificationObserver.swift; sourceTree = "<group>"; };
+		5D943B4B2A713F0800BB9A91 /* FeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlags.swift; sourceTree = "<group>"; };
+		5D943B4C2A713F0800BB9A91 /* DuetAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetAnalytics.h; sourceTree = "<group>"; };
+		5D943B4D2A713F0800BB9A91 /* .gitmodules */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
+		5D943B4E2A713F0800BB9A91 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5D943B502A713F0800BB9A91 /* Port Map.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Port Map.xcodeproj"; sourceTree = "<group>"; };
+		5D943B542A713F0800BB9A91 /* NSNotificationCenterThreadingAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSNotificationCenterThreadingAdditions.h; sourceTree = "<group>"; };
+		5D943B562A713F0800BB9A91 /* Makefile.mingw */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.mingw; sourceTree = "<group>"; };
+		5D943B572A713F0800BB9A91 /* minisoap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = minisoap.c; sourceTree = "<group>"; };
+		5D943B582A713F0800BB9A91 /* miniupnpcstrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = miniupnpcstrings.h; sourceTree = "<group>"; };
+		5D943B592A713F0800BB9A91 /* declspec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = declspec.h; sourceTree = "<group>"; };
+		5D943B5A2A713F0800BB9A91 /* upnpcommands.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = upnpcommands.h; sourceTree = "<group>"; };
+		5D943B5B2A713F0800BB9A91 /* testupnpreplyparse.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testupnpreplyparse.c; sourceTree = "<group>"; };
+		5D943B5C2A713F0800BB9A91 /* setupmingw32.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = setupmingw32.py; sourceTree = "<group>"; };
+		5D943B5D2A713F0800BB9A91 /* testminixml.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testminixml.c; sourceTree = "<group>"; };
+		5D943B5E2A713F0800BB9A91 /* updateminiupnpcstrings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = updateminiupnpcstrings.sh; sourceTree = "<group>"; };
+		5D943B5F2A713F0800BB9A91 /* pymoduletest.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = pymoduletest.py; sourceTree = "<group>"; };
+		5D943B602A713F0800BB9A91 /* miniupnpcmodule.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = miniupnpcmodule.c; sourceTree = "<group>"; };
+		5D943B622A713F0800BB9A91 /* miniupnpc.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = miniupnpc.3; sourceTree = "<group>"; };
+		5D943B632A713F0800BB9A91 /* testupnpigd.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = testupnpigd.py; sourceTree = "<group>"; };
+		5D943B642A713F0800BB9A91 /* upnpreplyparse.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = upnpreplyparse.c; sourceTree = "<group>"; };
+		5D943B652A713F0800BB9A91 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		5D943B662A713F0800BB9A91 /* minixml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = minixml.h; sourceTree = "<group>"; };
+		5D943B672A713F0800BB9A91 /* miniwget.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = miniwget.c; sourceTree = "<group>"; };
+		5D943B682A713F0800BB9A91 /* upnperrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = upnperrors.h; sourceTree = "<group>"; };
+		5D943B692A713F0800BB9A91 /* igd_desc_parse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = igd_desc_parse.h; sourceTree = "<group>"; };
+		5D943B6A2A713F0800BB9A91 /* minissdpc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = minissdpc.h; sourceTree = "<group>"; };
+		5D943B6B2A713F0800BB9A91 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		5D943B6C2A713F0800BB9A91 /* miniupnpc.def */ = {isa = PBXFileReference; lastKnownFileType = text; path = miniupnpc.def; sourceTree = "<group>"; };
+		5D943B6D2A713F0800BB9A91 /* miniupnpc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = miniupnpc.h; sourceTree = "<group>"; };
+		5D943B6E2A713F0800BB9A91 /* upnpcommands.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = upnpcommands.c; sourceTree = "<group>"; };
+		5D943B6F2A713F0800BB9A91 /* testigddescparse.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testigddescparse.c; sourceTree = "<group>"; };
+		5D943B702A713F0800BB9A91 /* bsdqueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bsdqueue.h; sourceTree = "<group>"; };
+		5D943B712A713F0800BB9A91 /* setup.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = setup.py; sourceTree = "<group>"; };
+		5D943B722A713F0800BB9A91 /* minisoap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = minisoap.h; sourceTree = "<group>"; };
+		5D943B732A713F0800BB9A91 /* upnpc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = upnpc.c; sourceTree = "<group>"; };
+		5D943B742A713F0800BB9A91 /* Changelog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Changelog.txt; sourceTree = "<group>"; };
+		5D943B752A713F0800BB9A91 /* minixmlvalid.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = minixmlvalid.c; sourceTree = "<group>"; };
+		5D943B762A713F0800BB9A91 /* upnperrors.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = upnperrors.c; sourceTree = "<group>"; };
+		5D943B772A713F0800BB9A91 /* miniwget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = miniwget.h; sourceTree = "<group>"; };
+		5D943B782A713F0800BB9A91 /* codelength.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = codelength.h; sourceTree = "<group>"; };
+		5D943B792A713F0800BB9A91 /* minixml.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = minixml.c; sourceTree = "<group>"; };
+		5D943B7A2A713F0800BB9A91 /* upnpreplyparse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = upnpreplyparse.h; sourceTree = "<group>"; };
+		5D943B7B2A713F0800BB9A91 /* minissdpc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = minissdpc.c; sourceTree = "<group>"; };
+		5D943B7C2A713F0800BB9A91 /* miniupnpc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = miniupnpc.c; sourceTree = "<group>"; };
+		5D943B7D2A713F0800BB9A91 /* LICENCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
+		5D943B7E2A713F0800BB9A91 /* mingw32make.bat */ = {isa = PBXFileReference; lastKnownFileType = text; path = mingw32make.bat; sourceTree = "<group>"; };
+		5D943B7F2A713F0800BB9A91 /* igd_desc_parse.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = igd_desc_parse.c; sourceTree = "<group>"; };
+		5D943B802A713F0800BB9A91 /* Ethernet-OUI.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Ethernet-OUI.txt"; sourceTree = "<group>"; };
+		5D943B812A713F0800BB9A91 /* TCMUPNPPortMapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMUPNPPortMapper.m; sourceTree = "<group>"; };
+		5D943B822A713F0800BB9A91 /* IXSCNotificationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IXSCNotificationManager.h; sourceTree = "<group>"; };
+		5D943B832A713F0800BB9A91 /* TCMPortMapper_prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMPortMapper_prefix.pch; sourceTree = "<group>"; };
+		5D943B842A713F0800BB9A91 /* miniupnp_modeldescription.patch */ = {isa = PBXFileReference; lastKnownFileType = text; path = miniupnp_modeldescription.patch; sourceTree = "<group>"; };
+		5D943B852A713F0800BB9A91 /* TCMPortMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMPortMapper.h; sourceTree = "<group>"; };
+		5D943B862A713F0800BB9A91 /* TCMNATPMPPortMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMNATPMPPortMapper.h; sourceTree = "<group>"; };
+		5D943B872A713F0800BB9A91 /* OUI-FindAndReplaceRegexes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OUI-FindAndReplaceRegexes.txt"; sourceTree = "<group>"; };
+		5D943B882A713F0800BB9A91 /* OUItoCompany.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = OUItoCompany.plist; sourceTree = "<group>"; };
+		5D943B892A713F0800BB9A91 /* NSNotificationCenterThreadingAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSNotificationCenterThreadingAdditions.m; sourceTree = "<group>"; };
+		5D943B8B2A713F0800BB9A91 /* wingettimeofday.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wingettimeofday.c; sourceTree = "<group>"; };
+		5D943B8C2A713F0800BB9A91 /* declspec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = declspec.h; sourceTree = "<group>"; };
+		5D943B8D2A713F0800BB9A91 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		5D943B8E2A713F0800BB9A91 /* natpmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = natpmp.h; sourceTree = "<group>"; };
+		5D943B8F2A713F0800BB9A91 /* natpmpc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = natpmpc.c; sourceTree = "<group>"; };
+		5D943B902A713F0800BB9A91 /* getgateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = getgateway.h; sourceTree = "<group>"; };
+		5D943B912A713F0800BB9A91 /* build.bat */ = {isa = PBXFileReference; lastKnownFileType = text; path = build.bat; sourceTree = "<group>"; };
+		5D943B922A713F0800BB9A91 /* testgetgateway.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testgetgateway.c; sourceTree = "<group>"; };
+		5D943B932A713F0800BB9A91 /* Changelog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Changelog.txt; sourceTree = "<group>"; };
+		5D943B942A713F0800BB9A91 /* natpmp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = natpmp.c; sourceTree = "<group>"; };
+		5D943B952A713F0800BB9A91 /* natpmp.def */ = {isa = PBXFileReference; lastKnownFileType = text; path = natpmp.def; sourceTree = "<group>"; };
+		5D943B962A713F0800BB9A91 /* getgateway.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = getgateway.c; sourceTree = "<group>"; };
+		5D943B972A713F0800BB9A91 /* LICENCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
+		5D943B982A713F0800BB9A91 /* OUItoCompanyXML.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = OUItoCompanyXML.plist; sourceTree = "<group>"; };
+		5D943B992A713F0800BB9A91 /* IXSCNotificationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IXSCNotificationManager.m; sourceTree = "<group>"; };
+		5D943B9A2A713F0800BB9A91 /* TCMUPNPPortMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMUPNPPortMapper.h; sourceTree = "<group>"; };
+		5D943B9B2A713F0800BB9A91 /* TCMPortMapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMPortMapper.m; sourceTree = "<group>"; };
+		5D943B9C2A713F0800BB9A91 /* TCMPortMapper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TCMPortMapper-Info.plist"; sourceTree = "<group>"; };
+		5D943B9D2A713F0800BB9A91 /* TCMNATPMPPortMapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMNATPMPPortMapper.m; sourceTree = "<group>"; };
+		5D943B9F2A713F0800BB9A91 /* TCPServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPServer.h; sourceTree = "<group>"; };
+		5D943BA02A713F0800BB9A91 /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		5D943BA22A713F0800BB9A91 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		5D943BA32A713F0800BB9A91 /* NATEcho-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NATEcho-Info.plist"; sourceTree = "<group>"; };
+		5D943BA42A713F0800BB9A91 /* AppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		5D943BA52A713F0800BB9A91 /* TCPServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCPServer.m; sourceTree = "<group>"; };
+		5D943BA62A713F0800BB9A91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5D943BA72A713F0800BB9A91 /* natecho_prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = natecho_prefix.pch; sourceTree = "<group>"; };
+		5D943BA92A713F0800BB9A91 /* RSVerticallyCenteredTextFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSVerticallyCenteredTextFieldCell.m; sourceTree = "<group>"; };
+		5D943BAA2A713F0800BB9A91 /* MIT-License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "MIT-License.rtf"; sourceTree = "<group>"; };
+		5D943BAB2A713F0800BB9A91 /* RSVerticallyCenteredTextFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSVerticallyCenteredTextFieldCell.h; sourceTree = "<group>"; };
+		5D943BAC2A713F0800BB9A91 /* TCMPortMapper 64 bit.patchfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = "TCMPortMapper 64 bit.patchfile"; sourceTree = "<group>"; };
+		5D943BAD2A713F0800BB9A91 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5D943BAE2A713F0800BB9A91 /* createZip.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = createZip.sh; sourceTree = "<group>"; };
+		5D943BB02A713F0800BB9A91 /* PortMapIcon.acorn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PortMapIcon.acorn; sourceTree = "<group>"; };
+		5D943BB12A713F0800BB9A91 /* DotGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DotGreen.png; sourceTree = "<group>"; };
+		5D943BB22A713F0800BB9A91 /* DotYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DotYellow.png; sourceTree = "<group>"; };
+		5D943BB32A713F0800BB9A91 /* DotRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DotRed.png; sourceTree = "<group>"; };
+		5D943BB52A713F0800BB9A91 /* mdnskiller.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = mdnskiller.rb; sourceTree = "<group>"; };
+		5D943BB62A713F0800BB9A91 /* nat-pmp-listener.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = "nat-pmp-listener.rb"; sourceTree = "<group>"; };
+		5D943BB72A713F0800BB9A91 /* nat-pmp-ip-broadcaster.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = "nat-pmp-ip-broadcaster.rb"; sourceTree = "<group>"; };
+		5D943BB92A713F0800BB9A91 /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		5D943BBA2A713F0800BB9A91 /* miniupnpc-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "miniupnpc-LICENSE.txt"; sourceTree = "<group>"; };
+		5D943BBC2A713F0800BB9A91 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5D943BBE2A713F0800BB9A91 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		5D943BC02A713F0800BB9A91 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5D943BC12A713F0800BB9A91 /* TCMPortStringFromPublicPortValueTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMPortStringFromPublicPortValueTransformer.m; sourceTree = "<group>"; };
+		5D943BC32A713F0800BB9A91 /* GenericQuestionMarkIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GenericQuestionMarkIcon.icns; sourceTree = "<group>"; };
+		5D943BC42A713F0800BB9A91 /* NSAddTemplate.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = NSAddTemplate.tiff; sourceTree = "<group>"; };
+		5D943BC52A713F0800BB9A91 /* Off20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Off20.png; sourceTree = "<group>"; };
+		5D943BC62A713F0800BB9A91 /* NSRemoveTemplate.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = NSRemoveTemplate.tiff; sourceTree = "<group>"; };
+		5D943BC72A713F0800BB9A91 /* On20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = On20.png; sourceTree = "<group>"; };
+		5D943BC82A713F0800BB9A91 /* PortMap.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PortMap.icns; sourceTree = "<group>"; };
+		5D943BC92A713F0800BB9A91 /* NSRefreshTemplate.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = NSRefreshTemplate.tiff; sourceTree = "<group>"; };
+		5D943BCA2A713F0800BB9A91 /* TCMStatusImageFromMappingStatusValueTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMStatusImageFromMappingStatusValueTransformer.h; sourceTree = "<group>"; };
+		5D943BCB2A713F0800BB9A91 /* TCMPortMappingAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMPortMappingAdditions.h; sourceTree = "<group>"; };
+		5D943BCC2A713F0800BB9A91 /* PortMapper_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PortMapper_Prefix.pch; sourceTree = "<group>"; };
+		5D943BCD2A713F0800BB9A91 /* AppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		5D943BCE2A713F0800BB9A91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5D943BD02A713F0800BB9A91 /* version_1_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = version_1_1.html; sourceTree = "<group>"; };
+		5D943BD12A713F0800BB9A91 /* version_1_3_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = version_1_3_1.html; sourceTree = "<group>"; };
+		5D943BD22A713F0800BB9A91 /* portmap_releasenotes.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = portmap_releasenotes.html; sourceTree = "<group>"; };
+		5D943BD32A713F0800BB9A91 /* portmap_releasenotes.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = portmap_releasenotes.css; sourceTree = "<group>"; };
+		5D943BD42A713F0800BB9A91 /* appcast.rss */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = appcast.rss; sourceTree = "<group>"; };
+		5D943BD52A713F0800BB9A91 /* version_1_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = version_1_2.html; sourceTree = "<group>"; };
+		5D943BD62A713F0800BB9A91 /* version_1_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = version_1_3.html; sourceTree = "<group>"; };
+		5D943BD72A713F0800BB9A91 /* TCMPortStringFromPublicPortValueTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMPortStringFromPublicPortValueTransformer.h; sourceTree = "<group>"; };
+		5D943BD82A713F0800BB9A91 /* dsa_pub.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		5D943BD92A713F0800BB9A91 /* TCMPortMappingAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMPortMappingAdditions.m; sourceTree = "<group>"; };
+		5D943BDA2A713F0800BB9A91 /* Presets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Presets.plist; sourceTree = "<group>"; };
+		5D943BDB2A713F0800BB9A91 /* TCMStatusImageFromMappingStatusValueTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMStatusImageFromMappingStatusValueTransformer.m; sourceTree = "<group>"; };
+		5D943BDC2A713F0800BB9A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D943BDD2A713F0800BB9A91 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5D943BDF2A713F0800BB9A91 /* DSCScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCScreen.m; sourceTree = "<group>"; };
+		5D943BE02A713F0800BB9A91 /* DuetTimedTrigger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetTimedTrigger.h; sourceTree = "<group>"; };
+		5D943BE12A713F0800BB9A91 /* DSCScreenReconfigurationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCScreenReconfigurationManager.m; sourceTree = "<group>"; };
+		5D943BE22A713F0800BB9A91 /* DifferenceShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DifferenceShaders.metal; sourceTree = "<group>"; };
+		5D943BE32A713F0800BB9A91 /* DSCScreenFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCScreenFrame.h; sourceTree = "<group>"; };
+		5D943BE42A713F0800BB9A91 /* DuetRDSExtendedDisplayProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetRDSExtendedDisplayProvider.h; sourceTree = "<group>"; };
+		5D943BE52A713F0800BB9A91 /* DuetScreenResolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuetScreenResolution.swift; sourceTree = "<group>"; };
+		5D943BE62A713F0800BB9A91 /* DSCScreenFrame+Private.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DSCScreenFrame+Private.m"; sourceTree = "<group>"; };
+		5D943BE72A713F0800BB9A91 /* DSCUpdateArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCUpdateArea.m; sourceTree = "<group>"; };
+		5D943BE82A713F0800BB9A91 /* DSCScreenEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCScreenEvent.h; sourceTree = "<group>"; };
+		5D943BE92A713F0800BB9A91 /* DSCSurfaceFilterEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCSurfaceFilterEngine.h; sourceTree = "<group>"; };
+		5D943BEA2A713F0800BB9A91 /* DSCScreenManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCScreenManager.h; sourceTree = "<group>"; };
+		5D943BEB2A713F0800BB9A91 /* DuetTimedTrigger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetTimedTrigger.m; sourceTree = "<group>"; };
+		5D943BEC2A713F0800BB9A91 /* DSCScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCScreen.h; sourceTree = "<group>"; };
+		5D943BED2A713F0800BB9A91 /* DSCScreenFrame+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSCScreenFrame+Private.h"; sourceTree = "<group>"; };
+		5D943BEE2A713F0800BB9A91 /* DSCScreenFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCScreenFrame.m; sourceTree = "<group>"; };
+		5D943BEF2A713F0800BB9A91 /* DSCScreenReconfigurationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCScreenReconfigurationManager.h; sourceTree = "<group>"; };
+		5D943BF02A713F0800BB9A91 /* DuetScreenCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetScreenCapture.h; sourceTree = "<group>"; };
+		5D943BF12A713F0800BB9A91 /* DifferenceShaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DifferenceShaders.h; sourceTree = "<group>"; };
+		5D943BF22A713F0800BB9A91 /* DSCScreenEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCScreenEvent.m; sourceTree = "<group>"; };
+		5D943BF32A713F0800BB9A91 /* DSCUpdateArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCUpdateArea.h; sourceTree = "<group>"; };
+		5D943BF42A713F0800BB9A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D943BF52A713F0800BB9A91 /* DSCSurfaceFilterEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCSurfaceFilterEngine.m; sourceTree = "<group>"; };
+		5D943BF62A713F0800BB9A91 /* DSCScreenManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCScreenManager.m; sourceTree = "<group>"; };
+		5D943BF82A713F0800BB9A91 /* DuetVideoConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVideoConstants.h; sourceTree = "<group>"; };
+		5D943BF92A713F0800BB9A91 /* DuetVideoCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVideoCommon.m; sourceTree = "<group>"; };
+		5D943BFA2A713F0800BB9A91 /* DuetVideoDecoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVideoDecoding.h; sourceTree = "<group>"; };
+		5D943BFB2A713F0800BB9A91 /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libturbojpeg.a; sourceTree = "<group>"; };
+		5D943BFC2A713F0800BB9A91 /* DuetVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVideo.h; sourceTree = "<group>"; };
+		5D943BFE2A713F0800BB9A91 /* HEVCVideoSetupSpecification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HEVCVideoSetupSpecification.h; sourceTree = "<group>"; };
+		5D943BFF2A713F0800BB9A91 /* JPEGVideoSetupSpecification+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPEGVideoSetupSpecification+Private.h"; sourceTree = "<group>"; };
+		5D943C002A713F0800BB9A91 /* JPEGVideoType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPEGVideoType.h; sourceTree = "<group>"; };
+		5D943C012A713F0800BB9A91 /* JPEGVideoSetupSpecification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPEGVideoSetupSpecification.h; sourceTree = "<group>"; };
+		5D943C022A713F0800BB9A91 /* H264VideoSetupSpecification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = H264VideoSetupSpecification.h; sourceTree = "<group>"; };
+		5D943C032A713F0800BB9A91 /* HEVCVideoSetupSpecification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HEVCVideoSetupSpecification.m; sourceTree = "<group>"; };
+		5D943C042A713F0800BB9A91 /* H264VideoSetupSpecification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = H264VideoSetupSpecification.m; sourceTree = "<group>"; };
+		5D943C052A713F0800BB9A91 /* JPEGVideoSetupSpecification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPEGVideoSetupSpecification.m; sourceTree = "<group>"; };
+		5D943C062A713F0800BB9A91 /* JPEGEncoderInternalData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPEGEncoderInternalData.h; sourceTree = "<group>"; };
+		5D943C072A713F0800BB9A91 /* JPEGVideoType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPEGVideoType.m; sourceTree = "<group>"; };
+		5D943C082A713F0800BB9A91 /* DuetVideoEncoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVideoEncoding.h; sourceTree = "<group>"; };
+		5D943C092A713F0800BB9A91 /* DuetVideoDecoding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVideoDecoding.m; sourceTree = "<group>"; };
+		5D943C0A2A713F0800BB9A91 /* DuetVideoCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetVideoCommon.h; sourceTree = "<group>"; };
+		5D943C0B2A713F0800BB9A91 /* DuetVideoConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVideoConstants.m; sourceTree = "<group>"; };
+		5D943C0C2A713F0800BB9A91 /* DuetVideoEncoding+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuetVideoEncoding+Private.h"; sourceTree = "<group>"; };
+		5D943C0E2A713F0800BB9A91 /* jpeglib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jpeglib.h; sourceTree = "<group>"; };
+		5D943C0F2A713F0800BB9A91 /* jerror.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jerror.h; sourceTree = "<group>"; };
+		5D943C102A713F0800BB9A91 /* turbojpeg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = turbojpeg.h; sourceTree = "<group>"; };
+		5D943C112A713F0800BB9A91 /* jconfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jconfig.h; sourceTree = "<group>"; };
+		5D943C122A713F0800BB9A91 /* jmorecfg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jmorecfg.h; sourceTree = "<group>"; };
+		5D943C132A713F0800BB9A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D943C142A713F0800BB9A91 /* DuetVideoEncoding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetVideoEncoding.m; sourceTree = "<group>"; };
+		5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = DuetCommon.xcodeproj; sourceTree = "<group>"; };
+		5D943C1B2A713F0800BB9A91 /* DuetConnections.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetConnections.h; sourceTree = "<group>"; };
+		5D943C1D2A713F0800BB9A91 /* DuetStreamBase+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuetStreamBase+Internal.h"; sourceTree = "<group>"; };
+		5D943C1E2A713F0800BB9A91 /* route.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		5D943C1F2A713F0800BB9A91 /* if_ether.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = if_ether.h; sourceTree = "<group>"; };
+		5D943C202A713F0800BB9A91 /* DuetStreamBase+Internal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DuetStreamBase+Internal.m"; sourceTree = "<group>"; };
+		5D943C212A713F0800BB9A91 /* EmbededProtocolLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbededProtocolLayer.swift; sourceTree = "<group>"; };
+		5D943C222A713F0800BB9A91 /* DuetEmbeddedProtocolLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuetEmbeddedProtocolLayer.swift; sourceTree = "<group>"; };
+		5D943C242A713F0800BB9A91 /* DuetStreamCryptoConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetStreamCryptoConfiguration.h; sourceTree = "<group>"; };
+		5D943C252A713F0800BB9A91 /* NetworkFrameworkStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFrameworkStream.swift; sourceTree = "<group>"; };
+		5D943C262A713F0800BB9A91 /* DuetPortInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetPortInfo.h; sourceTree = "<group>"; };
+		5D943C272A713F0800BB9A91 /* DuetSocketStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetSocketStream.m; sourceTree = "<group>"; };
+		5D943C282A713F0800BB9A91 /* DuetE2ECryptoHandshake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetE2ECryptoHandshake.m; sourceTree = "<group>"; };
+		5D943C292A713F0800BB9A91 /* DuetStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetStream.h; sourceTree = "<group>"; };
+		5D943C2A2A713F0800BB9A91 /* DuetStreamBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetStreamBase.h; sourceTree = "<group>"; };
+		5D943C2B2A713F0800BB9A91 /* DuetConnectionConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetConnectionConstants.m; sourceTree = "<group>"; };
+		5D943C2C2A713F0800BB9A91 /* DuetBufferItems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetBufferItems.h; sourceTree = "<group>"; };
+		5D943C2D2A713F0800BB9A91 /* DuetPacketHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetPacketHandler.h; sourceTree = "<group>"; };
+		5D943C2E2A713F0800BB9A91 /* NetworkFrameworkWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFrameworkWrapper.swift; sourceTree = "<group>"; };
+		5D943C2F2A713F0800BB9A91 /* DuetNetworkUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetNetworkUtilities.m; sourceTree = "<group>"; };
+		5D943C302A713F0800BB9A91 /* Duet_RDPPublicKeyCrypto.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Duet_RDPPublicKeyCrypto.hpp; sourceTree = "<group>"; };
+		5D943C312A713F0800BB9A91 /* DuetStreamBase+Required.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuetStreamBase+Required.h"; sourceTree = "<group>"; };
+		5D943C322A713F0800BB9A91 /* DuetStreamCryptoConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetStreamCryptoConfiguration.m; sourceTree = "<group>"; };
+		5D943C332A713F0800BB9A91 /* DuetStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetStream.m; sourceTree = "<group>"; };
+		5D943C342A713F0800BB9A91 /* DuetStreamBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetStreamBase.m; sourceTree = "<group>"; };
+		5D943C352A713F0800BB9A91 /* Duet_RDPPublicKeyCrypto.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Duet_RDPPublicKeyCrypto.cpp; sourceTree = "<group>"; };
+		5D943C362A713F0800BB9A91 /* DuetE2ECryptoHandshake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetE2ECryptoHandshake.h; sourceTree = "<group>"; };
+		5D943C372A713F0800BB9A91 /* DuetSocketStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetSocketStream.h; sourceTree = "<group>"; };
+		5D943C382A713F0800BB9A91 /* DuetBufferItems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetBufferItems.m; sourceTree = "<group>"; };
+		5D943C392A713F0800BB9A91 /* DuetStreamBase+Required.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DuetStreamBase+Required.m"; sourceTree = "<group>"; };
+		5D943C3A2A713F0800BB9A91 /* DuetNetworkUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetNetworkUtilities.h; sourceTree = "<group>"; };
+		5D943C3C2A713F0800BB9A91 /* DuetNetPublisher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetNetPublisher.m; sourceTree = "<group>"; };
+		5D943C3D2A713F0800BB9A91 /* DuetNetPortMapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetNetPortMapper.m; sourceTree = "<group>"; };
+		5D943C3E2A713F0800BB9A91 /* DuetNetServicePortInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetNetServicePortInfo.h; sourceTree = "<group>"; };
+		5D943C3F2A713F0800BB9A91 /* DuetNetPublisherInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetNetPublisherInternal.h; sourceTree = "<group>"; };
+		5D943C402A713F0800BB9A91 /* DuetNetSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetNetSearch.h; sourceTree = "<group>"; };
+		5D943C412A713F0800BB9A91 /* DuetNetPublisher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetNetPublisher.h; sourceTree = "<group>"; };
+		5D943C422A713F0800BB9A91 /* DuetNetPublisherInternal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetNetPublisherInternal.m; sourceTree = "<group>"; };
+		5D943C432A713F0800BB9A91 /* DuetNetServicePortInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetNetServicePortInfo.m; sourceTree = "<group>"; };
+		5D943C442A713F0800BB9A91 /* DuetNetPortMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetNetPortMapper.h; sourceTree = "<group>"; };
+		5D943C452A713F0800BB9A91 /* NetworkFrameworkBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFrameworkBrowser.swift; sourceTree = "<group>"; };
+		5D943C462A713F0800BB9A91 /* DuetNetPublisherTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetNetPublisherTypes.h; sourceTree = "<group>"; };
+		5D943C472A713F0800BB9A91 /* NetworkFrameworkPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFrameworkPublisher.swift; sourceTree = "<group>"; };
+		5D943C482A713F0800BB9A91 /* DuetNetSearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetNetSearch.m; sourceTree = "<group>"; };
+		5D943C492A713F0800BB9A91 /* DuetConnectionConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetConnectionConstants.h; sourceTree = "<group>"; };
+		5D943C4B2A713F0800BB9A91 /* SimplePacketHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePacketHandler.m; sourceTree = "<group>"; };
+		5D943C4C2A713F0800BB9A91 /* SimplePacketHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplePacketHandler.h; sourceTree = "<group>"; };
+		5D943C4D2A713F0800BB9A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D943C4E2A713F0800BB9A91 /* OpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = OpenSSL.xcframework; sourceTree = "<group>"; };
+		5D943C502A713F0800BB9A91 /* DuetPacketFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetPacketFormat.h; sourceTree = "<group>"; };
+		5D943C512A713F0800BB9A91 /* DuetSharedPublicTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetSharedPublicTypes.m; sourceTree = "<group>"; };
+		5D943C522A713F0800BB9A91 /* DuetCommon.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DuetCommon.docc; sourceTree = "<group>"; };
+		5D943C532A713F0800BB9A91 /* DuetSharedPublicTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetSharedPublicTypes.h; sourceTree = "<group>"; };
+		5D943C542A713F0800BB9A91 /* DuetCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetCommon.h; sourceTree = "<group>"; };
+		5D943C552A713F0800BB9A91 /* DuetCommoniOS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DuetCommoniOS.docc; sourceTree = "<group>"; };
 		E47578DF18E58B7A00C668DE /* DuetDesktopCaptureManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuetDesktopCaptureManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47578E218E58B7A00C668DE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E475791318E5A06A00C668DE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -25,7 +820,8 @@
 		E475791818E5A06A00C668DE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E475791918E5A06A00C668DE /* main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = main.xib; sourceTree = "<group>"; };
 		E475791F18E5A1F000C668DE /* com.kairos.duet.DesktopCaptureManager.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = com.kairos.duet.DesktopCaptureManager.plist; sourceTree = "<group>"; };
-		E475792018E5A24F00C668DE /* Read Me About PreLoginAgents.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Read Me About PreLoginAgents.txt"; path = "../Read Me About PreLoginAgents.txt"; sourceTree = "<group>"; };
+		E4ABB589F56ADCBF25E4E8AB /* Pods-DuetDesktopCaptureManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuetDesktopCaptureManager.release.xcconfig"; path = "Target Support Files/Pods-DuetDesktopCaptureManager/Pods-DuetDesktopCaptureManager.release.xcconfig"; sourceTree = "<group>"; };
+		E6F906F3C0D1E513F627AA96 /* libPods-DuetDesktopCaptureManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DuetDesktopCaptureManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,27 +829,1416 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E47578E318E58B7A00C668DE /* Cocoa.framework in Frameworks */,
+				5DF8FDF42A7153860077C1CC /* SocketRocket.framework in Frameworks */,
+				5D65C7602A7144F1000FB8DD /* DuetScreenCapture.framework in Frameworks */,
+				5D65C7572A7144EB000FB8DD /* DuetAnalytics.framework in Frameworks */,
+				5D65C7642A7144F4000FB8DD /* DuetServiceSessions.framework in Frameworks */,
+				5D65C75A2A7144ED000FB8DD /* DuetCommon.framework in Frameworks */,
+				5DF8FDF62A71588B0077C1CC /* TCMPortMapper.framework in Frameworks */,
+				5DF8FDF32A7152C10077C1CC /* CocoaLumberjackSwift in Frameworks */,
+				5D65C75C2A7144EE000FB8DD /* DuetConnections.framework in Frameworks */,
+				5D65C7662A7144F6000FB8DD /* DuetVideo.framework in Frameworks */,
+				5DF8FDF12A7152C10077C1CC /* CocoaLumberjack in Frameworks */,
+				5D65C75E2A7144F0000FB8DD /* DuetRemoteDisplay.framework in Frameworks */,
+				5D65C7542A7144E6000FB8DD /* Cocoa.framework in Frameworks */,
+				42583ABE93513321FD4445A5 /* libPods-DuetDesktopCaptureManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10CF4201A608BAEE6FF315D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				411946218BF15387E6A60CFF /* Pods-DuetDesktopCaptureManager.debug.xcconfig */,
+				E4ABB589F56ADCBF25E4E8AB /* Pods-DuetDesktopCaptureManager.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5D9439902A713F0700BB9A91 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439912A713F0700BB9A91 /* Checkouts */,
+			);
+			path = Carthage;
+			sourceTree = "<group>";
+		};
+		5D9439912A713F0700BB9A91 /* Checkouts */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439922A713F0700BB9A91 /* UICKeyChainStore */,
+				5D9439932A713F0700BB9A91 /* DuetCommon */,
+			);
+			path = Checkouts;
+			sourceTree = "<group>";
+		};
+		5D9439932A713F0700BB9A91 /* DuetCommon */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439942A713F0700BB9A91 /* Cartfile.resolved */,
+				5D9439952A713F0700BB9A91 /* DuetServiceSessions */,
+				5D9439BF2A713F0700BB9A91 /* udplib */,
+				5D9439C32A713F0700BB9A91 /* cartfile */,
+				5D9439C42A713F0700BB9A91 /* Tests */,
+				5D9439C72A713F0700BB9A91 /* Carthage */,
+				5D943A672A713F0800BB9A91 /* DuetRemoteDisplay */,
+				5D943B472A713F0800BB9A91 /* DuetAnalytics */,
+				5D943B4D2A713F0800BB9A91 /* .gitmodules */,
+				5D943B4E2A713F0800BB9A91 /* README.md */,
+				5D943B4F2A713F0800BB9A91 /* TCMPortMapper */,
+				5D943BDD2A713F0800BB9A91 /* .gitignore */,
+				5D943BDE2A713F0800BB9A91 /* DuetScreenCapture */,
+				5D943BF72A713F0800BB9A91 /* DuetVideo */,
+				5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */,
+				5D943C1A2A713F0800BB9A91 /* DuetConnections */,
+				5D943C4E2A713F0800BB9A91 /* OpenSSL.xcframework */,
+				5D943C4F2A713F0800BB9A91 /* DuetCommon */,
+			);
+			path = DuetCommon;
+			sourceTree = "<group>";
+		};
+		5D9439952A713F0700BB9A91 /* DuetServiceSessions */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439962A713F0700BB9A91 /* Classes */,
+				5D9439B42A713F0700BB9A91 /* DuetServiceConstants.h */,
+				5D9439B52A713F0700BB9A91 /* DuetServiceConstants.m */,
+				5D9439B62A713F0700BB9A91 /* DuetServiceSessions.h */,
+				5D9439B72A713F0700BB9A91 /* Helpers */,
+				5D9439BE2A713F0700BB9A91 /* Info.plist */,
+			);
+			path = DuetServiceSessions;
+			sourceTree = "<group>";
+		};
+		5D9439962A713F0700BB9A91 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439972A713F0700BB9A91 /* WebSocketProvider.swift */,
+				5D9439982A713F0700BB9A91 /* DevicesClient.swift */,
+				5D9439992A713F0700BB9A91 /* DuetServiceSessionPreferences+Private.h */,
+				5D94399A2A713F0700BB9A91 /* DuetServicePreference.m */,
+				5D94399B2A713F0700BB9A91 /* WebSocketDevicesClient.swift */,
+				5D94399C2A713F0700BB9A91 /* DuetServiceSessionUtil.swift */,
+				5D94399D2A713F0700BB9A91 /* DuetServiceServerInfo.m */,
+				5D94399E2A713F0700BB9A91 /* DuetServiceSession.m */,
+				5D94399F2A713F0700BB9A91 /* DuetServiceSessionPreferences.m */,
+				5D9439A02A713F0700BB9A91 /* DuetServiceDevice.m */,
+				5D9439A12A713F0700BB9A91 /* DuetRelayProxyInfo.m */,
+				5D9439A22A713F0700BB9A91 /* DuetServicesConfig.h */,
+				5D9439A32A713F0700BB9A91 /* DuetServiceSession+Private.h */,
+				5D9439A42A713F0700BB9A91 /* URLSessionWebSocket.swift */,
+				5D9439A52A713F0700BB9A91 /* DuetStunConfiguration.m */,
+				5D9439A62A713F0700BB9A91 /* DeviceInfo.h */,
+				5D9439A72A713F0700BB9A91 /* SocketRocketWebSocket.swift */,
+				5D9439A82A713F0700BB9A91 /* DuetCertificateManager.h */,
+				5D9439A92A713F0700BB9A91 /* DuetServicePreference.h */,
+				5D9439AA2A713F0700BB9A91 /* DuetServiceDevice.h */,
+				5D9439AB2A713F0700BB9A91 /* DuetServiceSession.h */,
+				5D9439AC2A713F0700BB9A91 /* DuetServiceSessionPreferences.h */,
+				5D9439AD2A713F0700BB9A91 /* DuetServiceServerInfo.h */,
+				5D9439AE2A713F0700BB9A91 /* DuetRelayProxyInfo.h */,
+				5D9439AF2A713F0700BB9A91 /* DuetUserProfile.swift */,
+				5D9439B02A713F0700BB9A91 /* DuetCertificateManager.m */,
+				5D9439B12A713F0700BB9A91 /* DuetStunConfiguration.h */,
+				5D9439B22A713F0700BB9A91 /* DeviceInfo.m */,
+				5D9439B32A713F0700BB9A91 /* DuetServicesConfig.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5D9439B72A713F0700BB9A91 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439B82A713F0700BB9A91 /* DuetServiceUtils.m */,
+				5D9439B92A713F0700BB9A91 /* NSData+ServiceHashing.h */,
+				5D9439BA2A713F0700BB9A91 /* NSURLRequest+CURL.h */,
+				5D9439BB2A713F0700BB9A91 /* DuetServiceUtils.h */,
+				5D9439BC2A713F0700BB9A91 /* NSURLRequest+CURL.m */,
+				5D9439BD2A713F0700BB9A91 /* NSData+ServiceHashing.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5D9439BF2A713F0700BB9A91 /* udplib */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439C02A713F0700BB9A91 /* udplib.hpp */,
+				5D9439C12A713F0700BB9A91 /* udplibPriv.hpp */,
+				5D9439C22A713F0700BB9A91 /* udplib.cpp */,
+			);
+			path = udplib;
+			sourceTree = "<group>";
+		};
+		5D9439C42A713F0700BB9A91 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439C52A713F0700BB9A91 /* DuetE2ECryptoHandshakeTests.m */,
+				5D9439C62A713F0700BB9A91 /* DuetE2ECryptoTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		5D9439C72A713F0700BB9A91 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439C82A713F0700BB9A91 /* Checkouts */,
+			);
+			path = Carthage;
+			sourceTree = "<group>";
+		};
+		5D9439C82A713F0700BB9A91 /* Checkouts */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439C92A713F0700BB9A91 /* SocketRocket */,
+			);
+			path = Checkouts;
+			sourceTree = "<group>";
+		};
+		5D9439C92A713F0700BB9A91 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439CA2A713F0700BB9A91 /* Configurations */,
+				5D9439E12A713F0700BB9A91 /* CODE_OF_CONDUCT.md */,
+				5D9439E22A713F0700BB9A91 /* TestSupport */,
+				5D9439E62A713F0700BB9A91 /* LICENSE */,
+				5D9439E72A713F0700BB9A91 /* PATENTS */,
+				5D9439E82A713F0700BB9A91 /* .ruby-version */,
+				5D9439E92A713F0700BB9A91 /* Makefile */,
+				5D9439EA2A713F0700BB9A91 /* TestChatServer */,
+				5D9439F42A713F0700BB9A91 /* SocketRocket.podspec */,
+				5D9439F52A713F0700BB9A91 /* SocketRocket */,
+				5D943A282A713F0700BB9A91 /* Tests */,
+				5D943A352A713F0700BB9A91 /* .gitmodules */,
+				5D943A362A713F0700BB9A91 /* README.md */,
+				5D943A372A713F0700BB9A91 /* .gitignore */,
+				5D943A382A713F0700BB9A91 /* CONTRIBUTING.md */,
+				5D943A392A713F0700BB9A91 /* SocketRocket.xcodeproj */,
+				5D943A3C2A713F0700BB9A91 /* LICENSE-examples */,
+				5D943A3D2A713F0700BB9A91 /* Gemfile */,
+				5D943A3E2A713F0700BB9A91 /* TestChat */,
+				5D943A4D2A713F0700BB9A91 /* .travis.yml */,
+				5D943A4E2A713F0700BB9A91 /* Vendor */,
+			);
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		5D9439CA2A713F0700BB9A91 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439CB2A713F0700BB9A91 /* SocketRocket-macOS.xcconfig */,
+				5D9439CC2A713F0700BB9A91 /* SocketRocket-tvOS.xcconfig */,
+				5D9439CD2A713F0700BB9A91 /* Shared */,
+				5D9439DD2A713F0700BB9A91 /* SocketRocketTests-iOS.xcconfig */,
+				5D9439DE2A713F0700BB9A91 /* SocketRocket-iOS-Dynamic.xcconfig */,
+				5D9439DF2A713F0700BB9A91 /* TestChat-iOS.xcconfig */,
+				5D9439E02A713F0700BB9A91 /* SocketRocket-iOS.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		5D9439CD2A713F0700BB9A91 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439CE2A713F0700BB9A91 /* Common.xcconfig */,
+				5D9439CF2A713F0700BB9A91 /* Platform */,
+				5D9439D42A713F0700BB9A91 /* Product */,
+				5D9439D92A713F0700BB9A91 /* Project */,
+				5D9439DC2A713F0700BB9A91 /* Warnings.xcconfig */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5D9439CF2A713F0700BB9A91 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439D02A713F0700BB9A91 /* macOS.xcconfig */,
+				5D9439D12A713F0700BB9A91 /* tvOS.xcconfig */,
+				5D9439D22A713F0700BB9A91 /* iOS.xcconfig */,
+				5D9439D32A713F0700BB9A91 /* watchOS.xcconfig */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		5D9439D42A713F0700BB9A91 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439D52A713F0700BB9A91 /* Application.xcconfig */,
+				5D9439D62A713F0700BB9A91 /* DynamicFramework.xcconfig */,
+				5D9439D72A713F0700BB9A91 /* StaticFramework.xcconfig */,
+				5D9439D82A713F0700BB9A91 /* LogicTests.xcconfig */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		5D9439D92A713F0700BB9A91 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439DA2A713F0700BB9A91 /* Debug.xcconfig */,
+				5D9439DB2A713F0700BB9A91 /* Release.xcconfig */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		5D9439E22A713F0700BB9A91 /* TestSupport */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439E32A713F0700BB9A91 /* autobahn_fuzzingserver.json */,
+				5D9439E42A713F0700BB9A91 /* run_test_server.sh */,
+				5D9439E52A713F0700BB9A91 /* setup_env.sh */,
+			);
+			path = TestSupport;
+			sourceTree = "<group>";
+		};
+		5D9439EA2A713F0700BB9A91 /* TestChatServer */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439EB2A713F0700BB9A91 /* py */,
+				5D9439ED2A713F0700BB9A91 /* go */,
+				5D9439F02A713F0700BB9A91 /* static */,
+			);
+			path = TestChatServer;
+			sourceTree = "<group>";
+		};
+		5D9439EB2A713F0700BB9A91 /* py */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439EC2A713F0700BB9A91 /* chatroom.py */,
+			);
+			path = py;
+			sourceTree = "<group>";
+		};
+		5D9439ED2A713F0700BB9A91 /* go */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439EE2A713F0700BB9A91 /* chatroom.go */,
+				5D9439EF2A713F0700BB9A91 /* README */,
+			);
+			path = go;
+			sourceTree = "<group>";
+		};
+		5D9439F02A713F0700BB9A91 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439F12A713F0700BB9A91 /* proxy.js */,
+				5D9439F22A713F0700BB9A91 /* index.html */,
+				5D9439F32A713F0700BB9A91 /* .gitignore */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		5D9439F52A713F0700BB9A91 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439F62A713F0700BB9A91 /* SRWebSocket.m */,
+				5D9439F72A713F0700BB9A91 /* NSRunLoop+SRWebSocket.m */,
+				5D9439F82A713F0700BB9A91 /* Resources */,
+				5D9439FA2A713F0700BB9A91 /* SRSecurityPolicy.m */,
+				5D9439FB2A713F0700BB9A91 /* SocketRocket.h */,
+				5D9439FC2A713F0700BB9A91 /* Internal */,
+				5D943A232A713F0700BB9A91 /* NSURLRequest+SRWebSocket.h */,
+				5D943A242A713F0700BB9A91 /* SRWebSocket.h */,
+				5D943A252A713F0700BB9A91 /* NSRunLoop+SRWebSocket.h */,
+				5D943A262A713F0700BB9A91 /* SRSecurityPolicy.h */,
+				5D943A272A713F0700BB9A91 /* NSURLRequest+SRWebSocket.m */,
+			);
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		5D9439F82A713F0700BB9A91 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439F92A713F0700BB9A91 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5D9439FC2A713F0700BB9A91 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439FD2A713F0700BB9A91 /* SRConstants.h */,
+				5D9439FE2A713F0700BB9A91 /* Proxy */,
+				5D943A012A713F0700BB9A91 /* RunLoop */,
+				5D943A042A713F0700BB9A91 /* Security */,
+				5D943A072A713F0700BB9A91 /* NSRunLoop+SRWebSocketPrivate.h */,
+				5D943A082A713F0700BB9A91 /* Delegate */,
+				5D943A0B2A713F0700BB9A91 /* NSURLRequest+SRWebSocketPrivate.h */,
+				5D943A0C2A713F0700BB9A91 /* Utilities */,
+				5D943A1D2A713F0700BB9A91 /* IOConsumer */,
+				5D943A222A713F0700BB9A91 /* SRConstants.m */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		5D9439FE2A713F0700BB9A91 /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				5D9439FF2A713F0700BB9A91 /* SRProxyConnect.m */,
+				5D943A002A713F0700BB9A91 /* SRProxyConnect.h */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
+		5D943A012A713F0700BB9A91 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A022A713F0700BB9A91 /* SRRunLoopThread.h */,
+				5D943A032A713F0700BB9A91 /* SRRunLoopThread.m */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		5D943A042A713F0700BB9A91 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A052A713F0700BB9A91 /* SRPinningSecurityPolicy.h */,
+				5D943A062A713F0700BB9A91 /* SRPinningSecurityPolicy.m */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		5D943A082A713F0700BB9A91 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A092A713F0700BB9A91 /* SRDelegateController.m */,
+				5D943A0A2A713F0700BB9A91 /* SRDelegateController.h */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		5D943A0C2A713F0700BB9A91 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A0D2A713F0700BB9A91 /* SRHash.h */,
+				5D943A0E2A713F0700BB9A91 /* SRLog.h */,
+				5D943A0F2A713F0700BB9A91 /* SRMutex.m */,
+				5D943A102A713F0700BB9A91 /* SRHTTPConnectMessage.m */,
+				5D943A112A713F0700BB9A91 /* SRSIMDHelpers.h */,
+				5D943A122A713F0700BB9A91 /* SRRandom.h */,
+				5D943A132A713F0700BB9A91 /* SRURLUtilities.m */,
+				5D943A142A713F0700BB9A91 /* SRError.h */,
+				5D943A152A713F0700BB9A91 /* SRLog.m */,
+				5D943A162A713F0700BB9A91 /* SRHash.m */,
+				5D943A172A713F0700BB9A91 /* SRMutex.h */,
+				5D943A182A713F0700BB9A91 /* SRHTTPConnectMessage.h */,
+				5D943A192A713F0700BB9A91 /* SRError.m */,
+				5D943A1A2A713F0700BB9A91 /* SRRandom.m */,
+				5D943A1B2A713F0700BB9A91 /* SRURLUtilities.h */,
+				5D943A1C2A713F0700BB9A91 /* SRSIMDHelpers.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5D943A1D2A713F0700BB9A91 /* IOConsumer */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A1E2A713F0700BB9A91 /* SRIOConsumerPool.h */,
+				5D943A1F2A713F0700BB9A91 /* SRIOConsumer.m */,
+				5D943A202A713F0700BB9A91 /* SRIOConsumer.h */,
+				5D943A212A713F0700BB9A91 /* SRIOConsumerPool.m */,
+			);
+			path = IOConsumer;
+			sourceTree = "<group>";
+		};
+		5D943A282A713F0700BB9A91 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A292A713F0700BB9A91 /* SRAutobahnTests.m */,
+				5D943A2A2A713F0700BB9A91 /* Resources */,
+				5D943A2D2A713F0700BB9A91 /* Operations */,
+				5D943A322A713F0700BB9A91 /* Utilities */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		5D943A2A2A713F0700BB9A91 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A2B2A713F0700BB9A91 /* autobahn_configuration.json */,
+				5D943A2C2A713F0700BB9A91 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5D943A2D2A713F0700BB9A91 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A2E2A713F0700BB9A91 /* SRAutobahnOperation.h */,
+				5D943A2F2A713F0700BB9A91 /* SRTWebSocketOperation.m */,
+				5D943A302A713F0700BB9A91 /* SRAutobahnOperation.m */,
+				5D943A312A713F0700BB9A91 /* SRTWebSocketOperation.h */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		5D943A322A713F0700BB9A91 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A332A713F0700BB9A91 /* SRAutobahnUtilities.m */,
+				5D943A342A713F0700BB9A91 /* SRAutobahnUtilities.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5D943A3A2A713F0700BB9A91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D943C8A2A713F0800BB9A91 /* SocketRocket.framework */,
+				5D943C8C2A713F0800BB9A91 /* SocketRocket.framework */,
+				5D943C8E2A713F0800BB9A91 /* SocketRocket.framework */,
+				5D943C902A713F0800BB9A91 /* SocketRocket.framework */,
+				5D943C922A713F0800BB9A91 /* SocketRocketTests-iOS.xctest */,
+				5D943C942A713F0800BB9A91 /* TestChat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D943A3E2A713F0700BB9A91 /* TestChat */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A3F2A713F0700BB9A91 /* InfoPlist.strings */,
+				5D943A412A713F0700BB9A91 /* Default-568h@2x.png */,
+				5D943A432A713F0700BB9A91 /* MainStoryboard.storyboard */,
+				5D943A452A713F0700BB9A91 /* TCAppDelegate.h */,
+				5D943A462A713F0700BB9A91 /* TCViewController.m */,
+				5D943A472A713F0700BB9A91 /* TCChatCell.m */,
+				5D943A482A713F0700BB9A91 /* main.m */,
+				5D943A492A713F0700BB9A91 /* TestChat-Info.plist */,
+				5D943A4A2A713F0700BB9A91 /* TCChatCell.h */,
+				5D943A4B2A713F0700BB9A91 /* TCViewController.h */,
+				5D943A4C2A713F0700BB9A91 /* TCAppDelegate.m */,
+			);
+			path = TestChat;
+			sourceTree = "<group>";
+		};
+		5D943A4E2A713F0700BB9A91 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A4F2A713F0800BB9A91 /* xctoolchain */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		5D943A4F2A713F0800BB9A91 /* xctoolchain */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A502A713F0800BB9A91 /* Configurations */,
+				5D943A602A713F0800BB9A91 /* README.md */,
+				5D943A612A713F0800BB9A91 /* .gitignore */,
+				5D943A622A713F0800BB9A91 /* Scripts */,
+				5D943A662A713F0800BB9A91 /* .clang-format */,
+			);
+			path = xctoolchain;
+			sourceTree = "<group>";
+		};
+		5D943A502A713F0800BB9A91 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A512A713F0800BB9A91 /* Common.xcconfig */,
+				5D943A522A713F0800BB9A91 /* Platform */,
+				5D943A572A713F0800BB9A91 /* Product */,
+				5D943A5C2A713F0800BB9A91 /* Project */,
+				5D943A5F2A713F0800BB9A91 /* Warnings.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		5D943A522A713F0800BB9A91 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A532A713F0800BB9A91 /* macOS.xcconfig */,
+				5D943A542A713F0800BB9A91 /* tvOS.xcconfig */,
+				5D943A552A713F0800BB9A91 /* iOS.xcconfig */,
+				5D943A562A713F0800BB9A91 /* watchOS.xcconfig */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		5D943A572A713F0800BB9A91 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A582A713F0800BB9A91 /* Application.xcconfig */,
+				5D943A592A713F0800BB9A91 /* DynamicFramework.xcconfig */,
+				5D943A5A2A713F0800BB9A91 /* StaticFramework.xcconfig */,
+				5D943A5B2A713F0800BB9A91 /* LogicTests.xcconfig */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		5D943A5C2A713F0800BB9A91 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A5D2A713F0800BB9A91 /* Debug.xcconfig */,
+				5D943A5E2A713F0800BB9A91 /* Release.xcconfig */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		5D943A622A713F0800BB9A91 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A632A713F0800BB9A91 /* xctask */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		5D943A632A713F0800BB9A91 /* xctask */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A642A713F0800BB9A91 /* build_task.rb */,
+				5D943A652A713F0800BB9A91 /* build_framework_task.rb */,
+			);
+			path = xctask;
+			sourceTree = "<group>";
+		};
+		5D943A672A713F0800BB9A91 /* DuetRemoteDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A682A713F0800BB9A91 /* DuetUDPStreamCluster.swift */,
+				5D943A692A713F0800BB9A91 /* RDSInternalProtocolsModule */,
+				5D943A6C2A713F0800BB9A91 /* DuetDataContentResponseHandler.m */,
+				5D943A6D2A713F0800BB9A91 /* DuetRemoteDisplay.h */,
+				5D943A6E2A713F0800BB9A91 /* VPN */,
+				5D943A882A713F0800BB9A91 /* DuetRemoteDisplayLogging.h */,
+				5D943A892A713F0800BB9A91 /* Server */,
+				5D943B032A713F0800BB9A91 /* Shared */,
+				5D943B202A713F0800BB9A91 /* DuetRemoteMinimal.h */,
+				5D943B212A713F0800BB9A91 /* DuetRDSPacketForwardingProvider.h */,
+				5D943B222A713F0800BB9A91 /* DuetStreamMonitor.swift */,
+				5D943B232A713F0800BB9A91 /* DuetRemoteDisplayLogging.m */,
+				5D943B242A713F0800BB9A91 /* Client */,
+				5D943B462A713F0800BB9A91 /* Info.plist */,
+			);
+			path = DuetRemoteDisplay;
+			sourceTree = "<group>";
+		};
+		5D943A692A713F0800BB9A91 /* RDSInternalProtocolsModule */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A6A2A713F0800BB9A91 /* DuetUDPStreamProtocol.h */,
+				5D943A6B2A713F0800BB9A91 /* module.modulemap */,
+			);
+			path = RDSInternalProtocolsModule;
+			sourceTree = "<group>";
+		};
+		5D943A6E2A713F0800BB9A91 /* VPN */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A6F2A713F0800BB9A91 /* Server */,
+				5D943A792A713F0800BB9A91 /* Shared */,
+				5D943A7E2A713F0800BB9A91 /* Client */,
+			);
+			path = VPN;
+			sourceTree = "<group>";
+		};
+		5D943A6F2A713F0800BB9A91 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A702A713F0800BB9A91 /* DuetVPNServerPacketHandler.h */,
+				5D943A712A713F0800BB9A91 /* Processors */,
+				5D943A782A713F0800BB9A91 /* DuetVPNServerPacketHandler.m */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		5D943A712A713F0800BB9A91 /* Processors */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A722A713F0800BB9A91 /* DuetVPNServerConfigurationProcessor.m */,
+				5D943A732A713F0800BB9A91 /* DuetVPNServerCommandProcessor.h */,
+				5D943A742A713F0800BB9A91 /* DuetVPNServerPacketProcessor.m */,
+				5D943A752A713F0800BB9A91 /* DuetVPNServerConfigurationProcessor.h */,
+				5D943A762A713F0800BB9A91 /* DuetVPNServerCommandProcessor.m */,
+				5D943A772A713F0800BB9A91 /* DuetVPNServerPacketProcessor.h */,
+			);
+			path = Processors;
+			sourceTree = "<group>";
+		};
+		5D943A792A713F0800BB9A91 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A7A2A713F0800BB9A91 /* DuetVPNPacketFormat.m */,
+				5D943A7B2A713F0800BB9A91 /* DuetVPNBasePacketHandler.m */,
+				5D943A7C2A713F0800BB9A91 /* DuetVPNPacketFormat.h */,
+				5D943A7D2A713F0800BB9A91 /* DuetVPNBasePacketHandler.h */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5D943A7E2A713F0800BB9A91 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A7F2A713F0800BB9A91 /* DuetRemoteVPNClientPacketHandler.m */,
+				5D943A802A713F0800BB9A91 /* Processors */,
+				5D943A872A713F0800BB9A91 /* DuetRemoteVPNClientPacketHandler.h */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		5D943A802A713F0800BB9A91 /* Processors */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A812A713F0800BB9A91 /* DuetVPNClientCommandProcessor.h */,
+				5D943A822A713F0800BB9A91 /* DuetVPNClientConfigurationProcessor.m */,
+				5D943A832A713F0800BB9A91 /* DuetVPNClientPacketProcessor.h */,
+				5D943A842A713F0800BB9A91 /* DuetVPNClientCommandProcessor.m */,
+				5D943A852A713F0800BB9A91 /* DuetVPNClientPacketProcessor.m */,
+				5D943A862A713F0800BB9A91 /* DuetVPNClientConfigurationProcessor.h */,
+			);
+			path = Processors;
+			sourceTree = "<group>";
+		};
+		5D943A892A713F0800BB9A91 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A8A2A713F0800BB9A91 /* DuetRemoteDisplayServer.h */,
+				5D943A8B2A713F0800BB9A91 /* PacketProcessors */,
+				5D943A9D2A713F0800BB9A91 /* DuetRemoteDisplayServer+UdpRelay.m */,
+				5D943A9E2A713F0800BB9A91 /* DuetServerScreenStreamContainer.m */,
+				5D943A9F2A713F0800BB9A91 /* MiscUtil.m */,
+				5D943AA02A713F0800BB9A91 /* DuetRemoteDisplayServer+Private.m */,
+				5D943AA12A713F0800BB9A91 /* DuetRDSServerPacketHandler.h */,
+				5D943AA22A713F0800BB9A91 /* SlicePacketForUdp.h */,
+				5D943AA32A713F0800BB9A91 /* DuetRemoteDisplayServer+InternalMethods.m */,
+				5D943AA42A713F0800BB9A91 /* DuetLocalUserEventManager.m */,
+				5D943AA52A713F0800BB9A91 /* NSScreen+PointConversion.h */,
+				5D943AA62A713F0800BB9A91 /* DuetUDPPacketFormat.h */,
+				5D943AA72A713F0800BB9A91 /* KeyUtils.h */,
+				5D943AA82A713F0800BB9A91 /* DuetRemoteDisplayServer.m */,
+				5D943AA92A713F0800BB9A91 /* cpp */,
+				5D943AF92A713F0800BB9A91 /* DuetRemoteDisplayServer+Private.h */,
+				5D943AFA2A713F0800BB9A91 /* MiscUtil.h */,
+				5D943AFB2A713F0800BB9A91 /* DuetServerScreenStreamContainer.h */,
+				5D943AFC2A713F0800BB9A91 /* DuetRemoteDisplayServer+UdpRelay.h */,
+				5D943AFD2A713F0800BB9A91 /* SlicePacketForUdp.m */,
+				5D943AFE2A713F0800BB9A91 /* DuetRDSServerPacketHandler.m */,
+				5D943AFF2A713F0800BB9A91 /* KeyUtils.m */,
+				5D943B002A713F0800BB9A91 /* NSScreen+PointConversion.m */,
+				5D943B012A713F0800BB9A91 /* DuetLocalUserEventManager.h */,
+				5D943B022A713F0800BB9A91 /* DuetRemoteDisplayServer+InternalMethods.h */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		5D943A8B2A713F0800BB9A91 /* PacketProcessors */ = {
+			isa = PBXGroup;
+			children = (
+				5D943A8C2A713F0800BB9A91 /* DuetRDSMirrorProcessorServer.h */,
+				5D943A8D2A713F0800BB9A91 /* DuetDisplayListPacket.m */,
+				5D943A8E2A713F0800BB9A91 /* DuetContentDataPackets.m */,
+				5D943A8F2A713F0800BB9A91 /* DuetRDSExtendProcessorServer.m */,
+				5D943A902A713F0800BB9A91 /* PacketDebug.h */,
+				5D943A912A713F0800BB9A91 /* DuetDisplayStreamPackets.m */,
+				5D943A922A713F0800BB9A91 /* DuetRDSUDPNegotiationHandlerServer.h */,
+				5D943A932A713F0800BB9A91 /* DuetRemoteEventPackets.m */,
+				5D943A942A713F0800BB9A91 /* DuetVPNPromotionServerHandler.m */,
+				5D943A952A713F0800BB9A91 /* DuetRDSMirrorProcessorServer.m */,
+				5D943A962A713F0800BB9A91 /* DuetRDSExtendProcessorServer.h */,
+				5D943A972A713F0800BB9A91 /* DuetContentDataPackets.h */,
+				5D943A982A713F0800BB9A91 /* DuetDisplayListPacket.h */,
+				5D943A992A713F0800BB9A91 /* DuetVPNPromotionServerHandler.h */,
+				5D943A9A2A713F0800BB9A91 /* DuetRemoteEventPackets.h */,
+				5D943A9B2A713F0800BB9A91 /* DuetRDSUDPNegotiationHandlerServer.m */,
+				5D943A9C2A713F0800BB9A91 /* DuetDisplayStreamPackets.h */,
+			);
+			path = PacketProcessors;
+			sourceTree = "<group>";
+		};
+		5D943AA92A713F0800BB9A91 /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				5D943AAA2A713F0800BB9A91 /* Logger */,
+				5D943AAD2A713F0800BB9A91 /* UdpRelay */,
+				5D943AF82A713F0800BB9A91 /* README.txt */,
+			);
+			path = cpp;
+			sourceTree = "<group>";
+		};
+		5D943AAA2A713F0800BB9A91 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				5D943AAB2A713F0800BB9A91 /* logger.cpp */,
+				5D943AAC2A713F0800BB9A91 /* logger.h */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		5D943AAD2A713F0800BB9A91 /* UdpRelay */ = {
+			isa = PBXGroup;
+			children = (
+				5D943AAE2A713F0800BB9A91 /* experimental */,
+				5D943AC22A713F0800BB9A91 /* OpenPort.cpp */,
+				5D943AC32A713F0800BB9A91 /* PacketList.h */,
+				5D943AC42A713F0800BB9A91 /* PortsHistory.h */,
+				5D943AC52A713F0800BB9A91 /* UDPRelayClient.cpp */,
+				5D943AC62A713F0800BB9A91 /* StunUtil.h */,
+				5D943AC72A713F0800BB9A91 /* StunPacket.h */,
+				5D943AC82A713F0800BB9A91 /* SockUtil.h */,
+				5D943AC92A713F0800BB9A91 /* XirsysInfo.h */,
+				5D943ACA2A713F0800BB9A91 /* c_interface */,
+				5D943ADD2A713F0800BB9A91 /* UDPRelayClient.h */,
+				5D943ADE2A713F0800BB9A91 /* StunPacket.cpp */,
+				5D943ADF2A713F0800BB9A91 /* XirsysInfo.cpp */,
+				5D943AE02A713F0800BB9A91 /* README.txt */,
+				5D943AE12A713F0800BB9A91 /* TwilioAuth.h */,
+				5D943AE22A713F0800BB9A91 /* StunUtil.cpp */,
+				5D943AE32A713F0800BB9A91 /* 3rdparty */,
+				5D943AF32A713F0800BB9A91 /* macutil.h */,
+				5D943AF42A713F0800BB9A91 /* TwilioAuth.cpp */,
+				5D943AF52A713F0800BB9A91 /* OpenPort.h */,
+				5D943AF62A713F0800BB9A91 /* StunDefs.h */,
+				5D943AF72A713F0800BB9A91 /* ScopedLock.h */,
+			);
+			path = UdpRelay;
+			sourceTree = "<group>";
+		};
+		5D943AAE2A713F0800BB9A91 /* experimental */ = {
+			isa = PBXGroup;
+			children = (
+				5D943AAF2A713F0800BB9A91 /* apitest.cpp */,
+				5D943AB02A713F0800BB9A91 /* makefile.mac */,
+				5D943AB12A713F0800BB9A91 /* udpshow.cpp */,
+				5D943AB22A713F0800BB9A91 /* udpviewres.h */,
+				5D943AB32A713F0800BB9A91 /* OpenPortTest.cpp */,
+				5D943AB42A713F0800BB9A91 /* udpviewpkt.h */,
+				5D943AB52A713F0800BB9A91 /* StunTestWin.cpp */,
+				5D943AB62A713F0800BB9A91 /* TwilioTest.cpp */,
+				5D943AB72A713F0800BB9A91 /* StunTest.cpp */,
+				5D943AB82A713F0800BB9A91 /* ipfile.h */,
+				5D943AB92A713F0800BB9A91 /* UDPTest.cpp */,
+				5D943ABA2A713F0800BB9A91 /* trtemp2.sh */,
+				5D943ABB2A713F0800BB9A91 /* udpview.cpp */,
+				5D943ABC2A713F0800BB9A91 /* README.txt */,
+				5D943ABD2A713F0800BB9A91 /* txtemp3.sh */,
+				5D943ABE2A713F0800BB9A91 /* udpview.rc */,
+				5D943ABF2A713F0800BB9A91 /* txtemp2.sh */,
+				5D943AC02A713F0800BB9A91 /* udpcap.cpp */,
+				5D943AC12A713F0800BB9A91 /* udpsend.cpp */,
+			);
+			path = experimental;
+			sourceTree = "<group>";
+		};
+		5D943ACA2A713F0800BB9A91 /* c_interface */ = {
+			isa = PBXGroup;
+			children = (
+				5D943ACB2A713F0800BB9A91 /* trtest.sh */,
+				5D943ACC2A713F0800BB9A91 /* StunUtil_c.h */,
+				5D943ACD2A713F0800BB9A91 /* makefile.mac */,
+				5D943ACE2A713F0800BB9A91 /* bin */,
+				5D943AD02A713F0800BB9A91 /* ipfile_c.h */,
+				5D943AD12A713F0800BB9A91 /* txtest.sh */,
+				5D943AD22A713F0800BB9A91 /* StunUtil_c.cpp */,
+				5D943AD32A713F0800BB9A91 /* .gitignore */,
+				5D943AD42A713F0800BB9A91 /* UDPRelayClient_c.h */,
+				5D943AD52A713F0800BB9A91 /* README.txt */,
+				5D943AD62A713F0800BB9A91 /* StunTest_c.c */,
+				5D943AD72A713F0800BB9A91 /* UdpTest_m.m */,
+				5D943AD82A713F0800BB9A91 /* StunTest_m.m */,
+				5D943AD92A713F0800BB9A91 /* UdpTest_c.c */,
+				5D943ADA2A713F0800BB9A91 /* trtest_m.sh */,
+				5D943ADB2A713F0800BB9A91 /* txtest_m.sh */,
+				5D943ADC2A713F0800BB9A91 /* UDPRelayClient_c.cpp */,
+			);
+			path = c_interface;
+			sourceTree = "<group>";
+		};
+		5D943ACE2A713F0800BB9A91 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				5D943ACF2A713F0800BB9A91 /* DuetUdpRelayLib.a */,
+			);
+			path = bin;
+			sourceTree = "<group>";
+		};
+		5D943AE32A713F0800BB9A91 /* 3rdparty */ = {
+			isa = PBXGroup;
+			children = (
+				5D943AE42A713F0800BB9A91 /* authutil */,
+				5D943AED2A713F0800BB9A91 /* ammon */,
+				5D943AF02A713F0800BB9A91 /* lzrw1 */,
+			);
+			path = 3rdparty;
+			sourceTree = "<group>";
+		};
+		5D943AE42A713F0800BB9A91 /* authutil */ = {
+			isa = PBXGroup;
+			children = (
+				5D943AE52A713F0800BB9A91 /* md5solar.cpp */,
+				5D943AE62A713F0800BB9A91 /* base64.h */,
+				5D943AE72A713F0800BB9A91 /* crc32.cpp */,
+				5D943AE82A713F0800BB9A91 /* hmac_sha1.h */,
+				5D943AE92A713F0800BB9A91 /* README.txt */,
+				5D943AEA2A713F0800BB9A91 /* sha1.h */,
+				5D943AEB2A713F0800BB9A91 /* md5solar.h */,
+				5D943AEC2A713F0800BB9A91 /* crc32.h */,
+			);
+			path = authutil;
+			sourceTree = "<group>";
+		};
+		5D943AED2A713F0800BB9A91 /* ammon */ = {
+			isa = PBXGroup;
+			children = (
+				5D943AEE2A713F0800BB9A91 /* formatstring.h */,
+				5D943AEF2A713F0800BB9A91 /* Trace.h */,
+			);
+			path = ammon;
+			sourceTree = "<group>";
+		};
+		5D943AF02A713F0800BB9A91 /* lzrw1 */ = {
+			isa = PBXGroup;
+			children = (
+				5D943AF12A713F0800BB9A91 /* lzrw1.c */,
+				5D943AF22A713F0800BB9A91 /* lzrw1.h */,
+			);
+			path = lzrw1;
+			sourceTree = "<group>";
+		};
+		5D943B032A713F0800BB9A91 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5D943B042A713F0800BB9A91 /* DuetRemoteEvent.m */,
+				5D943B052A713F0800BB9A91 /* PacketProcessors */,
+				5D943B0E2A713F0800BB9A91 /* DuetPacketProcessor.h */,
+				5D943B0F2A713F0800BB9A91 /* DuetTouchEvent.h */,
+				5D943B102A713F0800BB9A91 /* DuetRDSPublicTypes.h */,
+				5D943B112A713F0800BB9A91 /* DuetAccessibilityEvent.h */,
+				5D943B122A713F0800BB9A91 /* DuetKeyEvent.m */,
+				5D943B132A713F0800BB9A91 /* GetDebugOption.h */,
+				5D943B142A713F0800BB9A91 /* DuetRemoteFeatures.m */,
+				5D943B152A713F0800BB9A91 /* DuetRDSPacketFormat.h */,
+				5D943B162A713F0800BB9A91 /* DuetRemoteSettings.m */,
+				5D943B172A713F0800BB9A91 /* DuetRemoteEvent.h */,
+				5D943B182A713F0800BB9A91 /* DuetTouchEvent.m */,
+				5D943B192A713F0800BB9A91 /* DuetKeyEvent.h */,
+				5D943B1A2A713F0800BB9A91 /* DuetRemoteCodeFeatures.swift */,
+				5D943B1B2A713F0800BB9A91 /* DuetAccessibilityEvent.m */,
+				5D943B1C2A713F0800BB9A91 /* DuetRemoteSettings.h */,
+				5D943B1D2A713F0800BB9A91 /* DuetRDSPacketFormat.m */,
+				5D943B1E2A713F0800BB9A91 /* DuetRemoteFeatures.h */,
+				5D943B1F2A713F0800BB9A91 /* GetDebugOption.c */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5D943B052A713F0800BB9A91 /* PacketProcessors */ = {
+			isa = PBXGroup;
+			children = (
+				5D943B062A713F0800BB9A91 /* DuetTimingPacketProcessor.m */,
+				5D943B072A713F0800BB9A91 /* DuetSettingsChangeRequestProcessor.m */,
+				5D943B082A713F0800BB9A91 /* DuetFeatureListProcessor.m */,
+				5D943B092A713F0800BB9A91 /* DuetSettingsRequestProcessor.m */,
+				5D943B0A2A713F0800BB9A91 /* DuetTimingPacketProcessor.h */,
+				5D943B0B2A713F0800BB9A91 /* DuetSettingsRequestProcessor.h */,
+				5D943B0C2A713F0800BB9A91 /* DuetFeatureListProcessor.h */,
+				5D943B0D2A713F0800BB9A91 /* DuetSettingsChangeRequestProcessor.h */,
+			);
+			path = PacketProcessors;
+			sourceTree = "<group>";
+		};
+		5D943B242A713F0800BB9A91 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				5D943B252A713F0800BB9A91 /* RDPAsyncConnectionState.h */,
+				5D943B262A713F0800BB9A91 /* PacketProcessors */,
+				5D943B342A713F0800BB9A91 /* RDPAsyncConnectionOperation.h */,
+				5D943B352A713F0800BB9A91 /* DuetRDSClientPacketHandler.m */,
+				5D943B362A713F0800BB9A91 /* DuetRemoteDeviceClient+Private.m */,
+				5D943B372A713F0800BB9A91 /* DuetRemoteDeviceClient.m */,
+				5D943B382A713F0800BB9A91 /* DuetRemoteFrame.m */,
+				5D943B392A713F0800BB9A91 /* DuetClientStreamHandlerContainer.h */,
+				5D943B3A2A713F0800BB9A91 /* DuetRemoteDeviceClient+InternalMethods.h */,
+				5D943B3B2A713F0800BB9A91 /* DuetRemoteDisplayClient.m */,
+				5D943B3C2A713F0800BB9A91 /* DuetRemoteDisplayClient.swift */,
+				5D943B3D2A713F0800BB9A91 /* RDPAsyncConnectionState.m */,
+				5D943B3E2A713F0800BB9A91 /* DuetRDSClientPacketHandler.h */,
+				5D943B3F2A713F0800BB9A91 /* RDPAsyncConnectionOperation.m */,
+				5D943B402A713F0800BB9A91 /* DuetRemoteDeviceClient.h */,
+				5D943B412A713F0800BB9A91 /* DuetRemoteDeviceClient+Private.h */,
+				5D943B422A713F0800BB9A91 /* DuetRemoteDisplayClient.h */,
+				5D943B432A713F0800BB9A91 /* DuetRemoteDeviceClient+InternalMethods.m */,
+				5D943B442A713F0800BB9A91 /* DuetClientStreamHandlerContainer.m */,
+				5D943B452A713F0800BB9A91 /* DuetRemoteFrame.h */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		5D943B262A713F0800BB9A91 /* PacketProcessors */ = {
+			isa = PBXGroup;
+			children = (
+				5D943B272A713F0800BB9A91 /* DuetRDSRemoteEventProcessorClient.m */,
+				5D943B282A713F0800BB9A91 /* DuetDisplayListResponse.m */,
+				5D943B292A713F0800BB9A91 /* DuetRemoteFrameResponseHandler.h */,
+				5D943B2A2A713F0800BB9A91 /* DuetRDSUDPNegotiationHandler.m */,
+				5D943B2B2A713F0800BB9A91 /* DuetRDSExtendProcessorClient.h */,
+				5D943B2C2A713F0800BB9A91 /* DuetRDSMirrorProcessorClient.m */,
+				5D943B2D2A713F0800BB9A91 /* DuetRDSRemoteEventProcessorClient.h */,
+				5D943B2E2A713F0800BB9A91 /* DuetRemoteFrameResponseHandler.m */,
+				5D943B2F2A713F0800BB9A91 /* DuetDisplayListResponse.h */,
+				5D943B302A713F0800BB9A91 /* DuetDataContentResponseHandler.h */,
+				5D943B312A713F0800BB9A91 /* DuetRDSExtendProcessorClient.m */,
+				5D943B322A713F0800BB9A91 /* DuetRDSUDPNegotiationHandler.h */,
+				5D943B332A713F0800BB9A91 /* DuetRDSMirrorProcessorClient.h */,
+			);
+			path = PacketProcessors;
+			sourceTree = "<group>";
+		};
+		5D943B472A713F0800BB9A91 /* DuetAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				5D943B482A713F0800BB9A91 /* AnalyticManager.swift */,
+				5D943B492A713F0800BB9A91 /* AnalyiticsServiceAdapter.swift */,
+				5D943B4A2A713F0800BB9A91 /* AnalyticsEventNotificationObserver.swift */,
+				5D943B4B2A713F0800BB9A91 /* FeatureFlags.swift */,
+				5D943B4C2A713F0800BB9A91 /* DuetAnalytics.h */,
+			);
+			path = DuetAnalytics;
+			sourceTree = "<group>";
+		};
+		5D943B4F2A713F0800BB9A91 /* TCMPortMapper */ = {
+			isa = PBXGroup;
+			children = (
+				5D943B502A713F0800BB9A91 /* Port Map.xcodeproj */,
+				5D943B532A713F0800BB9A91 /* framework */,
+				5D943B9E2A713F0800BB9A91 /* natecho */,
+				5D943BA82A713F0800BB9A91 /* RSVerticallyCenteredTextFieldCell */,
+				5D943BAC2A713F0800BB9A91 /* TCMPortMapper 64 bit.patchfile */,
+				5D943BAD2A713F0800BB9A91 /* README.md */,
+				5D943BAE2A713F0800BB9A91 /* createZip.sh */,
+				5D943BAF2A713F0800BB9A91 /* general_artwork */,
+				5D943BB42A713F0800BB9A91 /* ruby */,
+				5D943BB82A713F0800BB9A91 /* portmap */,
+			);
+			path = TCMPortMapper;
+			sourceTree = "<group>";
+		};
+		5D943B512A713F0800BB9A91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D943C7C2A713F0800BB9A91 /* TCMPortMapper.framework */,
+				5D943C7E2A713F0800BB9A91 /* Port Map.app */,
+				5D943C802A713F0800BB9A91 /* NATEcho.app */,
+				5D943C822A713F0800BB9A91 /* upnpc-static */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D943B532A713F0800BB9A91 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				5D943B542A713F0800BB9A91 /* NSNotificationCenterThreadingAdditions.h */,
+				5D943B552A713F0800BB9A91 /* miniupnpc */,
+				5D943B802A713F0800BB9A91 /* Ethernet-OUI.txt */,
+				5D943B812A713F0800BB9A91 /* TCMUPNPPortMapper.m */,
+				5D943B822A713F0800BB9A91 /* IXSCNotificationManager.h */,
+				5D943B832A713F0800BB9A91 /* TCMPortMapper_prefix.pch */,
+				5D943B842A713F0800BB9A91 /* miniupnp_modeldescription.patch */,
+				5D943B852A713F0800BB9A91 /* TCMPortMapper.h */,
+				5D943B862A713F0800BB9A91 /* TCMNATPMPPortMapper.h */,
+				5D943B872A713F0800BB9A91 /* OUI-FindAndReplaceRegexes.txt */,
+				5D943B882A713F0800BB9A91 /* OUItoCompany.plist */,
+				5D943B892A713F0800BB9A91 /* NSNotificationCenterThreadingAdditions.m */,
+				5D943B8A2A713F0800BB9A91 /* libnatpmp */,
+				5D943B982A713F0800BB9A91 /* OUItoCompanyXML.plist */,
+				5D943B992A713F0800BB9A91 /* IXSCNotificationManager.m */,
+				5D943B9A2A713F0800BB9A91 /* TCMUPNPPortMapper.h */,
+				5D943B9B2A713F0800BB9A91 /* TCMPortMapper.m */,
+				5D943B9C2A713F0800BB9A91 /* TCMPortMapper-Info.plist */,
+				5D943B9D2A713F0800BB9A91 /* TCMNATPMPPortMapper.m */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
+		5D943B552A713F0800BB9A91 /* miniupnpc */ = {
+			isa = PBXGroup;
+			children = (
+				5D943B562A713F0800BB9A91 /* Makefile.mingw */,
+				5D943B572A713F0800BB9A91 /* minisoap.c */,
+				5D943B582A713F0800BB9A91 /* miniupnpcstrings.h */,
+				5D943B592A713F0800BB9A91 /* declspec.h */,
+				5D943B5A2A713F0800BB9A91 /* upnpcommands.h */,
+				5D943B5B2A713F0800BB9A91 /* testupnpreplyparse.c */,
+				5D943B5C2A713F0800BB9A91 /* setupmingw32.py */,
+				5D943B5D2A713F0800BB9A91 /* testminixml.c */,
+				5D943B5E2A713F0800BB9A91 /* updateminiupnpcstrings.sh */,
+				5D943B5F2A713F0800BB9A91 /* pymoduletest.py */,
+				5D943B602A713F0800BB9A91 /* miniupnpcmodule.c */,
+				5D943B612A713F0800BB9A91 /* man3 */,
+				5D943B632A713F0800BB9A91 /* testupnpigd.py */,
+				5D943B642A713F0800BB9A91 /* upnpreplyparse.c */,
+				5D943B652A713F0800BB9A91 /* Makefile */,
+				5D943B662A713F0800BB9A91 /* minixml.h */,
+				5D943B672A713F0800BB9A91 /* miniwget.c */,
+				5D943B682A713F0800BB9A91 /* upnperrors.h */,
+				5D943B692A713F0800BB9A91 /* igd_desc_parse.h */,
+				5D943B6A2A713F0800BB9A91 /* minissdpc.h */,
+				5D943B6B2A713F0800BB9A91 /* README */,
+				5D943B6C2A713F0800BB9A91 /* miniupnpc.def */,
+				5D943B6D2A713F0800BB9A91 /* miniupnpc.h */,
+				5D943B6E2A713F0800BB9A91 /* upnpcommands.c */,
+				5D943B6F2A713F0800BB9A91 /* testigddescparse.c */,
+				5D943B702A713F0800BB9A91 /* bsdqueue.h */,
+				5D943B712A713F0800BB9A91 /* setup.py */,
+				5D943B722A713F0800BB9A91 /* minisoap.h */,
+				5D943B732A713F0800BB9A91 /* upnpc.c */,
+				5D943B742A713F0800BB9A91 /* Changelog.txt */,
+				5D943B752A713F0800BB9A91 /* minixmlvalid.c */,
+				5D943B762A713F0800BB9A91 /* upnperrors.c */,
+				5D943B772A713F0800BB9A91 /* miniwget.h */,
+				5D943B782A713F0800BB9A91 /* codelength.h */,
+				5D943B792A713F0800BB9A91 /* minixml.c */,
+				5D943B7A2A713F0800BB9A91 /* upnpreplyparse.h */,
+				5D943B7B2A713F0800BB9A91 /* minissdpc.c */,
+				5D943B7C2A713F0800BB9A91 /* miniupnpc.c */,
+				5D943B7D2A713F0800BB9A91 /* LICENCE */,
+				5D943B7E2A713F0800BB9A91 /* mingw32make.bat */,
+				5D943B7F2A713F0800BB9A91 /* igd_desc_parse.c */,
+			);
+			path = miniupnpc;
+			sourceTree = "<group>";
+		};
+		5D943B612A713F0800BB9A91 /* man3 */ = {
+			isa = PBXGroup;
+			children = (
+				5D943B622A713F0800BB9A91 /* miniupnpc.3 */,
+			);
+			path = man3;
+			sourceTree = "<group>";
+		};
+		5D943B8A2A713F0800BB9A91 /* libnatpmp */ = {
+			isa = PBXGroup;
+			children = (
+				5D943B8B2A713F0800BB9A91 /* wingettimeofday.c */,
+				5D943B8C2A713F0800BB9A91 /* declspec.h */,
+				5D943B8D2A713F0800BB9A91 /* Makefile */,
+				5D943B8E2A713F0800BB9A91 /* natpmp.h */,
+				5D943B8F2A713F0800BB9A91 /* natpmpc.c */,
+				5D943B902A713F0800BB9A91 /* getgateway.h */,
+				5D943B912A713F0800BB9A91 /* build.bat */,
+				5D943B922A713F0800BB9A91 /* testgetgateway.c */,
+				5D943B932A713F0800BB9A91 /* Changelog.txt */,
+				5D943B942A713F0800BB9A91 /* natpmp.c */,
+				5D943B952A713F0800BB9A91 /* natpmp.def */,
+				5D943B962A713F0800BB9A91 /* getgateway.c */,
+				5D943B972A713F0800BB9A91 /* LICENCE */,
+			);
+			path = libnatpmp;
+			sourceTree = "<group>";
+		};
+		5D943B9E2A713F0800BB9A91 /* natecho */ = {
+			isa = PBXGroup;
+			children = (
+				5D943B9F2A713F0800BB9A91 /* TCPServer.h */,
+				5D943BA02A713F0800BB9A91 /* AppController.h */,
+				5D943BA12A713F0800BB9A91 /* MainMenu.nib */,
+				5D943BA32A713F0800BB9A91 /* NATEcho-Info.plist */,
+				5D943BA42A713F0800BB9A91 /* AppController.m */,
+				5D943BA52A713F0800BB9A91 /* TCPServer.m */,
+				5D943BA62A713F0800BB9A91 /* main.m */,
+				5D943BA72A713F0800BB9A91 /* natecho_prefix.pch */,
+			);
+			path = natecho;
+			sourceTree = "<group>";
+		};
+		5D943BA82A713F0800BB9A91 /* RSVerticallyCenteredTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				5D943BA92A713F0800BB9A91 /* RSVerticallyCenteredTextFieldCell.m */,
+				5D943BAA2A713F0800BB9A91 /* MIT-License.rtf */,
+				5D943BAB2A713F0800BB9A91 /* RSVerticallyCenteredTextFieldCell.h */,
+			);
+			path = RSVerticallyCenteredTextFieldCell;
+			sourceTree = "<group>";
+		};
+		5D943BAF2A713F0800BB9A91 /* general_artwork */ = {
+			isa = PBXGroup;
+			children = (
+				5D943BB02A713F0800BB9A91 /* PortMapIcon.acorn */,
+				5D943BB12A713F0800BB9A91 /* DotGreen.png */,
+				5D943BB22A713F0800BB9A91 /* DotYellow.png */,
+				5D943BB32A713F0800BB9A91 /* DotRed.png */,
+			);
+			path = general_artwork;
+			sourceTree = "<group>";
+		};
+		5D943BB42A713F0800BB9A91 /* ruby */ = {
+			isa = PBXGroup;
+			children = (
+				5D943BB52A713F0800BB9A91 /* mdnskiller.rb */,
+				5D943BB62A713F0800BB9A91 /* nat-pmp-listener.rb */,
+				5D943BB72A713F0800BB9A91 /* nat-pmp-ip-broadcaster.rb */,
+			);
+			path = ruby;
+			sourceTree = "<group>";
+		};
+		5D943BB82A713F0800BB9A91 /* portmap */ = {
+			isa = PBXGroup;
+			children = (
+				5D943BB92A713F0800BB9A91 /* AppController.h */,
+				5D943BBA2A713F0800BB9A91 /* miniupnpc-LICENSE.txt */,
+				5D943BBB2A713F0800BB9A91 /* Localizable.strings */,
+				5D943BBD2A713F0800BB9A91 /* MainMenu.nib */,
+				5D943BBF2A713F0800BB9A91 /* InfoPlist.strings */,
+				5D943BC12A713F0800BB9A91 /* TCMPortStringFromPublicPortValueTransformer.m */,
+				5D943BC22A713F0800BB9A91 /* artwork */,
+				5D943BCA2A713F0800BB9A91 /* TCMStatusImageFromMappingStatusValueTransformer.h */,
+				5D943BCB2A713F0800BB9A91 /* TCMPortMappingAdditions.h */,
+				5D943BCC2A713F0800BB9A91 /* PortMapper_Prefix.pch */,
+				5D943BCD2A713F0800BB9A91 /* AppController.m */,
+				5D943BCE2A713F0800BB9A91 /* main.m */,
+				5D943BCF2A713F0800BB9A91 /* htdocs */,
+				5D943BD72A713F0800BB9A91 /* TCMPortStringFromPublicPortValueTransformer.h */,
+				5D943BD82A713F0800BB9A91 /* dsa_pub.pem */,
+				5D943BD92A713F0800BB9A91 /* TCMPortMappingAdditions.m */,
+				5D943BDA2A713F0800BB9A91 /* Presets.plist */,
+				5D943BDB2A713F0800BB9A91 /* TCMStatusImageFromMappingStatusValueTransformer.m */,
+				5D943BDC2A713F0800BB9A91 /* Info.plist */,
+			);
+			path = portmap;
+			sourceTree = "<group>";
+		};
+		5D943BC22A713F0800BB9A91 /* artwork */ = {
+			isa = PBXGroup;
+			children = (
+				5D943BC32A713F0800BB9A91 /* GenericQuestionMarkIcon.icns */,
+				5D943BC42A713F0800BB9A91 /* NSAddTemplate.tiff */,
+				5D943BC52A713F0800BB9A91 /* Off20.png */,
+				5D943BC62A713F0800BB9A91 /* NSRemoveTemplate.tiff */,
+				5D943BC72A713F0800BB9A91 /* On20.png */,
+				5D943BC82A713F0800BB9A91 /* PortMap.icns */,
+				5D943BC92A713F0800BB9A91 /* NSRefreshTemplate.tiff */,
+			);
+			path = artwork;
+			sourceTree = "<group>";
+		};
+		5D943BCF2A713F0800BB9A91 /* htdocs */ = {
+			isa = PBXGroup;
+			children = (
+				5D943BD02A713F0800BB9A91 /* version_1_1.html */,
+				5D943BD12A713F0800BB9A91 /* version_1_3_1.html */,
+				5D943BD22A713F0800BB9A91 /* portmap_releasenotes.html */,
+				5D943BD32A713F0800BB9A91 /* portmap_releasenotes.css */,
+				5D943BD42A713F0800BB9A91 /* appcast.rss */,
+				5D943BD52A713F0800BB9A91 /* version_1_2.html */,
+				5D943BD62A713F0800BB9A91 /* version_1_3.html */,
+			);
+			path = htdocs;
+			sourceTree = "<group>";
+		};
+		5D943BDE2A713F0800BB9A91 /* DuetScreenCapture */ = {
+			isa = PBXGroup;
+			children = (
+				5D943BDF2A713F0800BB9A91 /* DSCScreen.m */,
+				5D943BE02A713F0800BB9A91 /* DuetTimedTrigger.h */,
+				5D943BE12A713F0800BB9A91 /* DSCScreenReconfigurationManager.m */,
+				5D943BE22A713F0800BB9A91 /* DifferenceShaders.metal */,
+				5D943BE32A713F0800BB9A91 /* DSCScreenFrame.h */,
+				5D943BE42A713F0800BB9A91 /* DuetRDSExtendedDisplayProvider.h */,
+				5D943BE52A713F0800BB9A91 /* DuetScreenResolution.swift */,
+				5D943BE62A713F0800BB9A91 /* DSCScreenFrame+Private.m */,
+				5D943BE72A713F0800BB9A91 /* DSCUpdateArea.m */,
+				5D943BE82A713F0800BB9A91 /* DSCScreenEvent.h */,
+				5D943BE92A713F0800BB9A91 /* DSCSurfaceFilterEngine.h */,
+				5D943BEA2A713F0800BB9A91 /* DSCScreenManager.h */,
+				5D943BEB2A713F0800BB9A91 /* DuetTimedTrigger.m */,
+				5D943BEC2A713F0800BB9A91 /* DSCScreen.h */,
+				5D943BED2A713F0800BB9A91 /* DSCScreenFrame+Private.h */,
+				5D943BEE2A713F0800BB9A91 /* DSCScreenFrame.m */,
+				5D943BEF2A713F0800BB9A91 /* DSCScreenReconfigurationManager.h */,
+				5D943BF02A713F0800BB9A91 /* DuetScreenCapture.h */,
+				5D943BF12A713F0800BB9A91 /* DifferenceShaders.h */,
+				5D943BF22A713F0800BB9A91 /* DSCScreenEvent.m */,
+				5D943BF32A713F0800BB9A91 /* DSCUpdateArea.h */,
+				5D943BF42A713F0800BB9A91 /* Info.plist */,
+				5D943BF52A713F0800BB9A91 /* DSCSurfaceFilterEngine.m */,
+				5D943BF62A713F0800BB9A91 /* DSCScreenManager.m */,
+			);
+			path = DuetScreenCapture;
+			sourceTree = "<group>";
+		};
+		5D943BF72A713F0800BB9A91 /* DuetVideo */ = {
+			isa = PBXGroup;
+			children = (
+				5D943BF82A713F0800BB9A91 /* DuetVideoConstants.h */,
+				5D943BF92A713F0800BB9A91 /* DuetVideoCommon.m */,
+				5D943BFA2A713F0800BB9A91 /* DuetVideoDecoding.h */,
+				5D943BFB2A713F0800BB9A91 /* libturbojpeg.a */,
+				5D943BFC2A713F0800BB9A91 /* DuetVideo.h */,
+				5D943BFD2A713F0800BB9A91 /* VideoTypes */,
+				5D943C082A713F0800BB9A91 /* DuetVideoEncoding.h */,
+				5D943C092A713F0800BB9A91 /* DuetVideoDecoding.m */,
+				5D943C0A2A713F0800BB9A91 /* DuetVideoCommon.h */,
+				5D943C0B2A713F0800BB9A91 /* DuetVideoConstants.m */,
+				5D943C0C2A713F0800BB9A91 /* DuetVideoEncoding+Private.h */,
+				5D943C0D2A713F0800BB9A91 /* jpegturbo-include */,
+				5D943C132A713F0800BB9A91 /* Info.plist */,
+				5D943C142A713F0800BB9A91 /* DuetVideoEncoding.m */,
+			);
+			path = DuetVideo;
+			sourceTree = "<group>";
+		};
+		5D943BFD2A713F0800BB9A91 /* VideoTypes */ = {
+			isa = PBXGroup;
+			children = (
+				5D943BFE2A713F0800BB9A91 /* HEVCVideoSetupSpecification.h */,
+				5D943BFF2A713F0800BB9A91 /* JPEGVideoSetupSpecification+Private.h */,
+				5D943C002A713F0800BB9A91 /* JPEGVideoType.h */,
+				5D943C012A713F0800BB9A91 /* JPEGVideoSetupSpecification.h */,
+				5D943C022A713F0800BB9A91 /* H264VideoSetupSpecification.h */,
+				5D943C032A713F0800BB9A91 /* HEVCVideoSetupSpecification.m */,
+				5D943C042A713F0800BB9A91 /* H264VideoSetupSpecification.m */,
+				5D943C052A713F0800BB9A91 /* JPEGVideoSetupSpecification.m */,
+				5D943C062A713F0800BB9A91 /* JPEGEncoderInternalData.h */,
+				5D943C072A713F0800BB9A91 /* JPEGVideoType.m */,
+			);
+			path = VideoTypes;
+			sourceTree = "<group>";
+		};
+		5D943C0D2A713F0800BB9A91 /* jpegturbo-include */ = {
+			isa = PBXGroup;
+			children = (
+				5D943C0E2A713F0800BB9A91 /* jpeglib.h */,
+				5D943C0F2A713F0800BB9A91 /* jerror.h */,
+				5D943C102A713F0800BB9A91 /* turbojpeg.h */,
+				5D943C112A713F0800BB9A91 /* jconfig.h */,
+				5D943C122A713F0800BB9A91 /* jmorecfg.h */,
+			);
+			path = "jpegturbo-include";
+			sourceTree = "<group>";
+		};
+		5D943C162A713F0800BB9A91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D943C612A713F0800BB9A91 /* DuetSDK.framework */,
+				5D943C632A713F0800BB9A91 /* DuetRemoteDisplay.framework */,
+				5D943C652A713F0800BB9A91 /* DuetServiceSessions.framework */,
+				5D943C672A713F0800BB9A91 /* DuetCommon.framework */,
+				5D943C692A713F0800BB9A91 /* DuetConnections.framework */,
+				5D943C6B2A713F0800BB9A91 /* DuetAnalytics.framework */,
+				5D943C6D2A713F0800BB9A91 /* DuetScreenCapture.framework */,
+				5D943C6F2A713F0800BB9A91 /* DuetVideo.framework */,
+				5D943C712A713F0800BB9A91 /* libudplib.a */,
+				5D943C732A713F0800BB9A91 /* DuetSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D943C1A2A713F0800BB9A91 /* DuetConnections */ = {
+			isa = PBXGroup;
+			children = (
+				5D943C1B2A713F0800BB9A91 /* DuetConnections.h */,
+				5D943C1C2A713F0800BB9A91 /* Internal */,
+				5D943C232A713F0800BB9A91 /* Bases */,
+				5D943C3B2A713F0800BB9A91 /* mDNS */,
+				5D943C492A713F0800BB9A91 /* DuetConnectionConstants.h */,
+				5D943C4A2A713F0800BB9A91 /* PacketHandlers */,
+				5D943C4D2A713F0800BB9A91 /* Info.plist */,
+			);
+			path = DuetConnections;
+			sourceTree = "<group>";
+		};
+		5D943C1C2A713F0800BB9A91 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				5D943C1D2A713F0800BB9A91 /* DuetStreamBase+Internal.h */,
+				5D943C1E2A713F0800BB9A91 /* route.h */,
+				5D943C1F2A713F0800BB9A91 /* if_ether.h */,
+				5D943C202A713F0800BB9A91 /* DuetStreamBase+Internal.m */,
+				5D943C212A713F0800BB9A91 /* EmbededProtocolLayer.swift */,
+				5D943C222A713F0800BB9A91 /* DuetEmbeddedProtocolLayer.swift */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		5D943C232A713F0800BB9A91 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				5D943C242A713F0800BB9A91 /* DuetStreamCryptoConfiguration.h */,
+				5D943C252A713F0800BB9A91 /* NetworkFrameworkStream.swift */,
+				5D943C262A713F0800BB9A91 /* DuetPortInfo.h */,
+				5D943C272A713F0800BB9A91 /* DuetSocketStream.m */,
+				5D943C282A713F0800BB9A91 /* DuetE2ECryptoHandshake.m */,
+				5D943C292A713F0800BB9A91 /* DuetStream.h */,
+				5D943C2A2A713F0800BB9A91 /* DuetStreamBase.h */,
+				5D943C2B2A713F0800BB9A91 /* DuetConnectionConstants.m */,
+				5D943C2C2A713F0800BB9A91 /* DuetBufferItems.h */,
+				5D943C2D2A713F0800BB9A91 /* DuetPacketHandler.h */,
+				5D943C2E2A713F0800BB9A91 /* NetworkFrameworkWrapper.swift */,
+				5D943C2F2A713F0800BB9A91 /* DuetNetworkUtilities.m */,
+				5D943C302A713F0800BB9A91 /* Duet_RDPPublicKeyCrypto.hpp */,
+				5D943C312A713F0800BB9A91 /* DuetStreamBase+Required.h */,
+				5D943C322A713F0800BB9A91 /* DuetStreamCryptoConfiguration.m */,
+				5D943C332A713F0800BB9A91 /* DuetStream.m */,
+				5D943C342A713F0800BB9A91 /* DuetStreamBase.m */,
+				5D943C352A713F0800BB9A91 /* Duet_RDPPublicKeyCrypto.cpp */,
+				5D943C362A713F0800BB9A91 /* DuetE2ECryptoHandshake.h */,
+				5D943C372A713F0800BB9A91 /* DuetSocketStream.h */,
+				5D943C382A713F0800BB9A91 /* DuetBufferItems.m */,
+				5D943C392A713F0800BB9A91 /* DuetStreamBase+Required.m */,
+				5D943C3A2A713F0800BB9A91 /* DuetNetworkUtilities.h */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		5D943C3B2A713F0800BB9A91 /* mDNS */ = {
+			isa = PBXGroup;
+			children = (
+				5D943C3C2A713F0800BB9A91 /* DuetNetPublisher.m */,
+				5D943C3D2A713F0800BB9A91 /* DuetNetPortMapper.m */,
+				5D943C3E2A713F0800BB9A91 /* DuetNetServicePortInfo.h */,
+				5D943C3F2A713F0800BB9A91 /* DuetNetPublisherInternal.h */,
+				5D943C402A713F0800BB9A91 /* DuetNetSearch.h */,
+				5D943C412A713F0800BB9A91 /* DuetNetPublisher.h */,
+				5D943C422A713F0800BB9A91 /* DuetNetPublisherInternal.m */,
+				5D943C432A713F0800BB9A91 /* DuetNetServicePortInfo.m */,
+				5D943C442A713F0800BB9A91 /* DuetNetPortMapper.h */,
+				5D943C452A713F0800BB9A91 /* NetworkFrameworkBrowser.swift */,
+				5D943C462A713F0800BB9A91 /* DuetNetPublisherTypes.h */,
+				5D943C472A713F0800BB9A91 /* NetworkFrameworkPublisher.swift */,
+				5D943C482A713F0800BB9A91 /* DuetNetSearch.m */,
+			);
+			path = mDNS;
+			sourceTree = "<group>";
+		};
+		5D943C4A2A713F0800BB9A91 /* PacketHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				5D943C4B2A713F0800BB9A91 /* SimplePacketHandler.m */,
+				5D943C4C2A713F0800BB9A91 /* SimplePacketHandler.h */,
+			);
+			path = PacketHandlers;
+			sourceTree = "<group>";
+		};
+		5D943C4F2A713F0800BB9A91 /* DuetCommon */ = {
+			isa = PBXGroup;
+			children = (
+				5D943C502A713F0800BB9A91 /* DuetPacketFormat.h */,
+				5D943C512A713F0800BB9A91 /* DuetSharedPublicTypes.m */,
+				5D943C522A713F0800BB9A91 /* DuetCommon.docc */,
+				5D943C532A713F0800BB9A91 /* DuetSharedPublicTypes.h */,
+				5D943C542A713F0800BB9A91 /* DuetCommon.h */,
+				5D943C552A713F0800BB9A91 /* DuetCommoniOS.docc */,
+			);
+			path = DuetCommon;
+			sourceTree = "<group>";
+		};
 		E47578D618E58B7A00C668DE = {
 			isa = PBXGroup;
 			children = (
-				E475792018E5A24F00C668DE /* Read Me About PreLoginAgents.txt */,
 				E475791F18E5A1F000C668DE /* com.kairos.duet.DesktopCaptureManager.plist */,
 				E475791818E5A06A00C668DE /* main.m */,
 				E475791518E5A06A00C668DE /* Info.plist */,
 				E475791918E5A06A00C668DE /* main.xib */,
+				5D65C7682A7148CA000FB8DD /* FramePanel.h */,
+				5D65C7692A7148CA000FB8DD /* FramePanel.m */,
 				E475791318E5A06A00C668DE /* AppDelegate.h */,
 				E475791418E5A06A00C668DE /* AppDelegate.m */,
 				E475791618E5A06A00C668DE /* LogManager.h */,
 				E475791718E5A06A00C668DE /* LogManager.m */,
+				5D9439902A713F0700BB9A91 /* Carthage */,
 				E47578E118E58B7A00C668DE /* Frameworks */,
 				E47578E018E58B7A00C668DE /* Products */,
+				10CF4201A608BAEE6FF315D0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +2254,7 @@
 			isa = PBXGroup;
 			children = (
 				E47578E218E58B7A00C668DE /* Cocoa.framework */,
+				E6F906F3C0D1E513F627AA96 /* libPods-DuetDesktopCaptureManager.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,15 +2266,22 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E47578EF18E58B7A00C668DE /* Build configuration list for PBXNativeTarget "DuetDesktopCaptureManager" */;
 			buildPhases = (
+				301E98C29C32916A8829EAF4 /* [CP] Check Pods Manifest.lock */,
 				E47578DB18E58B7A00C668DE /* Sources */,
 				E47578DC18E58B7A00C668DE /* Frameworks */,
 				E47578DD18E58B7A00C668DE /* Resources */,
+				5D65C7592A7144EB000FB8DD /* Embed Frameworks */,
+				775434119BD4AFCC926CCAA3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DuetDesktopCaptureManager;
+			packageProductDependencies = (
+				5DF8FDF02A7152C10077C1CC /* CocoaLumberjack */,
+				5DF8FDF22A7152C10077C1CC /* CocoaLumberjackSwift */,
+			);
 			productName = PreLoginAgentCocoa;
 			productReference = E47578DF18E58B7A00C668DE /* DuetDesktopCaptureManager.app */;
 			productType = "com.apple.product-type.application";
@@ -99,7 +2292,8 @@
 		E47578D718E58B7A00C668DE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
 			};
 			buildConfigurationList = E47578DA18E58B7A00C668DE /* Build configuration list for PBXProject "DuetDesktopCaptureManager" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -110,14 +2304,174 @@
 				en,
 			);
 			mainGroup = E47578D618E58B7A00C668DE;
+			packageReferences = (
+				5DF8FDEF2A7152C10077C1CC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+			);
 			productRefGroup = E47578E018E58B7A00C668DE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5D943C162A713F0800BB9A91 /* Products */;
+					ProjectRef = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+				},
+				{
+					ProductGroup = 5D943B512A713F0800BB9A91 /* Products */;
+					ProjectRef = 5D943B502A713F0800BB9A91 /* Port Map.xcodeproj */;
+				},
+				{
+					ProductGroup = 5D943A3A2A713F0700BB9A91 /* Products */;
+					ProjectRef = 5D943A392A713F0700BB9A91 /* SocketRocket.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E47578DE18E58B7A00C668DE /* DuetDesktopCaptureManager */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5D943C612A713F0800BB9A91 /* DuetSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DuetSDK.framework;
+			remoteRef = 5D943C602A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C632A713F0800BB9A91 /* DuetRemoteDisplay.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DuetRemoteDisplay.framework;
+			remoteRef = 5D943C622A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C652A713F0800BB9A91 /* DuetServiceSessions.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DuetServiceSessions.framework;
+			remoteRef = 5D943C642A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C672A713F0800BB9A91 /* DuetCommon.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DuetCommon.framework;
+			remoteRef = 5D943C662A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C692A713F0800BB9A91 /* DuetConnections.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DuetConnections.framework;
+			remoteRef = 5D943C682A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C6B2A713F0800BB9A91 /* DuetAnalytics.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DuetAnalytics.framework;
+			remoteRef = 5D943C6A2A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C6D2A713F0800BB9A91 /* DuetScreenCapture.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DuetScreenCapture.framework;
+			remoteRef = 5D943C6C2A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C6F2A713F0800BB9A91 /* DuetVideo.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DuetVideo.framework;
+			remoteRef = 5D943C6E2A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C712A713F0800BB9A91 /* libudplib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libudplib.a;
+			remoteRef = 5D943C702A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C732A713F0800BB9A91 /* DuetSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DuetSDKTests.xctest;
+			remoteRef = 5D943C722A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C7C2A713F0800BB9A91 /* TCMPortMapper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TCMPortMapper.framework;
+			remoteRef = 5D943C7B2A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C7E2A713F0800BB9A91 /* Port Map.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Port Map.app";
+			remoteRef = 5D943C7D2A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C802A713F0800BB9A91 /* NATEcho.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = NATEcho.app;
+			remoteRef = 5D943C7F2A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C822A713F0800BB9A91 /* upnpc-static */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "upnpc-static";
+			remoteRef = 5D943C812A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C8A2A713F0800BB9A91 /* SocketRocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SocketRocket.framework;
+			remoteRef = 5D943C892A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C8C2A713F0800BB9A91 /* SocketRocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SocketRocket.framework;
+			remoteRef = 5D943C8B2A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C8E2A713F0800BB9A91 /* SocketRocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SocketRocket.framework;
+			remoteRef = 5D943C8D2A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C902A713F0800BB9A91 /* SocketRocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SocketRocket.framework;
+			remoteRef = 5D943C8F2A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C922A713F0800BB9A91 /* SocketRocketTests-iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SocketRocketTests-iOS.xctest";
+			remoteRef = 5D943C912A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D943C942A713F0800BB9A91 /* TestChat.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TestChat.app;
+			remoteRef = 5D943C932A713F0800BB9A91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E47578DD18E58B7A00C668DE /* Resources */ = {
@@ -130,6 +2484,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		301E98C29C32916A8829EAF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DuetDesktopCaptureManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		775434119BD4AFCC926CCAA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DuetDesktopCaptureManager/Pods-DuetDesktopCaptureManager-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DuetDesktopCaptureManager/Pods-DuetDesktopCaptureManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E47578DB18E58B7A00C668DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,36 +2534,110 @@
 			files = (
 				E475791C18E5A06A00C668DE /* LogManager.m in Sources */,
 				E475791D18E5A06A00C668DE /* main.m in Sources */,
+				5D65C76A2A7148CA000FB8DD /* FramePanel.m in Sources */,
 				E475791A18E5A06A00C668DE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		5D943A3F2A713F0700BB9A91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D943A402A713F0700BB9A91 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5D943A412A713F0700BB9A91 /* Default-568h@2x.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D943A422A713F0700BB9A91 /* en */,
+			);
+			name = "Default-568h@2x.png";
+			sourceTree = "<group>";
+		};
+		5D943A432A713F0700BB9A91 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D943A442A713F0700BB9A91 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		5D943BA12A713F0800BB9A91 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D943BA22A713F0800BB9A91 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		5D943BBB2A713F0800BB9A91 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D943BBC2A713F0800BB9A91 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		5D943BBD2A713F0800BB9A91 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D943BBE2A713F0800BB9A91 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		5D943BBF2A713F0800BB9A91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D943BC02A713F0800BB9A91 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		E47578ED18E58B7A00C668DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -185,8 +2656,10 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -194,25 +2667,38 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -233,14 +2719,38 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		E47578F018E58B7A00C668DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 411946218BF15387E6A60CFF /* Pods-DuetDesktopCaptureManager.debug.xcconfig */;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = YES;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6L96W8A86;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+					"$(PROJECT_DIR)/DuetMac",
+				);
 				INFOPLIST_FILE = Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Checkouts/DuetCommon/DuetRemoteDisplay/Server/cpp/UdpRelay/c_interface/bin",
+					"$(PROJECT_DIR)/Carthage/Checkouts/DuetCommon/DuetVideo",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kairos.duet.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -248,9 +2758,31 @@
 		};
 		E47578F118E58B7A00C668DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4ABB589F56ADCBF25E4E8AB /* Pods-DuetDesktopCaptureManager.release.xcconfig */;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = YES;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6L96W8A86;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+					"$(PROJECT_DIR)/DuetMac",
+				);
 				INFOPLIST_FILE = Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Checkouts/DuetCommon/DuetRemoteDisplay/Server/cpp/UdpRelay/c_interface/bin",
+					"$(PROJECT_DIR)/Carthage/Checkouts/DuetCommon/DuetVideo",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kairos.duet.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -278,6 +2810,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5DF8FDEF2A7152C10077C1CC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5DF8FDF02A7152C10077C1CC /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DF8FDEF2A7152C10077C1CC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		5DF8FDF22A7152C10077C1CC /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DF8FDEF2A7152C10077C1CC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E47578D718E58B7A00C668DE /* Project object */;
 }

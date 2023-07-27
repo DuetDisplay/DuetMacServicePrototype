@@ -13,32 +13,96 @@
                 <outlet property="delegate" destination="219" id="221"/>
             </connections>
         </customObject>
-        <window title="PreLoginAgentCocoa" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="210" userLabel="Panel" customClass="NSPanel">
-            <windowStyleMask key="styleMask" titled="YES" utility="YES"/>
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" toolbarStyle="expanded" id="210" userLabel="Panel" customClass="FramePanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="100" y="100" width="250" height="200"/>
+            <rect key="contentRect" x="100" y="100" width="489" height="354"/>
             <rect key="screenRect" x="0.0" y="0.0" width="3440" height="1415"/>
             <view key="contentView" id="211">
-                <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <rect key="frame" x="0.0" y="0.0" width="489" height="354"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="212">
-                        <rect key="frame" x="95" y="83" width="60" height="32"/>
-                        <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="218">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="terminate:" target="-1" id="213"/>
-                        </connections>
-                    </button>
+                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9T-na-3FM">
+                        <rect key="frame" x="20" y="20" width="449" height="314"/>
+                        <clipView key="contentView" drawsBackground="NO" id="TdC-5h-VTZ">
+                            <rect key="frame" x="0.0" y="0.0" width="434" height="314"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView wantsLayer="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="ps8-xC-q8g">
+                                    <rect key="frame" x="0.0" y="0.0" width="434" height="314"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <size key="minSize" width="434" height="314"/>
+                                    <size key="maxSize" width="449" height="10000000"/>
+                                    <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                </textView>
+                            </subviews>
+                        </clipView>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="239" id="FWd-lI-BZn"/>
+                        </constraints>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="I97-IY-WNs">
+                            <rect key="frame" x="-100" y="-100" width="225" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="dxa-FU-NVF">
+                            <rect key="frame" x="434" y="0.0" width="15" height="314"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="centerY" secondItem="212" secondAttribute="centerY" id="LUW-gF-rhq"/>
-                    <constraint firstAttribute="centerX" secondItem="212" secondAttribute="centerX" id="hKn-HD-Ohe"/>
+                    <constraint firstAttribute="bottom" secondItem="c9T-na-3FM" secondAttribute="bottom" constant="20" symbolic="YES" id="1c5-0I-7C3"/>
+                    <constraint firstItem="c9T-na-3FM" firstAttribute="top" secondItem="211" secondAttribute="top" constant="20" symbolic="YES" id="CTw-GM-ZCN"/>
+                    <constraint firstItem="c9T-na-3FM" firstAttribute="leading" secondItem="211" secondAttribute="leading" constant="20" symbolic="YES" id="U4I-dC-J9I"/>
+                    <constraint firstAttribute="trailing" secondItem="c9T-na-3FM" secondAttribute="trailing" constant="20" symbolic="YES" id="jsU-gv-cjE"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="98" y="-78"/>
+            <toolbar key="toolbar" implicitIdentifier="BBCE006A-47D7-4DAF-9B65-5CE4C83A4B18" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="tlk-og-jmc">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="791C9C92-35BA-4F05-8484-48E8B1F0174E" label="start capture" paletteLabel="start capture" tag="-1" image="NSTouchBarRecordStartTemplate" bordered="YES" id="Cj7-Fh-Cxj" userLabel="Start capture">
+                        <size key="minSize" width="27" height="25"/>
+                        <size key="maxSize" width="27" height="25"/>
+                        <connections>
+                            <action selector="startCaptureButtonAction:" target="219" id="4pS-8k-GxB"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="F27FD558-DB59-4B3F-AEEF-306EDF6B949C" label="stop capture" paletteLabel="stop capture" tag="-1" image="NSTouchBarRecordStopTemplate" bordered="YES" id="J3u-TH-ffD">
+                        <size key="minSize" width="27" height="25"/>
+                        <size key="maxSize" width="27" height="25"/>
+                        <connections>
+                            <action selector="stopCaptureButtonAction:" target="219" id="8ho-28-y1j"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="RVG-OM-QUw"/>
+                    <toolbarItem implicitItemIdentifier="9F1FC0C0-7D55-4799-A471-5E819045F3EA" label="clear logs" paletteLabel="clear logs" tag="-1" image="trash" catalog="system" bordered="YES" id="xhw-td-xju">
+                        <size key="minSize" width="27" height="25"/>
+                        <size key="maxSize" width="27" height="25"/>
+                        <connections>
+                            <action selector="clearLogsButtonAction:" target="219" id="ybK-eA-Efe"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="458EA317-31A4-4045-AEFB-EE6139F76300" label="close app" paletteLabel="close app" tag="-1" image="xmark.circle" catalog="system" bordered="YES" id="W5z-eS-TOe">
+                        <size key="minSize" width="27" height="25"/>
+                        <size key="maxSize" width="27" height="25"/>
+                        <connections>
+                            <action selector="closeAppButtonAction:" target="219" id="Fjb-qM-X96"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="Cj7-Fh-Cxj"/>
+                    <toolbarItem reference="J3u-TH-ffD"/>
+                    <toolbarItem reference="xhw-td-xju"/>
+                    <toolbarItem reference="RVG-OM-QUw"/>
+                    <toolbarItem reference="W5z-eS-TOe"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="logView" destination="ps8-xC-q8g" id="BmI-ub-gaT"/>
+            </connections>
+            <point key="canvasLocation" x="217.5" y="56"/>
         </window>
         <customObject id="219" userLabel="AppDelegate" customClass="AppDelegate">
             <connections>
@@ -46,4 +110,10 @@
             </connections>
         </customObject>
     </objects>
+    <resources>
+        <image name="NSTouchBarRecordStartTemplate" width="19" height="19"/>
+        <image name="NSTouchBarRecordStopTemplate" width="18" height="16"/>
+        <image name="trash" catalog="system" width="15" height="17"/>
+        <image name="xmark.circle" catalog="system" width="15" height="15"/>
+    </resources>
 </document>

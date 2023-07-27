@@ -46,13 +46,17 @@
  */
 
 #import "AppDelegate.h"
+#import "FramePanel.h"
+@import DuetCommon;
+@import DuetScreenCapture;
 
 #import "LogManager.h"
 
 @interface AppDelegate () <NSApplicationDelegate>
 
-@property (nonatomic, assign, readwrite) IBOutlet NSPanel *     panel;
-
+@property (nonatomic, assign, readwrite) IBOutlet FramePanel *     panel;
+@property (nonatomic, strong) DSCScreen *mainScreen;
+@property (nonatomic, assign) NSInteger frameCount;
 @end
 
 @implementation AppDelegate
@@ -60,7 +64,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)note
 {
     #pragma unused(note)
-    
+	
     [[LogManager sharedManager] logWithFormat:@"Did finish launching begin"];
 
     assert(self.panel != nil);
@@ -95,6 +99,92 @@
 {
     #pragma unused(note)
     [[LogManager sharedManager] logWithFormat:@"Will terminate"];
+}
+
+- (IBAction)startCaptureButtonAction:(id)sender {
+	self.mainScreen = [DSCScreen screenWithDisplayID:CGMainDisplayID()];
+	typeof(self) __weak weakSelf = self;
+	if ([self.mainScreen isStreaming]) {
+		[self logMessage:@"Already capturing"];
+		return;
+	}
+	[self logMessage:@"Starting capture"];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		self.frameCount = 0;
+	});
+
+	[self.mainScreen startCapturingResolution:kDSCCaptureFullResolution fullResolutionEnabled:YES intoErrorCapable:^(DSCScreen * _Nonnull screen, DSCScreenEvent * _Nonnull event, NSError * _Nullable error) {
+		typeof(self) self = weakSelf;
+		if (self == nil) {
+			return;
+		}
+		switch(event.type) {
+			case DSCScreenEventHandlerSet: {
+				[self logMessage:@"DSCScreenEventHandlerSet"];
+				break;
+			}
+			case DSCScreenEventStartingStream: {
+				[self logMessage:@"DSCScreenEventStartingStream"];
+				break;
+			}
+			case DSCScreenEventStartedStream: {
+				[self logMessage:@"DSCScreenEventStartedStream"];
+				break;
+			}
+			case DSCScreenEventStoppingStream: {
+				[self logMessage:@"DSCScreenEventStoppingStream"];
+				break;
+			}
+			case DSCScreenEventStoppedStream: {
+				[self logMessage:@"DSCScreenEventStoppedStream"];
+				break;
+			}
+			case DSCScreenEventSizeModified: {
+				[self logMessage:@"DSCScreenEventSizeModified"];
+				break;
+			}
+			case DSCScreenEventFrame: {
+				dispatch_async(dispatch_get_main_queue(), ^{
+					self.frameCount++;
+				});
+				[self logMessage:[NSString stringWithFormat:@"DSCScreenEventFrame: %lu %@", self.frameCount, event.frame]];
+				break;
+			}
+			case DSCScreenEventError: {
+				[self logMessage:[NSString stringWithFormat:@"DSCScreenEventError: %@", error]];
+				break;
+			}
+			case DSCScreenEventFlush: {
+				[self logMessage:@"DSCScreenEventFlush"];
+				break;
+			}
+			default:
+				[self logMessage:[NSString stringWithFormat:@"Unknown event: %lu", event.type]];
+				break;
+		}
+	}];
+}
+
+- (IBAction)stopCaptureButtonAction:(id)sender {
+	[self logMessage:@"Stopping capture"];
+	[self.mainScreen stopCapturingScreen];
+}
+
+- (IBAction)clearLogsButtonAction:(id)sender {
+	dispatch_async(dispatch_get_main_queue(), ^{
+		self.panel.logView.string = @"";
+	});
+	
+}
+
+- (IBAction)closeAppButtonAction:(id)sender {
+	[[NSApplication sharedApplication] terminate:self];
+}
+
+- (void)logMessage:(NSString *)string {
+	dispatch_async(dispatch_get_main_queue(), ^{
+		self.panel.logView.string = [self.panel.logView.string stringByAppendingFormat:@"\n%@: %@", [NSDate date], string];
+	});
 }
 
 @end
