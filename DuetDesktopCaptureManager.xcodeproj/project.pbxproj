@@ -24,9 +24,9 @@
 		5D65C7662A7144F6000FB8DD /* DuetVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6F2A713F0800BB9A91 /* DuetVideo.framework */; };
 		5D65C7672A7144F6000FB8DD /* DuetVideo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6F2A713F0800BB9A91 /* DuetVideo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D65C76A2A7148CA000FB8DD /* FramePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D65C7692A7148CA000FB8DD /* FramePanel.m */; };
-		5DE389DE2A73A95300686A63 /* DuetService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE389DD2A73A95300686A63 /* DuetService.m */; };
-		5DE389E02A73A95300686A63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE389DF2A73A95300686A63 /* main.m */; };
 		5DE389E52A73A95300686A63 /* DuetService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 5DE389D92A73A95300686A63 /* DuetService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5DE389F12A73E8A100686A63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE389F02A73E8A100686A63 /* main.m */; };
+		5DE389F52A73E99D00686A63 /* DuetService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE389DD2A73A95300686A63 /* DuetService.m */; };
 		5DF8FDF12A7152C10077C1CC /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 5DF8FDF02A7152C10077C1CC /* CocoaLumberjack */; };
 		5DF8FDF32A7152C10077C1CC /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5DF8FDF22A7152C10077C1CC /* CocoaLumberjackSwift */; };
 		5DF8FDF42A7153860077C1CC /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C8E2A713F0800BB9A91 /* SocketRocket.framework */; };
@@ -219,6 +219,15 @@
 			);
 			name = "Embed XPC Services";
 			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DE389EC2A73E8A100686A63 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -835,9 +844,8 @@
 		5DE389DB2A73A95300686A63 /* DuetServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetServiceProtocol.h; sourceTree = "<group>"; };
 		5DE389DC2A73A95300686A63 /* DuetService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetService.h; sourceTree = "<group>"; };
 		5DE389DD2A73A95300686A63 /* DuetService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetService.m; sourceTree = "<group>"; };
-		5DE389DF2A73A95300686A63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5DE389E12A73A95300686A63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DE389E22A73A95300686A63 /* DuetService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DuetService.entitlements; sourceTree = "<group>"; };
+		5DE389EE2A73E8A100686A63 /* DuetCoreService */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DuetCoreService; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DE389F02A73E8A100686A63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E47578DF18E58B7A00C668DE /* DuetDesktopCaptureManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuetDesktopCaptureManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47578E218E58B7A00C668DE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E475791318E5A06A00C668DE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -854,6 +862,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		5DE389D62A73A95300686A63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DE389EB2A73E8A100686A63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2257,17 +2272,15 @@
 			path = DuetCommon;
 			sourceTree = "<group>";
 		};
-		5DE389DA2A73A95300686A63 /* DuetService */ = {
+		5DE389EF2A73E8A100686A63 /* DuetCoreService */ = {
 			isa = PBXGroup;
 			children = (
 				5DE389DB2A73A95300686A63 /* DuetServiceProtocol.h */,
 				5DE389DC2A73A95300686A63 /* DuetService.h */,
 				5DE389DD2A73A95300686A63 /* DuetService.m */,
-				5DE389DF2A73A95300686A63 /* main.m */,
-				5DE389E12A73A95300686A63 /* Info.plist */,
-				5DE389E22A73A95300686A63 /* DuetService.entitlements */,
+				5DE389F02A73E8A100686A63 /* main.m */,
 			);
-			path = DuetService;
+			path = DuetCoreService;
 			sourceTree = "<group>";
 		};
 		E47578D618E58B7A00C668DE = {
@@ -2284,7 +2297,7 @@
 				E475791618E5A06A00C668DE /* LogManager.h */,
 				E475791718E5A06A00C668DE /* LogManager.m */,
 				5D9439902A713F0700BB9A91 /* Carthage */,
-				5DE389DA2A73A95300686A63 /* DuetService */,
+				5DE389EF2A73E8A100686A63 /* DuetCoreService */,
 				E47578E118E58B7A00C668DE /* Frameworks */,
 				E47578E018E58B7A00C668DE /* Products */,
 				10CF4201A608BAEE6FF315D0 /* Pods */,
@@ -2296,6 +2309,7 @@
 			children = (
 				E47578DF18E58B7A00C668DE /* DuetDesktopCaptureManager.app */,
 				5DE389D92A73A95300686A63 /* DuetService.xpc */,
+				5DE389EE2A73E8A100686A63 /* DuetCoreService */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2328,6 +2342,23 @@
 			productName = DuetService;
 			productReference = 5DE389D92A73A95300686A63 /* DuetService.xpc */;
 			productType = "com.apple.product-type.xpc-service";
+		};
+		5DE389ED2A73E8A100686A63 /* DuetCoreService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DE389F22A73E8A100686A63 /* Build configuration list for PBXNativeTarget "DuetCoreService" */;
+			buildPhases = (
+				5DE389EA2A73E8A100686A63 /* Sources */,
+				5DE389EB2A73E8A100686A63 /* Frameworks */,
+				5DE389EC2A73E8A100686A63 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DuetCoreService;
+			productName = DuetCoreService;
+			productReference = 5DE389EE2A73E8A100686A63 /* DuetCoreService */;
+			productType = "com.apple.product-type.tool";
 		};
 		E47578DE18E58B7A00C668DE /* DuetDesktopCaptureManager */ = {
 			isa = PBXNativeTarget;
@@ -2367,6 +2398,9 @@
 					5DE389D82A73A95300686A63 = {
 						CreatedOnToolsVersion = 14.3;
 					};
+					5DE389ED2A73E8A100686A63 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 				};
 			};
 			buildConfigurationList = E47578DA18E58B7A00C668DE /* Build configuration list for PBXProject "DuetDesktopCaptureManager" */;
@@ -2401,6 +2435,7 @@
 			targets = (
 				E47578DE18E58B7A00C668DE /* DuetDesktopCaptureManager */,
 				5DE389D82A73A95300686A63 /* DuetService */,
+				5DE389ED2A73E8A100686A63 /* DuetCoreService */,
 			);
 		};
 /* End PBXProject section */
@@ -2614,8 +2649,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DE389E02A73A95300686A63 /* main.m in Sources */,
-				5DE389DE2A73A95300686A63 /* DuetService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DE389EA2A73E8A100686A63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DE389F12A73E8A100686A63 /* main.m in Sources */,
+				5DE389F52A73E99D00686A63 /* DuetService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2776,6 +2818,65 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		5DE389F32A73E8A100686A63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = J6L96W8A86;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5DE389F42A73E8A100686A63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = J6L96W8A86;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -2974,6 +3075,15 @@
 			buildConfigurations = (
 				5DE389E72A73A95300686A63 /* Debug */,
 				5DE389E82A73A95300686A63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DE389F22A73E8A100686A63 /* Build configuration list for PBXNativeTarget "DuetCoreService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DE389F32A73E8A100686A63 /* Debug */,
+				5DE389F42A73E8A100686A63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
