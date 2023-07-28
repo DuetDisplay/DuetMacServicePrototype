@@ -20,5 +20,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A413E379-45E8-4A77-A9E9-43B4E73B5DE9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "-connectToDaemon:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A413E379-45E8-4A77-A9E9-43B4E73B5DE9 - 116d0fe0af82d6c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate connectToDaemon:]"
+                  moduleName = "DuetDesktopCaptureManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "A413E379-45E8-4A77-A9E9-43B4E73B5DE9 - 116d0fe0af82d6c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate connectToDaemon:]"
+                  moduleName = "DuetDesktopCaptureManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

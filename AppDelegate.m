@@ -49,14 +49,16 @@
 #import "FramePanel.h"
 @import DuetCommon;
 @import DuetScreenCapture;
+#import "DuetServiceProtocol.h"
 
 #import "LogManager.h"
 
-@interface AppDelegate () <NSApplicationDelegate>
+@interface AppDelegate () <NSApplicationDelegate, DuetServiceProtocol>
 
 @property (nonatomic, assign, readwrite) IBOutlet FramePanel *     panel;
 @property (nonatomic, strong) DSCScreen *mainScreen;
 @property (nonatomic, assign) NSInteger frameCount;
+@property (nonatomic, strong) NSXPCConnection *connectionToService;
 @end
 
 @implementation AppDelegate
@@ -148,6 +150,16 @@
 					self.frameCount++;
 				});
 				[self logMessage:[NSString stringWithFormat:@"DSCScreenEventFrame: %lu %@", self.frameCount, event.frame]];
+				//	Once you have a connection to the service, you can use it like this:
+				CMBlockBufferRef blockBuffer = CMSampleBufferGetDataBuffer(event.frame.sampleBuffer);
+				size_t lengthAtOffset;
+				size_t totalLength;
+				char *rawData;
+				CMBlockBufferGetDataPointer(blockBuffer, 0, &lengthAtOffset, &totalLength, &rawData);
+
+				NSData *data = [NSData dataWithBytes:rawData length:totalLength];
+				[[self->_connectionToService remoteObjectProxy] sendScreenData:data];
+
 				break;
 			}
 			case DSCScreenEventError: {
@@ -177,6 +189,28 @@
 	
 }
 
+- (IBAction)connectToDaemon:(id)sender {
+	//TODO: establish connection to the daemon. Plus error handling.
+	/*
+	 To use the service from an application or other process, use NSXPCConnection to establish a connection to the service by doing something like this:
+	 */
+	
+		 _connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:NSXPCConnectionPrivileged];
+		 _connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetServiceProtocol)];
+		 [_connectionToService resume];
+	BOOL connected = _connectionToService.remoteObjectProxy != nil;
+	NSLog(@"Connected %d", connected);
+	/*
+	*/
+}
+
+- (IBAction)disconnectFromDaemon:(id)sender {
+	//TODO: disconnect XPC connection to the daemon.
+	//	 And, when you are finished with the service, clean up the connection like this:
+
+			 [_connectionToService invalidate];
+}
+
 - (IBAction)closeAppButtonAction:(id)sender {
 	[[NSApplication sharedApplication] terminate:self];
 }
@@ -185,6 +219,14 @@
 	dispatch_async(dispatch_get_main_queue(), ^{
 		self.panel.logView.string = [self.panel.logView.string stringByAppendingFormat:@"\n%@: %@", [NSDate date], string];
 	});
+}
+
+- (void)sendDataToAgent:(NSData *)data {
+	// TODO: process data coming from the daemon
+}
+
+- (void)sendScreenData:(NSData *)data {
+	// nop - implemented by the daemon. TODO: we should use two separate protocols for each of the peers
 }
 
 @end

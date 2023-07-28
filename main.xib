@@ -75,6 +75,20 @@
                             <action selector="stopCaptureButtonAction:" target="219" id="8ho-28-y1j"/>
                         </connections>
                     </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="7EA519BC-70A0-4927-BE28-394173B19F96" label="connect" paletteLabel="connect" tag="-1" bordered="YES" id="IZl-b3-1kP">
+                        <size key="minSize" width="27" height="25"/>
+                        <size key="maxSize" width="27" height="25"/>
+                        <connections>
+                            <action selector="connectToDaemon:" target="219" id="4lS-fm-Qdu"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="96AD8A28-45CB-4876-B15E-FA4F8D2871A1" label="disconnect" paletteLabel="disconnect" tag="-1" bordered="YES" id="cu3-Y4-CAP">
+                        <size key="minSize" width="27" height="25"/>
+                        <size key="maxSize" width="27" height="25"/>
+                        <connections>
+                            <action selector="disconnectFromDaemon:" target="219" id="z1k-I4-Hff"/>
+                        </connections>
+                    </toolbarItem>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="RVG-OM-QUw"/>
                     <toolbarItem implicitItemIdentifier="9F1FC0C0-7D55-4799-A471-5E819045F3EA" label="clear logs" paletteLabel="clear logs" tag="-1" image="trash" catalog="system" bordered="YES" id="xhw-td-xju">
                         <size key="minSize" width="27" height="25"/>
@@ -94,6 +108,8 @@
                 <defaultToolbarItems>
                     <toolbarItem reference="Cj7-Fh-Cxj"/>
                     <toolbarItem reference="J3u-TH-ffD"/>
+                    <toolbarItem reference="IZl-b3-1kP"/>
+                    <toolbarItem reference="cu3-Y4-CAP"/>
                     <toolbarItem reference="xhw-td-xju"/>
                     <toolbarItem reference="RVG-OM-QUw"/>
                     <toolbarItem reference="W5z-eS-TOe"/>
