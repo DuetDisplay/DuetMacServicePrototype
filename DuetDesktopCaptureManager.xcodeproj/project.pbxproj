@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		42583ABE93513321FD4445A5 /* libPods-DuetDesktopCaptureManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F906F3C0D1E513F627AA96 /* libPods-DuetDesktopCaptureManager.a */; };
 		5D490CF42A766273007E8343 /* DuetCoreService in Embed Daemon */ = {isa = PBXBuildFile; fileRef = 5DE389EE2A73E8A100686A63 /* DuetCoreService */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5D490CF62A7693B0007E8343 /* com.kairos.duet.DesktopCaptureManager.plist in Resources */ = {isa = PBXBuildFile; fileRef = E475791F18E5A1F000C668DE /* com.kairos.duet.DesktopCaptureManager.plist */; };
+		5D490CF72A7693B0007E8343 /* com.kairos.DuetCoreService.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D490CEF2A764B95007E8343 /* com.kairos.DuetCoreService.plist */; };
 		5D65C7542A7144E6000FB8DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47578E218E58B7A00C668DE /* Cocoa.framework */; };
 		5D65C7572A7144EB000FB8DD /* DuetAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6B2A713F0800BB9A91 /* DuetAnalytics.framework */; };
 		5D65C7582A7144EB000FB8DD /* DuetAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6B2A713F0800BB9A91 /* DuetAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -2562,6 +2564,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D490CF62A7693B0007E8343 /* com.kairos.duet.DesktopCaptureManager.plist in Resources */,
+				5D490CF72A7693B0007E8343 /* com.kairos.DuetCoreService.plist in Resources */,
 				E475791E18E5A06A00C668DE /* main.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
