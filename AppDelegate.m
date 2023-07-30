@@ -49,11 +49,12 @@
 #import "FramePanel.h"
 @import DuetCommon;
 @import DuetScreenCapture;
-#import "DuetServiceProtocol.h"
+#import "DuetDesktopServiceProtocol.h"
+#import "DuetDesktopClientProtocol.h"
 
 #import "LogManager.h"
 
-@interface AppDelegate () <NSApplicationDelegate, DuetServiceProtocol>
+@interface AppDelegate () <NSApplicationDelegate, DuetDesktopClientProtocol>
 
 @property (nonatomic, assign, readwrite) IBOutlet FramePanel *     panel;
 @property (nonatomic, strong) DSCScreen *mainScreen;
@@ -150,16 +151,10 @@
 					self.frameCount++;
 				});
 				[self logMessage:[NSString stringWithFormat:@"DSCScreenEventFrame: %lu %@", self.frameCount, event.frame]];
-				//	Once you have a connection to the service, you can use it like this:
-				CMBlockBufferRef blockBuffer = CMSampleBufferGetDataBuffer(event.frame.sampleBuffer);
-				size_t lengthAtOffset;
-				size_t totalLength;
-				char *rawData;
-				CMBlockBufferGetDataPointer(blockBuffer, 0, &lengthAtOffset, &totalLength, &rawData);
-
-				NSData *data = [NSData dataWithBytes:rawData length:totalLength];
-				[[self->_connectionToService remoteObjectProxy] sendScreenData:data];
-
+				//TODO: encoding frames. For now, we don't send the actual data in the prototype.
+				[[self->_connectionToService remoteObjectProxy] sendScreenData:[@"screendata" dataUsingEncoding:NSUTF8StringEncoding] withReply:^(NSString *message) {
+					NSLog(@"Daemon responded to sendScreenData: %@", message);
+				}];
 				break;
 			}
 			case DSCScreenEventError: {
@@ -190,25 +185,26 @@
 }
 
 - (IBAction)connectToDaemon:(id)sender {
-	//TODO: establish connection to the daemon. Plus error handling.
 	/*
 	 To use the service from an application or other process, use NSXPCConnection to establish a connection to the service by doing something like this:
 	 */
 	
-		 _connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:NSXPCConnectionPrivileged];
-		 _connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetServiceProtocol)];
-		 [_connectionToService resume];
-	BOOL connected = _connectionToService.remoteObjectProxy != nil;
-	NSLog(@"Connected %d", connected);
-	/*
-	*/
+	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:NSXPCConnectionPrivileged]; //0];//
+//	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:0];
+	_connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopServiceProtocol)];
+	_connectionToService.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopClientProtocol)];
+	_connectionToService.exportedObject = self;
+	[_connectionToService resume];
+	
+	[[_connectionToService remoteObjectProxy] sendScreenData:[@"screendata" dataUsingEncoding:NSUTF8StringEncoding] withReply:^(NSString *message) {
+		NSLog(@"Daemon responded to sendScreenData: %@", message);
+	}];
 }
 
 - (IBAction)disconnectFromDaemon:(id)sender {
-	//TODO: disconnect XPC connection to the daemon.
 	//	 And, when you are finished with the service, clean up the connection like this:
 
-			 [_connectionToService invalidate];
+	[_connectionToService invalidate];
 }
 
 - (IBAction)closeAppButtonAction:(id)sender {
@@ -221,12 +217,10 @@
 	});
 }
 
-- (void)sendDataToAgent:(NSData *)data {
+- (void)sendDataToAgent:(NSData *)data withReply:(void (^)(NSString *))reply {
 	// TODO: process data coming from the daemon
-}
-
-- (void)sendScreenData:(NSData *)data {
-	// nop - implemented by the daemon. TODO: we should use two separate protocols for each of the peers
+	NSLog(@"Daemon called sendDataToAgent: %@", data);
+	reply(@"xpc client received sendDataToAgent");
 }
 
 @end

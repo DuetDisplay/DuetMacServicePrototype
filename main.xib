@@ -42,11 +42,11 @@
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="239" id="FWd-lI-BZn"/>
                         </constraints>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="I97-IY-WNs">
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="I97-IY-WNs">
                             <rect key="frame" x="-100" y="-100" width="225" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="dxa-FU-NVF">
+                        <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="dxa-FU-NVF">
                             <rect key="frame" x="434" y="0.0" width="15" height="314"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>

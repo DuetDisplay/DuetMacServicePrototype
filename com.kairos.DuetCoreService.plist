@@ -15,11 +15,9 @@
 	</dict>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Applications/DuetServicePrototype.app/Contents/MacOS/DuetCoreService</string>
+		<string>/Applications/DuetDesktopCaptureManager.app/Contents/MacOS/DuetCoreService</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
-	<key>WorkingDirectory</key>
-	<string>/Applications/DuetServicePrototype.app/Contents/MacOS/</string>
 </dict>
 </plist>

@@ -8,14 +8,11 @@
 #import <Foundation/Foundation.h>
 
 // The protocol that this service will vend as its API. This header file will also need to be visible to the process hosting the service.
-@protocol DuetServiceProtocol
+@protocol DuetDesktopServiceProtocol
 
 // Methods for communication from Agent to Daemon
-- (void)sendScreenData:(NSData *)data;
+- (void)sendScreenData:(NSData *)data withReply:(void (^)(NSString *message))reply;
 
-// Methods for communication from Daemon to Agent
-- (void)sendDataToAgent:(NSData *)data;
-    
 @end
 
 /*
