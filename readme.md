@@ -11,6 +11,14 @@ Since Launch Daemons interaction with the GUI is very limited, another new compo
 
 There will be a purely GUI component too, that will implement the actual user interface of the app, and also the Remote Desktop client/viewer functionality. 
 
+``` mermaid
+graph LR
+  S[Services] -- REST, Websocket <--> Dd[Duet Core Service <BR>Daemon]
+  Dd -- Video frames, UI events <--> Ddp[Duet Desktop Capture Manager<BR>hybrid launch agent]
+  Dd -- Virtual display <--> Ddp
+  Dd -- User actions, App state <--> Dg[Duet GUI<BR>user-space process]
+```
+
 ## Installation
 1. Copy the app to /Applications.
 2. Starting and stopping the daemon and launch agent components of the application are managed by macOS, using launchd. To let the system know we need these processes up and running, we need to copy plist descriptors of these processes:
