@@ -5,12 +5,15 @@
 	<key>AssociatedBundleIdentifiers</key>
 	<array>
 		<string>com.kairos.DuetDesktopCaptureManager</string>
+		<string>com.kairos.DuetGUI</string>
 	</array>
 	<key>Label</key>
-	<string>com.kairos.DuetService</string>
+	<string>com.kairos.DuetDesktopCapturerService</string>
 	<key>MachServices</key>
 	<dict>
-		<key>com.kairos.DuetService</key>
+		<key>com.kairos.DuetDesktopCapturerService</key>
+		<true/>
+		<key>com.kairos.DuetGUIService</key>
 		<true/>
 	</dict>
 	<key>ProgramArguments</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.kairos.duet.DesktopCaptureManager.plist</string>
+	<string>com.kairos.DuetDesktopCaptureManager</string>
 	<key>LimitLoadToSessionType</key>
 	<array>
 		<string>Aqua</string>
@@ -13,7 +13,7 @@
 	<true/>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Library/PrivilegedHelperTools/DuetDesktopCaptureManager.app/Contents/MacOS/DuetDesktopCaptureManager</string>
+		<string>/Applications/DuetDesktopCaptureManager.app/Contents/MacOS/DuetDesktopCaptureManager</string>
 	</array>
 </dict>
 </plist>

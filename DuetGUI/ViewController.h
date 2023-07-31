@@ -9,6 +9,8 @@
 
 @interface ViewController : NSViewController
 
+@property (weak) IBOutlet NSSwitch *screenSharingSwitch;
+@property (weak) IBOutlet NSSwitch *screenCapturerSwitch;
 
 @end
 

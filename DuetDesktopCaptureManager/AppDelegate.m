@@ -49,12 +49,12 @@
 #import "FramePanel.h"
 @import DuetCommon;
 @import DuetScreenCapture;
-#import "DuetDesktopServiceProtocol.h"
-#import "DuetDesktopClientProtocol.h"
+#import "DuetDesktopCapturerServiceProtocol.h"
+#import "DuetDesktopCapturerClientProtocol.h"
 
 #import "LogManager.h"
 
-@interface AppDelegate () <NSApplicationDelegate, DuetDesktopClientProtocol>
+@interface AppDelegate () <NSApplicationDelegate, DuetDesktopCapturerClientProtocol>
 
 @property (nonatomic, assign, readwrite) IBOutlet FramePanel *     panel;
 @property (nonatomic, strong) DSCScreen *mainScreen;
@@ -104,7 +104,7 @@
     [[LogManager sharedManager] logWithFormat:@"Will terminate"];
 }
 
-- (IBAction)startCaptureButtonAction:(id)sender {
+- (void)startScreenCapture {
 	self.mainScreen = [DSCScreen screenWithDisplayID:CGMainDisplayID()];
 	typeof(self) __weak weakSelf = self;
 	if ([self.mainScreen isStreaming]) {
@@ -115,7 +115,7 @@
 	dispatch_async(dispatch_get_main_queue(), ^{
 		self.frameCount = 0;
 	});
-
+	
 	[self.mainScreen startCapturingResolution:kDSCCaptureFullResolution fullResolutionEnabled:YES intoErrorCapable:^(DSCScreen * _Nonnull screen, DSCScreenEvent * _Nonnull event, NSError * _Nullable error) {
 		typeof(self) self = weakSelf;
 		if (self == nil) {
@@ -153,14 +153,14 @@
 				[self logMessage:[NSString stringWithFormat:@"DSCScreenEventFrame: %lu %@", self.frameCount, event.frame]];
 				//TODO: encoding frames. For now, we don't send the actual data in the prototype.
 				// Validate the connection
-				id<DuetDesktopServiceProtocol> remoteProxy = [self->_connectionToService remoteObjectProxyWithErrorHandler:^(NSError *error) {
+				id<DuetDesktopCapturerServiceProtocol> remoteProxy = [self->_connectionToService remoteObjectProxyWithErrorHandler:^(NSError *error) {
 					typeof(self) self = weakSelf;
 					// This block will be called if the connection is interrupted or disconnected.
 					NSLog(@"Connection to the service was interrupted or disconnected: %@", error);
 					[self logMessage:[NSString stringWithFormat:@"Connection to the service was interrupted or disconnected: %@", error]];
-
+					
 				}];
-
+				
 				[remoteProxy sendScreenData:[@"screendata" dataUsingEncoding:NSUTF8StringEncoding] withReply:^(NSString *message) {
 					typeof(self) self = weakSelf;
 					NSLog(@"Daemon responded to sendScreenData: %@", message);
@@ -183,6 +183,10 @@
 	}];
 }
 
+- (IBAction)startCaptureButtonAction:(id)sender {
+	[self startScreenCapture];
+}
+
 - (IBAction)stopCaptureButtonAction:(id)sender {
 	[self logMessage:@"Stopping capture"];
 	[self.mainScreen stopCapturingScreen];
@@ -201,27 +205,26 @@
 	 */
 	[self logMessage:@"connectToDaemon"];
 
-//	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:NSXPCConnectionPrivileged];
-	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:0];
-	_connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopServiceProtocol)];
-	_connectionToService.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopClientProtocol)];
+	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetDesktopCapturerService" options:NSXPCConnectionPrivileged];
+//	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:0];
+	_connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopCapturerServiceProtocol)];
+	_connectionToService.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopCapturerClientProtocol)];
 	_connectionToService.exportedObject = self;
 	[_connectionToService resume];
 	
 	typeof(self) __weak weakSelf = self;
 
 	// Validate the connection
-	id<DuetDesktopServiceProtocol> remoteProxy = [_connectionToService remoteObjectProxyWithErrorHandler:^(NSError *error) {
+	id<DuetDesktopCapturerServiceProtocol> remoteProxy = [_connectionToService remoteObjectProxyWithErrorHandler:^(NSError *error) {
 		typeof(self) self = weakSelf;
 		// This block will be called if the connection is interrupted or disconnected.
 		[self logMessage:[NSString stringWithFormat:@"Connection to the service was interrupted or disconnected: %@", error]];
 	}];
 	
-	[remoteProxy sendScreenData:[@"screendata" dataUsingEncoding:NSUTF8StringEncoding] withReply:^(NSString *message) {
+	[remoteProxy getVersionWithCompletion:^(NSString *version, NSError *error) {
 		typeof(self) self = weakSelf;
-		NSLog(@"Daemon responded to sendScreenData: %@", message);
-		[self logMessage:[NSString stringWithFormat:@"Daemon responded to sendScreenData: %@", message]];
-
+		NSLog(@"Daemon responded to getVersion: %@ error: %@", version, error);
+		[self logMessage:[NSString stringWithFormat:@"Daemon responded to getVersion: %@ error: %@", version, error]];
 	}];
 }
 
@@ -242,12 +245,23 @@
 	});
 }
 
+- (void)startScreenCaptureWithCompletion:(void (^)(BOOL, NSError *))completion {
+	[self startScreenCapture];
+	//TODO: error handling here
+	completion(YES, nil);
+}
+
 - (void)sendDataToAgent:(NSData *)data withReply:(void (^)(NSString *))reply {
 	// TODO: process data coming from the daemon
 	NSLog(@"Daemon called sendDataToAgent: %@", data);
 	[self logMessage:[NSString stringWithFormat:@"Daemon called sendDataToAgent: %@", data]];
 
 	reply(@"xpc client received sendDataToAgent");
+}
+
+- (void)getVersionWithCompletion:(void (^)(NSString *, NSError *))completion {
+	//TODO: add version handling
+	completion(@"1.0", nil);
 }
 
 @end

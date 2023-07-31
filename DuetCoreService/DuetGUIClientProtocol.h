@@ -7,12 +7,24 @@
 
 #import <Foundation/Foundation.h>
 
-// The protocol that this service will vend as its API. This header file will also need to be visible to the process hosting the service.
-@protocol DuetDesktopClientProtocol
+typedef NS_ENUM(NSUInteger, DuetServiceState) {
+	DuetServiceStateConnected,
+	DuetServiceStateDisconnected
+};
 
-// Methods for communication from Daemon to Agent
-- (void)sendDataToAgent:(NSData *)data withReply:(void (^)(NSString *message))reply;
-    
+typedef NS_ENUM(NSUInteger, DuetServiceScreenSharingState) {
+	DuetServiceScreenSharingStateEnabled,
+	DuetServiceScreenSharingStateDisabled
+};
+
+
+// The protocol that this service will vend as its API. This header file will also need to be visible to the process hosting the service.
+@protocol DuetGUIClientProtocol
+
+// Methods for communication from Daemon to GUI
+- (void)getVersionWithCompletion:(void (^)(NSString *version, NSError *error))completion;
+- (void)serviceDidChangeScreenSharingState:(DuetServiceScreenSharingState)state;
+
 @end
 
 /*

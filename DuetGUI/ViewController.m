@@ -22,5 +22,12 @@
 	// Update the view, if already loaded.
 }
 
+- (IBAction)screenSharingSwitchAction:(id)sender {
+	
+}
+
+- (IBAction)screenCapturerSwitchAction:(id)sender {
+	
+}
 
 @end
