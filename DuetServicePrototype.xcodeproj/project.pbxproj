@@ -2446,7 +2446,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E47578DA18E58B7A00C668DE /* Build configuration list for PBXProject "DuetDesktopCaptureManager" */;
+			buildConfigurationList = E47578DA18E58B7A00C668DE /* Build configuration list for PBXProject "DuetServicePrototype" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -3159,7 +3159,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E47578DA18E58B7A00C668DE /* Build configuration list for PBXProject "DuetDesktopCaptureManager" */ = {
+		E47578DA18E58B7A00C668DE /* Build configuration list for PBXProject "DuetServicePrototype" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E47578ED18E58B7A00C668DE /* Debug */,

@@ -17,7 +17,7 @@
                BlueprintIdentifier = "5DE389ED2A73E8A100686A63"
                BuildableName = "DuetCoreService"
                BlueprintName = "DuetCoreService"
-               ReferencedContainer = "container:DuetDesktopCaptureManager.xcodeproj">
+               ReferencedContainer = "container:DuetServicePrototype.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,6 +33,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      debugAsWhichUser = "root"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +48,7 @@
             BlueprintIdentifier = "5DE389ED2A73E8A100686A63"
             BuildableName = "DuetCoreService"
             BlueprintName = "DuetCoreService"
-            ReferencedContainer = "container:DuetDesktopCaptureManager.xcodeproj">
+            ReferencedContainer = "container:DuetServicePrototype.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,7 +64,7 @@
             BlueprintIdentifier = "5DE389ED2A73E8A100686A63"
             BuildableName = "DuetCoreService"
             BlueprintName = "DuetCoreService"
-            ReferencedContainer = "container:DuetDesktopCaptureManager.xcodeproj">
+            ReferencedContainer = "container:DuetServicePrototype.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

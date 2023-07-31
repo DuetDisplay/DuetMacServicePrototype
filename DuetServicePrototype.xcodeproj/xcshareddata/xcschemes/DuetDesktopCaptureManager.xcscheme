@@ -17,7 +17,7 @@
                BlueprintIdentifier = "E47578DE18E58B7A00C668DE"
                BuildableName = "DuetDesktopCaptureManager.app"
                BlueprintName = "DuetDesktopCaptureManager"
-               ReferencedContainer = "container:DuetDesktopCaptureManager.xcodeproj">
+               ReferencedContainer = "container:DuetServicePrototype.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,7 +46,7 @@
             BlueprintIdentifier = "E47578DE18E58B7A00C668DE"
             BuildableName = "DuetDesktopCaptureManager.app"
             BlueprintName = "DuetDesktopCaptureManager"
-            ReferencedContainer = "container:DuetDesktopCaptureManager.xcodeproj">
+            ReferencedContainer = "container:DuetServicePrototype.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,7 +62,7 @@
             BlueprintIdentifier = "E47578DE18E58B7A00C668DE"
             BuildableName = "DuetDesktopCaptureManager.app"
             BlueprintName = "DuetDesktopCaptureManager"
-            ReferencedContainer = "container:DuetDesktopCaptureManager.xcodeproj">
+            ReferencedContainer = "container:DuetServicePrototype.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
