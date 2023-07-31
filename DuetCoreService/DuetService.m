@@ -16,10 +16,4 @@
 	NSLog(@"DuetService data received %lu", data.length);
 }
 
-//- (void)sendDataToAgent:(NSData *)data withReply:(void (^)(NSString *message))reply {
-//	// Process the received data from the LaunchAgent
-//	// You can send data back to the Agent or perform other tasks
-//	reply(@"sendDataToAgent called");
-//}
-
 @end

@@ -152,8 +152,19 @@
 				});
 				[self logMessage:[NSString stringWithFormat:@"DSCScreenEventFrame: %lu %@", self.frameCount, event.frame]];
 				//TODO: encoding frames. For now, we don't send the actual data in the prototype.
-				[[self->_connectionToService remoteObjectProxy] sendScreenData:[@"screendata" dataUsingEncoding:NSUTF8StringEncoding] withReply:^(NSString *message) {
+				// Validate the connection
+				id<DuetDesktopServiceProtocol> remoteProxy = [self->_connectionToService remoteObjectProxyWithErrorHandler:^(NSError *error) {
+					typeof(self) self = weakSelf;
+					// This block will be called if the connection is interrupted or disconnected.
+					NSLog(@"Connection to the service was interrupted or disconnected: %@", error);
+					[self logMessage:[NSString stringWithFormat:@"Connection to the service was interrupted or disconnected: %@", error]];
+
+				}];
+
+				[remoteProxy sendScreenData:[@"screendata" dataUsingEncoding:NSUTF8StringEncoding] withReply:^(NSString *message) {
+					typeof(self) self = weakSelf;
 					NSLog(@"Daemon responded to sendScreenData: %@", message);
+					[self logMessage:[NSString stringWithFormat:@"Daemon responded to sendScreenData: %@", message]];
 				}];
 				break;
 			}
@@ -188,21 +199,35 @@
 	/*
 	 To use the service from an application or other process, use NSXPCConnection to establish a connection to the service by doing something like this:
 	 */
-	
-	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:NSXPCConnectionPrivileged]; //0];//
-//	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:0];
+	[self logMessage:@"connectToDaemon"];
+
+//	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:NSXPCConnectionPrivileged];
+	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:0];
 	_connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopServiceProtocol)];
 	_connectionToService.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopClientProtocol)];
 	_connectionToService.exportedObject = self;
 	[_connectionToService resume];
 	
-	[[_connectionToService remoteObjectProxy] sendScreenData:[@"screendata" dataUsingEncoding:NSUTF8StringEncoding] withReply:^(NSString *message) {
+	typeof(self) __weak weakSelf = self;
+
+	// Validate the connection
+	id<DuetDesktopServiceProtocol> remoteProxy = [_connectionToService remoteObjectProxyWithErrorHandler:^(NSError *error) {
+		typeof(self) self = weakSelf;
+		// This block will be called if the connection is interrupted or disconnected.
+		[self logMessage:[NSString stringWithFormat:@"Connection to the service was interrupted or disconnected: %@", error]];
+	}];
+	
+	[remoteProxy sendScreenData:[@"screendata" dataUsingEncoding:NSUTF8StringEncoding] withReply:^(NSString *message) {
+		typeof(self) self = weakSelf;
 		NSLog(@"Daemon responded to sendScreenData: %@", message);
+		[self logMessage:[NSString stringWithFormat:@"Daemon responded to sendScreenData: %@", message]];
+
 	}];
 }
 
 - (IBAction)disconnectFromDaemon:(id)sender {
 	//	 And, when you are finished with the service, clean up the connection like this:
+	[self logMessage:@"disconnectFromDaemon"];
 
 	[_connectionToService invalidate];
 }
@@ -220,6 +245,8 @@
 - (void)sendDataToAgent:(NSData *)data withReply:(void (^)(NSString *))reply {
 	// TODO: process data coming from the daemon
 	NSLog(@"Daemon called sendDataToAgent: %@", data);
+	[self logMessage:[NSString stringWithFormat:@"Daemon called sendDataToAgent: %@", data]];
+
 	reply(@"xpc client received sendDataToAgent");
 }
 
