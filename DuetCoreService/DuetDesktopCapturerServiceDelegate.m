@@ -23,6 +23,10 @@
 	// Next, set the object that the connection exports. All messages sent on the connection to this service will be sent to the exported object to handle. The connection retains the exported object.
 	DuetDesktopCapturerService *exportedObject = [DuetDesktopCapturerService new];
 	newConnection.exportedObject = exportedObject;
+	newConnection.invalidationHandler = ^{
+		NSLog(@"Connection to the DesktopCaptureManager Client was invalidated");
+	};
+
 	
 	// Resuming the connection allows the system to deliver more incoming messages.
 	[newConnection resume];

@@ -31,6 +31,7 @@
 		5D65C76A2A7148CA000FB8DD /* FramePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D65C7692A7148CA000FB8DD /* FramePanel.m */; };
 		5D781AD52A77FEB8007FC81A /* DuetGUIServiceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D781AD42A77FEB8007FC81A /* DuetGUIServiceDelegate.m */; };
 		5D781AD82A77FF4B007FC81A /* DuetGUIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D781AD72A77FF4B007FC81A /* DuetGUIService.m */; };
+		5D83A4712A792BE300EE88FC /* DuetCoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83A4702A792BE300EE88FC /* DuetCoreModel.m */; };
 		5DCE11F52A77A1480076DD4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE11F42A77A1480076DD4C /* AppDelegate.m */; };
 		5DCE11F82A77A1480076DD4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE11F72A77A1480076DD4C /* ViewController.m */; };
 		5DCE11FA2A77A1490076DD4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DCE11F92A77A1490076DD4C /* Assets.xcassets */; };
@@ -259,6 +260,8 @@
 		5D781AD62A77FF4B007FC81A /* DuetGUIService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetGUIService.h; sourceTree = "<group>"; };
 		5D781AD72A77FF4B007FC81A /* DuetGUIService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetGUIService.m; sourceTree = "<group>"; };
 		5D83A46E2A78FA7300EE88FC /* DuetDesktopCaptureManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DuetDesktopCaptureManager.entitlements; sourceTree = "<group>"; };
+		5D83A46F2A792BE300EE88FC /* DuetCoreModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetCoreModel.h; sourceTree = "<group>"; };
+		5D83A4702A792BE300EE88FC /* DuetCoreModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetCoreModel.m; sourceTree = "<group>"; };
 		5D9439922A713F0700BB9A91 /* UICKeyChainStore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UICKeyChainStore; sourceTree = "<group>"; };
 		5D9439942A713F0700BB9A91 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		5D9439972A713F0700BB9A91 /* WebSocketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketProvider.swift; sourceTree = "<group>"; };
@@ -2352,6 +2355,8 @@
 				5D781AD32A77FEB8007FC81A /* DuetGUIServiceDelegate.h */,
 				5D781AD42A77FEB8007FC81A /* DuetGUIServiceDelegate.m */,
 				5DE389F02A73E8A100686A63 /* main.m */,
+				5D83A46F2A792BE300EE88FC /* DuetCoreModel.h */,
+				5D83A4702A792BE300EE88FC /* DuetCoreModel.m */,
 			);
 			path = DuetCoreService;
 			sourceTree = "<group>";
@@ -2734,6 +2739,7 @@
 			files = (
 				5D781AD82A77FF4B007FC81A /* DuetGUIService.m in Sources */,
 				5DE389F12A73E8A100686A63 /* main.m in Sources */,
+				5D83A4712A792BE300EE88FC /* DuetCoreModel.m in Sources */,
 				5D448EAF2A77D92D000D97A5 /* DuetDesktopCapturerServiceDelegate.m in Sources */,
 				5D781AD52A77FEB8007FC81A /* DuetGUIServiceDelegate.m in Sources */,
 				5DE389F52A73E99D00686A63 /* DuetDesktopCapturerService.m in Sources */,

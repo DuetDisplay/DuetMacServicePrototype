@@ -37,7 +37,7 @@
 
 - (void)connectToDaemon {
 	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetGUIService" options:NSXPCConnectionPrivileged];
-//	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:0];
+//	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetGUIService" options:0];
 	_connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetGUIServiceProtocol)];
 	_connectionToService.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetGUIClientProtocol)];
 	_connectionToService.exportedObject = self;
