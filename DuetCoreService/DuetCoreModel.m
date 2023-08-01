@@ -18,7 +18,9 @@
 @interface DuetCoreModel ()
 
 @property (nonatomic, strong) NSXPCListener *guiListener;
+@property (nonatomic, strong) DuetGUIServiceDelegate *guiDelegate;
 @property (nonatomic, strong) NSXPCListener *capturerListener;
+@property (nonatomic, strong) DuetDesktopCapturerServiceDelegate *desktopCapturerDelegate;
 @property (nonatomic, assign) BOOL started;
 
 @end
@@ -34,10 +36,10 @@
 }
 
 - (void)setupServiceListeners {
-	DuetGUIServiceDelegate *guiDelegate = [DuetGUIServiceDelegate new];
+	self.guiDelegate = [DuetGUIServiceDelegate new];
 	// Set up the one NSXPCListener for this service. It will handle all incoming connections.
 	self.guiListener = [[NSXPCListener alloc] initWithMachServiceName:@"com.kairos.DuetGUIService"];
-	self.guiListener.delegate = guiDelegate;
+	self.guiListener.delegate = self.guiDelegate;
 	if (@available(macOS 13.0, *)) {
 //		[self.guiListener setConnectionCodeSigningRequirement:@"identifier \"com.kairos.DuetGUI\""];
 	} else {
@@ -45,11 +47,11 @@
 	}
 
 	// Create the delegate for the service.
-	DuetDesktopCapturerServiceDelegate *desktopCapturerDelegate = [DuetDesktopCapturerServiceDelegate new];
+	self.desktopCapturerDelegate = [DuetDesktopCapturerServiceDelegate new];
 	
 	// Set up the one NSXPCListener for this service. It will handle all incoming connections.
 	self.capturerListener = [[NSXPCListener alloc] initWithMachServiceName:@"com.kairos.DuetDesktopCapturerService"];
-	self.capturerListener.delegate = desktopCapturerDelegate;
+	self.capturerListener.delegate = self.desktopCapturerDelegate;
 	if (@available(macOS 13.0, *)) {
 		[self.capturerListener setConnectionCodeSigningRequirement:@"identifier \"com.kairos.DuetDesktopCaptureManager\""];
 	} else {
