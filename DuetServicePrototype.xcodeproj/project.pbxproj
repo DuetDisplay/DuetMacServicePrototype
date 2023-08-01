@@ -258,6 +258,7 @@
 		5D781AD42A77FEB8007FC81A /* DuetGUIServiceDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetGUIServiceDelegate.m; sourceTree = "<group>"; };
 		5D781AD62A77FF4B007FC81A /* DuetGUIService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetGUIService.h; sourceTree = "<group>"; };
 		5D781AD72A77FF4B007FC81A /* DuetGUIService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetGUIService.m; sourceTree = "<group>"; };
+		5D83A46E2A78FA7300EE88FC /* DuetDesktopCaptureManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DuetDesktopCaptureManager.entitlements; sourceTree = "<group>"; };
 		5D9439922A713F0700BB9A91 /* UICKeyChainStore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UICKeyChainStore; sourceTree = "<group>"; };
 		5D9439942A713F0700BB9A91 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		5D9439972A713F0700BB9A91 /* WebSocketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketProvider.swift; sourceTree = "<group>"; };
@@ -871,7 +872,6 @@
 		5DCE11F92A77A1490076DD4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DCE11FC2A77A1490076DD4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DCE11FE2A77A1490076DD4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5DCE12002A77A1490076DD4C /* DuetGUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DuetGUI.entitlements; sourceTree = "<group>"; };
 		5DE389DB2A73A95300686A63 /* DuetDesktopCapturerServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetDesktopCapturerServiceProtocol.h; sourceTree = "<group>"; };
 		5DE389DC2A73A95300686A63 /* DuetDesktopCapturerService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetDesktopCapturerService.h; sourceTree = "<group>"; };
 		5DE389DD2A73A95300686A63 /* DuetDesktopCapturerService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetDesktopCapturerService.m; sourceTree = "<group>"; };
@@ -2315,7 +2315,6 @@
 				5DCE11F92A77A1490076DD4C /* Assets.xcassets */,
 				5DCE11FB2A77A1490076DD4C /* Main.storyboard */,
 				5DCE11FE2A77A1490076DD4C /* main.m */,
-				5DCE12002A77A1490076DD4C /* DuetGUI.entitlements */,
 			);
 			path = DuetGUI;
 			sourceTree = "<group>";
@@ -2323,6 +2322,7 @@
 		5DCE12042A77A2640076DD4C /* DuetDesktopCaptureManager */ = {
 			isa = PBXGroup;
 			children = (
+				5D83A46E2A78FA7300EE88FC /* DuetDesktopCaptureManager.entitlements */,
 				E475791518E5A06A00C668DE /* Info.plist */,
 				E475791818E5A06A00C668DE /* main.m */,
 				E475791918E5A06A00C668DE /* main.xib */,
@@ -2843,7 +2843,6 @@
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = DuetGUI/DuetGUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -2891,7 +2890,6 @@
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = DuetGUI/DuetGUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -3106,6 +3104,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 411946218BF15387E6A60CFF /* Pods-DuetDesktopCaptureManager.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DuetDesktopCaptureManager/DuetDesktopCaptureManager.entitlements;
 				DEAD_CODE_STRIPPING = YES;
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6L96W8A86;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3138,6 +3137,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4ABB589F56ADCBF25E4E8AB /* Pods-DuetDesktopCaptureManager.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DuetDesktopCaptureManager/DuetDesktopCaptureManager.entitlements;
 				DEAD_CODE_STRIPPING = YES;
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6L96W8A86;
 				FRAMEWORK_SEARCH_PATHS = (

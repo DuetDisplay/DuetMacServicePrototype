@@ -21,7 +21,12 @@ int main(int argc, const char *argv[])
 	// Set up the one NSXPCListener for this service. It will handle all incoming connections.
 	NSXPCListener *guiListener = [[NSXPCListener alloc] initWithMachServiceName:@"com.kairos.DuetGUIService"];
 	guiListener.delegate = guiDelegate;
-	
+	if (@available(macOS 13.0, *)) {
+		[guiListener setConnectionCodeSigningRequirement:@"identifier \"com.kairos.DuetGUI\""];
+	} else {
+		// Fallback on earlier versions
+	}
+
 	// Resuming the serviceListener starts this service. This method does not return.
 	[guiListener resume];
 	
@@ -31,13 +36,16 @@ int main(int argc, const char *argv[])
 	// Set up the one NSXPCListener for this service. It will handle all incoming connections.
 	NSXPCListener *capturerListener = [[NSXPCListener alloc] initWithMachServiceName:@"com.kairos.DuetDesktopCapturerService"];
 	capturerListener.delegate = desktopCapturerDelegate;
-	
+	if (@available(macOS 13.0, *)) {
+		[capturerListener setConnectionCodeSigningRequirement:@"identifier \"com.kairos.DuetDesktopCaptureManager\""];
+	} else {
+		// Fallback on earlier versions
+	}
 	// Resuming the serviceListener starts this service. This method does not return.
 	[capturerListener resume];
 	
 
 
-	
 	[[NSRunLoop mainRunLoop] run];
 
 	return 0;
