@@ -10,9 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DuetDesktopCapturerServiceDelegate : NSObject <NSXPCListenerDelegate>
+@interface DuetDesktopCapturerServiceXPCListenerDelegate : NSObject <NSXPCListenerDelegate>
 
 @property (nonatomic, strong) DuetDesktopCapturerService *sharedService;
+
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)initWithService:(DuetDesktopCapturerService *)service;
 
 @end
 

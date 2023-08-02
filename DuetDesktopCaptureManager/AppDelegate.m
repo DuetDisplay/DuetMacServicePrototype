@@ -49,7 +49,7 @@
 #import "FramePanel.h"
 @import DuetCommon;
 @import DuetScreenCapture;
-#import "DuetDesktopCapturerServiceProtocol.h"
+#import "DuetDesktopCapturerDaemonProtocol.h"
 #import "DuetDesktopCapturerClientProtocol.h"
 
 #import "LogManager.h"
@@ -153,7 +153,7 @@
 				[self logMessage:[NSString stringWithFormat:@"DSCScreenEventFrame: %lu %@", self.frameCount, event.frame]];
 				//TODO: encoding frames. For now, we don't send the actual data in the prototype.
 				// Validate the connection
-				id<DuetDesktopCapturerServiceProtocol> remoteProxy = [self->_connectionToService remoteObjectProxyWithErrorHandler:^(NSError *error) {
+				id<DuetDesktopCapturerDaemonProtocol> remoteProxy = [self->_connectionToService remoteObjectProxyWithErrorHandler:^(NSError *error) {
 					typeof(self) self = weakSelf;
 					// This block will be called if the connection is interrupted or disconnected.
 					NSLog(@"Connection to the service was interrupted or disconnected: %@", error);
@@ -207,7 +207,7 @@
 
 	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetDesktopCapturerService" options:NSXPCConnectionPrivileged];
 //	_connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"com.kairos.DuetService" options:0];
-	_connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopCapturerServiceProtocol)];
+	_connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopCapturerDaemonProtocol)];
 	_connectionToService.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopCapturerClientProtocol)];
 	_connectionToService.exportedObject = self;
 	[_connectionToService resume];
@@ -215,7 +215,7 @@
 	typeof(self) __weak weakSelf = self;
 
 	// Validate the connection
-	id<DuetDesktopCapturerServiceProtocol> remoteProxy = [_connectionToService remoteObjectProxyWithErrorHandler:^(NSError *error) {
+	id<DuetDesktopCapturerDaemonProtocol> remoteProxy = [_connectionToService remoteObjectProxyWithErrorHandler:^(NSError *error) {
 		typeof(self) self = weakSelf;
 		// This block will be called if the connection is interrupted or disconnected.
 		[self logMessage:[NSString stringWithFormat:@"Connection to the service was interrupted or disconnected: %@", error]];

@@ -5,12 +5,25 @@
 //  Created by Peter Huszak on 2023. 07. 31..
 //
 
-#import "DuetDesktopCapturerServiceDelegate.h"
+#import "DuetDesktopCapturerServiceXPCListenerDelegate.h"
 #import "DuetDesktopCapturerService.h"
 #import "DuetDesktopCapturerClientProtocol.h"
 
+@interface DuetDesktopCapturerServiceXPCListenerDelegate ()
 
-@implementation DuetDesktopCapturerServiceDelegate
+@property (nonatomic, weak) DuetDesktopCapturerService *service;
+
+@end
+
+@implementation DuetDesktopCapturerServiceXPCListenerDelegate
+
+- (nonnull instancetype)initWithService:(nonnull DuetDesktopCapturerService *)service {
+	self = [super init];
+	if (self != nil) {
+		self.service = service;
+	}
+	return self;
+}
 
 - (BOOL)listener:(NSXPCListener *)listener shouldAcceptNewConnection:(NSXPCConnection *)newConnection {
 	// This method is where the NSXPCListener configures, accepts, and resumes a new incoming NSXPCConnection.
@@ -18,10 +31,10 @@
 
 	// Configure the connection.
 	// First, set the interface that the exported object implements.
-	newConnection.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopCapturerServiceProtocol)];
+	newConnection.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopCapturerDaemonProtocol)];
 	newConnection.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopCapturerClientProtocol)];
 	// Next, set the object that the connection exports. All messages sent on the connection to this service will be sent to the exported object to handle. The connection retains the exported object.
-	DuetDesktopCapturerService *exportedObject = [DuetDesktopCapturerService new];
+	DuetDesktopCapturerService *exportedObject = self.service;
 	newConnection.exportedObject = exportedObject;
 	newConnection.invalidationHandler = ^{
 		NSLog(@"Connection to the DesktopCaptureManager Client was invalidated");

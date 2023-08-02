@@ -10,8 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DuetGUIServiceDelegate : NSObject <NSXPCListenerDelegate>
+@interface DuetGUIServiceXPCListenerDelegate : NSObject <NSXPCListenerDelegate>
 @property (nonatomic, strong) DuetGUIService *sharedService;
+
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)initWithService:(DuetGUIService *)service;
 
 @end
 

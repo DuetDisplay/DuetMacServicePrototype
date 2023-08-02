@@ -8,12 +8,11 @@
 #import <Foundation/Foundation.h>
 
 // The protocol that this service will vend as its API. This header file will also need to be visible to the process hosting the service.
-@protocol DuetGUIServiceProtocol
+@protocol DuetDesktopCapturerDaemonProtocol
 
-// Methods for communication from GUI to Daemon
+// Methods for communication from Agent to Daemon
 - (void)getVersionWithCompletion:(void (^)(NSString *version, NSError *error))completion;
-- (void)setScreenSharingStateTo:(BOOL)enabled withCompletion:(void (^)(BOOL success, NSError *error))completion;
-- (void)startSessionWithCompletion:(void (^)(BOOL success, NSError *error))completion;
+- (void)sendScreenData:(NSData *)data withReply:(void (^)(NSString *message))reply;
 
 @end
 

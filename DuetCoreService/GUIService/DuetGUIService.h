@@ -6,11 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DuetGUIServiceProtocol.h"
+#import "DuetGUIDaemonProtocol.h"
+#import "DuetServiceProtocol.h"
+@class DuetCoreModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DuetGUIService : NSObject <DuetGUIServiceProtocol>
+@interface DuetGUIService : NSObject <DuetServiceProtocol, DuetGUIDaemonProtocol>
 
 @end
 

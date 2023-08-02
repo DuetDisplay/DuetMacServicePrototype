@@ -5,11 +5,25 @@
 //  Created by Peter Huszak on 2023. 07. 31..
 //
 
-#import "DuetGUIServiceDelegate.h"
+#import "DuetGUIServiceXPCListenerDelegate.h"
 #import "DuetGUIClientProtocol.h"
-#import "DuetGUIServiceProtocol.h"
+#import "DuetGUIDaemonProtocol.h"
 
-@implementation DuetGUIServiceDelegate
+@interface DuetGUIServiceXPCListenerDelegate ()
+
+@property (nonatomic, weak) DuetGUIService *service;
+
+@end
+
+@implementation DuetGUIServiceXPCListenerDelegate
+
+- (nonnull instancetype)initWithService:(nonnull DuetGUIService *)service {
+	self = [super init];
+	if (self != nil) {
+		self.service = service;
+	}
+	return self;
+}
 
 - (BOOL)listener:(NSXPCListener *)listener shouldAcceptNewConnection:(NSXPCConnection *)newConnection {
 	// This method is where the NSXPCListener configures, accepts, and resumes a new incoming NSXPCConnection.
@@ -17,10 +31,10 @@
 
 	// Configure the connection.
 	// First, set the interface that the exported object implements.
-	newConnection.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetGUIServiceProtocol)];
+	newConnection.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetGUIDaemonProtocol)];
 	newConnection.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetGUIClientProtocol)];
 	// Next, set the object that the connection exports. All messages sent on the connection to this service will be sent to the exported object to handle. The connection retains the exported object.
-	DuetGUIService *exportedObject = [DuetGUIService new];
+	DuetGUIService *exportedObject = self.service;
 	newConnection.exportedObject = exportedObject;
 	newConnection.invalidationHandler = ^{
 		NSLog(@"Connection to the GUI Client was invalidated");
