@@ -10,6 +10,7 @@
 
 int main(int argc, const char *argv[])
 {
+	NSLog(@"Launching DuetCoreService Daemon");
 	DuetCoreModel *model = [DuetCoreModel new];
 	[model start];
 	

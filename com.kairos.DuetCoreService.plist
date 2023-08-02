@@ -18,9 +18,12 @@
 	</dict>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Applications/DuetDesktopCaptureManager.app/Contents/MacOS/DuetCoreService</string>
+		<string>/Library/PrivilegedHelperTools/DuetCoreService</string>
+<!--		<string>/Applications/DuetDesktopCaptureManager.app/Contents/MacOS/DuetCoreService</string>-->
 	</array>
 	<key>RunAtLoad</key>
+	<true/>
+	<key>WaitForDebugger</key>
 	<true/>
 </dict>
 </plist>

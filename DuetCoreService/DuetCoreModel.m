@@ -41,7 +41,7 @@
 	self.guiListener = [[NSXPCListener alloc] initWithMachServiceName:@"com.kairos.DuetGUIService"];
 	self.guiListener.delegate = self.guiDelegate;
 	if (@available(macOS 13.0, *)) {
-//		[self.guiListener setConnectionCodeSigningRequirement:@"identifier \"com.kairos.DuetGUI\""];
+		[self.guiListener setConnectionCodeSigningRequirement:@"identifier \"com.kairos.DuetGUI\""];
 	} else {
 		// Fallback on earlier versions
 	}
