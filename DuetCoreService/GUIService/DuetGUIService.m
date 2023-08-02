@@ -65,7 +65,10 @@
 
 - (void)startSessionWithCompletion:(void (^)(BOOL success, NSError *error))completion {
 	//TODO: start capture session
-	completion(YES, nil);
+	[self.coreModel startScreenCaptureWithCompletion:^(BOOL success, NSError * _Nonnull error) {
+		completion(success, error);
+	}];
+	
 }
 
 @end

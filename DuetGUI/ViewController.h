@@ -11,6 +11,7 @@
 
 @property (weak) IBOutlet NSSwitch *screenSharingSwitch;
 @property (weak) IBOutlet NSSwitch *screenCapturerSwitch;
+@property (weak) IBOutlet NSTextField *coreServiceConnectionStateLabel;
 
 @end
 

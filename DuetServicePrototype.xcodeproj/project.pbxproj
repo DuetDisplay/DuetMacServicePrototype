@@ -68,6 +68,8 @@
 		5D781AD52A77FEB8007FC81A /* DuetGUIServiceXPCListenerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D781AD42A77FEB8007FC81A /* DuetGUIServiceXPCListenerDelegate.m */; };
 		5D781AD82A77FF4B007FC81A /* DuetGUIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D781AD72A77FF4B007FC81A /* DuetGUIService.m */; };
 		5D83A4712A792BE300EE88FC /* DuetCoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83A4702A792BE300EE88FC /* DuetCoreModel.m */; };
+		5D83A5002A7AB30700EE88FC /* DuetAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83A4FF2A7AB30700EE88FC /* DuetAppModel.m */; };
+		5D83A5032A7ABCB300EE88FC /* DuetCoreGUIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83A5022A7ABCB300EE88FC /* DuetCoreGUIClient.m */; };
 		5DCE11F52A77A1480076DD4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE11F42A77A1480076DD4C /* AppDelegate.m */; };
 		5DCE11F82A77A1480076DD4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE11F72A77A1480076DD4C /* ViewController.m */; };
 		5DCE11FA2A77A1490076DD4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DCE11F92A77A1490076DD4C /* Assets.xcassets */; };
@@ -302,6 +304,10 @@
 		5D83A4E92A7A419C00EE88FC /* install.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		5D83A4F52A7A537100EE88FC /* launch.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = launch.sh; sourceTree = "<group>"; };
 		5D83A4FD2A7A855F00EE88FC /* DuetServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DuetServiceProtocol.h; path = DuetCoreService/DuetServiceProtocol.h; sourceTree = SOURCE_ROOT; };
+		5D83A4FE2A7AB30700EE88FC /* DuetAppModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetAppModel.h; sourceTree = "<group>"; };
+		5D83A4FF2A7AB30700EE88FC /* DuetAppModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetAppModel.m; sourceTree = "<group>"; };
+		5D83A5012A7ABCB300EE88FC /* DuetCoreGUIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetCoreGUIClient.h; sourceTree = "<group>"; };
+		5D83A5022A7ABCB300EE88FC /* DuetCoreGUIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetCoreGUIClient.m; sourceTree = "<group>"; };
 		5D9439922A713F0700BB9A91 /* UICKeyChainStore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UICKeyChainStore; sourceTree = "<group>"; };
 		5D9439942A713F0700BB9A91 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		5D9439972A713F0700BB9A91 /* WebSocketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketProvider.swift; sourceTree = "<group>"; };
@@ -2394,6 +2400,10 @@
 				5DCE11F92A77A1490076DD4C /* Assets.xcassets */,
 				5DCE11FB2A77A1490076DD4C /* Main.storyboard */,
 				5DCE11FE2A77A1490076DD4C /* main.m */,
+				5D83A4FE2A7AB30700EE88FC /* DuetAppModel.h */,
+				5D83A4FF2A7AB30700EE88FC /* DuetAppModel.m */,
+				5D83A5012A7ABCB300EE88FC /* DuetCoreGUIClient.h */,
+				5D83A5022A7ABCB300EE88FC /* DuetCoreGUIClient.m */,
 			);
 			path = DuetGUI;
 			sourceTree = "<group>";
@@ -2851,6 +2861,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D83A5002A7AB30700EE88FC /* DuetAppModel.m in Sources */,
+				5D83A5032A7ABCB300EE88FC /* DuetCoreGUIClient.m in Sources */,
 				5DCE11F82A77A1480076DD4C /* ViewController.m in Sources */,
 				5DCE11FF2A77A1490076DD4C /* main.m in Sources */,
 				5DCE11F52A77A1480076DD4C /* AppDelegate.m in Sources */,

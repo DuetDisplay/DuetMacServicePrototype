@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)start;
 - (void)stop;
 
+- (void)startScreenCaptureWithCompletion:(void (^)(BOOL success, NSError *error))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END

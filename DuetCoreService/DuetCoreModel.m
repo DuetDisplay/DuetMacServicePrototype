@@ -52,4 +52,14 @@
 	self.started = NO;
 }
 
+- (void)startScreenCaptureWithCompletion:(void (^)(BOOL, NSError * _Nonnull))completion {
+	if (self.desktopCapturerService.remoteProxy == nil) {
+		completion(NO, [NSError errorWithDomain:@"" code:404 userInfo:nil]);
+		return;
+	}
+	[self.desktopCapturerService.remoteProxy startScreenCaptureWithCompletion:^(BOOL success, NSError *error) {
+		completion(success, error);
+	}];
+}
+
 @end

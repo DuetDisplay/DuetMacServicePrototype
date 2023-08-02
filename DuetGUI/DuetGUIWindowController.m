@@ -6,7 +6,7 @@
 //
 
 #import "DuetGUIWindowController.h"
-#import "AppDelegate.h"
+#import "DuetAppModel.h"
 
 @interface DuetGUIWindowController ()
 
@@ -29,11 +29,12 @@
 }
 
 - (IBAction)connectToDaemon:(id)sender {
-	[((AppDelegate *)[[NSApplication sharedApplication] delegate]) connectToDaemon];
+	[[DuetAppModel shared] connectToDaemon];
 }
 
 - (IBAction)disconnectFromDaemon:(id)sender {
-	
+	[[DuetAppModel shared] disconnectFromDaemon];
+
 }
 
 @end

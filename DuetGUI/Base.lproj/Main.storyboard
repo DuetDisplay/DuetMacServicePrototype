@@ -754,59 +754,132 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="384" height="284"/>
+                        <rect key="frame" x="0.0" y="0.0" width="391" height="327"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="2sV-Z5-4KV">
-                                <rect key="frame" x="324" y="240" width="42" height="25"/>
-                                <connections>
-                                    <action selector="screenSharingSwitchAction:" target="XfG-lQ-9wD" id="abe-AD-Pmx"/>
-                                </connections>
-                            </switch>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wh2-Ly-6IP">
-                                <rect key="frame" x="18" y="245" width="97" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Screen Sharing" id="k8L-pr-6yM">
-                                    <font key="font" usesAppearanceFont="YES"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="LWp-bn-ZCh">
-                                <rect key="frame" x="324" y="210" width="42" height="25"/>
-                                <connections>
-                                    <action selector="screenCapturerSwitchAction:" target="XfG-lQ-9wD" id="kpj-zz-Mam"/>
-                                </connections>
-                            </switch>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xYK-u9-pG6">
-                                <rect key="frame" x="18" y="215" width="104" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Screen Capturer" id="Bob-L8-uX0">
-                                    <font key="font" usesAppearanceFont="YES"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVm-XP-BkL">
+                                <rect key="frame" x="20" y="231" width="351" height="76"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTh-I2-3ZU">
+                                        <rect key="frame" x="0.0" y="60" width="351" height="16"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tCc-v5-hME" userLabel="DuetCoreService">
+                                                <rect key="frame" x="-2" y="0.0" width="305" height="16"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="DuetCoreService:" id="G6a-7n-X0z">
+                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="252" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JT0-8E-QZ8" userLabel="stateLabel">
+                                                <rect key="frame" x="299" y="0.0" width="54" height="16"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" id="jTT-Vz-zwe">
+                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TEI-FD-Wd8">
+                                        <rect key="frame" x="0.0" y="30" width="351" height="22"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wh2-Ly-6IP">
+                                                <rect key="frame" x="-2" y="3" width="317" height="16"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Screen Sharing" id="k8L-pr-6yM">
+                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="2sV-Z5-4KV">
+                                                <rect key="frame" x="311" y="-2" width="42" height="25"/>
+                                                <connections>
+                                                    <action selector="screenSharingSwitchAction:" target="XfG-lQ-9wD" id="abe-AD-Pmx"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lD-Cz-Igy">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="22"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xYK-u9-pG6">
+                                                <rect key="frame" x="-2" y="3" width="317" height="16"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Screen Capturer" id="Bob-L8-uX0">
+                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="LWp-bn-ZCh">
+                                                <rect key="frame" x="311" y="-2" width="42" height="25"/>
+                                                <connections>
+                                                    <action selector="screenCapturerSwitchAction:" target="XfG-lQ-9wD" id="kpj-zz-Mam"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6lD-Cz-Igy" secondAttribute="trailing" id="Axg-Bw-wC5"/>
+                                    <constraint firstItem="JTh-I2-3ZU" firstAttribute="leading" secondItem="GVm-XP-BkL" secondAttribute="leading" id="Cff-Ci-8FH"/>
+                                    <constraint firstAttribute="trailing" secondItem="TEI-FD-Wd8" secondAttribute="trailing" id="ID7-DO-l9e"/>
+                                    <constraint firstAttribute="trailing" secondItem="JTh-I2-3ZU" secondAttribute="trailing" id="KxV-FU-MgS"/>
+                                    <constraint firstItem="TEI-FD-Wd8" firstAttribute="leading" secondItem="GVm-XP-BkL" secondAttribute="leading" id="Xwc-6q-4LT"/>
+                                    <constraint firstItem="6lD-Cz-Igy" firstAttribute="leading" secondItem="GVm-XP-BkL" secondAttribute="leading" id="ryV-3z-Xcn"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="LWp-bn-ZCh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xYK-u9-pG6" secondAttribute="trailing" constant="8" symbolic="YES" id="1f8-jz-l98"/>
-                            <constraint firstItem="2sV-Z5-4KV" firstAttribute="centerY" secondItem="Wh2-Ly-6IP" secondAttribute="centerY" id="334-2k-0Xk"/>
-                            <constraint firstAttribute="trailing" secondItem="2sV-Z5-4KV" secondAttribute="trailing" constant="20" symbolic="YES" id="CRI-tg-MgK"/>
-                            <constraint firstItem="xYK-u9-pG6" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="FTY-xQ-CxI"/>
-                            <constraint firstItem="LWp-bn-ZCh" firstAttribute="top" secondItem="2sV-Z5-4KV" secondAttribute="bottom" constant="8" symbolic="YES" id="PqD-kc-tGg"/>
-                            <constraint firstItem="2sV-Z5-4KV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Wh2-Ly-6IP" secondAttribute="trailing" constant="8" symbolic="YES" id="caJ-GE-mbd"/>
-                            <constraint firstAttribute="trailing" secondItem="LWp-bn-ZCh" secondAttribute="trailing" constant="20" symbolic="YES" id="jI0-Zn-S62"/>
-                            <constraint firstItem="2sV-Z5-4KV" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="pAf-5g-Hn0"/>
-                            <constraint firstItem="Wh2-Ly-6IP" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="tWt-MB-5TE"/>
-                            <constraint firstItem="LWp-bn-ZCh" firstAttribute="centerY" secondItem="xYK-u9-pG6" secondAttribute="centerY" id="vR3-cx-ipB"/>
+                            <constraint firstItem="GVm-XP-BkL" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="64g-zA-D9L"/>
+                            <constraint firstItem="GVm-XP-BkL" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="Blx-Cl-YTu"/>
+                            <constraint firstAttribute="trailing" secondItem="GVm-XP-BkL" secondAttribute="trailing" constant="20" symbolic="YES" id="YEM-Oz-5DX"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GVm-XP-BkL" secondAttribute="bottom" constant="20" symbolic="YES" id="xCe-Cu-zZe"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="coreServiceConnectionStateLabel" destination="JT0-8E-QZ8" id="se8-fy-wlE"/>
                         <outlet property="screenCapturerSwitch" destination="LWp-bn-ZCh" id="bAu-yk-Fcq"/>
                         <outlet property="screenSharingSwitch" destination="2sV-Z5-4KV" id="6ZA-OF-cCF"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="710"/>
+            <point key="canvasLocation" x="57.5" y="731.5"/>
         </scene>
     </scenes>
     <resources>
