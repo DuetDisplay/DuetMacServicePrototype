@@ -19,6 +19,8 @@
 
 @implementation DuetDesktopCapturerService
 
+#pragma mark - DuetServiceProtocol
+
 - (instancetype)initWithCoreModel:(DuetCoreModel *)model {
 	self = [super init];
 	if (self != nil) {
@@ -47,6 +49,11 @@
 	[self.capturerListener suspend];
 }
 
+- (id<DuetDesktopCapturerClientProtocol>)remoteProxy {
+	return self.capturerDelegate.remoteProxy;
+}
+
+#pragma mark - DuetDesktopCapturerDaemonProtocol
 
 - (void)sendScreenData:(NSData *)data withReply:(void (^)(NSString *message))reply {
 	// Process the received screen data from the LaunchAgent

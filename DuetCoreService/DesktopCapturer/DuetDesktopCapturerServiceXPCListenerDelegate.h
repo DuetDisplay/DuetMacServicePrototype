@@ -7,12 +7,14 @@
 
 #import <Foundation/Foundation.h>
 #import "DuetDesktopCapturerService.h"
+#import "DuetDesktopCapturerClientProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DuetDesktopCapturerServiceXPCListenerDelegate : NSObject <NSXPCListenerDelegate>
 
-@property (nonatomic, strong) DuetDesktopCapturerService *sharedService;
+@property (nonatomic, assign, readonly) BOOL connected;
+@property (nonatomic, assign, readonly) id<DuetDesktopCapturerClientProtocol> remoteProxy;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithService:(DuetDesktopCapturerService *)service;

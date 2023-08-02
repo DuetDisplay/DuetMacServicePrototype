@@ -8,11 +8,15 @@
 #import <Foundation/Foundation.h>
 #import "DuetGUIDaemonProtocol.h"
 #import "DuetServiceProtocol.h"
+#import "DuetGUIClientProtocol.h"
+
 @class DuetCoreModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DuetGUIService : NSObject <DuetServiceProtocol, DuetGUIDaemonProtocol>
+
+@property (nonatomic, strong, readonly) id<DuetGUIClientProtocol> remoteProxy;
 
 @end
 

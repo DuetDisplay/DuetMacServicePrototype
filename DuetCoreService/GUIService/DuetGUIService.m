@@ -47,6 +47,10 @@
 	[self.guiListener suspend];
 }
 
+- (id<DuetGUIClientProtocol>)remoteProxy {
+	return self.guiDelegate.remoteProxy;
+}
+
 #pragma mark - DuetGUIDaemonProtocol
 
 - (void)getVersionWithCompletion:(void (^)(NSString *version, NSError *error))completion {
