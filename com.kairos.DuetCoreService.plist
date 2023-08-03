@@ -18,8 +18,7 @@
 	</dict>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Library/PrivilegedHelperTools/DuetCoreService</string>
-<!--		<string>/Applications/DuetDesktopCaptureManager.app/Contents/MacOS/DuetCoreService</string>-->
+		<string>/Applications/DuetGUI.App/Contents/SharedSupport/DuetCoreService</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>

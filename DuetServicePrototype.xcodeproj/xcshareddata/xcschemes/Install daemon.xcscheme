@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5D83A4EB2A7A42AA00EE88FC"
-               BuildableName = "Install daemon"
-               BlueprintName = "Install daemon"
+               BuildableName = "Install DuetCoreService"
+               BlueprintName = "Install DuetCoreService"
                ReferencedContainer = "container:DuetServicePrototype.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,8 +50,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5D83A4EB2A7A42AA00EE88FC"
-            BuildableName = "Install daemon"
-            BlueprintName = "Install daemon"
+            BuildableName = "Install DuetCoreService"
+            BlueprintName = "Install DuetCoreService"
             ReferencedContainer = "container:DuetServicePrototype.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

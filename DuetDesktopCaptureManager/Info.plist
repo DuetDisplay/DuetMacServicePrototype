@@ -27,7 +27,7 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2007-2014 Apple Inc.</string>
 	<key>NSMainNibFile</key>
-	<string>main</string>
+	<string>DuetDesktopCaptureManagerDebugUI</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

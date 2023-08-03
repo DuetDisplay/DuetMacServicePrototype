@@ -15,7 +15,11 @@ done
 # Copy the daemon's executable into /Library/PrivilegedHelperTools
 for executable in DuetCoreService
 do
-  trg=/Library/PrivilegedHelperTools/${executable}
+  trgdir=/Applications/DuetGUI.app/Contents/SharedSupport
+  trg=${trgdir}/${executable}
+  if [ ! -f ${trgdir} ]; then
+	mkdir -p ${trgdir}
+  fi
   cp ${BUILT_PRODUCTS_DIR}/${executable} ${trg}
   chown -R root:admin ${trg}
 done

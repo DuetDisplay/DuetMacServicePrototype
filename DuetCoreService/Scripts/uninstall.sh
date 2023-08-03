@@ -8,7 +8,7 @@ if [ -f /Library/LaunchDaemons/com.kairos.DuetCoreService.plist ]; then
 	rm /Library/LaunchDaemons/com.kairos.DuetCoreService.plist
 fi
 
-if [ -f /Library/PrivilegedHelperTools/DuetCoreService ]; then
-	# Remove the daemon's executable
-	rm /Library/PrivilegedHelperTools/DuetCoreService
-fi
+#if [ -f /Library/PrivilegedHelperTools/DuetCoreService ]; then
+#	# Remove the daemon's executable
+#	rm /Library/PrivilegedHelperTools/DuetCoreService
+#fi

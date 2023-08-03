@@ -13,7 +13,7 @@
 	<true/>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Applications/DuetDesktopCaptureManager.app/Contents/MacOS/DuetDesktopCaptureManager</string>
+		<string>/Applications/DuetGUI.app/Contents/SharedSupport/DuetDesktopCaptureManager.app/Contents/MacOS/DuetDesktopCaptureManager</string>
 	</array>
 </dict>
 </plist>

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "83F54146A4F8DBBCCBF0762A37537A03"
-               BuildableName = "libPods-DuetDesktopCaptureManager.a"
-               BlueprintName = "Pods-DuetDesktopCaptureManager"
+               BlueprintIdentifier = "B71B3FA4C40F22A06BAFFD35E0707870"
+               BuildableName = "libPods-DuetGUI.a"
+               BlueprintName = "Pods-DuetGUI"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

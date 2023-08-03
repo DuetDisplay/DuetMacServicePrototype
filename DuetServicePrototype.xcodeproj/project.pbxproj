@@ -7,48 +7,80 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		5D83A4EB2A7A42AA00EE88FC /* Install daemon */ = {
+		5D83A4EB2A7A42AA00EE88FC /* Install DuetCoreService */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 5D83A4EC2A7A42AA00EE88FC /* Build configuration list for PBXAggregateTarget "Install daemon" */;
+			buildConfigurationList = 5D83A4EC2A7A42AA00EE88FC /* Build configuration list for PBXAggregateTarget "Install DuetCoreService" */;
 			buildPhases = (
 				5D83A4EF2A7A42D800EE88FC /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = "Install daemon";
+			name = "Install DuetCoreService";
 			productName = "Install daemon";
 		};
-		5D83A4F02A7A431500EE88FC /* Uninstall daemon */ = {
+		5D83A4F02A7A431500EE88FC /* Uninstall DuetCoreService */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 5D83A4F22A7A431500EE88FC /* Build configuration list for PBXAggregateTarget "Uninstall daemon" */;
+			buildConfigurationList = 5D83A4F22A7A431500EE88FC /* Build configuration list for PBXAggregateTarget "Uninstall DuetCoreService" */;
 			buildPhases = (
 				5D83A4F12A7A431500EE88FC /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = "Uninstall daemon";
+			name = "Uninstall DuetCoreService";
 			productName = "Install daemon";
 		};
-		5D83A4F62A7A53AE00EE88FC /* Launch daemon */ = {
+		5D83A4F62A7A53AE00EE88FC /* Launch DuetCoreService */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 5D83A4F82A7A53AE00EE88FC /* Build configuration list for PBXAggregateTarget "Launch daemon" */;
+			buildConfigurationList = 5D83A4F82A7A53AE00EE88FC /* Build configuration list for PBXAggregateTarget "Launch DuetCoreService" */;
 			buildPhases = (
 				5D83A4F72A7A53AE00EE88FC /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = "Launch daemon";
+			name = "Launch DuetCoreService";
 			productName = "Install daemon";
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		42583ABE93513321FD4445A5 /* libPods-DuetDesktopCaptureManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F906F3C0D1E513F627AA96 /* libPods-DuetDesktopCaptureManager.a */; };
+		5D204F0A2A7B866A0047A657 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 5D204F092A7B866A0047A657 /* CocoaLumberjack */; };
+		5D204F0C2A7B866A0047A657 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5D204F0B2A7B866A0047A657 /* CocoaLumberjackSwift */; };
+		5D204F0D2A7B866A0047A657 /* DuetAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6B2A713F0800BB9A91 /* DuetAnalytics.framework */; };
+		5D204F0E2A7B866A0047A657 /* DuetAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6B2A713F0800BB9A91 /* DuetAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D204F0F2A7B866A0047A657 /* DuetCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C672A713F0800BB9A91 /* DuetCommon.framework */; };
+		5D204F102A7B866A0047A657 /* DuetCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C672A713F0800BB9A91 /* DuetCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D204F112A7B866A0047A657 /* DuetConnections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C692A713F0800BB9A91 /* DuetConnections.framework */; };
+		5D204F122A7B866A0047A657 /* DuetConnections.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C692A713F0800BB9A91 /* DuetConnections.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D204F132A7B866A0047A657 /* DuetRemoteDisplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C632A713F0800BB9A91 /* DuetRemoteDisplay.framework */; };
+		5D204F142A7B866A0047A657 /* DuetRemoteDisplay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C632A713F0800BB9A91 /* DuetRemoteDisplay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D204F152A7B866A0047A657 /* DuetScreenCapture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6D2A713F0800BB9A91 /* DuetScreenCapture.framework */; };
+		5D204F162A7B866A0047A657 /* DuetScreenCapture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6D2A713F0800BB9A91 /* DuetScreenCapture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D204F172A7B866A0047A657 /* DuetServiceSessions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C652A713F0800BB9A91 /* DuetServiceSessions.framework */; };
+		5D204F182A7B866A0047A657 /* DuetServiceSessions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C652A713F0800BB9A91 /* DuetServiceSessions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D204F192A7B866A0047A657 /* DuetVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6F2A713F0800BB9A91 /* DuetVideo.framework */; };
+		5D204F1A2A7B866A0047A657 /* DuetVideo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6F2A713F0800BB9A91 /* DuetVideo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D204F1B2A7B866A0047A657 /* TCMPortMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C7C2A713F0800BB9A91 /* TCMPortMapper.framework */; };
+		5D204F1C2A7B866A0047A657 /* TCMPortMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C7C2A713F0800BB9A91 /* TCMPortMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D204F1D2A7B866A0047A657 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C8E2A713F0800BB9A91 /* SocketRocket.framework */; };
+		5D204F1E2A7B866A0047A657 /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C8E2A713F0800BB9A91 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D204F252A7B86EF0047A657 /* DuetCoreService in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5DE389EE2A73E8A100686A63 /* DuetCoreService */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5D204F2A2A7B97070047A657 /* DuetDesktopCaptureManager.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = E47578DF18E58B7A00C668DE /* DuetDesktopCaptureManager.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5D204F7A2A7BA97F0047A657 /* libUICKeyChainStore.a in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D204F732A7BA81A0047A657 /* libUICKeyChainStore.a */; };
+		5D204F7B2A7BA9B10047A657 /* libUICKeyChainStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D204F732A7BA81A0047A657 /* libUICKeyChainStore.a */; };
 		5D448EAF2A77D92D000D97A5 /* DuetDesktopCapturerServiceXPCListenerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D448EAE2A77D92D000D97A5 /* DuetDesktopCapturerServiceXPCListenerDelegate.m */; };
 		5D448EB22A77DCC9000D97A5 /* DuetGUIWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D448EB12A77DCC9000D97A5 /* DuetGUIWindowController.m */; };
 		5D490CF42A766273007E8343 /* DuetCoreService in Embed Daemon */ = {isa = PBXBuildFile; fileRef = 5DE389EE2A73E8A100686A63 /* DuetCoreService */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5D490CF62A7693B0007E8343 /* com.kairos.DuetDesktopCaptureManager.plist in Resources */ = {isa = PBXBuildFile; fileRef = E475791F18E5A1F000C668DE /* com.kairos.DuetDesktopCaptureManager.plist */; };
 		5D490CF72A7693B0007E8343 /* com.kairos.DuetCoreService.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D490CEF2A764B95007E8343 /* com.kairos.DuetCoreService.plist */; };
+		5D56D6E52A7AE3A400566C37 /* DuetAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6B2A713F0800BB9A91 /* DuetAnalytics.framework */; };
+		5D56D6E82A7AE3A500566C37 /* DuetCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C672A713F0800BB9A91 /* DuetCommon.framework */; };
+		5D56D6EA2A7AE3A700566C37 /* DuetConnections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C692A713F0800BB9A91 /* DuetConnections.framework */; };
+		5D56D6EC2A7AE3A800566C37 /* DuetRemoteDisplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C632A713F0800BB9A91 /* DuetRemoteDisplay.framework */; };
+		5D56D6EE2A7AE3AA00566C37 /* DuetScreenCapture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6D2A713F0800BB9A91 /* DuetScreenCapture.framework */; };
+		5D56D6F02A7AE3AB00566C37 /* DuetServiceSessions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C652A713F0800BB9A91 /* DuetServiceSessions.framework */; };
+		5D56D6F22A7AE3AD00566C37 /* DuetVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6F2A713F0800BB9A91 /* DuetVideo.framework */; };
+		5D56D6F42A7AE3AF00566C37 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C8E2A713F0800BB9A91 /* SocketRocket.framework */; };
+		5D56D6F62A7AE3B000566C37 /* TCMPortMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C7C2A713F0800BB9A91 /* TCMPortMapper.framework */; };
 		5D65C7542A7144E6000FB8DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47578E218E58B7A00C668DE /* Cocoa.framework */; };
 		5D65C7572A7144EB000FB8DD /* DuetAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6B2A713F0800BB9A91 /* DuetAnalytics.framework */; };
 		5D65C7582A7144EB000FB8DD /* DuetAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C6B2A713F0800BB9A91 /* DuetAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -70,6 +102,8 @@
 		5D83A4712A792BE300EE88FC /* DuetCoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83A4702A792BE300EE88FC /* DuetCoreModel.m */; };
 		5D83A5002A7AB30700EE88FC /* DuetAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83A4FF2A7AB30700EE88FC /* DuetAppModel.m */; };
 		5D83A5032A7ABCB300EE88FC /* DuetCoreGUIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D83A5022A7ABCB300EE88FC /* DuetCoreGUIClient.m */; };
+		5D83A5052A7ADE7F00EE88FC /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 5D83A5042A7ADE7F00EE88FC /* CocoaLumberjack */; };
+		5D83A5072A7ADE7F00EE88FC /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5D83A5062A7ADE7F00EE88FC /* CocoaLumberjackSwift */; };
 		5DCE11F52A77A1480076DD4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE11F42A77A1480076DD4C /* AppDelegate.m */; };
 		5DCE11F82A77A1480076DD4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE11F72A77A1480076DD4C /* ViewController.m */; };
 		5DCE11FA2A77A1490076DD4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DCE11F92A77A1490076DD4C /* Assets.xcassets */; };
@@ -83,19 +117,62 @@
 		5DF8FDF52A7153860077C1CC /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C8E2A713F0800BB9A91 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DF8FDF62A71588B0077C1CC /* TCMPortMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C7C2A713F0800BB9A91 /* TCMPortMapper.framework */; };
 		5DF8FDF72A71588B0077C1CC /* TCMPortMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C7C2A713F0800BB9A91 /* TCMPortMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C00AB7168952EAE8F7D64BD /* libPods-DuetGUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9F80C46C62EF359939CB5E /* libPods-DuetGUI.a */; };
 		E475791A18E5A06A00C668DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E475791418E5A06A00C668DE /* AppDelegate.m */; };
 		E475791C18E5A06A00C668DE /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E475791718E5A06A00C668DE /* LogManager.m */; };
 		E475791D18E5A06A00C668DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E475791818E5A06A00C668DE /* main.m */; };
-		E475791E18E5A06A00C668DE /* main.xib in Resources */ = {isa = PBXBuildFile; fileRef = E475791918E5A06A00C668DE /* main.xib */; };
+		E475791E18E5A06A00C668DE /* DuetDesktopCaptureManagerDebugUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = E475791918E5A06A00C668DE /* DuetDesktopCaptureManagerDebugUI.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5D490CF02A766211007E8343 /* PBXContainerItemProxy */ = {
+		5D204F2B2A7B97570047A657 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E47578D718E58B7A00C668DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E47578DE18E58B7A00C668DE;
+			remoteInfo = DuetDesktopCaptureManager;
+		};
+		5D204F2D2A7B9A610047A657 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E47578D718E58B7A00C668DE /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5DE389ED2A73E8A100686A63;
 			remoteInfo = DuetCoreService;
+		};
+		5D204F702A7BA81A0047A657 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D204F692A7BA81A0047A657 /* UICKeyChainStore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 14796A501C1CD9A500169D09;
+			remoteInfo = UICKeyChainStore;
+		};
+		5D204F722A7BA81A0047A657 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D204F692A7BA81A0047A657 /* UICKeyChainStore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 14796A691C1CD9C900169D09;
+			remoteInfo = libUICKeyChainStore;
+		};
+		5D204F742A7BA81A0047A657 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D204F692A7BA81A0047A657 /* UICKeyChainStore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 14796A5F1C1CD9B500169D09;
+			remoteInfo = UICKeyChainStoreTests;
+		};
+		5D204F762A7BA81A0047A657 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D204F692A7BA81A0047A657 /* UICKeyChainStore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 148993CF1D8F2515000132F7;
+			remoteInfo = TestHost;
+		};
+		5D204F782A7BA8270047A657 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D204F692A7BA81A0047A657 /* UICKeyChainStore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 14796A461C1CD9A500169D09;
+			remoteInfo = UICKeyChainStore;
 		};
 		5D943C602A713F0800BB9A91 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -240,6 +317,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		5D204F1F2A7B866A0047A657 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5D204F7A2A7BA97F0047A657 /* libUICKeyChainStore.a in Embed Frameworks */,
+				5D204F0E2A7B866A0047A657 /* DuetAnalytics.framework in Embed Frameworks */,
+				5D204F1C2A7B866A0047A657 /* TCMPortMapper.framework in Embed Frameworks */,
+				5D204F1A2A7B866A0047A657 /* DuetVideo.framework in Embed Frameworks */,
+				5D204F162A7B866A0047A657 /* DuetScreenCapture.framework in Embed Frameworks */,
+				5D204F1E2A7B866A0047A657 /* SocketRocket.framework in Embed Frameworks */,
+				5D204F122A7B866A0047A657 /* DuetConnections.framework in Embed Frameworks */,
+				5D204F102A7B866A0047A657 /* DuetCommon.framework in Embed Frameworks */,
+				5D204F142A7B866A0047A657 /* DuetRemoteDisplay.framework in Embed Frameworks */,
+				5D204F182A7B866A0047A657 /* DuetServiceSessions.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D204F242A7B86DD0047A657 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 12;
+			files = (
+				5D204F2A2A7B97070047A657 /* DuetDesktopCaptureManager.app in CopyFiles */,
+				5D204F252A7B86EF0047A657 /* DuetCoreService in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5D65C7592A7144EB000FB8DD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,19 +378,11 @@
 			name = "Embed Daemon";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5DE389EC2A73E8A100686A63 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		411946218BF15387E6A60CFF /* Pods-DuetDesktopCaptureManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuetDesktopCaptureManager.debug.xcconfig"; path = "Target Support Files/Pods-DuetDesktopCaptureManager/Pods-DuetDesktopCaptureManager.debug.xcconfig"; sourceTree = "<group>"; };
+		1A9F80C46C62EF359939CB5E /* libPods-DuetGUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DuetGUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D204F692A7BA81A0047A657 /* UICKeyChainStore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UICKeyChainStore.xcodeproj; path = UICKeyChainStore/Lib/UICKeyChainStore.xcodeproj; sourceTree = "<group>"; };
 		5D448EAB2A77B703000D97A5 /* DuetGUIDaemonProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuetGUIDaemonProtocol.h; sourceTree = "<group>"; };
 		5D448EAC2A77B70F000D97A5 /* DuetGUIClientProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuetGUIClientProtocol.h; sourceTree = "<group>"; };
 		5D448EAD2A77D92D000D97A5 /* DuetDesktopCapturerServiceXPCListenerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetDesktopCapturerServiceXPCListenerDelegate.h; sourceTree = "<group>"; };
@@ -308,7 +408,6 @@
 		5D83A4FF2A7AB30700EE88FC /* DuetAppModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetAppModel.m; sourceTree = "<group>"; };
 		5D83A5012A7ABCB300EE88FC /* DuetCoreGUIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetCoreGUIClient.h; sourceTree = "<group>"; };
 		5D83A5022A7ABCB300EE88FC /* DuetCoreGUIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetCoreGUIClient.m; sourceTree = "<group>"; };
-		5D9439922A713F0700BB9A91 /* UICKeyChainStore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UICKeyChainStore; sourceTree = "<group>"; };
 		5D9439942A713F0700BB9A91 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		5D9439972A713F0700BB9A91 /* WebSocketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketProvider.swift; sourceTree = "<group>"; };
 		5D9439982A713F0700BB9A91 /* DevicesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesClient.swift; sourceTree = "<group>"; };
@@ -926,6 +1025,8 @@
 		5DE389DD2A73A95300686A63 /* DuetDesktopCapturerService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetDesktopCapturerService.m; sourceTree = "<group>"; };
 		5DE389EE2A73E8A100686A63 /* DuetCoreService */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DuetCoreService; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE389F02A73E8A100686A63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9CF0730A0138FB25065B9AAF /* Pods-DuetGUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuetGUI.release.xcconfig"; path = "Target Support Files/Pods-DuetGUI/Pods-DuetGUI.release.xcconfig"; sourceTree = "<group>"; };
+		E42AA71F6D972BAA560E13C1 /* Pods-DuetGUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuetGUI.debug.xcconfig"; path = "Target Support Files/Pods-DuetGUI/Pods-DuetGUI.debug.xcconfig"; sourceTree = "<group>"; };
 		E47578DF18E58B7A00C668DE /* DuetDesktopCaptureManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuetDesktopCaptureManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47578E218E58B7A00C668DE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E475791318E5A06A00C668DE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -934,10 +1035,8 @@
 		E475791618E5A06A00C668DE /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
 		E475791718E5A06A00C668DE /* LogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogManager.m; sourceTree = "<group>"; };
 		E475791818E5A06A00C668DE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E475791918E5A06A00C668DE /* main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = main.xib; sourceTree = "<group>"; };
+		E475791918E5A06A00C668DE /* DuetDesktopCaptureManagerDebugUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DuetDesktopCaptureManagerDebugUI.xib; sourceTree = "<group>"; };
 		E475791F18E5A1F000C668DE /* com.kairos.DuetDesktopCaptureManager.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = com.kairos.DuetDesktopCaptureManager.plist; sourceTree = "<group>"; };
-		E4ABB589F56ADCBF25E4E8AB /* Pods-DuetDesktopCaptureManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuetDesktopCaptureManager.release.xcconfig"; path = "Target Support Files/Pods-DuetDesktopCaptureManager/Pods-DuetDesktopCaptureManager.release.xcconfig"; sourceTree = "<group>"; };
-		E6F906F3C0D1E513F627AA96 /* libPods-DuetDesktopCaptureManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DuetDesktopCaptureManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -945,6 +1044,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D204F0C2A7B866A0047A657 /* CocoaLumberjackSwift in Frameworks */,
+				5D204F0A2A7B866A0047A657 /* CocoaLumberjack in Frameworks */,
+				5D204F1D2A7B866A0047A657 /* SocketRocket.framework in Frameworks */,
+				5D204F132A7B866A0047A657 /* DuetRemoteDisplay.framework in Frameworks */,
+				5D204F172A7B866A0047A657 /* DuetServiceSessions.framework in Frameworks */,
+				5D204F0D2A7B866A0047A657 /* DuetAnalytics.framework in Frameworks */,
+				5D204F192A7B866A0047A657 /* DuetVideo.framework in Frameworks */,
+				5D204F112A7B866A0047A657 /* DuetConnections.framework in Frameworks */,
+				5D204F0F2A7B866A0047A657 /* DuetCommon.framework in Frameworks */,
+				5D204F152A7B866A0047A657 /* DuetScreenCapture.framework in Frameworks */,
+				5D204F1B2A7B866A0047A657 /* TCMPortMapper.framework in Frameworks */,
+				8C00AB7168952EAE8F7D64BD /* libPods-DuetGUI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,6 +1063,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D56D6F42A7AE3AF00566C37 /* SocketRocket.framework in Frameworks */,
+				5D204F7B2A7BA9B10047A657 /* libUICKeyChainStore.a in Frameworks */,
+				5D56D6EE2A7AE3AA00566C37 /* DuetScreenCapture.framework in Frameworks */,
+				5D56D6E82A7AE3A500566C37 /* DuetCommon.framework in Frameworks */,
+				5D56D6F02A7AE3AB00566C37 /* DuetServiceSessions.framework in Frameworks */,
+				5D56D6EC2A7AE3A800566C37 /* DuetRemoteDisplay.framework in Frameworks */,
+				5D83A5072A7ADE7F00EE88FC /* CocoaLumberjackSwift in Frameworks */,
+				5D56D6F62A7AE3B000566C37 /* TCMPortMapper.framework in Frameworks */,
+				5D56D6EA2A7AE3A700566C37 /* DuetConnections.framework in Frameworks */,
+				5D83A5052A7ADE7F00EE88FC /* CocoaLumberjack in Frameworks */,
+				5D56D6F22A7AE3AD00566C37 /* DuetVideo.framework in Frameworks */,
+				5D56D6E52A7AE3A400566C37 /* DuetAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,7 +1094,6 @@
 				5DF8FDF12A7152C10077C1CC /* CocoaLumberjack in Frameworks */,
 				5D65C75E2A7144F0000FB8DD /* DuetRemoteDisplay.framework in Frameworks */,
 				5D65C7542A7144E6000FB8DD /* Cocoa.framework in Frameworks */,
-				42583ABE93513321FD4445A5 /* libPods-DuetDesktopCaptureManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -981,10 +1103,21 @@
 		10CF4201A608BAEE6FF315D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				411946218BF15387E6A60CFF /* Pods-DuetDesktopCaptureManager.debug.xcconfig */,
-				E4ABB589F56ADCBF25E4E8AB /* Pods-DuetDesktopCaptureManager.release.xcconfig */,
+				E42AA71F6D972BAA560E13C1 /* Pods-DuetGUI.debug.xcconfig */,
+				9CF0730A0138FB25065B9AAF /* Pods-DuetGUI.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5D204F6A2A7BA81A0047A657 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D204F712A7BA81A0047A657 /* UICKeyChainStore.framework */,
+				5D204F732A7BA81A0047A657 /* libUICKeyChainStore.a */,
+				5D204F752A7BA81A0047A657 /* UICKeyChainStoreTests.xctest */,
+				5D204F772A7BA81A0047A657 /* TestHost.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		5D83A4EA2A7A41A600EE88FC /* Scripts */ = {
@@ -1034,7 +1167,7 @@
 		5D9439912A713F0700BB9A91 /* Checkouts */ = {
 			isa = PBXGroup;
 			children = (
-				5D9439922A713F0700BB9A91 /* UICKeyChainStore */,
+				5D204F692A7BA81A0047A657 /* UICKeyChainStore.xcodeproj */,
 				5D9439932A713F0700BB9A91 /* DuetCommon */,
 			);
 			path = Checkouts;
@@ -2414,7 +2547,7 @@
 				5D83A46E2A78FA7300EE88FC /* DuetDesktopCaptureManager.entitlements */,
 				E475791518E5A06A00C668DE /* Info.plist */,
 				E475791818E5A06A00C668DE /* main.m */,
-				E475791918E5A06A00C668DE /* main.xib */,
+				E475791918E5A06A00C668DE /* DuetDesktopCaptureManagerDebugUI.xib */,
 				5D65C7682A7148CA000FB8DD /* FramePanel.h */,
 				5D65C7692A7148CA000FB8DD /* FramePanel.m */,
 				E475791318E5A06A00C668DE /* AppDelegate.h */,
@@ -2444,9 +2577,9 @@
 			children = (
 				E475791F18E5A1F000C668DE /* com.kairos.DuetDesktopCaptureManager.plist */,
 				5D490CEF2A764B95007E8343 /* com.kairos.DuetCoreService.plist */,
+				5DCE11F22A77A1480076DD4C /* DuetGUI */,
 				5DCE12042A77A2640076DD4C /* DuetDesktopCaptureManager */,
 				5DE389EF2A73E8A100686A63 /* DuetCoreService */,
-				5DCE11F22A77A1480076DD4C /* DuetGUI */,
 				E47578E018E58B7A00C668DE /* Products */,
 				E47578E118E58B7A00C668DE /* Frameworks */,
 				5D9439902A713F0700BB9A91 /* Carthage */,
@@ -2468,7 +2601,7 @@
 			isa = PBXGroup;
 			children = (
 				E47578E218E58B7A00C668DE /* Cocoa.framework */,
-				E6F906F3C0D1E513F627AA96 /* libPods-DuetDesktopCaptureManager.a */,
+				1A9F80C46C62EF359939CB5E /* libPods-DuetGUI.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2480,15 +2613,25 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DCE12012A77A1490076DD4C /* Build configuration list for PBXNativeTarget "DuetGUI" */;
 			buildPhases = (
+				F90AE7495D7A2D68E68C5145 /* [CP] Check Pods Manifest.lock */,
 				5DCE11ED2A77A1480076DD4C /* Sources */,
 				5DCE11EE2A77A1480076DD4C /* Frameworks */,
 				5DCE11EF2A77A1480076DD4C /* Resources */,
+				5D204F1F2A7B866A0047A657 /* Embed Frameworks */,
+				5D204F242A7B86DD0047A657 /* CopyFiles */,
+				0AC950AA20C9E63D613A36CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5D204F2E2A7B9A610047A657 /* PBXTargetDependency */,
+				5D204F2C2A7B97570047A657 /* PBXTargetDependency */,
 			);
 			name = DuetGUI;
+			packageProductDependencies = (
+				5D204F092A7B866A0047A657 /* CocoaLumberjack */,
+				5D204F0B2A7B866A0047A657 /* CocoaLumberjackSwift */,
+			);
 			productName = DuetGUI;
 			productReference = 5DCE11F12A77A1480076DD4C /* DuetGUI.app */;
 			productType = "com.apple.product-type.application";
@@ -2499,13 +2642,17 @@
 			buildPhases = (
 				5DE389EA2A73E8A100686A63 /* Sources */,
 				5DE389EB2A73E8A100686A63 /* Frameworks */,
-				5DE389EC2A73E8A100686A63 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5D204F792A7BA8270047A657 /* PBXTargetDependency */,
 			);
 			name = DuetCoreService;
+			packageProductDependencies = (
+				5D83A5042A7ADE7F00EE88FC /* CocoaLumberjack */,
+				5D83A5062A7ADE7F00EE88FC /* CocoaLumberjackSwift */,
+			);
 			productName = DuetCoreService;
 			productReference = 5DE389EE2A73E8A100686A63 /* DuetCoreService */;
 			productType = "com.apple.product-type.tool";
@@ -2514,18 +2661,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E47578EF18E58B7A00C668DE /* Build configuration list for PBXNativeTarget "DuetDesktopCaptureManager" */;
 			buildPhases = (
-				301E98C29C32916A8829EAF4 /* [CP] Check Pods Manifest.lock */,
 				E47578DB18E58B7A00C668DE /* Sources */,
 				E47578DC18E58B7A00C668DE /* Frameworks */,
 				E47578DD18E58B7A00C668DE /* Resources */,
 				5D65C7592A7144EB000FB8DD /* Embed Frameworks */,
-				775434119BD4AFCC926CCAA3 /* [CP] Embed Pods Frameworks */,
 				5DE389E92A73A95300686A63 /* Embed Daemon */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5D490CF12A766211007E8343 /* PBXTargetDependency */,
 			);
 			name = DuetDesktopCaptureManager;
 			packageProductDependencies = (
@@ -2584,20 +2728,52 @@
 					ProductGroup = 5D943A3A2A713F0700BB9A91 /* Products */;
 					ProjectRef = 5D943A392A713F0700BB9A91 /* SocketRocket.xcodeproj */;
 				},
+				{
+					ProductGroup = 5D204F6A2A7BA81A0047A657 /* Products */;
+					ProjectRef = 5D204F692A7BA81A0047A657 /* UICKeyChainStore.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
 				E47578DE18E58B7A00C668DE /* DuetDesktopCaptureManager */,
 				5DE389ED2A73E8A100686A63 /* DuetCoreService */,
 				5DCE11F02A77A1480076DD4C /* DuetGUI */,
-				5D83A4EB2A7A42AA00EE88FC /* Install daemon */,
-				5D83A4F02A7A431500EE88FC /* Uninstall daemon */,
-				5D83A4F62A7A53AE00EE88FC /* Launch daemon */,
+				5D83A4EB2A7A42AA00EE88FC /* Install DuetCoreService */,
+				5D83A4F02A7A431500EE88FC /* Uninstall DuetCoreService */,
+				5D83A4F62A7A53AE00EE88FC /* Launch DuetCoreService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		5D204F712A7BA81A0047A657 /* UICKeyChainStore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UICKeyChainStore.framework;
+			remoteRef = 5D204F702A7BA81A0047A657 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D204F732A7BA81A0047A657 /* libUICKeyChainStore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUICKeyChainStore.a;
+			remoteRef = 5D204F722A7BA81A0047A657 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D204F752A7BA81A0047A657 /* UICKeyChainStoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UICKeyChainStoreTests.xctest;
+			remoteRef = 5D204F742A7BA81A0047A657 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D204F772A7BA81A0047A657 /* TestHost.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TestHost.app;
+			remoteRef = 5D204F762A7BA81A0047A657 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		5D943C612A713F0800BB9A91 /* DuetSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -2756,33 +2932,29 @@
 			files = (
 				5D490CF62A7693B0007E8343 /* com.kairos.DuetDesktopCaptureManager.plist in Resources */,
 				5D490CF72A7693B0007E8343 /* com.kairos.DuetCoreService.plist in Resources */,
-				E475791E18E5A06A00C668DE /* main.xib in Resources */,
+				E475791E18E5A06A00C668DE /* DuetDesktopCaptureManagerDebugUI.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		301E98C29C32916A8829EAF4 /* [CP] Check Pods Manifest.lock */ = {
+		0AC950AA20C9E63D613A36CB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-DuetGUI/Pods-DuetGUI-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DuetDesktopCaptureManager-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DuetGUI/Pods-DuetGUI-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5D83A4EF2A7A42D800EE88FC /* ShellScript */ = {
@@ -2836,22 +3008,26 @@
 			shellPath = /bin/sh;
 			shellScript = "#sudo -A ${PROJECT_DIR}/DuetCoreService/Scripts/install.sh ${PROJECT_DIR} ${BUILT_PRODUCTS_DIR}\nosascript -e \"do shell script \\\"${PROJECT_DIR}/DuetCoreService/Scripts/launch.sh\\\" with administrator privileges\"\n";
 		};
-		775434119BD4AFCC926CCAA3 /* [CP] Embed Pods Frameworks */ = {
+		F90AE7495D7A2D68E68C5145 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DuetDesktopCaptureManager/Pods-DuetDesktopCaptureManager-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
+			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+				"$(DERIVED_FILE_DIR)/Pods-DuetGUI-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DuetDesktopCaptureManager/Pods-DuetDesktopCaptureManager-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2897,10 +3073,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5D490CF12A766211007E8343 /* PBXTargetDependency */ = {
+		5D204F2C2A7B97570047A657 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E47578DE18E58B7A00C668DE /* DuetDesktopCaptureManager */;
+			targetProxy = 5D204F2B2A7B97570047A657 /* PBXContainerItemProxy */;
+		};
+		5D204F2E2A7B9A610047A657 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5DE389ED2A73E8A100686A63 /* DuetCoreService */;
-			targetProxy = 5D490CF02A766211007E8343 /* PBXContainerItemProxy */;
+			targetProxy = 5D204F2D2A7B9A610047A657 /* PBXContainerItemProxy */;
+		};
+		5D204F792A7BA8270047A657 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UICKeyChainStore;
+			targetProxy = 5D204F782A7BA8270047A657 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3028,6 +3214,7 @@
 		};
 		5DCE12022A77A1490076DD4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E42AA71F6D972BAA560E13C1 /* Pods-DuetGUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -3075,6 +3262,7 @@
 		};
 		5DCE12032A77A1490076DD4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF0730A0138FB25065B9AAF /* Pods-DuetGUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -3140,6 +3328,12 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -3167,6 +3361,12 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -3299,7 +3499,6 @@
 		};
 		E47578F018E58B7A00C668DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 411946218BF15387E6A60CFF /* Pods-DuetDesktopCaptureManager.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DuetDesktopCaptureManager/DuetDesktopCaptureManager.entitlements;
 				DEAD_CODE_STRIPPING = YES;
@@ -3332,7 +3531,6 @@
 		};
 		E47578F118E58B7A00C668DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4ABB589F56ADCBF25E4E8AB /* Pods-DuetDesktopCaptureManager.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DuetDesktopCaptureManager/DuetDesktopCaptureManager.entitlements;
 				DEAD_CODE_STRIPPING = YES;
@@ -3366,7 +3564,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5D83A4EC2A7A42AA00EE88FC /* Build configuration list for PBXAggregateTarget "Install daemon" */ = {
+		5D83A4EC2A7A42AA00EE88FC /* Build configuration list for PBXAggregateTarget "Install DuetCoreService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D83A4ED2A7A42AA00EE88FC /* Debug */,
@@ -3375,7 +3573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5D83A4F22A7A431500EE88FC /* Build configuration list for PBXAggregateTarget "Uninstall daemon" */ = {
+		5D83A4F22A7A431500EE88FC /* Build configuration list for PBXAggregateTarget "Uninstall DuetCoreService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D83A4F32A7A431500EE88FC /* Debug */,
@@ -3384,7 +3582,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5D83A4F82A7A53AE00EE88FC /* Build configuration list for PBXAggregateTarget "Launch daemon" */ = {
+		5D83A4F82A7A53AE00EE88FC /* Build configuration list for PBXAggregateTarget "Launch DuetCoreService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D83A4F92A7A53AE00EE88FC /* Debug */,
@@ -3443,6 +3641,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5D204F092A7B866A0047A657 /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DF8FDEF2A7152C10077C1CC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		5D204F0B2A7B866A0047A657 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DF8FDEF2A7152C10077C1CC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		5D83A5042A7ADE7F00EE88FC /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DF8FDEF2A7152C10077C1CC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		5D83A5062A7ADE7F00EE88FC /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DF8FDEF2A7152C10077C1CC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
 		5DF8FDF02A7152C10077C1CC /* CocoaLumberjack */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5DF8FDEF2A7152C10077C1CC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;

@@ -1,10 +1,10 @@
 inhibit_all_warnings!
 
 platform :osx, '10.16'
-project 'DuetDesktopCaptureManager.xcodeproj'
+project 'DuetServicePrototype.xcodeproj'
 
 
-target :DuetDesktopCaptureManager do
+target :DuetGUI do
 	pod 'GBDeviceInfo'
 	pod 'GBPing'
 	pod 'CocoaAsyncSocket'
