@@ -6,13 +6,15 @@
 //
 
 #import "ViewController.h"
+#import "DuetAppModel.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-
-	// Do any additional setup after loading the view.
+	//TODO: implement listener instead of notifications
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectionStateChanged:) name:@"clientConnectionStateChanged" object:nil];
+	[self updateUI];
 }
 
 
@@ -28,6 +30,16 @@
 
 - (IBAction)screenCapturerSwitchAction:(id)sender {
 	
+}
+
+- (void)connectionStateChanged:(NSNotification *)notification {
+	[self updateUI];
+}
+
+- (void)updateUI {
+	dispatch_async(dispatch_get_main_queue(), ^{
+		self.coreServiceConnectionStateLabel.stringValue = [DuetAppModel shared].connected ? @"Connected" : @"Disconnected";
+	});
 }
 
 @end

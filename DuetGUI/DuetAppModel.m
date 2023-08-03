@@ -7,7 +7,6 @@
 
 #import "DuetAppModel.h"
 #import "DuetGUIDaemonProtocol.h"
-#import "DuetCoreGUIClient.h"
 
 @interface DuetAppModel ()
 
@@ -32,6 +31,7 @@
 	self = [super init];
 	if (self != nil) {
 		self.guiClient = [[DuetCoreGUIClient alloc] initWithAppModel:self];
+		self.guiClient.delegate = self;
 	}
 	return self;
 }
@@ -46,6 +46,11 @@
 
 - (BOOL)connected {
 	return self.guiClient.isConnected;
+}
+
+- (void)clientConnectionStateDidChange:(nonnull DuetCoreGUIClient *)client {
+	//TODO: implement listener instead of notifications
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"clientConnectionStateChanged" object:nil];
 }
 
 @end

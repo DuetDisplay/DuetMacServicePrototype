@@ -78,6 +78,15 @@
 	self.connectionToService = nil;
 }
 
+- (void)setConnectionToService:(NSXPCConnection *)connectionToService {
+	if (_connectionToService == connectionToService) {
+		return;
+	}
+	_connectionToService = connectionToService;
+	[self.delegate clientConnectionStateDidChange:self];
+	
+}
+
 #pragma mark - DuetGUIClientProtocol
 - (void)serviceDidChangeScreenSharingState:(DuetServiceScreenSharingState)state {
 	
