@@ -148,8 +148,47 @@
 					[self logMessage:[NSString stringWithFormat:@"Connection to the service was interrupted or disconnected: %@", error]];
 					
 				}];
-				
-				[remoteProxy sendScreenData:[@"screendata" dataUsingEncoding:NSUTF8StringEncoding] withReply:^(NSString *message) {
+
+				CVImageBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(event.frame.sampleBuffer);
+				CVPixelBufferLockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
+				size_t planeCount = CVPixelBufferGetPlaneCount(pixelBuffer);
+				size_t totalSize = 0;
+				void *rawFrame;
+				if (planeCount == 0) {
+					size_t height = CVPixelBufferGetHeight(pixelBuffer);
+					size_t bytesPerRow = CVPixelBufferGetBytesPerRow(pixelBuffer);
+					totalSize = height * bytesPerRow;
+					rawFrame = malloc(totalSize);
+					if (rawFrame == nil) {
+						exit(1);
+					}
+					void *source = CVPixelBufferGetBaseAddress(pixelBuffer);
+					memcpy(rawFrame, source, totalSize);
+				} else {
+					for (size_t i = 0; i < planeCount; i++) {
+						size_t height = CVPixelBufferGetHeightOfPlane(pixelBuffer, i);
+						size_t bytesPerRow = CVPixelBufferGetBytesPerRowOfPlane(pixelBuffer, i);
+						size_t planeSize = height * bytesPerRow;
+						totalSize += planeSize;
+					}
+					rawFrame = malloc(totalSize);
+					if (rawFrame == nil) {
+						exit(1);
+					}
+					void *dest = rawFrame;
+					for (size_t i = 0; i < planeCount; i++) {
+						void *source = CVPixelBufferGetBaseAddressOfPlane(pixelBuffer, i);
+						size_t height = CVPixelBufferGetHeightOfPlane(pixelBuffer, i);
+						size_t bytesPerRow = CVPixelBufferGetBytesPerRowOfPlane(pixelBuffer, i);
+						size_t planeSize = height * bytesPerRow;
+						
+						memcpy(dest, source, planeSize);
+						dest += planeSize;
+					}
+				}
+				CVPixelBufferUnlockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
+				NSData *data = [[NSData alloc] initWithBytesNoCopy:rawFrame length:totalSize freeWhenDone:YES];
+				[remoteProxy sendScreenData:data withReply:^(NSString *message) {
 					typeof(self) self = weakSelf;
 					NSLog(@"Daemon responded to sendScreenData: %@", message);
 					[self logMessage:[NSString stringWithFormat:@"Daemon responded to sendScreenData: %@", message]];
