@@ -58,7 +58,7 @@
 - (void)sendScreenData:(NSData *)data withReply:(void (^)(NSString *message))reply {
 	// Process the received screen data from the LaunchAgent
 	// Send the data to the remote desktop client or perform other tasks
-	reply(@"sendScreenData called");
+	reply([NSString stringWithFormat:@"sendScreenData called - DuetService data received %lu", data.length]);
 	NSLog(@"DuetService data received %lu", data.length);
 }
 

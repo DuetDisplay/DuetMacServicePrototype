@@ -6,10 +6,17 @@
 //
 
 #import <Foundation/Foundation.h>
+@import DuetServiceSessions;
+
+@class DuetCoreModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^DuetServicesManagerCompletion)(DuetCoreModel *_Nonnull manager, NSError *_Nullable error);
+
 @interface DuetCoreModel : NSObject
+
+@property (nonatomic, readonly, nullable) DuetServiceSession *session;
 
 - (void)start;
 - (void)stop;

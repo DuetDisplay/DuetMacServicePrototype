@@ -52,8 +52,6 @@
 #import "DuetDesktopCapturerDaemonProtocol.h"
 #import "DuetDesktopCapturerClientProtocol.h"
 
-#import "LogManager.h"
-
 @interface AppDelegate () <NSApplicationDelegate, DuetDesktopCapturerClientProtocol>
 
 @property (nonatomic, assign, readwrite) IBOutlet FramePanel *     panel;
@@ -68,8 +66,6 @@
 {
     #pragma unused(note)
 	
-    [[LogManager sharedManager] logWithFormat:@"Did finish launching begin"];
-
     assert(self.panel != nil);
 
     // We have to call -[NSWindow setCanBecomeVisibleWithoutLogin:] to let the 
@@ -87,21 +83,13 @@
     // window server <rdar://problem/5136400>, -[NSWindow orderFront:] is not 
     // sufficient to show the window.  We have to use -[NSWindow orderFrontRegardless].
 
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"ForceOrderFront"]) {
-        [[LogManager sharedManager] logWithFormat:@"Showing window with extreme prejudice"];
-        [self.panel orderFrontRegardless];
-    } else {
-        [[LogManager sharedManager] logWithFormat:@"Showing window normally"];
-        [self.panel orderFront:self];
-    }
+	[self.panel orderFrontRegardless];
 
-    [[LogManager sharedManager] logWithFormat:@"Did finish launching end"];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)note
 {
     #pragma unused(note)
-    [[LogManager sharedManager] logWithFormat:@"Will terminate"];
 }
 
 - (void)startScreenCapture {

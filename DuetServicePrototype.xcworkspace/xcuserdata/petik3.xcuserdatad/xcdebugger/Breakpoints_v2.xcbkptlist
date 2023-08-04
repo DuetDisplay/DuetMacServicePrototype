@@ -141,8 +141,8 @@
             filePath = "DuetCoreService/DuetCoreModel.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-setupServiceListeners"
             landmarkType = "7">
          </BreakpointContent>
@@ -161,6 +161,54 @@
             endingLineNumber = "15"
             landmarkName = "main(argc, argv)"
             landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE57E4AF-F0D7-4889-AF0D-1D788AECA027"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DuetDesktopCaptureManager/AppDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "-startScreenCapture"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DE57E4AF-F0D7-4889-AF0D-1D788AECA027 - 856d252c3116bca8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__33-[AppDelegate startScreenCapture]_block_invoke.6"
+                  moduleName = "DuetDesktopCaptureManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/DuetDesktopCaptureManager/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "191"
+                  endingLineNumber = "191"
+                  offsetFromSymbolStart = "1596">
+               </Location>
+               <Location
+                  uuid = "DE57E4AF-F0D7-4889-AF0D-1D788AECA027 - 7df527e4a5fe93da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__33-[AppDelegate startScreenCapture]_block_invoke.26"
+                  moduleName = "DuetDesktopCaptureManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/DuetDesktopCaptureManager/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
