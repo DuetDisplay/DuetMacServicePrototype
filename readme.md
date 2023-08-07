@@ -19,28 +19,37 @@ graph LR
   Dd -- User actions, App state <--> Dg[Duet GUI<BR>user-space process]
 ```
 
-## Installation
-1. Copy the app to /Applications.
-2. Starting and stopping the daemon and launch agent components of the application are managed by macOS, using launchd. To let the system know we need these processes up and running, we need to copy plist descriptors of these processes:
+## Installation - debugging in Xcode
+1. Archive the Duet scheme, the resulting xcarchive will contain the product bundle in Products/Applications/DuetGUI.app
+2. Copy this DuetGUI.app into /Applications
+3. To start the Duet Core Service component in debug mode (breakpoints, but no logs in Xcode console), Run the Duet Core Service scheme.
+4. Xcode will ask for the admin credentials because installing the service component needs root privileges. 
+5. Once the Run finishes, Xcode will be in Waiting for executable to start state.
+6. Select "Launch daemon" scheme, and cmd+b. 
+7. Launchd will start the daemon in the background, and xcode lldb will automatically connect to it.
+8. Now you can start separately the DuetDesktopCaptureManager component running the scheme with the same name.
+9. Finally start the Duet scheme to debug the Duet app gui component.
+
+### Internals
+The Daemon process is installed by Xcode by copying plists to /Library/LaunchDaemons or LaunchAgents. You don't have to do this manually now.
 
 ```
-$ sudo cp /Applications/DuetDesktopCaptureManager.app/Contents/Resources/com.kairos.duet.DesktopCaptureManager.plist /Library/LaunchAgents
+$ sudo cp /Applications/DuetDesktopCaptureManager.app/Contents/Resources/com.kairos.DuetDesktopCaptureManager.plist /Library/LaunchAgents
 
 $ sudo cp /Applications/DuetDesktopCaptureManager.app/Contents/Resources/com.kairos.DuetCoreService.plist /Library/LaunchDaemons
 ```
-
-3. Make sure the plists are owned by root:wheel:
+Then chown everything
 
 ```
 $ sudo chown root:wheel /Library/LaunchDaemons/com.kairos.DuetCoreService.plist 
-$ sudo chown root:wheel /Library/LaunchAgents/com.kairos.duet.DesktopCaptureManager.plist
+$ sudo chown root:wheel /Library/LaunchAgents/com.kairos.DuetDesktopCaptureManager.plist
 
 ```
 
-4. Launch the services:
+And finally launching the components:
 
 ```
 $ sudo launchctl load /Library/LaunchDaemons/com.kairos.DuetCoreService.plist
-$ sudo launchctl load /Library/LaunchAgents/com.kairos.duet.DesktopCaptureManager.plist
+$ sudo launchctl load /Library/LaunchAgents/com.kairos.DuetDesktopCaptureManager.plist
 
 ```
