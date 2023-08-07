@@ -692,43 +692,29 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="07CD20AF-F1C0-473D-BD33-13BBEC2598B2" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="Eh1-f0-orM">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="791C9C92-35BA-4F05-8484-48E8B1F0174E" label="start capture" paletteLabel="start capture" tag="-1" image="NSTouchBarRecordStartTemplate" bordered="YES" id="h2c-PK-eI6" userLabel="Start capture">
-                                    <size key="minSize" width="27" height="25"/>
-                                    <size key="maxSize" width="27" height="25"/>
+                                <toolbarItem implicitItemIdentifier="791C9C92-35BA-4F05-8484-48E8B1F0174E" label="start capture" paletteLabel="start capture" tag="-1" image="NSTouchBarRecordStartTemplate" bordered="YES" sizingBehavior="auto" id="h2c-PK-eI6" userLabel="Start capture">
                                     <connections>
                                         <action selector="startCaptureAction:" target="B8D-0N-5wS" id="zmk-i5-PM1"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="F27FD558-DB59-4B3F-AEEF-306EDF6B949C" label="stop capture" paletteLabel="stop capture" tag="-1" image="NSTouchBarRecordStopTemplate" bordered="YES" id="9oU-cn-RL9">
-                                    <size key="minSize" width="27" height="25"/>
-                                    <size key="maxSize" width="27" height="25"/>
+                                <toolbarItem implicitItemIdentifier="F27FD558-DB59-4B3F-AEEF-306EDF6B949C" label="stop capture" paletteLabel="stop capture" tag="-1" image="NSTouchBarRecordStopTemplate" bordered="YES" sizingBehavior="auto" id="9oU-cn-RL9">
                                     <connections>
                                         <action selector="stopCaptureAction:" target="B8D-0N-5wS" id="F0f-KH-aRx"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="458EA317-31A4-4045-AEFB-EE6139F76300" label="close app" paletteLabel="close app" tag="-1" image="xmark.circle" catalog="system" bordered="YES" id="WaS-EP-XqQ">
-                                    <size key="minSize" width="27" height="25"/>
-                                    <size key="maxSize" width="27" height="25"/>
-                                </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="7EA519BC-70A0-4927-BE28-394173B19F96" label="connect" paletteLabel="connect" tag="-1" image="powerplug.fill" catalog="system" bordered="YES" id="5LA-9r-6Qy">
-                                    <size key="minSize" width="27" height="25"/>
-                                    <size key="maxSize" width="27" height="25"/>
+                                <toolbarItem implicitItemIdentifier="458EA317-31A4-4045-AEFB-EE6139F76300" label="close app" paletteLabel="close app" tag="-1" image="xmark.circle" catalog="system" bordered="YES" sizingBehavior="auto" id="WaS-EP-XqQ"/>
+                                <toolbarItem implicitItemIdentifier="7EA519BC-70A0-4927-BE28-394173B19F96" label="connect" paletteLabel="connect" tag="-1" image="powerplug.fill" catalog="system" bordered="YES" sizingBehavior="auto" id="5LA-9r-6Qy">
                                     <connections>
                                         <action selector="connectToDaemon:" target="B8D-0N-5wS" id="Hl1-nu-L1P"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="96AD8A28-45CB-4876-B15E-FA4F8D2871A1" label="disconnect" paletteLabel="disconnect" tag="-1" image="xmark" catalog="system" bordered="YES" id="iMr-aG-CBE">
-                                    <size key="minSize" width="27" height="25"/>
-                                    <size key="maxSize" width="27" height="25"/>
+                                <toolbarItem implicitItemIdentifier="96AD8A28-45CB-4876-B15E-FA4F8D2871A1" label="disconnect" paletteLabel="disconnect" tag="-1" image="xmark" catalog="system" bordered="YES" sizingBehavior="auto" id="iMr-aG-CBE">
                                     <connections>
                                         <action selector="disconnectFromDaemon:" target="B8D-0N-5wS" id="Gjg-3Z-fEn"/>
                                     </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="4jB-ru-MeT"/>
-                                <toolbarItem implicitItemIdentifier="9F1FC0C0-7D55-4799-A471-5E819045F3EA" label="clear logs" paletteLabel="clear logs" tag="-1" image="trash" catalog="system" bordered="YES" id="fDK-Ri-kh9">
-                                    <size key="minSize" width="27" height="25"/>
-                                    <size key="maxSize" width="27" height="25"/>
-                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="9F1FC0C0-7D55-4799-A471-5E819045F3EA" label="clear logs" paletteLabel="clear logs" tag="-1" image="trash" catalog="system" bordered="YES" sizingBehavior="auto" id="fDK-Ri-kh9"/>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="h2c-PK-eI6"/>

@@ -65,7 +65,6 @@
 		5D204F1E2A7B866A0047A657 /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C8E2A713F0800BB9A91 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D204F252A7B86EF0047A657 /* DuetCoreService in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5DE389EE2A73E8A100686A63 /* DuetCoreService */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5D204F2A2A7B97070047A657 /* DuetDesktopCaptureManager.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = E47578DF18E58B7A00C668DE /* DuetDesktopCaptureManager.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5D204F7A2A7BA97F0047A657 /* libUICKeyChainStore.a in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D204F732A7BA81A0047A657 /* libUICKeyChainStore.a */; };
 		5D204F7B2A7BA9B10047A657 /* libUICKeyChainStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D204F732A7BA81A0047A657 /* libUICKeyChainStore.a */; };
 		5D204F922A7D21C80047A657 /* DuetRemoteEDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D204F7D2A7CF46A0047A657 /* DuetRemoteEDM.swift */; };
 		5D204F932A7D21CB0047A657 /* DuetResolutionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D204F7F2A7CF4AD0047A657 /* DuetResolutionManager.swift */; };
@@ -81,6 +80,7 @@
 		5D204FA32A7D22F40047A657 /* NSUserDefaults+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D204FA22A7D22F40047A657 /* NSUserDefaults+Additions.m */; };
 		5D204FA62A80238C0047A657 /* DuetDesktopCaptureManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D204FA52A80238C0047A657 /* DuetDesktopCaptureManagerModel.m */; };
 		5D204FA92A8024140047A657 /* DuetCoreDesktopCaptureManagerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D204FA82A8024140047A657 /* DuetCoreDesktopCaptureManagerClient.m */; };
+		5D204FAC2A810AF10047A657 /* libUICKeyChainStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D204F732A7BA81A0047A657 /* libUICKeyChainStore.a */; };
 		5D448EAF2A77D92D000D97A5 /* DuetDesktopCapturerServiceXPCListenerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D448EAE2A77D92D000D97A5 /* DuetDesktopCapturerServiceXPCListenerDelegate.m */; };
 		5D448EB22A77DCC9000D97A5 /* DuetGUIWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D448EB12A77DCC9000D97A5 /* DuetGUIWindowController.m */; };
 		5D490CF62A7693B0007E8343 /* com.kairos.DuetDesktopCaptureManager.plist in Resources */ = {isa = PBXBuildFile; fileRef = E475791F18E5A1F000C668DE /* com.kairos.DuetDesktopCaptureManager.plist */; };
@@ -180,6 +180,13 @@
 			remoteInfo = TestHost;
 		};
 		5D204F782A7BA8270047A657 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D204F692A7BA81A0047A657 /* UICKeyChainStore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 14796A461C1CD9A500169D09;
+			remoteInfo = UICKeyChainStore;
+		};
+		5D204FAA2A810A900047A657 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5D204F692A7BA81A0047A657 /* UICKeyChainStore.xcodeproj */;
 			proxyType = 1;
@@ -335,7 +342,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5D204F7A2A7BA97F0047A657 /* libUICKeyChainStore.a in Embed Frameworks */,
 				5D204F0E2A7B866A0047A657 /* DuetAnalytics.framework in Embed Frameworks */,
 				5D204F1C2A7B866A0047A657 /* TCMPortMapper.framework in Embed Frameworks */,
 				5D204F1A2A7B866A0047A657 /* DuetVideo.framework in Embed Frameworks */,
@@ -1067,6 +1073,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D204FAC2A810AF10047A657 /* libUICKeyChainStore.a in Frameworks */,
 				5D204F0C2A7B866A0047A657 /* CocoaLumberjackSwift in Frameworks */,
 				5D204F0A2A7B866A0047A657 /* CocoaLumberjack in Frameworks */,
 				5D204F1D2A7B866A0047A657 /* SocketRocket.framework in Frameworks */,
@@ -2669,6 +2676,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5D204FAB2A810A900047A657 /* PBXTargetDependency */,
 				5D204F2E2A7B9A610047A657 /* PBXTargetDependency */,
 				5D204F2C2A7B97570047A657 /* PBXTargetDependency */,
 			);
@@ -3148,6 +3156,11 @@
 			name = UICKeyChainStore;
 			targetProxy = 5D204F782A7BA8270047A657 /* PBXContainerItemProxy */;
 		};
+		5D204FAB2A810A900047A657 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UICKeyChainStore;
+			targetProxy = 5D204FAA2A810A900047A657 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -3566,6 +3579,7 @@
 				CODE_SIGN_ENTITLEMENTS = DuetDesktopCaptureManager/DuetDesktopCaptureManager.entitlements;
 				DEAD_CODE_STRIPPING = YES;
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6L96W8A86;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
@@ -3602,6 +3616,7 @@
 				CODE_SIGN_ENTITLEMENTS = DuetDesktopCaptureManager/DuetDesktopCaptureManager.entitlements;
 				DEAD_CODE_STRIPPING = YES;
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6L96W8A86;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
