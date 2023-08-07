@@ -92,6 +92,10 @@
 	
 }
 
+- (void)serviceDidReceiveFrame {
+	NSLog(@"Daemon received a video frame from the capturer");
+}
+
 - (void)getVersionWithCompletion:(void (^)(NSString *, NSError *))completion {
 	//TODO: version handling
 	completion(@"1.0", nil);

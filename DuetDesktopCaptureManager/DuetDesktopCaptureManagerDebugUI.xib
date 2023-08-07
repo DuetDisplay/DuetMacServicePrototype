@@ -63,33 +63,33 @@
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="791C9C92-35BA-4F05-8484-48E8B1F0174E" label="start capture" paletteLabel="start capture" tag="-1" image="NSTouchBarRecordStartTemplate" bordered="YES" sizingBehavior="auto" id="Cj7-Fh-Cxj" userLabel="Start capture">
                         <connections>
-                            <action selector="startCaptureButtonAction:" target="d5E-i0-aJR" id="WfI-zx-iSp"/>
+                            <action selector="startCaptureButtonAction:" target="210" id="VwK-yv-sFX"/>
                         </connections>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="F27FD558-DB59-4B3F-AEEF-306EDF6B949C" label="stop capture" paletteLabel="stop capture" tag="-1" image="NSTouchBarRecordStopTemplate" bordered="YES" sizingBehavior="auto" id="J3u-TH-ffD">
                         <connections>
-                            <action selector="stopCaptureButtonAction:" target="d5E-i0-aJR" id="pge-C4-WT2"/>
+                            <action selector="stopCaptureButtonAction:" target="210" id="uLf-z4-9RJ"/>
                         </connections>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="7EA519BC-70A0-4927-BE28-394173B19F96" label="connect" paletteLabel="connect" tag="-1" image="powerplug.fill" catalog="system" bordered="YES" sizingBehavior="auto" id="IZl-b3-1kP">
                         <connections>
-                            <action selector="connectToDaemon:" target="d5E-i0-aJR" id="SvG-yf-KZ2"/>
+                            <action selector="connectToDaemon:" target="210" id="2Kd-EN-4Qa"/>
                         </connections>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="96AD8A28-45CB-4876-B15E-FA4F8D2871A1" label="disconnect" paletteLabel="disconnect" tag="-1" image="xmark" catalog="system" bordered="YES" sizingBehavior="auto" id="cu3-Y4-CAP">
                         <connections>
-                            <action selector="disconnectFromDaemon:" target="d5E-i0-aJR" id="D01-JL-4k1"/>
+                            <action selector="disconnectFromDaemon:" target="210" id="xF4-pv-3Xy"/>
                         </connections>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="RVG-OM-QUw"/>
                     <toolbarItem implicitItemIdentifier="9F1FC0C0-7D55-4799-A471-5E819045F3EA" label="clear logs" paletteLabel="clear logs" tag="-1" image="trash" catalog="system" bordered="YES" sizingBehavior="auto" id="xhw-td-xju">
                         <connections>
-                            <action selector="clearLogsButtonAction:" target="d5E-i0-aJR" id="WKc-K9-xXg"/>
+                            <action selector="clearLogsButtonAction:" target="210" id="lVp-54-r6O"/>
                         </connections>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="458EA317-31A4-4045-AEFB-EE6139F76300" label="close app" paletteLabel="close app" tag="-1" image="xmark.circle" catalog="system" bordered="YES" sizingBehavior="auto" id="W5z-eS-TOe">
                         <connections>
-                            <action selector="closeAppButtonAction:" target="d5E-i0-aJR" id="PN6-pm-DC3"/>
+                            <action selector="closeAppButtonAction:" target="210" id="2br-9g-5ug"/>
                         </connections>
                     </toolbarItem>
                 </allowedToolbarItems>
@@ -111,11 +111,6 @@
         <customObject id="219" userLabel="AppDelegate" customClass="AppDelegate">
             <connections>
                 <outlet property="panel" destination="210" id="220"/>
-            </connections>
-        </customObject>
-        <customObject id="d5E-i0-aJR" customClass="DuetDesktopCaptureManagerModel">
-            <connections>
-                <outlet property="panel" destination="210" id="929-2V-YZV"/>
             </connections>
         </customObject>
     </objects>

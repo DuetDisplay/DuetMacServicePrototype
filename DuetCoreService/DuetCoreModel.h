@@ -22,6 +22,7 @@ typedef void (^DuetServicesManagerCompletion)(DuetCoreModel *_Nonnull manager, N
 - (void)stop;
 
 - (void)startScreenCaptureWithCompletion:(void (^)(BOOL success, NSError *error))completion;
+- (void)capturerDidSendFrame:(NSData *)data;
 
 @end
 

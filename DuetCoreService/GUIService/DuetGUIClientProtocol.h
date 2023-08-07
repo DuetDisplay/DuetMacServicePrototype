@@ -24,7 +24,7 @@ typedef NS_ENUM(NSUInteger, DuetServiceScreenSharingState) {
 // Methods for communication from Daemon to GUI
 - (void)getVersionWithCompletion:(void (^)(NSString *version, NSError *error))completion;
 - (void)serviceDidChangeScreenSharingState:(DuetServiceScreenSharingState)state;
-
+- (void)serviceDidReceiveFrame;
 @end
 
 /*

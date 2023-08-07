@@ -47,19 +47,13 @@
 
 #import "AppDelegate.h"
 #import "FramePanel.h"
-@import DuetCommon;
-@import DuetScreenCapture;
-#import "DuetDesktopCapturerDaemonProtocol.h"
-#import "DuetDesktopCapturerClientProtocol.h"
 #import "DuetDesktopCaptureManagerModel.h"
 
-@interface AppDelegate () <NSApplicationDelegate, DuetDesktopCapturerClientProtocol>
+@interface AppDelegate () <NSApplicationDelegate>
 
-@property (nonatomic, assign, readwrite) IBOutlet FramePanel *     panel;
+@property (readwrite) IBOutlet FramePanel *     panel;
 @property (nonatomic, strong) DuetDesktopCaptureManagerModel *appModel;
-@property (nonatomic, strong) DSCScreen *mainScreen;
-@property (nonatomic, assign) NSInteger frameCount;
-@property (nonatomic, strong) NSXPCConnection *connectionToService;
+
 @end
 
 @implementation AppDelegate
@@ -67,7 +61,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)note
 {
     #pragma unused(note)
-	self.appModel = [DuetDesktopCaptureManagerModel new];
+	self.appModel = [DuetDesktopCaptureManagerModel shared];
 	assert(self.panel != nil);
 
 	// We have to call -[NSWindow setCanBecomeVisibleWithoutLogin:] to let the
@@ -85,9 +79,7 @@
 	// window server <rdar://problem/5136400>, -[NSWindow orderFront:] is not
 	// sufficient to show the window.  We have to use -[NSWindow orderFrontRegardless].
 
-	[self.panel orderFrontRegardless];
-	self.appModel.panel = self.panel;
-	
+	[self.panel orderFrontRegardless];	
 }
 
 - (void)applicationWillTerminate:(NSNotification *)note

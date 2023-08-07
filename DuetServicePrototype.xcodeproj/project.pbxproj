@@ -1146,6 +1146,32 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5D1487E82A8115E8004FAB36 /* DuetImports */ = {
+			isa = PBXGroup;
+			children = (
+				5D204F7D2A7CF46A0047A657 /* DuetRemoteEDM.swift */,
+				5D204F7F2A7CF4AD0047A657 /* DuetResolutionManager.swift */,
+				5D204F822A7CF4F40047A657 /* DVDI.swift */,
+				5D204F832A7CF4F40047A657 /* DVDIMap.h */,
+				5D204F812A7CF4F30047A657 /* DVDIMap.m */,
+				5D204F8C2A7CF7000047A657 /* DuetRefreshWindow.swift */,
+				5D204F862A7CF64E0047A657 /* UtilsReplacement.h */,
+				5D204F872A7CF64E0047A657 /* UtilsReplacement.m */,
+				5D204F892A7CF6720047A657 /* AppUserNotificationProtocol.h */,
+				5D204F8A2A7CF6730047A657 /* AppUserNotificationProtocol.m */,
+				5D204F8E2A7D1AAF0047A657 /* HiddenWindow.h */,
+				5D204F8F2A7D1AAF0047A657 /* HiddenWindow.m */,
+				5D204F9E2A7D224D0047A657 /* DuetConstants.h */,
+				5D204F9F2A7D224D0047A657 /* DuetConstants.m */,
+				5D204FA12A7D22F40047A657 /* NSUserDefaults+Additions.h */,
+				5D204FA22A7D22F40047A657 /* NSUserDefaults+Additions.m */,
+				5D204F9A2A7D22050047A657 /* GeneralSettingsManager.swift */,
+				5D204F9C2A7D22280047A657 /* UserDefaults+CodedKeys.swift */,
+				5D204F912A7D1B2C0047A657 /* CGDisplayDefines.h */,
+			);
+			path = DuetImports;
+			sourceTree = "<group>";
+		};
 		5D204F6A2A7BA81A0047A657 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -2589,25 +2615,7 @@
 				5D65C7692A7148CA000FB8DD /* FramePanel.m */,
 				E475791318E5A06A00C668DE /* AppDelegate.h */,
 				E475791418E5A06A00C668DE /* AppDelegate.m */,
-				5D204F7D2A7CF46A0047A657 /* DuetRemoteEDM.swift */,
-				5D204F7F2A7CF4AD0047A657 /* DuetResolutionManager.swift */,
-				5D204F822A7CF4F40047A657 /* DVDI.swift */,
-				5D204F832A7CF4F40047A657 /* DVDIMap.h */,
-				5D204F812A7CF4F30047A657 /* DVDIMap.m */,
-				5D204F8C2A7CF7000047A657 /* DuetRefreshWindow.swift */,
-				5D204F862A7CF64E0047A657 /* UtilsReplacement.h */,
-				5D204F872A7CF64E0047A657 /* UtilsReplacement.m */,
-				5D204F892A7CF6720047A657 /* AppUserNotificationProtocol.h */,
-				5D204F8A2A7CF6730047A657 /* AppUserNotificationProtocol.m */,
-				5D204F8E2A7D1AAF0047A657 /* HiddenWindow.h */,
-				5D204F8F2A7D1AAF0047A657 /* HiddenWindow.m */,
-				5D204F9E2A7D224D0047A657 /* DuetConstants.h */,
-				5D204F9F2A7D224D0047A657 /* DuetConstants.m */,
-				5D204FA12A7D22F40047A657 /* NSUserDefaults+Additions.h */,
-				5D204FA22A7D22F40047A657 /* NSUserDefaults+Additions.m */,
-				5D204F9A2A7D22050047A657 /* GeneralSettingsManager.swift */,
-				5D204F9C2A7D22280047A657 /* UserDefaults+CodedKeys.swift */,
-				5D204F912A7D1B2C0047A657 /* CGDisplayDefines.h */,
+				5D1487E82A8115E8004FAB36 /* DuetImports */,
 				5D204F7C2A7CF4690047A657 /* DuetDesktopCaptureManager-Bridging-Header.h */,
 				5D204FA42A80238C0047A657 /* DuetDesktopCaptureManagerModel.h */,
 				5D204FA52A80238C0047A657 /* DuetDesktopCaptureManagerModel.m */,

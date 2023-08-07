@@ -12,9 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DuetDesktopCaptureManagerModel : NSObject
 
-@property (nonatomic, assign, readwrite) IBOutlet FramePanel *panel;
++ (instancetype)shared;
+- (instancetype)init NS_UNAVAILABLE;
 
 - (void)startScreenCapture;
+- (void)stopScreenCapture;
+
+- (void)connect;
+- (void)disconnect;
 
 @end
 

@@ -10,6 +10,7 @@
 #import "DuetCoreDesktopCaptureManagerClient.h"
 @import DuetCommon;
 @import DuetScreenCapture;
+#import "AppDelegate.h"
 
 @interface DuetDesktopCaptureManagerModel () <DuetCoreDesktopCaptureManagerClientDelegate>
 
@@ -20,6 +21,17 @@
 @end
 
 @implementation DuetDesktopCaptureManagerModel
+
++ (instancetype)shared {
+	static dispatch_once_t onceToken;
+	static DuetDesktopCaptureManagerModel *shared;
+	
+	dispatch_once(&onceToken, ^{
+		shared = [[DuetDesktopCaptureManagerModel alloc] init];
+	});
+	
+	return shared;
+}
 
 - (instancetype)init {
 	self = [super init];
@@ -103,6 +115,13 @@
 			}
 			case DSCScreenEventStartedStream: {
 				[self logMessage:@"DSCScreenEventStartedStream"];
+				dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+					NSWindow *window = [[NSWindow alloc] initWithContentRect:NSMakeRect(screen.displayBounds.origin.x, screen.displayBounds.origin.y, 1, 1) styleMask:NSWindowStyleMaskBorderless backing:NSBackingStoreBuffered defer:NO];
+					[window orderFront:nil];
+					dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+						[window orderOut:nil];
+					});
+				});
 				break;
 			}
 			case DSCScreenEventStoppingStream: {
@@ -147,45 +166,8 @@
 	}];
 }
 
-- (IBAction)startCaptureButtonAction:(id)sender {
-	[self startScreenCapture];
-}
-
-- (IBAction)stopCaptureButtonAction:(id)sender {
-	[self logMessage:@"Stopping capture"];
+- (void)stopScreenCapture {
 	[self.mainScreen stopCapturingScreen];
-}
-
-- (IBAction)clearLogsButtonAction:(id)sender {
-	dispatch_async(dispatch_get_main_queue(), ^{
-		self.panel.logView.string = @"";
-	});
-	
-}
-
-- (IBAction)connectToDaemon:(id)sender {
-	/*
-	 To use the service from an application or other process, use NSXPCConnection to establish a connection to the service by doing something like this:
-	 */
-	[self logMessage:@"connectToDaemon"];
-	[self.captureManagerClient connect];
-}
-
-- (IBAction)disconnectFromDaemon:(id)sender {
-	//	 And, when you are finished with the service, clean up the connection like this:
-	[self logMessage:@"disconnectFromDaemon"];
-	
-	[self.captureManagerClient disconnect];
-}
-
-- (IBAction)closeAppButtonAction:(id)sender {
-	[[NSApplication sharedApplication] terminate:self];
-}
-
-- (void)logMessage:(NSString *)string {
-	dispatch_async(dispatch_get_main_queue(), ^{
-		self.panel.logView.string = [self.panel.logView.string stringByAppendingFormat:@"\n%@: %@", [NSDate date], string];
-	});
 }
 
 - (void)startScreenCaptureWithCompletion:(void (^)(BOOL, NSError *))completion {
@@ -201,5 +183,21 @@
 		[self logMessage:@"Disconnected from Duet Core Service"];
 	}
 }
+
+- (void)connect {
+	[self.captureManagerClient connect];
+
+}
+
+- (void)disconnect {
+	[self.captureManagerClient disconnect];
+}
+
+- (void)logMessage:(NSString *)message {
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[((AppDelegate *)([NSApplication sharedApplication].delegate)).panel logMessage:message];
+	});
+}
+
 
 @end

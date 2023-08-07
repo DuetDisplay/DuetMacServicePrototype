@@ -71,6 +71,10 @@
 	}];
 }
 
+- (void)capturerDidSendFrame:(NSData *)data {
+	[self.guiService.remoteProxy serviceDidReceiveFrame];
+}
+
 #pragma mark - session handling
 
 - (void)refreshSessionWithCompletion:(void (^_Nullable)(NSError *))completion {

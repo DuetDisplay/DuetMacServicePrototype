@@ -47,6 +47,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class FramePanel;
+
 @interface AppDelegate : NSObject
+
+@property (nonatomic, assign, readonly) IBOutlet FramePanel *     panel;
 
 @end

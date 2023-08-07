@@ -60,6 +60,7 @@
 	// Send the data to the remote desktop client or perform other tasks
 	reply([NSString stringWithFormat:@"sendScreenData called - DuetService data received %lu", data.length]);
 	NSLog(@"DuetService data received %lu", data.length);
+	[self.coreModel capturerDidSendFrame:data];
 }
 
 - (void)getVersionWithCompletion:(void (^)(NSString *, NSError *))completion {
