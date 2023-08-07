@@ -11,6 +11,13 @@ target :DuetGUI do
 	pod 'OpenSSL-Universal'
 end
 
+target :DuetDesktopCaptureManager do
+	pod 'GBDeviceInfo'
+	pod 'GBPing'
+	pod 'CocoaAsyncSocket'
+	pod 'OpenSSL-Universal'
+end
+
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|

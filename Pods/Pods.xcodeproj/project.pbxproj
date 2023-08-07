@@ -40,7 +40,8 @@
 		B615E2574FFCF42ED3C08A8EF6D2D354 /* GBDeviceInfo_Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E5BE04A31F27013C4095C72EAC3D66 /* GBDeviceInfo_Common.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C71401A295B98EA56F5BAED39DDB5851 /* GBDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D30146BC26AB78123B47E538E1206E13 /* GBDeviceInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C986D97CF6EEFE0F781F076C008E5A0A /* ICMPHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8AC08FA67569A0D553FEB311A8160F /* ICMPHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E5FA445FAFB136581B4F9F6829EB2E58 /* Pods-DuetGUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BF3B4F6DF939F0890EB61D73DB3CEF /* Pods-DuetGUI-dummy.m */; };
+		CCCF0EF58762663176ECAC83D6D9BFCC /* Pods-DuetDesktopCaptureManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4C90673D846B3993984BCF590D2E4C /* Pods-DuetDesktopCaptureManager-dummy.m */; };
+		E5FA445FAFB136581B4F9F6829EB2E58 /* Pods-DuetGUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 159228A81E4F2EF36F3DF383AD00F880 /* Pods-DuetGUI-dummy.m */; };
 		F5D7EA48739D7A8D24BA2EDD51FBD108 /* GBPingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 698122FD9878C94D6B85C056F560FC27 /* GBPingSummary.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
@@ -52,12 +53,40 @@
 			remoteGlobalIDString = BB98E1FC6C2504C46E7DE517B82518B8;
 			remoteInfo = GBDeviceInfo;
 		};
+		39833B80E9C8D286CB599F466C138C55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B75B4785F3A4E5A5455B1AC0DE538064;
+			remoteInfo = GBPing;
+		};
+		4042B5A29BB3BFBACA7CE118B2A93A81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB98E1FC6C2504C46E7DE517B82518B8;
+			remoteInfo = GBDeviceInfo;
+		};
+		4480E057086AED6AAF4B01B2FC757103 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9ED5194E665042005069EF06C82A050;
+			remoteInfo = "OpenSSL-Universal";
+		};
 		46E7BEDC7FBA22EAF1960CD7E713E66C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B75B4785F3A4E5A5455B1AC0DE538064;
 			remoteInfo = GBPing;
+		};
+		7609AF2005B6A84F828C7F92C7C895CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
+			remoteInfo = CocoaAsyncSocket;
 		};
 		A11024C590B82626A7ED11E189AB9643 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -78,6 +107,7 @@
 /* Begin PBXFileReference section */
 		0EBD7EC79529B3C25CBBFDC0045E157E /* OpenSSL-Universal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-Universal.release.xcconfig"; sourceTree = "<group>"; };
 		135707A511227B668EF911194A3F281F /* OpenSSL-Universal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-Universal.debug.xcconfig"; sourceTree = "<group>"; };
+		159228A81E4F2EF36F3DF383AD00F880 /* Pods-DuetGUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DuetGUI-dummy.m"; sourceTree = "<group>"; };
 		18C89301074FD0A2857E868A02432AE8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
 		1A52405253ED4EDF58A498472197D49F /* CocoaAsyncSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.debug.xcconfig; sourceTree = "<group>"; };
 		1C16F68D1A9E03A7E58B759233E9311B /* Pods-DuetGUI */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-DuetGUI"; path = "libPods-DuetGUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,42 +115,48 @@
 		3063400BB3B461CC5CCA88526DBD32CB /* GBDeviceInfo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBDeviceInfo-prefix.pch"; sourceTree = "<group>"; };
 		344943148765495F0FA497A705D9154D /* GBDeviceInfo_OSX.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBDeviceInfo_OSX.m; path = GBDeviceInfo/GBDeviceInfo_OSX.m; sourceTree = "<group>"; };
 		3744D80C7A7066904256110959780C3E /* OpenSSL.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OpenSSL.xcframework; path = Frameworks/OpenSSL.xcframework; sourceTree = "<group>"; };
+		3CA11EC288E9193D552C22BDADA234B8 /* Pods-DuetDesktopCaptureManager-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DuetDesktopCaptureManager-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3DCE3A9FF400153650F69AA396BF4D44 /* GBPing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBPing.release.xcconfig; sourceTree = "<group>"; };
 		43B70B1F98E264AAA26898D7362CEE3E /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		4667212ACA106D5F9F444DD4F7B09E5F /* GBDeviceInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBDeviceInfo.debug.xcconfig; sourceTree = "<group>"; };
-		55332CE445693DCBEF3296216655F1F7 /* Pods-DuetGUI-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DuetGUI-frameworks.sh"; sourceTree = "<group>"; };
+		57ACA0F581EAF1A39CCC4D19BE4ACFBD /* Pods-DuetDesktopCaptureManager */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-DuetDesktopCaptureManager"; path = "libPods-DuetDesktopCaptureManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A9EF68B664428A74A356FBB939B016 /* GBDeviceInfo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GBDeviceInfo-dummy.m"; sourceTree = "<group>"; };
 		698122FD9878C94D6B85C056F560FC27 /* GBPingSummary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBPingSummary.m; path = GBPing/GBPingSummary.m; sourceTree = "<group>"; };
 		6A301CC6FDFE59290937C88786052B68 /* CocoaAsyncSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.release.xcconfig; sourceTree = "<group>"; };
 		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = CocoaAsyncSocket; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E703F26305CAD157F2C355F7D7840E /* GBDeviceInfoTypes_OSX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfoTypes_OSX.h; path = GBDeviceInfo/GBDeviceInfoTypes_OSX.h; sourceTree = "<group>"; };
+		723CF10F13A8B3EDE8302F29ADC2997F /* Pods-DuetGUI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DuetGUI-acknowledgements.markdown"; sourceTree = "<group>"; };
 		739C6937B96E291E4F1B788C91395200 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
-		77FE87CBD010FB73BA82D2002E7E4756 /* Pods-DuetGUI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DuetGUI-acknowledgements.plist"; sourceTree = "<group>"; };
+		7CE421C10B333C877ED8A836E141FF8C /* Pods-DuetGUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DuetGUI.release.xcconfig"; sourceTree = "<group>"; };
+		864B04CBBA73500F0A2024378A2016E8 /* Pods-DuetDesktopCaptureManager-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DuetDesktopCaptureManager-frameworks.sh"; sourceTree = "<group>"; };
 		8A2A9C18C262650B2189908FBF9AED31 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		8D227CEDEE3A238265C7D04DB7FA5A31 /* GBPingSummary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBPingSummary.h; path = GBPing/GBPingSummary.h; sourceTree = "<group>"; };
 		918EF60C8D1262E09F636F8A91F039F1 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
 		938E39FEA9E76D8E3B64C12EA2BAB830 /* GBDeviceInfo */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = GBDeviceInfo; path = libGBDeviceInfo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		98148903863B7ECD9546345553EA5A30 /* Pods-DuetGUI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DuetGUI-acknowledgements.plist"; sourceTree = "<group>"; };
 		9BB1C52565E3983F0FCE5FFDCEC24B6B /* GBDeviceInfoInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfoInterface.h; path = GBDeviceInfo/GBDeviceInfoInterface.h; sourceTree = "<group>"; };
+		9D7519A990873EAB9680941F897EB541 /* Pods-DuetDesktopCaptureManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DuetDesktopCaptureManager.debug.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A96F4D57D826525442B7A5485D0549D3 /* Pods-DuetGUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DuetGUI.release.xcconfig"; sourceTree = "<group>"; };
 		B53E9041CA92E47FD7EA2AB73757CF38 /* GBPing */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = GBPing; path = libGBPing.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65A0F3832882AFC271270ACC929DC10 /* GBPing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBPing.m; path = GBPing/GBPing.m; sourceTree = "<group>"; };
 		BAE0433609121E6E10E57B0D9C7D13F9 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
+		BB4C90673D846B3993984BCF590D2E4C /* Pods-DuetDesktopCaptureManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DuetDesktopCaptureManager-dummy.m"; sourceTree = "<group>"; };
 		C352D28419572CF01D7F349DC0DEA579 /* GBDeviceInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBDeviceInfo.release.xcconfig; sourceTree = "<group>"; };
 		C687A7B5485BDD5A6B6016CD8B03EE38 /* GBDeviceInfo_Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfo_Subclass.h; path = GBDeviceInfo/GBDeviceInfo_Subclass.h; sourceTree = "<group>"; };
-		C7BF3B4F6DF939F0890EB61D73DB3CEF /* Pods-DuetGUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DuetGUI-dummy.m"; sourceTree = "<group>"; };
+		CD416C2AC79916DFE30109C5195970F7 /* Pods-DuetGUI-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DuetGUI-frameworks.sh"; sourceTree = "<group>"; };
 		D08BFFE3F2593F081FEE162DEED7F680 /* GBPing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBPing-prefix.pch"; sourceTree = "<group>"; };
+		D2F488EC440BCD4D1C0B6F9B91049CAD /* Pods-DuetDesktopCaptureManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DuetDesktopCaptureManager.release.xcconfig"; sourceTree = "<group>"; };
 		D30146BC26AB78123B47E538E1206E13 /* GBDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfo.h; path = GBDeviceInfo/GBDeviceInfo.h; sourceTree = "<group>"; };
 		D7862CA5031FAA9C796B58DC2F75F6E9 /* GBPing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBPing.h; path = GBPing/GBPing.h; sourceTree = "<group>"; };
 		DA8AC08FA67569A0D553FEB311A8160F /* ICMPHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ICMPHeader.h; path = GBPing/ICMPHeader.h; sourceTree = "<group>"; };
 		DB6B47FC76C4874182E4677F6D660E60 /* OpenSSL-Universal-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "OpenSSL-Universal-xcframeworks.sh"; sourceTree = "<group>"; };
 		E0A5C67C231C74F8B1658B990E1A3B27 /* GBPing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GBPing-dummy.m"; sourceTree = "<group>"; };
 		E6E5865DF5BCB06D1935EA7814BB5890 /* GBDeviceInfoTypes_Common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfoTypes_Common.h; path = GBDeviceInfo/GBDeviceInfoTypes_Common.h; sourceTree = "<group>"; };
-		E721AF4EEF85CBA31DE4F82DD3D13A0E /* Pods-DuetGUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DuetGUI.debug.xcconfig"; sourceTree = "<group>"; };
 		E9E5BE04A31F27013C4095C72EAC3D66 /* GBDeviceInfo_Common.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBDeviceInfo_Common.m; path = GBDeviceInfo/GBDeviceInfo_Common.m; sourceTree = "<group>"; };
+		EB52374CA9990072D6607324E629680C /* Pods-DuetDesktopCaptureManager-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DuetDesktopCaptureManager-acknowledgements.plist"; sourceTree = "<group>"; };
 		ED8658C47B6471E4BF50444621AA25A2 /* GBPing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBPing.debug.xcconfig; sourceTree = "<group>"; };
+		F58B6F2013BBE32610681726C21CD41A /* Pods-DuetGUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DuetGUI.debug.xcconfig"; sourceTree = "<group>"; };
 		FCA0D65ABE52419E3813FCBCF6ADD01F /* GBDeviceInfo_OSX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfo_OSX.h; path = GBDeviceInfo/GBDeviceInfo_OSX.h; sourceTree = "<group>"; };
-		FFB39E05196FE42D3D5396461F3C7534 /* Pods-DuetGUI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DuetGUI-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +175,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BAD1F9081561A2EC2EC1971C81C27591 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5B302FC996D2BA22CF4E59840AFCE81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -173,26 +216,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2EC5B63E833B930AE72C85E750D02738 /* Pods-DuetGUI */ = {
+		288696920F37A9431CC629B81448A3B6 /* Pods-DuetDesktopCaptureManager */ = {
 			isa = PBXGroup;
 			children = (
-				FFB39E05196FE42D3D5396461F3C7534 /* Pods-DuetGUI-acknowledgements.markdown */,
-				77FE87CBD010FB73BA82D2002E7E4756 /* Pods-DuetGUI-acknowledgements.plist */,
-				C7BF3B4F6DF939F0890EB61D73DB3CEF /* Pods-DuetGUI-dummy.m */,
-				55332CE445693DCBEF3296216655F1F7 /* Pods-DuetGUI-frameworks.sh */,
-				E721AF4EEF85CBA31DE4F82DD3D13A0E /* Pods-DuetGUI.debug.xcconfig */,
-				A96F4D57D826525442B7A5485D0549D3 /* Pods-DuetGUI.release.xcconfig */,
+				3CA11EC288E9193D552C22BDADA234B8 /* Pods-DuetDesktopCaptureManager-acknowledgements.markdown */,
+				EB52374CA9990072D6607324E629680C /* Pods-DuetDesktopCaptureManager-acknowledgements.plist */,
+				BB4C90673D846B3993984BCF590D2E4C /* Pods-DuetDesktopCaptureManager-dummy.m */,
+				864B04CBBA73500F0A2024378A2016E8 /* Pods-DuetDesktopCaptureManager-frameworks.sh */,
+				9D7519A990873EAB9680941F897EB541 /* Pods-DuetDesktopCaptureManager.debug.xcconfig */,
+				D2F488EC440BCD4D1C0B6F9B91049CAD /* Pods-DuetDesktopCaptureManager.release.xcconfig */,
+			);
+			name = "Pods-DuetDesktopCaptureManager";
+			path = "Target Support Files/Pods-DuetDesktopCaptureManager";
+			sourceTree = "<group>";
+		};
+		635E9D8CEB9FA78B1AE62C6EB3D073B6 /* Pods-DuetGUI */ = {
+			isa = PBXGroup;
+			children = (
+				723CF10F13A8B3EDE8302F29ADC2997F /* Pods-DuetGUI-acknowledgements.markdown */,
+				98148903863B7ECD9546345553EA5A30 /* Pods-DuetGUI-acknowledgements.plist */,
+				159228A81E4F2EF36F3DF383AD00F880 /* Pods-DuetGUI-dummy.m */,
+				CD416C2AC79916DFE30109C5195970F7 /* Pods-DuetGUI-frameworks.sh */,
+				F58B6F2013BBE32610681726C21CD41A /* Pods-DuetGUI.debug.xcconfig */,
+				7CE421C10B333C877ED8A836E141FF8C /* Pods-DuetGUI.release.xcconfig */,
 			);
 			name = "Pods-DuetGUI";
 			path = "Target Support Files/Pods-DuetGUI";
-			sourceTree = "<group>";
-		};
-		74DC3549AC549BABD0D9FC4989FFBA8F /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2EC5B63E833B930AE72C85E750D02738 /* Pods-DuetGUI */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		814D2388B40AACAE70D06262E92DF512 /* CocoaAsyncSocket */ = {
@@ -206,6 +255,18 @@
 			);
 			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		8991B8A0004202BC9F1A929BACBB4F52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */,
+				938E39FEA9E76D8E3B64C12EA2BAB830 /* GBDeviceInfo */,
+				B53E9041CA92E47FD7EA2AB73757CF38 /* GBPing */,
+				57ACA0F581EAF1A39CCC4D19BE4ACFBD /* Pods-DuetDesktopCaptureManager */,
+				1C16F68D1A9E03A7E58B759233E9311B /* Pods-DuetGUI */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		8FD1CBEFFFD16591F91896F17B50F32C /* GBPing */ = {
@@ -262,26 +323,24 @@
 			path = "../Target Support Files/GBPing";
 			sourceTree = "<group>";
 		};
+		CCFE96DC59D8939EE9D301D4A140136F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				288696920F37A9431CC629B81448A3B6 /* Pods-DuetDesktopCaptureManager */,
+				635E9D8CEB9FA78B1AE62C6EB3D073B6 /* Pods-DuetGUI */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				EEC288F4EBE8D0348E88D256F3BF83BB /* Pods */,
-				D68B73778F9B51831D09328CD99D530E /* Products */,
-				74DC3549AC549BABD0D9FC4989FFBA8F /* Targets Support Files */,
+				8991B8A0004202BC9F1A929BACBB4F52 /* Products */,
+				CCFE96DC59D8939EE9D301D4A140136F /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D68B73778F9B51831D09328CD99D530E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */,
-				938E39FEA9E76D8E3B64C12EA2BAB830 /* GBDeviceInfo */,
-				B53E9041CA92E47FD7EA2AB73757CF38 /* GBPing */,
-				1C16F68D1A9E03A7E58B759233E9311B /* Pods-DuetGUI */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
@@ -378,6 +437,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F23AE3A89CE5152707A04252E41F31B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -396,6 +462,27 @@
 			name = CocoaAsyncSocket;
 			productName = CocoaAsyncSocket;
 			productReference = 6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */;
+			productType = "com.apple.product-type.library.static";
+		};
+		83F54146A4F8DBBCCBF0762A37537A03 /* Pods-DuetDesktopCaptureManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6311E6994D2B6B14B79FEF9E0167879F /* Build configuration list for PBXNativeTarget "Pods-DuetDesktopCaptureManager" */;
+			buildPhases = (
+				F23AE3A89CE5152707A04252E41F31B9 /* Headers */,
+				2E1AF46381956F13B963D457E872D8C3 /* Sources */,
+				D5B302FC996D2BA22CF4E59840AFCE81 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56DCC93512D4AC6D912440B65E6DA7D9 /* PBXTargetDependency */,
+				BC449F62B9AFB6D08FCFF22758B72E8B /* PBXTargetDependency */,
+				860199B47BA722A1C9DB1C50B6725874 /* PBXTargetDependency */,
+				52994B1A5D9F55EE8443E94ED19A8344 /* PBXTargetDependency */,
+			);
+			name = "Pods-DuetDesktopCaptureManager";
+			productName = "Pods-DuetDesktopCaptureManager";
+			productReference = 57ACA0F581EAF1A39CCC4D19BE4ACFBD /* Pods-DuetDesktopCaptureManager */;
 			productType = "com.apple.product-type.library.static";
 		};
 		B71B3FA4C40F22A06BAFFD35E0707870 /* Pods-DuetGUI */ = {
@@ -471,7 +558,7 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = D68B73778F9B51831D09328CD99D530E /* Products */;
+			productRefGroup = 8991B8A0004202BC9F1A929BACBB4F52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -479,6 +566,7 @@
 				BB98E1FC6C2504C46E7DE517B82518B8 /* GBDeviceInfo */,
 				B75B4785F3A4E5A5455B1AC0DE538064 /* GBPing */,
 				B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */,
+				83F54146A4F8DBBCCBF0762A37537A03 /* Pods-DuetDesktopCaptureManager */,
 				B71B3FA4C40F22A06BAFFD35E0707870 /* Pods-DuetGUI */,
 			);
 		};
@@ -515,6 +603,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2E1AF46381956F13B963D457E872D8C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCCF0EF58762663176ECAC83D6D9BFCC /* Pods-DuetDesktopCaptureManager-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		71CCF1EA160865388F357CF4FA9FD7BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -546,6 +642,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		52994B1A5D9F55EE8443E94ED19A8344 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "OpenSSL-Universal";
+			target = B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */;
+			targetProxy = 4480E057086AED6AAF4B01B2FC757103 /* PBXContainerItemProxy */;
+		};
+		56DCC93512D4AC6D912440B65E6DA7D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
+			targetProxy = 7609AF2005B6A84F828C7F92C7C895CF /* PBXContainerItemProxy */;
+		};
 		5E7F31439B01DCD59FD15175BE2C8639 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CocoaAsyncSocket;
@@ -563,6 +671,18 @@
 			name = "OpenSSL-Universal";
 			target = B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */;
 			targetProxy = A11024C590B82626A7ED11E189AB9643 /* PBXContainerItemProxy */;
+		};
+		860199B47BA722A1C9DB1C50B6725874 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GBPing;
+			target = B75B4785F3A4E5A5455B1AC0DE538064 /* GBPing */;
+			targetProxy = 39833B80E9C8D286CB599F466C138C55 /* PBXContainerItemProxy */;
+		};
+		BC449F62B9AFB6D08FCFF22758B72E8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GBDeviceInfo;
+			target = BB98E1FC6C2504C46E7DE517B82518B8 /* GBDeviceInfo */;
+			targetProxy = 4042B5A29BB3BFBACA7CE118B2A93A81 /* PBXContainerItemProxy */;
 		};
 		CBA8759B05941ACA986D6BCFA68DAD85 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -723,9 +843,30 @@
 			};
 			name = Debug;
 		};
+		712A43824668521C610D11C093A9FE8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D7519A990873EAB9680941F897EB541 /* Pods-DuetDesktopCaptureManager.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		940E58D9C288F454F7518499A4CECC0F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A96F4D57D826525442B7A5485D0549D3 /* Pods-DuetGUI.release.xcconfig */;
+			baseConfigurationReference = 7CE421C10B333C877ED8A836E141FF8C /* Pods-DuetGUI.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -852,7 +993,7 @@
 		};
 		B3D9CDA7E1050890EC200D9FD77A1732 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E721AF4EEF85CBA31DE4F82DD3D13A0E /* Pods-DuetGUI.debug.xcconfig */;
+			baseConfigurationReference = F58B6F2013BBE32610681726C21CD41A /* Pods-DuetGUI.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -891,6 +1032,27 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E9DFD6329F3405FA1B9D6E9634D18BDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F488EC440BCD4D1C0B6F9B91049CAD /* Pods-DuetDesktopCaptureManager.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -952,6 +1114,15 @@
 			buildConfigurations = (
 				AF3D8F31D242969879B2F71959E4E448 /* Debug */,
 				2367AB191F8B835E697CEE08D2CDF21A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6311E6994D2B6B14B79FEF9E0167879F /* Build configuration list for PBXNativeTarget "Pods-DuetDesktopCaptureManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				712A43824668521C610D11C093A9FE8E /* Debug */,
+				E9DFD6329F3405FA1B9D6E9634D18BDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

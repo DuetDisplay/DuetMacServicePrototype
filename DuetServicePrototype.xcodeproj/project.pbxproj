@@ -131,6 +131,7 @@
 		5DF8FDF62A71588B0077C1CC /* TCMPortMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C7C2A713F0800BB9A91 /* TCMPortMapper.framework */; };
 		5DF8FDF72A71588B0077C1CC /* TCMPortMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D943C7C2A713F0800BB9A91 /* TCMPortMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C00AB7168952EAE8F7D64BD /* libPods-DuetGUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9F80C46C62EF359939CB5E /* libPods-DuetGUI.a */; };
+		B2B1C37ED8483F37D3F3501F /* libPods-DuetDesktopCaptureManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCC13B601258B0B6525F98D /* libPods-DuetDesktopCaptureManager.a */; };
 		E475791A18E5A06A00C668DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E475791418E5A06A00C668DE /* AppDelegate.m */; };
 		E475791D18E5A06A00C668DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E475791818E5A06A00C668DE /* main.m */; };
 		E475791E18E5A06A00C668DE /* DuetDesktopCaptureManagerDebugUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = E475791918E5A06A00C668DE /* DuetDesktopCaptureManagerDebugUI.xib */; };
@@ -389,6 +390,8 @@
 
 /* Begin PBXFileReference section */
 		1A9F80C46C62EF359939CB5E /* libPods-DuetGUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DuetGUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32D0403070D12339A6F272BA /* Pods-DuetDesktopCaptureManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuetDesktopCaptureManager.release.xcconfig"; path = "Target Support Files/Pods-DuetDesktopCaptureManager/Pods-DuetDesktopCaptureManager.release.xcconfig"; sourceTree = "<group>"; };
+		3308FEF73C5CB427F2C6A38F /* Pods-DuetDesktopCaptureManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuetDesktopCaptureManager.debug.xcconfig"; path = "Target Support Files/Pods-DuetDesktopCaptureManager/Pods-DuetDesktopCaptureManager.debug.xcconfig"; sourceTree = "<group>"; };
 		5D204F692A7BA81A0047A657 /* UICKeyChainStore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UICKeyChainStore.xcodeproj; path = UICKeyChainStore/Lib/UICKeyChainStore.xcodeproj; sourceTree = "<group>"; };
 		5D204F7C2A7CF4690047A657 /* DuetDesktopCaptureManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuetDesktopCaptureManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		5D204F7D2A7CF46A0047A657 /* DuetRemoteEDM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DuetRemoteEDM.swift; sourceTree = "<group>"; };
@@ -1056,6 +1059,7 @@
 		5DE389DD2A73A95300686A63 /* DuetDesktopCapturerService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetDesktopCapturerService.m; sourceTree = "<group>"; };
 		5DE389EE2A73E8A100686A63 /* DuetCoreService */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DuetCoreService; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE389F02A73E8A100686A63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7CCC13B601258B0B6525F98D /* libPods-DuetDesktopCaptureManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DuetDesktopCaptureManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF0730A0138FB25065B9AAF /* Pods-DuetGUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuetGUI.release.xcconfig"; path = "Target Support Files/Pods-DuetGUI/Pods-DuetGUI.release.xcconfig"; sourceTree = "<group>"; };
 		E42AA71F6D972BAA560E13C1 /* Pods-DuetGUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuetGUI.debug.xcconfig"; path = "Target Support Files/Pods-DuetGUI/Pods-DuetGUI.debug.xcconfig"; sourceTree = "<group>"; };
 		E47578DF18E58B7A00C668DE /* DuetDesktopCaptureManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuetDesktopCaptureManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1124,6 +1128,7 @@
 				5DF8FDF12A7152C10077C1CC /* CocoaLumberjack in Frameworks */,
 				5D65C75E2A7144F0000FB8DD /* DuetRemoteDisplay.framework in Frameworks */,
 				5D65C7542A7144E6000FB8DD /* Cocoa.framework in Frameworks */,
+				B2B1C37ED8483F37D3F3501F /* libPods-DuetDesktopCaptureManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1135,6 +1140,8 @@
 			children = (
 				E42AA71F6D972BAA560E13C1 /* Pods-DuetGUI.debug.xcconfig */,
 				9CF0730A0138FB25065B9AAF /* Pods-DuetGUI.release.xcconfig */,
+				3308FEF73C5CB427F2C6A38F /* Pods-DuetDesktopCaptureManager.debug.xcconfig */,
+				32D0403070D12339A6F272BA /* Pods-DuetDesktopCaptureManager.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -2654,6 +2661,7 @@
 			children = (
 				E47578E218E58B7A00C668DE /* Cocoa.framework */,
 				1A9F80C46C62EF359939CB5E /* libPods-DuetGUI.a */,
+				7CCC13B601258B0B6525F98D /* libPods-DuetDesktopCaptureManager.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2714,10 +2722,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E47578EF18E58B7A00C668DE /* Build configuration list for PBXNativeTarget "DuetDesktopCaptureManager" */;
 			buildPhases = (
+				03E0AEE374ABC29B38ACEA00 /* [CP] Check Pods Manifest.lock */,
 				E47578DB18E58B7A00C668DE /* Sources */,
 				E47578DC18E58B7A00C668DE /* Frameworks */,
 				E47578DD18E58B7A00C668DE /* Resources */,
 				5D65C7592A7144EB000FB8DD /* Embed Frameworks */,
+				0BFA337DE2F39152EA45EE35 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2994,6 +3004,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		03E0AEE374ABC29B38ACEA00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DuetDesktopCaptureManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		0AC950AA20C9E63D613A36CB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3010,6 +3042,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DuetGUI/Pods-DuetGUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0BFA337DE2F39152EA45EE35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DuetDesktopCaptureManager/Pods-DuetDesktopCaptureManager-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DuetDesktopCaptureManager/Pods-DuetDesktopCaptureManager-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5D83A4EF2A7A42D800EE88FC /* ShellScript */ = {
@@ -3574,6 +3624,7 @@
 		};
 		E47578F018E58B7A00C668DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3308FEF73C5CB427F2C6A38F /* Pods-DuetDesktopCaptureManager.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = DuetDesktopCaptureManager/DuetDesktopCaptureManager.entitlements;
@@ -3611,6 +3662,7 @@
 		};
 		E47578F118E58B7A00C668DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32D0403070D12339A6F272BA /* Pods-DuetDesktopCaptureManager.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = DuetDesktopCaptureManager/DuetDesktopCaptureManager.entitlements;

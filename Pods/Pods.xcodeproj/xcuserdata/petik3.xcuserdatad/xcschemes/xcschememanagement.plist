@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-DuetDesktopCaptureManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-DuetGUI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
