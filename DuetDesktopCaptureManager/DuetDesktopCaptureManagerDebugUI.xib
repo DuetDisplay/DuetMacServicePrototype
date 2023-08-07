@@ -61,47 +61,35 @@
             </view>
             <toolbar key="toolbar" implicitIdentifier="BBCE006A-47D7-4DAF-9B65-5CE4C83A4B18" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="tlk-og-jmc">
                 <allowedToolbarItems>
-                    <toolbarItem implicitItemIdentifier="791C9C92-35BA-4F05-8484-48E8B1F0174E" label="start capture" paletteLabel="start capture" tag="-1" image="NSTouchBarRecordStartTemplate" bordered="YES" id="Cj7-Fh-Cxj" userLabel="Start capture">
-                        <size key="minSize" width="27" height="25"/>
-                        <size key="maxSize" width="27" height="25"/>
+                    <toolbarItem implicitItemIdentifier="791C9C92-35BA-4F05-8484-48E8B1F0174E" label="start capture" paletteLabel="start capture" tag="-1" image="NSTouchBarRecordStartTemplate" bordered="YES" sizingBehavior="auto" id="Cj7-Fh-Cxj" userLabel="Start capture">
                         <connections>
-                            <action selector="startCaptureButtonAction:" target="219" id="4pS-8k-GxB"/>
+                            <action selector="startCaptureButtonAction:" target="d5E-i0-aJR" id="WfI-zx-iSp"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="F27FD558-DB59-4B3F-AEEF-306EDF6B949C" label="stop capture" paletteLabel="stop capture" tag="-1" image="NSTouchBarRecordStopTemplate" bordered="YES" id="J3u-TH-ffD">
-                        <size key="minSize" width="27" height="25"/>
-                        <size key="maxSize" width="27" height="25"/>
+                    <toolbarItem implicitItemIdentifier="F27FD558-DB59-4B3F-AEEF-306EDF6B949C" label="stop capture" paletteLabel="stop capture" tag="-1" image="NSTouchBarRecordStopTemplate" bordered="YES" sizingBehavior="auto" id="J3u-TH-ffD">
                         <connections>
-                            <action selector="stopCaptureButtonAction:" target="219" id="8ho-28-y1j"/>
+                            <action selector="stopCaptureButtonAction:" target="d5E-i0-aJR" id="pge-C4-WT2"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="7EA519BC-70A0-4927-BE28-394173B19F96" label="connect" paletteLabel="connect" tag="-1" image="powerplug.fill" catalog="system" bordered="YES" id="IZl-b3-1kP">
-                        <size key="minSize" width="27" height="25"/>
-                        <size key="maxSize" width="27" height="25"/>
+                    <toolbarItem implicitItemIdentifier="7EA519BC-70A0-4927-BE28-394173B19F96" label="connect" paletteLabel="connect" tag="-1" image="powerplug.fill" catalog="system" bordered="YES" sizingBehavior="auto" id="IZl-b3-1kP">
                         <connections>
-                            <action selector="connectToDaemon:" target="219" id="4lS-fm-Qdu"/>
+                            <action selector="connectToDaemon:" target="d5E-i0-aJR" id="SvG-yf-KZ2"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="96AD8A28-45CB-4876-B15E-FA4F8D2871A1" label="disconnect" paletteLabel="disconnect" tag="-1" image="xmark" catalog="system" bordered="YES" id="cu3-Y4-CAP">
-                        <size key="minSize" width="27" height="25"/>
-                        <size key="maxSize" width="27" height="25"/>
+                    <toolbarItem implicitItemIdentifier="96AD8A28-45CB-4876-B15E-FA4F8D2871A1" label="disconnect" paletteLabel="disconnect" tag="-1" image="xmark" catalog="system" bordered="YES" sizingBehavior="auto" id="cu3-Y4-CAP">
                         <connections>
-                            <action selector="disconnectFromDaemon:" target="219" id="z1k-I4-Hff"/>
+                            <action selector="disconnectFromDaemon:" target="d5E-i0-aJR" id="D01-JL-4k1"/>
                         </connections>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="RVG-OM-QUw"/>
-                    <toolbarItem implicitItemIdentifier="9F1FC0C0-7D55-4799-A471-5E819045F3EA" label="clear logs" paletteLabel="clear logs" tag="-1" image="trash" catalog="system" bordered="YES" id="xhw-td-xju">
-                        <size key="minSize" width="27" height="25"/>
-                        <size key="maxSize" width="27" height="25"/>
+                    <toolbarItem implicitItemIdentifier="9F1FC0C0-7D55-4799-A471-5E819045F3EA" label="clear logs" paletteLabel="clear logs" tag="-1" image="trash" catalog="system" bordered="YES" sizingBehavior="auto" id="xhw-td-xju">
                         <connections>
-                            <action selector="clearLogsButtonAction:" target="219" id="ybK-eA-Efe"/>
+                            <action selector="clearLogsButtonAction:" target="d5E-i0-aJR" id="WKc-K9-xXg"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="458EA317-31A4-4045-AEFB-EE6139F76300" label="close app" paletteLabel="close app" tag="-1" image="xmark.circle" catalog="system" bordered="YES" id="W5z-eS-TOe">
-                        <size key="minSize" width="27" height="25"/>
-                        <size key="maxSize" width="27" height="25"/>
+                    <toolbarItem implicitItemIdentifier="458EA317-31A4-4045-AEFB-EE6139F76300" label="close app" paletteLabel="close app" tag="-1" image="xmark.circle" catalog="system" bordered="YES" sizingBehavior="auto" id="W5z-eS-TOe">
                         <connections>
-                            <action selector="closeAppButtonAction:" target="219" id="Fjb-qM-X96"/>
+                            <action selector="closeAppButtonAction:" target="d5E-i0-aJR" id="PN6-pm-DC3"/>
                         </connections>
                     </toolbarItem>
                 </allowedToolbarItems>
@@ -123,6 +111,11 @@
         <customObject id="219" userLabel="AppDelegate" customClass="AppDelegate">
             <connections>
                 <outlet property="panel" destination="210" id="220"/>
+            </connections>
+        </customObject>
+        <customObject id="d5E-i0-aJR" customClass="DuetDesktopCaptureManagerModel">
+            <connections>
+                <outlet property="panel" destination="210" id="929-2V-YZV"/>
             </connections>
         </customObject>
     </objects>

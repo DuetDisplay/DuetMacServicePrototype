@@ -79,6 +79,8 @@
 		5D204F9D2A7D22280047A657 /* UserDefaults+CodedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D204F9C2A7D22280047A657 /* UserDefaults+CodedKeys.swift */; };
 		5D204FA02A7D224D0047A657 /* DuetConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D204F9F2A7D224D0047A657 /* DuetConstants.m */; };
 		5D204FA32A7D22F40047A657 /* NSUserDefaults+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D204FA22A7D22F40047A657 /* NSUserDefaults+Additions.m */; };
+		5D204FA62A80238C0047A657 /* DuetDesktopCaptureManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D204FA52A80238C0047A657 /* DuetDesktopCaptureManagerModel.m */; };
+		5D204FA92A8024140047A657 /* DuetCoreDesktopCaptureManagerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D204FA82A8024140047A657 /* DuetCoreDesktopCaptureManagerClient.m */; };
 		5D448EAF2A77D92D000D97A5 /* DuetDesktopCapturerServiceXPCListenerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D448EAE2A77D92D000D97A5 /* DuetDesktopCapturerServiceXPCListenerDelegate.m */; };
 		5D448EB22A77DCC9000D97A5 /* DuetGUIWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D448EB12A77DCC9000D97A5 /* DuetGUIWindowController.m */; };
 		5D490CF62A7693B0007E8343 /* com.kairos.DuetDesktopCaptureManager.plist in Resources */ = {isa = PBXBuildFile; fileRef = E475791F18E5A1F000C668DE /* com.kairos.DuetDesktopCaptureManager.plist */; };
@@ -402,6 +404,10 @@
 		5D204F9F2A7D224D0047A657 /* DuetConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuetConstants.m; sourceTree = "<group>"; };
 		5D204FA12A7D22F40047A657 /* NSUserDefaults+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Additions.h"; sourceTree = "<group>"; };
 		5D204FA22A7D22F40047A657 /* NSUserDefaults+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Additions.m"; sourceTree = "<group>"; };
+		5D204FA42A80238C0047A657 /* DuetDesktopCaptureManagerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetDesktopCaptureManagerModel.h; sourceTree = "<group>"; };
+		5D204FA52A80238C0047A657 /* DuetDesktopCaptureManagerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetDesktopCaptureManagerModel.m; sourceTree = "<group>"; };
+		5D204FA72A8024140047A657 /* DuetCoreDesktopCaptureManagerClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetCoreDesktopCaptureManagerClient.h; sourceTree = "<group>"; };
+		5D204FA82A8024140047A657 /* DuetCoreDesktopCaptureManagerClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuetCoreDesktopCaptureManagerClient.m; sourceTree = "<group>"; };
 		5D448EAB2A77B703000D97A5 /* DuetGUIDaemonProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuetGUIDaemonProtocol.h; sourceTree = "<group>"; };
 		5D448EAC2A77B70F000D97A5 /* DuetGUIClientProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuetGUIClientProtocol.h; sourceTree = "<group>"; };
 		5D448EAD2A77D92D000D97A5 /* DuetDesktopCapturerServiceXPCListenerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuetDesktopCapturerServiceXPCListenerDelegate.h; sourceTree = "<group>"; };
@@ -2589,6 +2595,10 @@
 				5D204F9C2A7D22280047A657 /* UserDefaults+CodedKeys.swift */,
 				5D204F912A7D1B2C0047A657 /* CGDisplayDefines.h */,
 				5D204F7C2A7CF4690047A657 /* DuetDesktopCaptureManager-Bridging-Header.h */,
+				5D204FA42A80238C0047A657 /* DuetDesktopCaptureManagerModel.h */,
+				5D204FA52A80238C0047A657 /* DuetDesktopCaptureManagerModel.m */,
+				5D204FA72A8024140047A657 /* DuetCoreDesktopCaptureManagerClient.h */,
+				5D204FA82A8024140047A657 /* DuetCoreDesktopCaptureManagerClient.m */,
 			);
 			path = DuetDesktopCaptureManager;
 			sourceTree = "<group>";
@@ -3106,6 +3116,8 @@
 				5D65C76A2A7148CA000FB8DD /* FramePanel.m in Sources */,
 				5D204F972A7D21DC0047A657 /* UtilsReplacement.m in Sources */,
 				5D204F992A7D21E30047A657 /* HiddenWindow.m in Sources */,
+				5D204FA92A8024140047A657 /* DuetCoreDesktopCaptureManagerClient.m in Sources */,
+				5D204FA62A80238C0047A657 /* DuetDesktopCaptureManagerModel.m in Sources */,
 				5D204F9B2A7D22050047A657 /* GeneralSettingsManager.swift in Sources */,
 				5D204F9D2A7D22280047A657 /* UserDefaults+CodedKeys.swift in Sources */,
 				5D204F932A7D21CB0047A657 /* DuetResolutionManager.swift in Sources */,
