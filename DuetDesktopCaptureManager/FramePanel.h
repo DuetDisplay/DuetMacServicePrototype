@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @property (nonatomic, weak) IBOutlet NSTextView *logView;
+@property (weak) IBOutlet NSImageView *imageView;
 
 - (void)logMessage:(NSString *)string;
 

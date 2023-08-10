@@ -5,14 +5,14 @@ project 'DuetServicePrototype.xcodeproj'
 
 
 target :DuetGUI do
-	pod 'GBDeviceInfo'
+#	pod 'GBDeviceInfo'
 	pod 'GBPing'
 	pod 'CocoaAsyncSocket'
 	pod 'OpenSSL-Universal'
 end
 
 target :DuetDesktopCaptureManager do
-	pod 'GBDeviceInfo'
+#	pod 'GBDeviceInfo'
 	pod 'GBPing'
 	pod 'CocoaAsyncSocket'
 	pod 'OpenSSL-Universal'

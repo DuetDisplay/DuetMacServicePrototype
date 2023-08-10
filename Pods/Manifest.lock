@@ -1,30 +1,24 @@
 PODS:
   - CocoaAsyncSocket (7.6.5)
-  - GBDeviceInfo (7.1.0):
-    - GBDeviceInfo/Core (= 7.1.0)
-  - GBDeviceInfo/Core (7.1.0)
   - GBPing (1.5.1)
   - OpenSSL-Universal (1.1.1900)
 
 DEPENDENCIES:
   - CocoaAsyncSocket
-  - GBDeviceInfo
   - GBPing
   - OpenSSL-Universal
 
 SPEC REPOS:
   trunk:
     - CocoaAsyncSocket
-    - GBDeviceInfo
     - GBPing
     - OpenSSL-Universal
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
-  GBDeviceInfo: 5d62fa85bdcce3ed288d83c28789adf1173e4376
   GBPing: d7fb1b91990f1d2a0f07f72e0fe79e91ee9fc3ba
   OpenSSL-Universal: 84efb8a29841f2764ac5403e0c4119a28b713346
 
-PODFILE CHECKSUM: 830bf38053dbcf81c33ea2be10ce65de9dcef2d4
+PODFILE CHECKSUM: 4bff2067b8a562ef5fee3b1fbb06cc2220edf1f6
 
 COCOAPODS: 1.11.3

@@ -21,7 +21,7 @@
 }
 
 - (IBAction)startCaptureAction:(id)sender {
-	
+	[[DuetAppModel shared] startScreenCapture];
 }
 
 - (IBAction)stopCaptureAction:(id)sender {

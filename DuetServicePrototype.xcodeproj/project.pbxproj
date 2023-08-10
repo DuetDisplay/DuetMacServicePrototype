@@ -138,6 +138,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5D1487F92A84D872004FAB36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 18EDF6782A4F3CAE008E440C;
+			remoteInfo = DuetAnalyticsTests;
+		};
+		5D1487FB2A84D872004FAB36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D943C152A713F0800BB9A91 /* DuetCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 18FB14322A28FDAC00E33C55;
+			remoteInfo = DuetScreenCaptureTests;
+		};
 		5D204F2B2A7B97570047A657 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E47578D718E58B7A00C668DE /* Project object */;
@@ -2480,7 +2494,9 @@
 				5D943C6D2A713F0800BB9A91 /* DuetScreenCapture.framework */,
 				5D943C6F2A713F0800BB9A91 /* DuetVideo.framework */,
 				5D943C712A713F0800BB9A91 /* libudplib.a */,
+				5D1487FA2A84D872004FAB36 /* DuetAnalyticsTests.xctest */,
 				5D943C732A713F0800BB9A91 /* DuetSDKTests.xctest */,
+				5D1487FC2A84D872004FAB36 /* DuetScreenCaptureTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2819,6 +2835,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		5D1487FA2A84D872004FAB36 /* DuetAnalyticsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DuetAnalyticsTests.xctest;
+			remoteRef = 5D1487F92A84D872004FAB36 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D1487FC2A84D872004FAB36 /* DuetScreenCaptureTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DuetScreenCaptureTests.xctest;
+			remoteRef = 5D1487FB2A84D872004FAB36 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		5D204F712A7BA81A0047A657 /* UICKeyChainStore.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -3634,9 +3664,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3308FEF73C5CB427F2C6A38F /* Pods-DuetDesktopCaptureManager.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = DuetDesktopCaptureManager/DuetDesktopCaptureManager.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = J6L96W8A86;
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6L96W8A86;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3646,7 +3686,14 @@
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 					"$(PROJECT_DIR)/DuetMac",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = DuetDesktopCaptureManager/Info.plist;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -3658,9 +3705,11 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/DuetCommon/DuetRemoteDisplay/Server/cpp/UdpRelay/c_interface/bin",
 					"$(PROJECT_DIR)/Carthage/Checkouts/DuetCommon/DuetVideo",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kairos.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "DuetDesktopCaptureManager/DuetDesktopCaptureManager-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -3672,9 +3721,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32D0403070D12339A6F272BA /* Pods-DuetDesktopCaptureManager.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = DuetDesktopCaptureManager/DuetDesktopCaptureManager.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = J6L96W8A86;
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6L96W8A86;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3684,7 +3742,10 @@
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 					"$(PROJECT_DIR)/DuetMac",
 				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = DuetDesktopCaptureManager/Info.plist;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -3696,9 +3757,11 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/DuetCommon/DuetRemoteDisplay/Server/cpp/UdpRelay/c_interface/bin",
 					"$(PROJECT_DIR)/Carthage/Checkouts/DuetCommon/DuetVideo",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kairos.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "DuetDesktopCaptureManager/DuetDesktopCaptureManager-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;

@@ -20,146 +20,115 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0550383893922695DF915824F0D2B11E /* GBDeviceInfo_OSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 344943148765495F0FA497A705D9154D /* GBDeviceInfo_OSX.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		066D7CF6D77F8AFD96BDC936DF84E4A7 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 739C6937B96E291E4F1B788C91395200 /* CocoaAsyncSocket-dummy.m */; };
-		157440991FB89145AACF80182B1C70EF /* GBDeviceInfo_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA0D65ABE52419E3813FCBCF6ADD01F /* GBDeviceInfo_OSX.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		20EA9C10DD34B76F7F4D8F2674762448 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A2A9C18C262650B2189908FBF9AED31 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2C2CDB57D332B1C74242BCAC924B028B /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B70B1F98E264AAA26898D7362CEE3E /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		30C19037D0A15C756CC46DD819319F7D /* GBDeviceInfoInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BB1C52565E3983F0FCE5FFDCEC24B6B /* GBDeviceInfoInterface.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		374DA84132384B8790B51894D6B7235F /* GBPingSummary.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D227CEDEE3A238265C7D04DB7FA5A31 /* GBPingSummary.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		43CC049B1978E9E80363F31A16CD7D7F /* GBDeviceInfoTypes_Common.h in Headers */ = {isa = PBXBuildFile; fileRef = E6E5865DF5BCB06D1935EA7814BB5890 /* GBDeviceInfoTypes_Common.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4E8D5219D3DDBBCB95757EC41B51C3EF /* GBDeviceInfo_Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = C687A7B5485BDD5A6B6016CD8B03EE38 /* GBDeviceInfo_Subclass.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		593EFE3FBB6E3203B69D91B111D929EA /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 918EF60C8D1262E09F636F8A91F039F1 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6321C104191A4B48E70B63C641DEB15D /* GBDeviceInfoTypes_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 71E703F26305CAD157F2C355F7D7840E /* GBDeviceInfoTypes_OSX.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		67CF9D8F2AA830C94418DCF49ECBC6EB /* GBDeviceInfo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A9EF68B664428A74A356FBB939B016 /* GBDeviceInfo-dummy.m */; };
-		6DEAD3D97EEC205260866A4DEC708E68 /* GBPing.h in Headers */ = {isa = PBXBuildFile; fileRef = D7862CA5031FAA9C796B58DC2F75F6E9 /* GBPing.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		87808DC69E7D5ED97B11B21AAED5F68C /* GBPing.m in Sources */ = {isa = PBXBuildFile; fileRef = B65A0F3832882AFC271270ACC929DC10 /* GBPing.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		91C234ECC9842EFF029DA6FC8134971C /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C89301074FD0A2857E868A02432AE8 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		97C5361B61BC9650E7E74461F824A1CC /* GBDeviceInfo_Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 2421883F17812BCABACE5C2D0DD207DE /* GBDeviceInfo_Common.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		99CE518AC94431E4AED8B1F8FF7EA4B8 /* GBPing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A5C67C231C74F8B1658B990E1A3B27 /* GBPing-dummy.m */; };
-		B615E2574FFCF42ED3C08A8EF6D2D354 /* GBDeviceInfo_Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E5BE04A31F27013C4095C72EAC3D66 /* GBDeviceInfo_Common.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C71401A295B98EA56F5BAED39DDB5851 /* GBDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D30146BC26AB78123B47E538E1206E13 /* GBDeviceInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C986D97CF6EEFE0F781F076C008E5A0A /* ICMPHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8AC08FA67569A0D553FEB311A8160F /* ICMPHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CCCF0EF58762663176ECAC83D6D9BFCC /* Pods-DuetDesktopCaptureManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4C90673D846B3993984BCF590D2E4C /* Pods-DuetDesktopCaptureManager-dummy.m */; };
-		E5FA445FAFB136581B4F9F6829EB2E58 /* Pods-DuetGUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 159228A81E4F2EF36F3DF383AD00F880 /* Pods-DuetGUI-dummy.m */; };
-		F5D7EA48739D7A8D24BA2EDD51FBD108 /* GBPingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 698122FD9878C94D6B85C056F560FC27 /* GBPingSummary.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		066D7CF6D77F8AFD96BDC936DF84E4A7 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B674C6C113B037E52333CDFBA95E8826 /* CocoaAsyncSocket-dummy.m */; };
+		20EA9C10DD34B76F7F4D8F2674762448 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A768FA9EDC65C5FB13B348F1A2E3F45 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2C2CDB57D332B1C74242BCAC924B028B /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B337AD357DDA321D062398ABAC68BD3 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		374DA84132384B8790B51894D6B7235F /* GBPingSummary.h in Headers */ = {isa = PBXBuildFile; fileRef = 80D78E108AB0AEB544B9BF3D36AE4B8E /* GBPingSummary.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		44E629FAF0D4777F17522A9032B81D96 /* Pods-DuetDesktopCaptureManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4C90673D846B3993984BCF590D2E4C /* Pods-DuetDesktopCaptureManager-dummy.m */; };
+		4ED3DF0CB017568D1CF44A83891F7520 /* Pods-DuetGUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 159228A81E4F2EF36F3DF383AD00F880 /* Pods-DuetGUI-dummy.m */; };
+		593EFE3FBB6E3203B69D91B111D929EA /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = D27457D985642231EA51B1999AE758E6 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6DEAD3D97EEC205260866A4DEC708E68 /* GBPing.h in Headers */ = {isa = PBXBuildFile; fileRef = D2994CE65A0FD9F8D9A9209733AB261F /* GBPing.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		87808DC69E7D5ED97B11B21AAED5F68C /* GBPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB29DFEED811DB0F7845135DC531BE9 /* GBPing.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		91C234ECC9842EFF029DA6FC8134971C /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C72926BFDA21C87E79C0F82231E68B /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		99CE518AC94431E4AED8B1F8FF7EA4B8 /* GBPing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 682A455AB69471806C954516D0AE4CD7 /* GBPing-dummy.m */; };
+		C986D97CF6EEFE0F781F076C008E5A0A /* ICMPHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = EB145533512BCCD8C6664AAD04231C55 /* ICMPHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F5D7EA48739D7A8D24BA2EDD51FBD108 /* GBPingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEA0FDA2664A1173E4577DAF654AB45 /* GBPingSummary.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1683470A8175510D5D00CDBA023B3D6B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB98E1FC6C2504C46E7DE517B82518B8;
-			remoteInfo = GBDeviceInfo;
-		};
-		39833B80E9C8D286CB599F466C138C55 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B75B4785F3A4E5A5455B1AC0DE538064;
-			remoteInfo = GBPing;
-		};
-		4042B5A29BB3BFBACA7CE118B2A93A81 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB98E1FC6C2504C46E7DE517B82518B8;
-			remoteInfo = GBDeviceInfo;
-		};
-		4480E057086AED6AAF4B01B2FC757103 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B9ED5194E665042005069EF06C82A050;
-			remoteInfo = "OpenSSL-Universal";
-		};
-		46E7BEDC7FBA22EAF1960CD7E713E66C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B75B4785F3A4E5A5455B1AC0DE538064;
-			remoteInfo = GBPing;
-		};
-		7609AF2005B6A84F828C7F92C7C895CF /* PBXContainerItemProxy */ = {
+		21099B748DD6E4AB51FDCB81F107D08F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
 			remoteInfo = CocoaAsyncSocket;
 		};
-		A11024C590B82626A7ED11E189AB9643 /* PBXContainerItemProxy */ = {
+		2ACABB57B4FF48897320EF645D96A1BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B9ED5194E665042005069EF06C82A050;
 			remoteInfo = "OpenSSL-Universal";
 		};
-		C53CA4320A4A3EF381FDF8EA88A55280 /* PBXContainerItemProxy */ = {
+		2B7BECCA069D321260BED6CCFFFB76F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B75B4785F3A4E5A5455B1AC0DE538064;
+			remoteInfo = GBPing;
+		};
+		64F4925FE4AD937F9BB05E11C1759FA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9ED5194E665042005069EF06C82A050;
+			remoteInfo = "OpenSSL-Universal";
+		};
+		8CA4F464B20BEF69CB4981C9D82AB402 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
 			remoteInfo = CocoaAsyncSocket;
+		};
+		F55E8206D6D11551ACE8A59F2A56EAFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B75B4785F3A4E5A5455B1AC0DE538064;
+			remoteInfo = GBPing;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0EBD7EC79529B3C25CBBFDC0045E157E /* OpenSSL-Universal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-Universal.release.xcconfig"; sourceTree = "<group>"; };
-		135707A511227B668EF911194A3F281F /* OpenSSL-Universal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-Universal.debug.xcconfig"; sourceTree = "<group>"; };
+		013134CD400C936915851EB4E6646338 /* CocoaAsyncSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.release.xcconfig; sourceTree = "<group>"; };
 		159228A81E4F2EF36F3DF383AD00F880 /* Pods-DuetGUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DuetGUI-dummy.m"; sourceTree = "<group>"; };
-		18C89301074FD0A2857E868A02432AE8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
-		1A52405253ED4EDF58A498472197D49F /* CocoaAsyncSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.debug.xcconfig; sourceTree = "<group>"; };
+		1B337AD357DDA321D062398ABAC68BD3 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		1C16F68D1A9E03A7E58B759233E9311B /* Pods-DuetGUI */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-DuetGUI"; path = "libPods-DuetGUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2421883F17812BCABACE5C2D0DD207DE /* GBDeviceInfo_Common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfo_Common.h; path = GBDeviceInfo/GBDeviceInfo_Common.h; sourceTree = "<group>"; };
-		3063400BB3B461CC5CCA88526DBD32CB /* GBDeviceInfo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBDeviceInfo-prefix.pch"; sourceTree = "<group>"; };
-		344943148765495F0FA497A705D9154D /* GBDeviceInfo_OSX.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBDeviceInfo_OSX.m; path = GBDeviceInfo/GBDeviceInfo_OSX.m; sourceTree = "<group>"; };
-		3744D80C7A7066904256110959780C3E /* OpenSSL.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OpenSSL.xcframework; path = Frameworks/OpenSSL.xcframework; sourceTree = "<group>"; };
+		1FB29DFEED811DB0F7845135DC531BE9 /* GBPing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBPing.m; path = GBPing/GBPing.m; sourceTree = "<group>"; };
 		3CA11EC288E9193D552C22BDADA234B8 /* Pods-DuetDesktopCaptureManager-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DuetDesktopCaptureManager-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3DCE3A9FF400153650F69AA396BF4D44 /* GBPing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBPing.release.xcconfig; sourceTree = "<group>"; };
-		43B70B1F98E264AAA26898D7362CEE3E /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
-		4667212ACA106D5F9F444DD4F7B09E5F /* GBDeviceInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBDeviceInfo.debug.xcconfig; sourceTree = "<group>"; };
 		57ACA0F581EAF1A39CCC4D19BE4ACFBD /* Pods-DuetDesktopCaptureManager */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-DuetDesktopCaptureManager"; path = "libPods-DuetDesktopCaptureManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		60A9EF68B664428A74A356FBB939B016 /* GBDeviceInfo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GBDeviceInfo-dummy.m"; sourceTree = "<group>"; };
-		698122FD9878C94D6B85C056F560FC27 /* GBPingSummary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBPingSummary.m; path = GBPing/GBPingSummary.m; sourceTree = "<group>"; };
-		6A301CC6FDFE59290937C88786052B68 /* CocoaAsyncSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.release.xcconfig; sourceTree = "<group>"; };
+		682A455AB69471806C954516D0AE4CD7 /* GBPing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GBPing-dummy.m"; sourceTree = "<group>"; };
+		6A768FA9EDC65C5FB13B348F1A2E3F45 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = CocoaAsyncSocket; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		71E703F26305CAD157F2C355F7D7840E /* GBDeviceInfoTypes_OSX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfoTypes_OSX.h; path = GBDeviceInfo/GBDeviceInfoTypes_OSX.h; sourceTree = "<group>"; };
 		723CF10F13A8B3EDE8302F29ADC2997F /* Pods-DuetGUI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DuetGUI-acknowledgements.markdown"; sourceTree = "<group>"; };
-		739C6937B96E291E4F1B788C91395200 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
 		7CE421C10B333C877ED8A836E141FF8C /* Pods-DuetGUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DuetGUI.release.xcconfig"; sourceTree = "<group>"; };
+		7EB3F8AF1A059B9931B22C34CB3E4CC1 /* OpenSSL-Universal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-Universal.debug.xcconfig"; sourceTree = "<group>"; };
+		80D78E108AB0AEB544B9BF3D36AE4B8E /* GBPingSummary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBPingSummary.h; path = GBPing/GBPingSummary.h; sourceTree = "<group>"; };
 		864B04CBBA73500F0A2024378A2016E8 /* Pods-DuetDesktopCaptureManager-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DuetDesktopCaptureManager-frameworks.sh"; sourceTree = "<group>"; };
-		8A2A9C18C262650B2189908FBF9AED31 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		8D227CEDEE3A238265C7D04DB7FA5A31 /* GBPingSummary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBPingSummary.h; path = GBPing/GBPingSummary.h; sourceTree = "<group>"; };
-		918EF60C8D1262E09F636F8A91F039F1 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		938E39FEA9E76D8E3B64C12EA2BAB830 /* GBDeviceInfo */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = GBDeviceInfo; path = libGBDeviceInfo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		97F946D66AFEEDFDFD112756330732A2 /* CocoaAsyncSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.debug.xcconfig; sourceTree = "<group>"; };
 		98148903863B7ECD9546345553EA5A30 /* Pods-DuetGUI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DuetGUI-acknowledgements.plist"; sourceTree = "<group>"; };
-		9BB1C52565E3983F0FCE5FFDCEC24B6B /* GBDeviceInfoInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfoInterface.h; path = GBDeviceInfo/GBDeviceInfoInterface.h; sourceTree = "<group>"; };
 		9D7519A990873EAB9680941F897EB541 /* Pods-DuetDesktopCaptureManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DuetDesktopCaptureManager.debug.xcconfig"; sourceTree = "<group>"; };
+		9D78C6803AF603906512FC11C75E85F0 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B033FB53DF7FB94EA50215EF87A7BEEA /* GBPing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBPing.debug.xcconfig; sourceTree = "<group>"; };
 		B53E9041CA92E47FD7EA2AB73757CF38 /* GBPing */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = GBPing; path = libGBPing.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B65A0F3832882AFC271270ACC929DC10 /* GBPing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBPing.m; path = GBPing/GBPing.m; sourceTree = "<group>"; };
-		BAE0433609121E6E10E57B0D9C7D13F9 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
+		B674C6C113B037E52333CDFBA95E8826 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
 		BB4C90673D846B3993984BCF590D2E4C /* Pods-DuetDesktopCaptureManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DuetDesktopCaptureManager-dummy.m"; sourceTree = "<group>"; };
-		C352D28419572CF01D7F349DC0DEA579 /* GBDeviceInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBDeviceInfo.release.xcconfig; sourceTree = "<group>"; };
-		C687A7B5485BDD5A6B6016CD8B03EE38 /* GBDeviceInfo_Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfo_Subclass.h; path = GBDeviceInfo/GBDeviceInfo_Subclass.h; sourceTree = "<group>"; };
+		BF19DB3A6E7685B422B616ECAAD3E193 /* GBPing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBPing.release.xcconfig; sourceTree = "<group>"; };
+		BFEA0FDA2664A1173E4577DAF654AB45 /* GBPingSummary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBPingSummary.m; path = GBPing/GBPingSummary.m; sourceTree = "<group>"; };
+		C9C72926BFDA21C87E79C0F82231E68B /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		C9E12CEF1B1F64737C70E3A0EA623ADE /* OpenSSL-Universal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-Universal.release.xcconfig"; sourceTree = "<group>"; };
 		CD416C2AC79916DFE30109C5195970F7 /* Pods-DuetGUI-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DuetGUI-frameworks.sh"; sourceTree = "<group>"; };
-		D08BFFE3F2593F081FEE162DEED7F680 /* GBPing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBPing-prefix.pch"; sourceTree = "<group>"; };
+		D27457D985642231EA51B1999AE758E6 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		D2994CE65A0FD9F8D9A9209733AB261F /* GBPing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBPing.h; path = GBPing/GBPing.h; sourceTree = "<group>"; };
 		D2F488EC440BCD4D1C0B6F9B91049CAD /* Pods-DuetDesktopCaptureManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DuetDesktopCaptureManager.release.xcconfig"; sourceTree = "<group>"; };
-		D30146BC26AB78123B47E538E1206E13 /* GBDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfo.h; path = GBDeviceInfo/GBDeviceInfo.h; sourceTree = "<group>"; };
-		D7862CA5031FAA9C796B58DC2F75F6E9 /* GBPing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBPing.h; path = GBPing/GBPing.h; sourceTree = "<group>"; };
-		DA8AC08FA67569A0D553FEB311A8160F /* ICMPHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ICMPHeader.h; path = GBPing/ICMPHeader.h; sourceTree = "<group>"; };
-		DB6B47FC76C4874182E4677F6D660E60 /* OpenSSL-Universal-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "OpenSSL-Universal-xcframeworks.sh"; sourceTree = "<group>"; };
-		E0A5C67C231C74F8B1658B990E1A3B27 /* GBPing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GBPing-dummy.m"; sourceTree = "<group>"; };
-		E6E5865DF5BCB06D1935EA7814BB5890 /* GBDeviceInfoTypes_Common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfoTypes_Common.h; path = GBDeviceInfo/GBDeviceInfoTypes_Common.h; sourceTree = "<group>"; };
-		E9E5BE04A31F27013C4095C72EAC3D66 /* GBDeviceInfo_Common.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBDeviceInfo_Common.m; path = GBDeviceInfo/GBDeviceInfo_Common.m; sourceTree = "<group>"; };
+		D30567AD54C192AA4FE8B4E225AE36E8 /* OpenSSL.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OpenSSL.xcframework; path = Frameworks/OpenSSL.xcframework; sourceTree = "<group>"; };
+		D5D64EF9CB286A863867DB29DFFD3B70 /* OpenSSL-Universal-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "OpenSSL-Universal-xcframeworks.sh"; sourceTree = "<group>"; };
+		E7793A736E719FC7C281F98FFE63DECA /* GBPing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBPing-prefix.pch"; sourceTree = "<group>"; };
+		EB145533512BCCD8C6664AAD04231C55 /* ICMPHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ICMPHeader.h; path = GBPing/ICMPHeader.h; sourceTree = "<group>"; };
 		EB52374CA9990072D6607324E629680C /* Pods-DuetDesktopCaptureManager-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DuetDesktopCaptureManager-acknowledgements.plist"; sourceTree = "<group>"; };
-		ED8658C47B6471E4BF50444621AA25A2 /* GBPing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBPing.debug.xcconfig; sourceTree = "<group>"; };
 		F58B6F2013BBE32610681726C21CD41A /* Pods-DuetGUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DuetGUI.debug.xcconfig"; sourceTree = "<group>"; };
-		FCA0D65ABE52419E3813FCBCF6ADD01F /* GBDeviceInfo_OSX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfo_OSX.h; path = GBDeviceInfo/GBDeviceInfo_OSX.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		55FE25E760BF6488D5B90F9E997210E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		673381158C671B137FC040900C0A32A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,21 +136,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6AFDCD93679650AC697F20B236E91691 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAD1F9081561A2EC2EC1971C81C27591 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5B302FC996D2BA22CF4E59840AFCE81 /* Frameworks */ = {
+		C97947C54AE7EE4A06CC5044A1B2A9FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -198,22 +153,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		049E2AE380F7357DCDDBBED679D4D33C /* OpenSSL-Universal */ = {
+		0D0221537C5E8C4DA798D3F5F9719A7D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				11EA3CF0C29E0960B8970E2F5632AEA2 /* Frameworks */,
-				F6F8E07E4236B8866794ABD1911C2D03 /* Support Files */,
+				A02AD5908E5B09001109512882EA2ED0 /* CocoaAsyncSocket */,
+				54E1F96EBE57C6C8391AF108D800CE58 /* GBPing */,
+				5303557E0B6193BEF3C88FF4C4253C15 /* OpenSSL-Universal */,
 			);
-			name = "OpenSSL-Universal";
-			path = "OpenSSL-Universal";
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		11EA3CF0C29E0960B8970E2F5632AEA2 /* Frameworks */ = {
+		0FAFC34FDBD0B459F1551AFD68FEED6D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3744D80C7A7066904256110959780C3E /* OpenSSL.xcframework */,
+				682A455AB69471806C954516D0AE4CD7 /* GBPing-dummy.m */,
+				E7793A736E719FC7C281F98FFE63DECA /* GBPing-prefix.pch */,
+				B033FB53DF7FB94EA50215EF87A7BEEA /* GBPing.debug.xcconfig */,
+				BF19DB3A6E7685B422B616ECAAD3E193 /* GBPing.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/GBPing";
 			sourceTree = "<group>";
 		};
 		288696920F37A9431CC629B81448A3B6 /* Pods-DuetDesktopCaptureManager */ = {
@@ -230,6 +189,52 @@
 			path = "Target Support Files/Pods-DuetDesktopCaptureManager";
 			sourceTree = "<group>";
 		};
+		2D626359A0C07228BBF8D528F5E7FF76 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5D64EF9CB286A863867DB29DFFD3B70 /* OpenSSL-Universal-xcframeworks.sh */,
+				7EB3F8AF1A059B9931B22C34CB3E4CC1 /* OpenSSL-Universal.debug.xcconfig */,
+				C9E12CEF1B1F64737C70E3A0EA623ADE /* OpenSSL-Universal.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OpenSSL-Universal";
+			sourceTree = "<group>";
+		};
+		5158B38370ED717A249F4C921F2A4089 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */,
+				B53E9041CA92E47FD7EA2AB73757CF38 /* GBPing */,
+				57ACA0F581EAF1A39CCC4D19BE4ACFBD /* Pods-DuetDesktopCaptureManager */,
+				1C16F68D1A9E03A7E58B759233E9311B /* Pods-DuetGUI */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5303557E0B6193BEF3C88FF4C4253C15 /* OpenSSL-Universal */ = {
+			isa = PBXGroup;
+			children = (
+				8E40702D4CEC16A685AF40F57E857A8B /* Frameworks */,
+				2D626359A0C07228BBF8D528F5E7FF76 /* Support Files */,
+			);
+			name = "OpenSSL-Universal";
+			path = "OpenSSL-Universal";
+			sourceTree = "<group>";
+		};
+		54E1F96EBE57C6C8391AF108D800CE58 /* GBPing */ = {
+			isa = PBXGroup;
+			children = (
+				D2994CE65A0FD9F8D9A9209733AB261F /* GBPing.h */,
+				1FB29DFEED811DB0F7845135DC531BE9 /* GBPing.m */,
+				80D78E108AB0AEB544B9BF3D36AE4B8E /* GBPingSummary.h */,
+				BFEA0FDA2664A1173E4577DAF654AB45 /* GBPingSummary.m */,
+				EB145533512BCCD8C6664AAD04231C55 /* ICMPHeader.h */,
+				0FAFC34FDBD0B459F1551AFD68FEED6D /* Support Files */,
+			);
+			name = GBPing;
+			path = GBPing;
+			sourceTree = "<group>";
+		};
 		635E9D8CEB9FA78B1AE62C6EB3D073B6 /* Pods-DuetGUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,83 +249,37 @@
 			path = "Target Support Files/Pods-DuetGUI";
 			sourceTree = "<group>";
 		};
-		814D2388B40AACAE70D06262E92DF512 /* CocoaAsyncSocket */ = {
+		8E40702D4CEC16A685AF40F57E857A8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				918EF60C8D1262E09F636F8A91F039F1 /* GCDAsyncSocket.h */,
-				18C89301074FD0A2857E868A02432AE8 /* GCDAsyncSocket.m */,
-				8A2A9C18C262650B2189908FBF9AED31 /* GCDAsyncUdpSocket.h */,
-				43B70B1F98E264AAA26898D7362CEE3E /* GCDAsyncUdpSocket.m */,
-				B0E1778CEBFEFB7CC0C54E4BB5E51EA4 /* Support Files */,
+				D30567AD54C192AA4FE8B4E225AE36E8 /* OpenSSL.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A02AD5908E5B09001109512882EA2ED0 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				D27457D985642231EA51B1999AE758E6 /* GCDAsyncSocket.h */,
+				C9C72926BFDA21C87E79C0F82231E68B /* GCDAsyncSocket.m */,
+				6A768FA9EDC65C5FB13B348F1A2E3F45 /* GCDAsyncUdpSocket.h */,
+				1B337AD357DDA321D062398ABAC68BD3 /* GCDAsyncUdpSocket.m */,
+				A1414AE5F1E3D0A3CEA6949EFA164339 /* Support Files */,
 			);
 			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
-		8991B8A0004202BC9F1A929BACBB4F52 /* Products */ = {
+		A1414AE5F1E3D0A3CEA6949EFA164339 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */,
-				938E39FEA9E76D8E3B64C12EA2BAB830 /* GBDeviceInfo */,
-				B53E9041CA92E47FD7EA2AB73757CF38 /* GBPing */,
-				57ACA0F581EAF1A39CCC4D19BE4ACFBD /* Pods-DuetDesktopCaptureManager */,
-				1C16F68D1A9E03A7E58B759233E9311B /* Pods-DuetGUI */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8FD1CBEFFFD16591F91896F17B50F32C /* GBPing */ = {
-			isa = PBXGroup;
-			children = (
-				D7862CA5031FAA9C796B58DC2F75F6E9 /* GBPing.h */,
-				B65A0F3832882AFC271270ACC929DC10 /* GBPing.m */,
-				8D227CEDEE3A238265C7D04DB7FA5A31 /* GBPingSummary.h */,
-				698122FD9878C94D6B85C056F560FC27 /* GBPingSummary.m */,
-				DA8AC08FA67569A0D553FEB311A8160F /* ICMPHeader.h */,
-				B1A18AD20BA757E64A3EA154E9DD0AF4 /* Support Files */,
-			);
-			name = GBPing;
-			path = GBPing;
-			sourceTree = "<group>";
-		};
-		ABDEE4FD6B1E8A0F396E06026E614BF9 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				D30146BC26AB78123B47E538E1206E13 /* GBDeviceInfo.h */,
-				2421883F17812BCABACE5C2D0DD207DE /* GBDeviceInfo_Common.h */,
-				E9E5BE04A31F27013C4095C72EAC3D66 /* GBDeviceInfo_Common.m */,
-				FCA0D65ABE52419E3813FCBCF6ADD01F /* GBDeviceInfo_OSX.h */,
-				344943148765495F0FA497A705D9154D /* GBDeviceInfo_OSX.m */,
-				C687A7B5485BDD5A6B6016CD8B03EE38 /* GBDeviceInfo_Subclass.h */,
-				9BB1C52565E3983F0FCE5FFDCEC24B6B /* GBDeviceInfoInterface.h */,
-				E6E5865DF5BCB06D1935EA7814BB5890 /* GBDeviceInfoTypes_Common.h */,
-				71E703F26305CAD157F2C355F7D7840E /* GBDeviceInfoTypes_OSX.h */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		B0E1778CEBFEFB7CC0C54E4BB5E51EA4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				739C6937B96E291E4F1B788C91395200 /* CocoaAsyncSocket-dummy.m */,
-				BAE0433609121E6E10E57B0D9C7D13F9 /* CocoaAsyncSocket-prefix.pch */,
-				1A52405253ED4EDF58A498472197D49F /* CocoaAsyncSocket.debug.xcconfig */,
-				6A301CC6FDFE59290937C88786052B68 /* CocoaAsyncSocket.release.xcconfig */,
+				B674C6C113B037E52333CDFBA95E8826 /* CocoaAsyncSocket-dummy.m */,
+				9D78C6803AF603906512FC11C75E85F0 /* CocoaAsyncSocket-prefix.pch */,
+				97F946D66AFEEDFDFD112756330732A2 /* CocoaAsyncSocket.debug.xcconfig */,
+				013134CD400C936915851EB4E6646338 /* CocoaAsyncSocket.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/CocoaAsyncSocket";
-			sourceTree = "<group>";
-		};
-		B1A18AD20BA757E64A3EA154E9DD0AF4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E0A5C67C231C74F8B1658B990E1A3B27 /* GBPing-dummy.m */,
-				D08BFFE3F2593F081FEE162DEED7F680 /* GBPing-prefix.pch */,
-				ED8658C47B6471E4BF50444621AA25A2 /* GBPing.debug.xcconfig */,
-				3DCE3A9FF400153650F69AA396BF4D44 /* GBPing.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/GBPing";
 			sourceTree = "<group>";
 		};
 		CCFE96DC59D8939EE9D301D4A140136F /* Targets Support Files */ = {
@@ -337,8 +296,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				EEC288F4EBE8D0348E88D256F3BF83BB /* Pods */,
-				8991B8A0004202BC9F1A929BACBB4F52 /* Products */,
+				0D0221537C5E8C4DA798D3F5F9719A7D /* Pods */,
+				5158B38370ED717A249F4C921F2A4089 /* Products */,
 				CCFE96DC59D8939EE9D301D4A140136F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -350,54 +309,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E8D6507D6F044BCC8ABC4D0FFB0BD3D5 /* GBDeviceInfo */ = {
-			isa = PBXGroup;
-			children = (
-				ABDEE4FD6B1E8A0F396E06026E614BF9 /* Core */,
-				FC277ED7D6E7897D520DADDC977C4D69 /* Support Files */,
-			);
-			name = GBDeviceInfo;
-			path = GBDeviceInfo;
-			sourceTree = "<group>";
-		};
-		EEC288F4EBE8D0348E88D256F3BF83BB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				814D2388B40AACAE70D06262E92DF512 /* CocoaAsyncSocket */,
-				E8D6507D6F044BCC8ABC4D0FFB0BD3D5 /* GBDeviceInfo */,
-				8FD1CBEFFFD16591F91896F17B50F32C /* GBPing */,
-				049E2AE380F7357DCDDBBED679D4D33C /* OpenSSL-Universal */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F6F8E07E4236B8866794ABD1911C2D03 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DB6B47FC76C4874182E4677F6D660E60 /* OpenSSL-Universal-xcframeworks.sh */,
-				135707A511227B668EF911194A3F281F /* OpenSSL-Universal.debug.xcconfig */,
-				0EBD7EC79529B3C25CBBFDC0045E157E /* OpenSSL-Universal.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/OpenSSL-Universal";
-			sourceTree = "<group>";
-		};
-		FC277ED7D6E7897D520DADDC977C4D69 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				60A9EF68B664428A74A356FBB939B016 /* GBDeviceInfo-dummy.m */,
-				3063400BB3B461CC5CCA88526DBD32CB /* GBDeviceInfo-prefix.pch */,
-				4667212ACA106D5F9F444DD4F7B09E5F /* GBDeviceInfo.debug.xcconfig */,
-				C352D28419572CF01D7F349DC0DEA579 /* GBDeviceInfo.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/GBDeviceInfo";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2DAEB40E5300708B5673DF542438F871 /* Headers */ = {
+		51CACEF9C9386754A1DDEAF01B276804 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51DC13ED9B54F4D5DA9823D53244CE34 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,27 +345,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A2D60AA245EBADE567F69587E67CB33 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C71401A295B98EA56F5BAED39DDB5851 /* GBDeviceInfo.h in Headers */,
-				97C5361B61BC9650E7E74461F824A1CC /* GBDeviceInfo_Common.h in Headers */,
-				157440991FB89145AACF80182B1C70EF /* GBDeviceInfo_OSX.h in Headers */,
-				4E8D5219D3DDBBCB95757EC41B51C3EF /* GBDeviceInfo_Subclass.h in Headers */,
-				30C19037D0A15C756CC46DD819319F7D /* GBDeviceInfoInterface.h in Headers */,
-				43CC049B1978E9E80363F31A16CD7D7F /* GBDeviceInfoTypes_Common.h in Headers */,
-				6321C104191A4B48E70B63C641DEB15D /* GBDeviceInfoTypes_OSX.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F23AE3A89CE5152707A04252E41F31B9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -466,19 +367,18 @@
 		};
 		83F54146A4F8DBBCCBF0762A37537A03 /* Pods-DuetDesktopCaptureManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6311E6994D2B6B14B79FEF9E0167879F /* Build configuration list for PBXNativeTarget "Pods-DuetDesktopCaptureManager" */;
+			buildConfigurationList = 4F8A66B896E6A0398C3D82009860ECD5 /* Build configuration list for PBXNativeTarget "Pods-DuetDesktopCaptureManager" */;
 			buildPhases = (
-				F23AE3A89CE5152707A04252E41F31B9 /* Headers */,
-				2E1AF46381956F13B963D457E872D8C3 /* Sources */,
-				D5B302FC996D2BA22CF4E59840AFCE81 /* Frameworks */,
+				51CACEF9C9386754A1DDEAF01B276804 /* Headers */,
+				4C0E33CB165261C4EF4A2ED76A559E79 /* Sources */,
+				C97947C54AE7EE4A06CC5044A1B2A9FA /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				56DCC93512D4AC6D912440B65E6DA7D9 /* PBXTargetDependency */,
-				BC449F62B9AFB6D08FCFF22758B72E8B /* PBXTargetDependency */,
-				860199B47BA722A1C9DB1C50B6725874 /* PBXTargetDependency */,
-				52994B1A5D9F55EE8443E94ED19A8344 /* PBXTargetDependency */,
+				290587063CFC63DFB45F7D50A5DA805E /* PBXTargetDependency */,
+				6E772D3DC18E4781005963BA4DD0505E /* PBXTargetDependency */,
+				34C54F5A56280210D187FE950CAFE740 /* PBXTargetDependency */,
 			);
 			name = "Pods-DuetDesktopCaptureManager";
 			productName = "Pods-DuetDesktopCaptureManager";
@@ -487,19 +387,18 @@
 		};
 		B71B3FA4C40F22A06BAFFD35E0707870 /* Pods-DuetGUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 663C96E4AF28898BE6829FC30EE2C7A2 /* Build configuration list for PBXNativeTarget "Pods-DuetGUI" */;
+			buildConfigurationList = 607F8F81E66573A0710787381CD18828 /* Build configuration list for PBXNativeTarget "Pods-DuetGUI" */;
 			buildPhases = (
-				2DAEB40E5300708B5673DF542438F871 /* Headers */,
-				85B7A98A892212112F39FAFC07C4823A /* Sources */,
-				BAD1F9081561A2EC2EC1971C81C27591 /* Frameworks */,
+				51DC13ED9B54F4D5DA9823D53244CE34 /* Headers */,
+				619C9B49B3FB18C322B9B0BEC945A3DC /* Sources */,
+				55FE25E760BF6488D5B90F9E997210E8 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5E7F31439B01DCD59FD15175BE2C8639 /* PBXTargetDependency */,
-				5ECA43C3D46BF22B39A4E51E0C2A9A27 /* PBXTargetDependency */,
-				CBA8759B05941ACA986D6BCFA68DAD85 /* PBXTargetDependency */,
-				6FFA96ECF8A5A2407637C1017DA2DDCB /* PBXTargetDependency */,
+				6A05A1EA88B4BDC1A07AD56ED64E32C9 /* PBXTargetDependency */,
+				AD4CD90A0B981F91D3ED7A480C8C1054 /* PBXTargetDependency */,
+				189AFC53D928F23C2623A6208873D215 /* PBXTargetDependency */,
 			);
 			name = "Pods-DuetGUI";
 			productName = "Pods-DuetGUI";
@@ -523,23 +422,6 @@
 			productReference = B53E9041CA92E47FD7EA2AB73757CF38 /* GBPing */;
 			productType = "com.apple.product-type.library.static";
 		};
-		BB98E1FC6C2504C46E7DE517B82518B8 /* GBDeviceInfo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 24CF13A8B34AB3155D998470BFC891DE /* Build configuration list for PBXNativeTarget "GBDeviceInfo" */;
-			buildPhases = (
-				7A2D60AA245EBADE567F69587E67CB33 /* Headers */,
-				E2839DEFD3EF6739F38150994EBDE0F9 /* Sources */,
-				6AFDCD93679650AC697F20B236E91691 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GBDeviceInfo;
-			productName = GBDeviceInfo;
-			productReference = 938E39FEA9E76D8E3B64C12EA2BAB830 /* GBDeviceInfo */;
-			productType = "com.apple.product-type.library.static";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -558,12 +440,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 8991B8A0004202BC9F1A929BACBB4F52 /* Products */;
+			productRefGroup = 5158B38370ED717A249F4C921F2A4089 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */,
-				BB98E1FC6C2504C46E7DE517B82518B8 /* GBDeviceInfo */,
 				B75B4785F3A4E5A5455B1AC0DE538064 /* GBPing */,
 				B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */,
 				83F54146A4F8DBBCCBF0762A37537A03 /* Pods-DuetDesktopCaptureManager */,
@@ -603,11 +484,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E1AF46381956F13B963D457E872D8C3 /* Sources */ = {
+		4C0E33CB165261C4EF4A2ED76A559E79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCCF0EF58762663176ECAC83D6D9BFCC /* Pods-DuetDesktopCaptureManager-dummy.m in Sources */,
+				44E629FAF0D4777F17522A9032B81D96 /* Pods-DuetDesktopCaptureManager-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		619C9B49B3FB18C322B9B0BEC945A3DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ED3DF0CB017568D1CF44A83891F7520 /* Pods-DuetGUI-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,81 +510,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85B7A98A892212112F39FAFC07C4823A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E5FA445FAFB136581B4F9F6829EB2E58 /* Pods-DuetGUI-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2839DEFD3EF6739F38150994EBDE0F9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				67CF9D8F2AA830C94418DCF49ECBC6EB /* GBDeviceInfo-dummy.m in Sources */,
-				B615E2574FFCF42ED3C08A8EF6D2D354 /* GBDeviceInfo_Common.m in Sources */,
-				0550383893922695DF915824F0D2B11E /* GBDeviceInfo_OSX.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		52994B1A5D9F55EE8443E94ED19A8344 /* PBXTargetDependency */ = {
+		189AFC53D928F23C2623A6208873D215 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "OpenSSL-Universal";
 			target = B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */;
-			targetProxy = 4480E057086AED6AAF4B01B2FC757103 /* PBXContainerItemProxy */;
+			targetProxy = 64F4925FE4AD937F9BB05E11C1759FA8 /* PBXContainerItemProxy */;
 		};
-		56DCC93512D4AC6D912440B65E6DA7D9 /* PBXTargetDependency */ = {
+		290587063CFC63DFB45F7D50A5DA805E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CocoaAsyncSocket;
 			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
-			targetProxy = 7609AF2005B6A84F828C7F92C7C895CF /* PBXContainerItemProxy */;
+			targetProxy = 8CA4F464B20BEF69CB4981C9D82AB402 /* PBXContainerItemProxy */;
 		};
-		5E7F31439B01DCD59FD15175BE2C8639 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CocoaAsyncSocket;
-			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
-			targetProxy = C53CA4320A4A3EF381FDF8EA88A55280 /* PBXContainerItemProxy */;
-		};
-		5ECA43C3D46BF22B39A4E51E0C2A9A27 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GBDeviceInfo;
-			target = BB98E1FC6C2504C46E7DE517B82518B8 /* GBDeviceInfo */;
-			targetProxy = 1683470A8175510D5D00CDBA023B3D6B /* PBXContainerItemProxy */;
-		};
-		6FFA96ECF8A5A2407637C1017DA2DDCB /* PBXTargetDependency */ = {
+		34C54F5A56280210D187FE950CAFE740 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "OpenSSL-Universal";
 			target = B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */;
-			targetProxy = A11024C590B82626A7ED11E189AB9643 /* PBXContainerItemProxy */;
+			targetProxy = 2ACABB57B4FF48897320EF645D96A1BC /* PBXContainerItemProxy */;
 		};
-		860199B47BA722A1C9DB1C50B6725874 /* PBXTargetDependency */ = {
+		6A05A1EA88B4BDC1A07AD56ED64E32C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
+			targetProxy = 21099B748DD6E4AB51FDCB81F107D08F /* PBXContainerItemProxy */;
+		};
+		6E772D3DC18E4781005963BA4DD0505E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GBPing;
 			target = B75B4785F3A4E5A5455B1AC0DE538064 /* GBPing */;
-			targetProxy = 39833B80E9C8D286CB599F466C138C55 /* PBXContainerItemProxy */;
+			targetProxy = 2B7BECCA069D321260BED6CCFFFB76F9 /* PBXContainerItemProxy */;
 		};
-		BC449F62B9AFB6D08FCFF22758B72E8B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GBDeviceInfo;
-			target = BB98E1FC6C2504C46E7DE517B82518B8 /* GBDeviceInfo */;
-			targetProxy = 4042B5A29BB3BFBACA7CE118B2A93A81 /* PBXContainerItemProxy */;
-		};
-		CBA8759B05941ACA986D6BCFA68DAD85 /* PBXTargetDependency */ = {
+		AD4CD90A0B981F91D3ED7A480C8C1054 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GBPing;
 			target = B75B4785F3A4E5A5455B1AC0DE538064 /* GBPing */;
-			targetProxy = 46E7BEDC7FBA22EAF1960CD7E713E66C /* PBXContainerItemProxy */;
+			targetProxy = F55E8206D6D11551ACE8A59F2A56EAFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0DCF45E6FFA673D548A4B4E6EBA1814C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 135707A511227B668EF911194A3F281F /* OpenSSL-Universal.debug.xcconfig */;
+			baseConfigurationReference = 7EB3F8AF1A059B9931B22C34CB3E4CC1 /* OpenSSL-Universal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -774,7 +633,7 @@
 		};
 		3CD442B4EEBA085C40C74BF3774A5FEE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A301CC6FDFE59290937C88786052B68 /* CocoaAsyncSocket.release.xcconfig */;
+			baseConfigurationReference = 013134CD400C936915851EB4E6646338 /* CocoaAsyncSocket.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -795,99 +654,9 @@
 			};
 			name = Release;
 		};
-		6218ABEDCFE00975685BD6ED3C1A7B84 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C352D28419572CF01D7F349DC0DEA579 /* GBDeviceInfo.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/GBDeviceInfo/GBDeviceInfo-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = GBDeviceInfo;
-				PRODUCT_NAME = GBDeviceInfo;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		6219C8D176693F8CFC9BEB6FEEC8B322 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4667212ACA106D5F9F444DD4F7B09E5F /* GBDeviceInfo.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/GBDeviceInfo/GBDeviceInfo-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = GBDeviceInfo;
-				PRODUCT_NAME = GBDeviceInfo;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		712A43824668521C610D11C093A9FE8E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D7519A990873EAB9680941F897EB541 /* Pods-DuetDesktopCaptureManager.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		940E58D9C288F454F7518499A4CECC0F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CE421C10B333C877ED8A836E141FF8C /* Pods-DuetGUI.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		96EDB3E6A0B9BF69D9CE4B064F349B1E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EBD7EC79529B3C25CBBFDC0045E157E /* OpenSSL-Universal.release.xcconfig */;
+			baseConfigurationReference = C9E12CEF1B1F64737C70E3A0EA623ADE /* OpenSSL-Universal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -902,9 +671,30 @@
 			};
 			name = Release;
 		};
+		98FFFA30B48C06320FCA236F8A5CA0BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F58B6F2013BBE32610681726C21CD41A /* Pods-DuetGUI.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		9B13B2CC0B8D82E50B63D3440BD0EEB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED8658C47B6471E4BF50444621AA25A2 /* GBPing.debug.xcconfig */;
+			baseConfigurationReference = B033FB53DF7FB94EA50215EF87A7BEEA /* GBPing.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -924,6 +714,27 @@
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
+		};
+		A5F6CA440B97E41CCF73D27603215FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F488EC440BCD4D1C0B6F9B91049CAD /* Pods-DuetDesktopCaptureManager.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		AF3D8F31D242969879B2F71959E4E448 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -991,30 +802,9 @@
 			};
 			name = Debug;
 		};
-		B3D9CDA7E1050890EC200D9FD77A1732 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F58B6F2013BBE32610681726C21CD41A /* Pods-DuetGUI.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		B89D5A2FBF0CFDBAC09957E59D6F9163 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DCE3A9FF400153650F69AA396BF4D44 /* GBPing.release.xcconfig */;
+			baseConfigurationReference = BF19DB3A6E7685B422B616ECAAD3E193 /* GBPing.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1035,9 +825,30 @@
 			};
 			name = Release;
 		};
-		E9DFD6329F3405FA1B9D6E9634D18BDF /* Release */ = {
+		D3491D6A84D67EC6B1192A0F5D355F26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2F488EC440BCD4D1C0B6F9B91049CAD /* Pods-DuetDesktopCaptureManager.release.xcconfig */;
+			baseConfigurationReference = 9D7519A990873EAB9680941F897EB541 /* Pods-DuetDesktopCaptureManager.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F6AC29083D69950789F5B0AAFEBA1B95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE421C10B333C877ED8A836E141FF8C /* Pods-DuetGUI.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1058,7 +869,7 @@
 		};
 		FC168BE39B1C1DB9250684C75AE2F4D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A52405253ED4EDF58A498472197D49F /* CocoaAsyncSocket.debug.xcconfig */;
+			baseConfigurationReference = 97F946D66AFEEDFDFD112756330732A2 /* CocoaAsyncSocket.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1100,15 +911,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24CF13A8B34AB3155D998470BFC891DE /* Build configuration list for PBXNativeTarget "GBDeviceInfo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6219C8D176693F8CFC9BEB6FEEC8B322 /* Debug */,
-				6218ABEDCFE00975685BD6ED3C1A7B84 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1118,20 +920,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6311E6994D2B6B14B79FEF9E0167879F /* Build configuration list for PBXNativeTarget "Pods-DuetDesktopCaptureManager" */ = {
+		4F8A66B896E6A0398C3D82009860ECD5 /* Build configuration list for PBXNativeTarget "Pods-DuetDesktopCaptureManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				712A43824668521C610D11C093A9FE8E /* Debug */,
-				E9DFD6329F3405FA1B9D6E9634D18BDF /* Release */,
+				D3491D6A84D67EC6B1192A0F5D355F26 /* Debug */,
+				A5F6CA440B97E41CCF73D27603215FAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		663C96E4AF28898BE6829FC30EE2C7A2 /* Build configuration list for PBXNativeTarget "Pods-DuetGUI" */ = {
+		607F8F81E66573A0710787381CD18828 /* Build configuration list for PBXNativeTarget "Pods-DuetGUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B3D9CDA7E1050890EC200D9FD77A1732 /* Debug */,
-				940E58D9C288F454F7518499A4CECC0F /* Release */,
+				98FFFA30B48C06320FCA236F8A5CA0BF /* Debug */,
+				F6AC29083D69950789F5B0AAFEBA1B95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

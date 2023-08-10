@@ -45,7 +45,7 @@
 }
 
 - (NSData *)dataFromEvent:(DSCScreenEvent * _Nonnull)event {
-	CVImageBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(event.frame.sampleBuffer);
+	CVImageBufferRef pixelBuffer = event.frame.imageBuffer;;
 	CVPixelBufferLockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
 	size_t planeCount = CVPixelBufferGetPlaneCount(pixelBuffer);
 	size_t totalSize = 0;
@@ -84,6 +84,7 @@
 	}
 	CVPixelBufferUnlockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
 	NSData *data = [[NSData alloc] initWithBytesNoCopy:rawFrame length:totalSize freeWhenDone:YES];
+//	CFRelease(pixelBuffer);
 	return data;
 }
 
@@ -141,9 +142,16 @@
 					self.frameCount++;
 				});
 				[self logMessage:[NSString stringWithFormat:@"DSCScreenEventFrame: %lu %@", self.frameCount, event.frame]];
+				dispatch_async(dispatch_get_main_queue(), ^{
+					CVPixelBufferRef buffer = event.frame.imageBuffer;//CMSampleBufferGetImageBuffer(sampleBuffer);
+					CIImage *image = [[CIImage alloc] initWithCVPixelBuffer:buffer];
+					NSCIImageRep *rep = [[NSCIImageRep alloc] initWithCIImage:image];
+					NSImage *nsimage = [[NSImage alloc] init];//WithSize:rep.size];
+					[nsimage addRepresentation:rep];
+					((AppDelegate *)([NSApplication sharedApplication].delegate)).panel.imageView.image = nsimage;
 
+				});
 				NSData * data = [self dataFromEvent:event];
-				
 				[self.captureManagerClient.remoteProxy sendScreenData:data withReply:^(NSString *message) {
 					typeof(self) self = weakSelf;
 					NSLog(@"Daemon responded to sendScreenData: %@", message);
@@ -170,20 +178,6 @@
 	[self.mainScreen stopCapturingScreen];
 }
 
-- (void)startScreenCaptureWithCompletion:(void (^)(BOOL, NSError *))completion {
-	[self startScreenCapture];
-	//TODO: error handling here
-	completion(YES, nil);
-}
-
-- (void)clientConnectionStateDidChange:(DuetCoreDesktopCaptureManagerClient *)client {
-	if (client.isConnected) {
-		[self logMessage:@"Connected to Duet Core Service"];
-	} else {
-		[self logMessage:@"Disconnected from Duet Core Service"];
-	}
-}
-
 - (void)connect {
 	[self.captureManagerClient connect];
 
@@ -197,6 +191,16 @@
 	dispatch_async(dispatch_get_main_queue(), ^{
 		[((AppDelegate *)([NSApplication sharedApplication].delegate)).panel logMessage:message];
 	});
+}
+
+#pragma mark - DuetCoreDesktopCaptureManagerClientDelegate
+
+- (void)clientConnectionStateDidChange:(DuetCoreDesktopCaptureManagerClient *)client {
+	if (client.isConnected) {
+		[self logMessage:@"Connected to Duet Core Service"];
+	} else {
+		[self logMessage:@"Disconnected from Duet Core Service"];
+	}
 }
 
 

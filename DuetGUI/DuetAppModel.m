@@ -7,14 +7,29 @@
 
 #import "DuetAppModel.h"
 #import "DuetGUIDaemonProtocol.h"
+@import DuetScreenCapture;
+
 
 @interface DuetAppModel ()
 
 @property (nonatomic, strong) DuetCoreGUIClient *guiClient;
 
+@property (nonatomic, strong) DSCScreen *mainScreen;
+@property (nonatomic, assign) NSInteger frameCount;
+
 @end
 
 @implementation DuetAppModel
+
+- (void)startScreenCapture {
+	[self.guiClient.remoteProxy startSessionWithCompletion:^(BOOL success, NSError *error) {
+		NSLog(@"Start capture: %d %@", success, error);
+	}];
+}
+
+- (void)logMessage:(NSString *)message {
+	NSLog(@"%@",message);
+}
 
 + (instancetype)shared {
 	static dispatch_once_t onceToken;
@@ -32,6 +47,7 @@
 	if (self != nil) {
 		self.guiClient = [[DuetCoreGUIClient alloc] initWithAppModel:self];
 		self.guiClient.delegate = self;
+		DSCScreen *screen = [DSCScreen screenWithDisplayID:CGMainDisplayID()];
 	}
 	return self;
 }
