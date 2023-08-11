@@ -36,6 +36,7 @@
 - (instancetype)init {
 	self = [super init];
 	if (self != nil) {
+		self.mainScreen = [DSCScreen screenWithDisplayID:CGMainDisplayID()];
 		self.captureManagerClient = [[DuetCoreDesktopCaptureManagerClient alloc] initWithAppModel:self];
 		self.captureManagerClient.delegate = self;
 		[self.captureManagerClient connect];
@@ -89,7 +90,6 @@
 }
 
 - (void)startScreenCapture {
-	self.mainScreen = [DSCScreen screenWithDisplayID:CGMainDisplayID()];
 	typeof(self) __weak weakSelf = self;
 	if ([self.mainScreen isStreaming]) {
 		[self logMessage:@"Already capturing"];
@@ -154,7 +154,6 @@
 				NSData * data = [self dataFromEvent:event];
 				[self.captureManagerClient.remoteProxy sendScreenData:data withReply:^(NSString *message) {
 					typeof(self) self = weakSelf;
-					NSLog(@"Daemon responded to sendScreenData: %@", message);
 					[self logMessage:[NSString stringWithFormat:@"Daemon responded to sendScreenData: %@", message]];
 				}];
 				break;

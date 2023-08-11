@@ -53,6 +53,7 @@
 		self.connected = NO;
 		NSLog(@"Connection to the GUI Client was interrupted");
 	};
+	self.connection = newConnection;
 
 	// Resuming the connection allows the system to deliver more incoming messages.
 	[newConnection resume];
@@ -63,7 +64,6 @@
 	}];
 
 	self.connected = YES;
-	self.connection = newConnection;
 	// Returning YES from this method tells the system that you have accepted this connection. If you want to reject the connection for some reason, call -invalidate on the connection and return NO.
 	return YES;
 }

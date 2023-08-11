@@ -14,9 +14,9 @@
             filePath = "Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "401"
-            endingLineNumber = "401"
-            landmarkName = "-stopDisplayStreamRefWithTimeout:"
+            startingLineNumber = "405"
+            endingLineNumber = "405"
+            landmarkName = "-stopCapturingScreen"
             landmarkType = "7">
             <Locations>
                <Location
@@ -150,22 +150,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5F6E61D6-F561-4A16-95B6-666FA703A6DA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DuetCoreService/main.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "main(argc, argv)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "558E561C-C208-47CB-ACB1-52CE4D365B3C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -173,8 +157,8 @@
             filePath = "DuetDesktopCaptureManager/DuetCoreDesktopCaptureManagerClient.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "-connect"
             landmarkType = "7">
          </BreakpointContent>
@@ -189,9 +173,9 @@
             filePath = "Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
-            landmarkName = "-setupActualStreamRefWith:outputHeight:outputWidth:"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
+            landmarkName = "-startCapturingResolution:fullResolutionEnabled:into:"
             landmarkType = "7">
             <Locations>
                <Location
@@ -285,8 +269,8 @@
             filePath = "Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
             landmarkName = "-setupActualStreamRefWith:outputHeight:outputWidth:"
             landmarkType = "7">
          </BreakpointContent>
@@ -301,28 +285,43 @@
             filePath = "Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "-startCapturingResolution:into:"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "-startCapturingResolution:intoErrorCapable:"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "3BEA8A26-FC5F-48D7-8662-2D25639B31FA - 99fc1510ae4ff26"
+                  uuid = "3BEA8A26-FC5F-48D7-8662-2D25639B31FA - 5ef352e70bc09327"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[DSCScreen startCapturingResolution:into:]"
+                  symbolName = "-[DSCScreen saveAndSetupInitialState:maximumSize:output:quality:]"
                   moduleName = "DuetScreenCapture"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "210"
-                  endingLineNumber = "210"
-                  offsetFromSymbolStart = "108">
+                  startingLineNumber = "215"
+                  endingLineNumber = "215"
+                  offsetFromSymbolStart = "80">
                </Location>
                <Location
-                  uuid = "3BEA8A26-FC5F-48D7-8662-2D25639B31FA - 6121b3904d5ce1e4"
+                  uuid = "3BEA8A26-FC5F-48D7-8662-2D25639B31FA - 5ef352e70bc09282"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DSCScreen saveAndSetupInitialState:maximumSize:output:quality:]"
+                  moduleName = "DuetScreenCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "218"
+                  endingLineNumber = "218"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "3BEA8A26-FC5F-48D7-8662-2D25639B31FA - 6121b3904d5ce168"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -332,8 +331,8 @@
                   urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "210"
-                  endingLineNumber = "210"
+                  startingLineNumber = "214"
+                  endingLineNumber = "214"
                   offsetFromSymbolStart = "60">
                </Location>
             </Locations>
@@ -349,9 +348,9 @@
             filePath = "Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "319"
-            endingLineNumber = "319"
-            landmarkName = "-setupActualStreamRefWith:outputHeight:outputWidth:"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
+            landmarkName = "-startCapturingResolution:fullResolutionEnabled:into:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -368,6 +367,450 @@
             startingLineNumber = "154"
             endingLineNumber = "154"
             landmarkName = "-sampleBuffer"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1239FCB7-5C0A-4BD8-B427-3B9D440DF1C0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DuetGUI/DuetCoreGUIClient.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-connect"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54B32222-E8FA-4803-9214-ECC6909F1BF9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DuetGUI/DuetCoreGUIClient.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-connect"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2392B3C-2A64-4300-9EA2-0508CAF036F9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "877"
+            endingLineNumber = "877"
+            landmarkName = "-encodeWithCoder:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F2392B3C-2A64-4300-9EA2-0508CAF036F9 - dd64437b4751d10b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DSCScreen encodeWithCoder:]"
+                  moduleName = "DuetScreenCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "877"
+                  endingLineNumber = "877"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "F2392B3C-2A64-4300-9EA2-0508CAF036F9 - dd64437b4751d10b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DSCScreen encodeWithCoder:]"
+                  moduleName = "DuetScreenCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "877"
+                  endingLineNumber = "877"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "F2392B3C-2A64-4300-9EA2-0508CAF036F9 - dd64437b4751d10b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DSCScreen encodeWithCoder:]"
+                  moduleName = "DuetScreenCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "877"
+                  endingLineNumber = "877"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "590AF0BF-BA22-44E5-9144-567B616CCCA2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "889"
+            endingLineNumber = "889"
+            landmarkName = "-initWithCoder:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "590AF0BF-BA22-44E5-9144-567B616CCCA2 - a19c6969129f81db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DSCScreen initWithCoder:]"
+                  moduleName = "DuetScreenCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "889"
+                  endingLineNumber = "889"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "590AF0BF-BA22-44E5-9144-567B616CCCA2 - a19c6969129f81db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DSCScreen initWithCoder:]"
+                  moduleName = "DuetScreenCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "889"
+                  endingLineNumber = "889"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "590AF0BF-BA22-44E5-9144-567B616CCCA2 - a19c6969129f81db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DSCScreen initWithCoder:]"
+                  moduleName = "DuetScreenCapture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/Carthage/Checkouts/DuetCommon/DuetScreenCapture/DSCScreen.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "889"
+                  endingLineNumber = "889"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90AF1F2A-824C-484A-94BF-C41D2C9BFB72"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DuetCoreService/DesktopCapturer/DuetDesktopCapturerServiceXPCListenerDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-remoteSyncProxy"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "90AF1F2A-824C-484A-94BF-C41D2C9BFB72 - f19cc58a474850e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DuetDesktopCapturerServiceXPCListenerDelegate remoteSyncProxy]"
+                  moduleName = "DuetCoreService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/DuetCoreService/DesktopCapturer/DuetDesktopCapturerServiceXPCListenerDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "90AF1F2A-824C-484A-94BF-C41D2C9BFB72 - 9dfdd7b65d1f2669"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__64-[DuetDesktopCapturerServiceXPCListenerDelegate remoteSyncProxy]_block_invoke"
+                  moduleName = "DuetCoreService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/DuetCoreService/DesktopCapturer/DuetDesktopCapturerServiceXPCListenerDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD1CE81F-68E5-4F6B-A837-97C386BD5DB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DuetCoreService/DesktopCapturer/DuetDesktopCapturerServiceXPCListenerDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "-remoteSyncProxy"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BD1CE81F-68E5-4F6B-A837-97C386BD5DB9 - 9dfdd7b65d1f2153"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__64-[DuetDesktopCapturerServiceXPCListenerDelegate remoteSyncProxy]_block_invoke"
+                  moduleName = "DuetCoreService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/DuetCoreService/DesktopCapturer/DuetDesktopCapturerServiceXPCListenerDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "BD1CE81F-68E5-4F6B-A837-97C386BD5DB9 - f19cc58a47485761"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DuetDesktopCapturerServiceXPCListenerDelegate remoteSyncProxy]"
+                  moduleName = "DuetCoreService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/DuetCoreService/DesktopCapturer/DuetDesktopCapturerServiceXPCListenerDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "280604FC-D5C3-4873-B4DD-81E024282BEE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DuetCoreService/DesktopCapturer/DuetDesktopCapturerService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-getVersionWithCompletion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4108A5A-6A6C-402D-A278-E008FAEF21A2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DuetDesktopCaptureManager/DuetCoreDesktopCaptureManagerClient.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-connect"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F4108A5A-6A6C-402D-A278-E008FAEF21A2 - d6a0d29d797e2029"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[DuetCoreDesktopCaptureManagerClient connect]_block_invoke.43"
+                  moduleName = "DuetDesktopCaptureManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/DuetDesktopCaptureManager/DuetCoreDesktopCaptureManagerClient.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "F4108A5A-6A6C-402D-A278-E008FAEF21A2 - e0c4ff50b3d28997"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DuetCoreDesktopCaptureManagerClient connect]"
+                  moduleName = "DuetDesktopCaptureManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/DuetDesktopCaptureManager/DuetCoreDesktopCaptureManagerClient.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "696">
+               </Location>
+               <Location
+                  uuid = "F4108A5A-6A6C-402D-A278-E008FAEF21A2 - 7d6dfd550157afd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[DuetCoreDesktopCaptureManagerClient connect]_block_invoke_2"
+                  moduleName = "DuetDesktopCaptureManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/DuetDesktopCaptureManager/DuetCoreDesktopCaptureManagerClient.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44CDED41-8A99-45A6-A515-28083C4E9821"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DuetDesktopCaptureManager/DuetCoreDesktopCaptureManagerClient.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "-connect"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "88A12684-62A8-4F75-839C-D45AE6308932"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DuetCoreService/DesktopCapturer/DuetDesktopCapturerServiceXPCListenerDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-listener:shouldAcceptNewConnection:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "427570D0-7CAA-46AD-9836-815474ABB48B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DuetCoreService/DesktopCapturer/DuetDesktopCapturerServiceXPCListenerDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-listener:shouldAcceptNewConnection:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "427570D0-7CAA-46AD-9836-815474ABB48B - 38c45c64a88c7960"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DuetDesktopCapturerServiceXPCListenerDelegate listener:shouldAcceptNewConnection:]"
+                  moduleName = "DuetCoreService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/DuetCoreService/DesktopCapturer/DuetDesktopCapturerServiceXPCListenerDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "492">
+               </Location>
+               <Location
+                  uuid = "427570D0-7CAA-46AD-9836-815474ABB48B - 74e1336ef75e13d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__84-[DuetDesktopCapturerServiceXPCListenerDelegate listener:shouldAcceptNewConnection:]_block_invoke_2"
+                  moduleName = "DuetCoreService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/DuetCoreService/DesktopCapturer/DuetDesktopCapturerServiceXPCListenerDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "427570D0-7CAA-46AD-9836-815474ABB48B - 38c45c64a88c778f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DuetDesktopCapturerServiceXPCListenerDelegate listener:shouldAcceptNewConnection:]"
+                  moduleName = "DuetCoreService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petik3/Projects/Duet/DuetServicePrototype/DuetCoreService/DesktopCapturer/DuetDesktopCapturerServiceXPCListenerDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "492">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63121B6C-6ED5-40CA-812C-787F7910D003"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DuetCoreService/DesktopCapturer/DuetDesktopCapturerServiceXPCListenerDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-listener:shouldAcceptNewConnection:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

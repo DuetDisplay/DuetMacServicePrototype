@@ -6,6 +6,7 @@
 //
 
 #import "DuetCoreDesktopCaptureManagerClient.h"
+@import DuetScreenCapture;
 
 @interface DuetCoreDesktopCaptureManagerClient ()
 
@@ -26,7 +27,7 @@
 
 - (id<DuetDesktopCapturerDaemonProtocol>)remoteProxy {
 	typeof(self) __weak weakSelf = self;
-	id<DuetDesktopCapturerDaemonProtocol> remoteProxy = [self.connectionToService remoteObjectProxyWithErrorHandler:^(NSError *error) {
+	id<DuetDesktopCapturerDaemonProtocol> remoteProxy = [self.connectionToService synchronousRemoteObjectProxyWithErrorHandler:^(NSError *error) {
 		typeof(self) self = weakSelf;
 		NSLog(@"Connection to the Daemon is terminated. Error: %@.", error);
 		self.connectionToService = nil;
@@ -57,6 +58,21 @@
 	completion(YES, nil);
 }
 
+//- (void)getScreenList:(void (^)(NSArray<DSCScreen *> *))completion {
+- (void)getScreenList:(void (^)(NSArray *))completion {
+	NSLog(@"GETSCREENLIST CALLED");
+	NSArray *screenList = [DSCScreenManager manager].screenList;
+	NSMutableArray *results = [NSMutableArray new];
+	for (DSCScreen *screen in screenList) {
+		[results addObject:@{
+			@"displayID": @(screen.displayID),
+			@"screenFrameRate": @(screen.screenFrameRate),
+			@"width": @(screen.width),
+			@"height": @(screen.height)
+		}];
+	}
+	completion(results);
+}
 
 - (void)connect {
 	if (self.isConnected) {

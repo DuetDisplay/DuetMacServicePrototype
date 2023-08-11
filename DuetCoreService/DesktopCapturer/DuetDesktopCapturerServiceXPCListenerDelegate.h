@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readonly) BOOL connected;
 @property (nonatomic, assign, readonly) id<DuetDesktopCapturerClientProtocol> remoteProxy;
+@property (nonatomic, assign, readonly) id<DuetDesktopCapturerClientProtocol> remoteSyncProxy;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithService:(DuetDesktopCapturerService *)service;
