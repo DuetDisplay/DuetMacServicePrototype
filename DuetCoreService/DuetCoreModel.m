@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) DuetGUIService *guiService;
 @property (nonatomic, strong) DuetDesktopCapturerService *desktopCapturerService;
+@property (nonatomic, strong) DuetRemoteDisplayServer *rdpServer;
 
 @property (nonatomic) DuetServiceSession *session;
 
@@ -52,6 +53,7 @@
 		self.started = YES;
 		[self.guiService startListening];
 		[self.desktopCapturerService startListening];
+		self.rdpServer = [DuetRemoteDisplayServer remoteDisplayServer:[[NSHost currentHost] localizedName] allowUDP:NO embeddedCursor:YES asService:NO];
 	}
 }
 

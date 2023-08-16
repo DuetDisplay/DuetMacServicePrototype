@@ -64,19 +64,24 @@
 //	[self.remoteProxy getScreenList:^(NSArray *screenList) {
 //		NSLog(@"SCREEN LIST: %@", screenList);
 //	}];
-//	
-//	
+//
+//
 //	[self.remoteProxy startScreenCaptureWithCompletion:^(BOOL success, NSError *error) {
 //		NSLog(@"Start screencapture success: %d, error: %@", success, error);
 //	}];
-	
+	DuetResolution *resolution0 = [[DuetResolution alloc] initWithWidth:200 height:100 retina:YES portrait:NO];
+	DuetResolution *resolution1 = [[DuetResolution alloc] initWithWidth:400 height:800 retina:NO portrait:YES];
+	[self.remoteProxy setupWithResolutions:@[resolution0, resolution1] retina:YES portrait:NO completion:^(uint32_t displayId, NSError * _Nullable error) {
+		NSLog(@"setupWithResolutions reply from capturemanager: %d %@", displayId, error);
+	}];
+	[self.remoteProxy setRemoteFeatures:[[DuetRemoteFeatures alloc] init]];
 	// Returning YES from this method tells the system that you have accepted this connection. If you want to reject the connection for some reason, call -invalidate on the connection and return NO.
 	return YES;
 }
 
 - (id<DuetDesktopCapturerClientProtocol>)remoteProxy {
 	typeof(self) __weak weakSelf = self;
-	id<DuetDesktopCapturerClientProtocol> remoteProxy = [self.connection synchronousRemoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
+	id<DuetDesktopCapturerClientProtocol> remoteProxy = [self.connection remoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
 		typeof(self) self = weakSelf;
 		self.connected = NO;
 		// This block will be called if the connection is interrupted or disconnected.

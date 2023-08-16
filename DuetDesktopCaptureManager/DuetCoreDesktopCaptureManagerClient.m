@@ -27,7 +27,7 @@
 
 - (id<DuetDesktopCapturerDaemonProtocol>)remoteProxy {
 	typeof(self) __weak weakSelf = self;
-	id<DuetDesktopCapturerDaemonProtocol> remoteProxy = [self.connectionToService synchronousRemoteObjectProxyWithErrorHandler:^(NSError *error) {
+	id<DuetDesktopCapturerDaemonProtocol> remoteProxy = [self.connectionToService remoteObjectProxyWithErrorHandler:^(NSError *error) {
 		typeof(self) self = weakSelf;
 		NSLog(@"Connection to the Daemon is terminated. Error: %@.", error);
 		self.connectionToService = nil;
@@ -74,6 +74,14 @@
 	completion(results);
 }
 
+- (void)setRemoteFeatures:(DuetRemoteFeatures *)features {
+	NSLog(@"%@", features);
+}
+
+- (void)setupWithResolutions:(NSArray<id<DuetRDSExtendedDisplayResolution>> *)resolutions retina:(BOOL)retina portrait:(BOOL)portrait completion:(DuetRDSExtendedDisplaySetupCompletion)completion {
+	completion(1, [NSError errorWithDomain:@"EDMerror" code:500 userInfo:nil]);
+}
+
 - (void)connect {
 	if (self.isConnected) {
 		NSLog(@"Already connected to DuetCoreService.");
@@ -84,7 +92,8 @@
 	self.connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopCapturerDaemonProtocol)];
 	self.connectionToService.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(DuetDesktopCapturerClientProtocol)];
 	self.connectionToService.exportedObject = self;
-	
+	NSSet *allowedClasses = [NSSet setWithObjects:[DuetResolution class], [NSArray class], nil];
+	[self.connectionToService.exportedInterface setClasses:allowedClasses forSelector:@selector(setupWithResolutions:retina:portrait:completion:) argumentIndex:0 ofReply:NO];
 	typeof(self) __weak weakSelf = self;
 	self.connectionToService.interruptionHandler = ^{
 		typeof(self) self = weakSelf;
@@ -120,5 +129,6 @@
 	[self.delegate clientConnectionStateDidChange:self];
 	
 }
+
 
 @end

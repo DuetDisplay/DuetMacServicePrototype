@@ -11,6 +11,7 @@ import DuetRemoteDisplay
 import DuetVideo
 import Foundation
 
+
 @objcMembers
 class DuetRemoteEDMResolutionManager: NSObject, DuetRDSExtendedDisplayResolutionManager
 {
@@ -64,10 +65,55 @@ class DuetRemoteEDMResolutionManager: NSObject, DuetRDSExtendedDisplayResolution
 	}
 }
 
+// TODO: this class redirects the calls to the XPC interface of the capture/display manager module, and then transforms back the return values so it complies with the protocol
+@objcMembers
+class DuetRemoteEDMDisplayManagerProxy: NSObject, DuetRDSExtendedDisplayManager {
+	var displayId: UInt32 = 0
+	
+	var isPortrait: Bool = false
+	
+	var currentResolution: DuetRDSExtendedDisplayResolution?
+	
+	func setup(with resolutions: [DuetRDSExtendedDisplayResolution], retina: Bool, portrait: Bool, completion: @escaping DuetRDSExtendedDisplaySetupCompletion) {
+		// TODO
+	}
+	
+	func setup(with resolutions: [DuetRDSExtendedDisplayResolution], retina: Bool, portrait: Bool, includeSelection: Bool, completion: @escaping DuetRDSExtendedDisplaySetupCompletion) {
+		// TODO
+	}
+	
+	func destroy(_ display: UInt32) {
+		// TODO
+	}
+	
+	func destroyAll() {
+		// TODO
+	}
+	
+	func select(_ resolution: DuetRDSExtendedDisplayResolution, retinaEnabled: Bool) -> Bool {
+		// TODO
+		return true
+	}
+	
+	func selectResolution(withWidth width: Int32, height: Int32, retinaEnabled: Bool, forDisplay display: CGDirectDisplayID) -> Bool {
+		// TODO
+		return true
+	}
+	
+	func mirrorContents(ofDisplay sourceDisplayId: UInt32, toDisplay destinationDisplayId: UInt32, completion: @escaping DuetRDSMirrorDisplaySetupCompletion) {
+		// TODO
+	}
+	
+	func swapMirroring(completion: @escaping DuetRDSMirrorDisplaySetupCompletion) {
+		// TODO
+	}
+	
+}
+
 @objcMembers
 class DuetRemoteEDMDisplayManager: NSObject, DuetRDSExtendedDisplayManager
 {
-	private(set) var displayList: [NSNumber] = []
+//	private(set) var displayList: [NSNumber] = []
 	private var displayManager: DVDI?
 
 	private(set) var displayId: UInt32 = 0
@@ -270,6 +316,20 @@ class DuetRemoteEDMDisplayManager: NSObject, DuetRDSExtendedDisplayManager
 	deinit
 	{
 		self.destroyAll()
+	}
+}
+
+// I'm not sure if this class is needed, but for now let's use it - the initializer creates the proxy classes
+@objcMembers
+class DuetRemoteEDMProxy: NSObject, DuetRDSExtendedDisplayProvider
+{
+	var resolutionManager: DuetRDSExtendedDisplayResolutionManager
+	var displayManager: DuetRDSExtendedDisplayManager
+
+	override init()
+	{
+		resolutionManager = DuetRemoteEDMResolutionManager()
+		displayManager = DuetRemoteEDMDisplayManagerProxy()
 	}
 }
 

@@ -10,6 +10,7 @@
 #import "DuetCoreDesktopCaptureManagerClient.h"
 @import DuetCommon;
 @import DuetScreenCapture;
+@import DuetRemoteDisplay;
 #import "AppDelegate.h"
 
 @interface DuetDesktopCaptureManagerModel () <DuetCoreDesktopCaptureManagerClientDelegate>
@@ -17,7 +18,7 @@
 @property (nonatomic, strong) DSCScreen *mainScreen;
 @property (nonatomic, assign) NSInteger frameCount;
 @property (nonatomic, strong) DuetCoreDesktopCaptureManagerClient *captureManagerClient;
-
+@property (nonatomic, strong) DuetRemoteDisplayServer *rdpServer;
 @end
 
 @implementation DuetDesktopCaptureManagerModel
@@ -40,7 +41,12 @@
 		self.captureManagerClient = [[DuetCoreDesktopCaptureManagerClient alloc] initWithAppModel:self];
 		self.captureManagerClient.delegate = self;
 		[self.captureManagerClient connect];
-		
+		self.rdpServer = [DuetRemoteDisplayServer remoteDisplayServer:[[NSHost currentHost] localizedName] allowUDP:NO embeddedCursor:YES asService:NO];
+		[self.rdpServer startServerWithCompletion:^(NSError * _Nullable error) {
+					NSLog(@"STARTED RDP SERVER");
+				} connection:^(BOOL connected, id<DuetStream>  _Nullable stream) {
+					NSLog(@"CONNECTION RDP SERVER");
+				}];
 	}
 	return self;
 }
